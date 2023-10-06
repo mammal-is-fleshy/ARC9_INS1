@@ -4,7 +4,7 @@ SWEP.Base = "arc9_base"
 
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - INS1"
-SWEP.SubCategory = "1Pistol"
+SWEP.SubCategory = "Pistol"
 
 SWEP.PrintName = "Makarov"
 
@@ -277,7 +277,7 @@ SWEP.Attachments = {
     },
 }
 
-
+SWEP.InstantSightIdle = true
 SWEP.Animations = {
     ["idle"] = {
         Source = "makarov_idle",

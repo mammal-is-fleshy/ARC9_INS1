@@ -4,17 +4,14 @@ SWEP.Base = "arc9_base"
 
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - INS1"
-SWEP.SubCategory = "1Pistol"
+SWEP.SubCategory = "Pistol"
 
 SWEP.PrintName = "M9 Beretta"
 
 SWEP.Class = "Pistol"
 
 SWEP.Credits = {
-    ["Additional Coding1"] = [[TheOnly8Z#8888 (8Z)]],
-    ["Sound2"] = [[cherresoda#6579 (rzen1th)]],
-    ["Assets3"] = [[Counter-Strike Source]],
-    ["Contact4"] = [[SlogoKolt#6648 or Mytton#5132]],
+    ["Assets"] = [[Insurgency: Modern Infrantry Combat]],
 }
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_pist_m9.mdl"
@@ -161,8 +158,8 @@ SWEP.TracerColor = Color(255, 225, 200) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-3.25, 0, 1.6),
-    Ang = Angle(0, 0, 5),
+    Pos = Vector(-3.215, -5, 2.55),
+    Ang = Angle(0, 0, 0),
     Midpoint = { -- Where the gun should be at the middle of it's irons
         Pos = Vector(0, 15, -4),
         Ang = Angle(-10, 60, -25),
@@ -275,7 +272,7 @@ SWEP.AttachmentElements = {
         SprintAngOverride = Angle(0, 18, 0),
     },
 }
-
+SWEP.InstantSightIdle = true
 SWEP.Attachments = {
     {
         PrintName = "Frame",

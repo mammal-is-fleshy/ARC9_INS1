@@ -4,7 +4,7 @@ SWEP.Base = "arc9_base"
 
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - INS1"
-SWEP.SubCategory = "1Pistol"
+SWEP.SubCategory = "Pistol"
 
 SWEP.PrintName = "Desert Eagle"
 
@@ -36,8 +36,8 @@ SWEP.RecoilAutoControlMultHipFire = 0.5
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 40
-SWEP.DamageMin = 12
+SWEP.DamageMax = 80
+SWEP.DamageMin = 24
 
 SWEP.RangeMin = 500
 SWEP.RangeMax = 3000
@@ -88,7 +88,7 @@ SWEP.Firemodes = {
 -------------------------- RECOIL
 
 -- General recoil multiplier
-SWEP.Recoil = 1.2
+SWEP.Recoil = 1.5
 
 -- These multipliers affect the predictible recoil by making the pattern taller, shorter, wider, or thinner.
 SWEP.RecoilUp = 0.85 -- Multiplier for vertical recoil
@@ -238,8 +238,7 @@ SWEP.FiremodeSound = "arc9/firemode.wav"
 SWEP.DefaultBodygroups = "00000000"
 
 SWEP.AttachmentElements = {
-    ["g_1"] = { Bodygroups = {{6, 1}}, },
-    ["s_1"] = { Bodygroups = {{5, 1}}, },
+    ["has_tac"] = { Bodygroups = {{2, 1}}, },
 }
 
 SWEP.Attachments = {
@@ -263,6 +262,16 @@ SWEP.Attachments = {
         Bone = "Weapon_Controller",
         Pos = Vector(8.65, -2.4, 0),
         Ang = Angle(0, 0, -90),
+    },
+    {
+        PrintName = "Tac Mount",
+        DefaultName = "None",
+        InstalledElements = {"has_tac"},
+
+        Category = {"mountl_css"},
+        Bone = "Weapon_Controller",
+        Pos = Vector(5.8, -0.6, 0),
+        Ang = Angle(0, 0, 90),
     },
 }
 
