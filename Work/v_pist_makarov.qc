@@ -1,7 +1,7 @@
 // Created by Crowbar 0.74
 
 $modelname "weapons/myt_ins1/c_pist_makarov.mdl"
-$include ins2_hands.qci
+$include c_ins2_to_gmod_hands.qci
 $scale 1.3
 
 $bodygroup "makarov"

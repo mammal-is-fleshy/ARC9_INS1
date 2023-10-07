@@ -1,7 +1,7 @@
 // Created by Crowbar 0.74
 
 $modelname "weapons/myt_ins1/c_sr_l42a1.mdl"
-$include ins2_hands.qci
+$include c_ins2_to_gmod_hands.qci
 $scale 1.3
 
 $bodygroup "l42a1"

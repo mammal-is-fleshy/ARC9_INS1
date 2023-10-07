@@ -4,7 +4,7 @@ SWEP.Base = "arc9_base"
 
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - INS1"
-SWEP.SubCategory = "Sniper"
+SWEP.SubCategory = "Primary"
 
 SWEP.PrintName = "L42A1"
 
@@ -38,8 +38,8 @@ SWEP.RecoilAutoControlMultHipFire = 0.5
 SWEP.DamageMax = 52 -- Damage done at point blank range
 SWEP.DamageMin = 174 -- Damage done at maximum range
 
-SWEP.RangeMin = 100 -- How far bullets retain their maximum damage for.
-SWEP.RangeMax = 2000 -- In Hammer units, how far bullets can travel before dealing DamageMin.
+SWEP.RangeMin = 500
+SWEP.RangeMax = 3000
 
 SWEP.Penetration = 15 -- Units of wood that can be penetrated by this gun.
 
