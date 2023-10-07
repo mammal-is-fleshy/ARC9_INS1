@@ -172,8 +172,8 @@ SWEP.IronSights = {
     CrosshairInSights = false,
 }
 
-SWEP.SprintAng = Angle(45, -15, -5)
-SWEP.SprintPos = Vector(5, 1.25, 0.25)
+SWEP.SprintAng = Angle(40, 20, -20)
+SWEP.SprintPos = Vector(6, -5, -3)
 
 SWEP.BipodPos = Vector(-3.935, 0, -1)
 SWEP.BipodAng = Angle(0, 0, 0)

@@ -158,7 +158,7 @@ SWEP.TracerColor = Color(255, 225, 200) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-3.075	, -5, 1.85),
+    Pos = Vector(-3.1, -5, 1.85),
     Ang = Angle(0, 0, 0),
     Midpoint = { -- Where the gun should be at the middle of it's irons
         Pos = Vector(0, 15, -4),
@@ -282,6 +282,7 @@ SWEP.Animations = {
     },
     ["idle_sights"] = {
         Source = "makarov_idle_sight",
+		Time = 0
     }, 
 	["idle_sights_empty"] = {
         Source = "makarov_idle_sight_empty",
