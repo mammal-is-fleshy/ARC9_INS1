@@ -134,7 +134,7 @@ SWEP.SwayAddMove = 0.33
 SWEP.SwayMultMove = 1
 SWEP.SwayMultCrouch = 0.5
 SWEP.SwayMultShooting = 1.5
-SWEP.SwayMultSights = 0.5
+SWEP.SwayMultSights = 0.25
 
 SWEP.AimDownSightsTime = 0.31
 SWEP.SprintToFireTime = 0.35
@@ -165,7 +165,7 @@ SWEP.TracerColor = Color(255, 225, 200) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-2.325, -3, 1.1),
+    Pos = Vector(-2.34, -2, 1.085),
     Ang = Angle(0, 0, 0),
     Midpoint = { -- Where the gun should be at the middle of it's irons
         Pos = Vector(0, 15, -4),

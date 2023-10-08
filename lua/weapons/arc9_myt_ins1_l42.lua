@@ -35,7 +35,7 @@ SWEP.RecoilAutoControlMultHipFire = 0.5
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 52 -- Damage done at point blank range
+SWEP.DamageMax = 62 -- Damage done at point blank range
 SWEP.DamageMin = 174 -- Damage done at maximum range
 
 SWEP.RangeMin = 500
@@ -159,7 +159,7 @@ SWEP.TracerColor = Color(255, 225, 200) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-2.85, -5, 2.2),
+    Pos = Vector(-2.85, -5, 2.225),
     Ang = Angle(0, 0, 0),
     Midpoint = { -- Where the gun should be at the middle of it's irons
         Pos = Vector(0, 15, -4),

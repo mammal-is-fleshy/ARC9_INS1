@@ -291,7 +291,6 @@ $sequence "makarov_idle_sight_empty" {
 	fadeout 0.2
 	addlayer "slide_layer"
 	fps 20
-	loop
 }
 
 $sequence "makarov_down" {
