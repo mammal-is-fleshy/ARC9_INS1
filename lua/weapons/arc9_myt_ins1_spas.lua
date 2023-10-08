@@ -11,7 +11,7 @@ SWEP.PrintName = "SPAS"
 SWEP.Class = "Shotgun"
 
 SWEP.Credits = {
-    ["Assets"] = [[Insurgency: Modern Infrantry Combat]],
+    ["Assets"] = [[ https://gamebanana.com/mods/208522 ]],
 }
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_shot_spas.mdl"
