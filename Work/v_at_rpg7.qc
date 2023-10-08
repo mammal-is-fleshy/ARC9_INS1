@@ -1,6 +1,8 @@
 // Created by Crowbar 0.74
 
-$modelname "ins\weapons\v_at_rpg7.mdl"
+$modelname "weapons/myt_ins1/c_at_rpg7.mdl"
+$include c_ins2_to_gmod_hands.qci
+$scale 1.3
 
 $bodygroup "RPG"
 {
@@ -9,9 +11,11 @@ $bodygroup "RPG"
 $bodygroup "Projectile"
 {
 	studio "v_at_rpg7_body1_model0.smd"
+	blank
 }
 $bodygroup "arms"
 {
+	blank
 	studio "v_at_rpg7_body2_model0.smd"
 }
 
@@ -22,8 +26,9 @@ $contents "solid"
 
 $illumposition 0.106 -14.064 -102.048
 
+$cdmaterials "models\myt_ins1_vmt\"
+$cdmaterials "models\myt_ins1_vmt\att"
 $cdmaterials "ins\models\hands\"
-$cdmaterials "ins\models\weapons\rpg7\"
 
 $attachment "muzzle" "eject" 0 0 0 rotate 0 0 90
 $attachment "rocket_launch" "eject" 0 0 0 rotate 0 0 0
@@ -175,15 +180,6 @@ $weightlist "weights_empty" {
 	 "R ForeTwist6" 0
 }
 
-$sequence "empty" {
-	"v_at_rpg7_anims\empty.smd"
-	fadein 0.2
-	fadeout 0.2
-	hidden
-	fps 30
-	weightlist "weights_empty"
-}
-
 $sequence "rpg7_idle" {
 	"v_at_rpg7_anims\rpg7_idle.smd"
 	activity "ACT_VM_IDLE" 1
@@ -191,6 +187,16 @@ $sequence "rpg7_idle" {
 	fadeout 0.2
 	fps 20
 	loop
+}
+
+
+$sequence "empty" {
+	"v_at_rpg7_anims\empty.smd"
+	fadein 0.2
+	fadeout 0.2
+	hidden
+	fps 30
+	weightlist "weights_empty"
 }
 
 $sequence "rpg7_idle_empty" {
@@ -242,21 +248,16 @@ $sequence "rpg7_down_empty" {
 }
 
 $sequence "rpg7_ready" {
-	"v_at_rpg7_anims\rpg7_ready.smd"
+	"anims\rpg7_ready2.smd"
 	activity "ACT_DEPLOY" 1
-	{ event 5004 0 "Universal_INS.Draw" }
-	{ event 5004 45 "Weapon_INS_RPG7.Reload" }
-	{ event 5004 75 "Weapon_INS_RPG7.Load" }
 	fadein 0.2
 	fadeout 0.2
 	fps 30
 }
 
 $sequence "rpg7_reload" {
-	"v_at_rpg7_anims\rpg7_reload.smd"
+	"anims\rpg7_reload2.smd"
 	activity "ACT_VM_RELOAD" 1
-	{ event 5004 60 "Weapon_INS_RPG7.Reload" }
-	{ event 5004 86 "Weapon_INS_RPG7.Load" }
 	fadein 0.2
 	fadeout 0.2
 	fps 30
@@ -341,4 +342,18 @@ $sequence "rpg7_ironout_empty" {
 	fadeout 0.2
 	addlayer "empty"
 	fps 30
+}
+
+
+
+
+
+$collisionmodel "v_at_rpg7_body0_model0.smd"
+{
+	$mass 30
+	$inertia 10
+	$damping 0.01
+	$rotdamping 1.5
+	$rootbone " "
+
 }

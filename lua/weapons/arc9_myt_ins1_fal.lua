@@ -42,7 +42,7 @@ SWEP.DamageMin = 31
 SWEP.RangeMin = 500
 SWEP.RangeMax = 3000
 
-SWEP.Penetration = 2 -- Units of wood that can be penetrated by this gun.
+SWEP.Penetration = 15 -- Units of wood that can be penetrated by this gun.
 
 SWEP.BodyDamageMults = {
     [HITGROUP_HEAD] = 1.75,
@@ -62,7 +62,7 @@ SWEP.PhysBulletMuzzleVelocity = 1280 * 12
 SWEP.Ammo = "ar2" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 1 -- The amount of rounds this gun can chamber.
-SWEP.ClipSize = 30 -- Self-explanatory.
+SWEP.ClipSize = 20 -- Self-explanatory.
 SWEP.SupplyLimit = 4 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
 SWEP.SecondarySupplyLimit = 2 -- Amount of reserve UBGL magazines you can take.
 
@@ -113,14 +113,14 @@ SWEP.RecoilMultRecoil = 1.2 -- Looks stupid but it means expoential recoil growt
 
 -------------------------- SPREAD
 
-SWEP.Spread = 0.02
+SWEP.Spread = 0.0175
 
 SWEP.SpreadAddRecoil = 0
-SWEP.SpreadMultRecoil = 1.3
-SWEP.RecoilModifierCap = 7
+SWEP.SpreadMultRecoil = 1.2
+SWEP.RecoilModifierCap = 6
 
 SWEP.SpreadAddHipFire = 0.0012
-SWEP.SpreadMultHipFire = 1.3
+SWEP.SpreadMultHipFire = 1.25
 
 -------------------------- HANDLING
 
@@ -134,7 +134,7 @@ SWEP.SwayAddMove = 0.33
 SWEP.SwayMultMove = 1
 SWEP.SwayMultCrouch = 0.5
 SWEP.SwayMultShooting = 1.5
-SWEP.SwayMultSights = 0.25
+SWEP.SwayMultSights = 0.125
 
 SWEP.AimDownSightsTime = 0.31
 SWEP.SprintToFireTime = 0.35

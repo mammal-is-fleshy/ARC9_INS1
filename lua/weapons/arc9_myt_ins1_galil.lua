@@ -36,13 +36,13 @@ SWEP.RecoilAutoControlMultHipFire = 0.5
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 75
-SWEP.DamageMin = 31
+SWEP.DamageMax = 72
+SWEP.DamageMin = 34
 
 SWEP.RangeMin = 500
 SWEP.RangeMax = 3000
 
-SWEP.Penetration = 2 -- Units of wood that can be penetrated by this gun.
+SWEP.Penetration = 15 -- Units of wood that can be penetrated by this gun.
 
 SWEP.BodyDamageMults = {
     [HITGROUP_HEAD] = 1.75,
@@ -70,7 +70,7 @@ SWEP.ReloadInSights = false -- This weapon can aim down sights while reloading.
 
 -------------------------- FIREMODES
 
-SWEP.RPM = 600
+SWEP.RPM = 650
 
 -- Works different to ArcCW
 
@@ -116,7 +116,7 @@ SWEP.RecoilMultRecoil = 1.2 -- Looks stupid but it means expoential recoil growt
 SWEP.Spread = 0.02
 
 SWEP.SpreadAddRecoil = 0
-SWEP.SpreadMultRecoil = 1.3
+SWEP.SpreadMultRecoil = 1.225
 SWEP.RecoilModifierCap = 7
 
 SWEP.SpreadAddHipFire = 0.0012

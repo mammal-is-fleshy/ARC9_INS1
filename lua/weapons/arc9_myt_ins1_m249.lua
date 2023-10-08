@@ -4,28 +4,28 @@ SWEP.Base = "arc9_base"
 
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - INS1"
-SWEP.SubCategory = "Pistol"
+SWEP.SubCategory = "Primary"
 
-SWEP.PrintName = "Desert Eagle"
+SWEP.PrintName = "M249"
 
-SWEP.Class = "Pistol"
+SWEP.Class = "Machine Gun"
 
 SWEP.Credits = {
-    ["Assets"] = [[ https://gamebanana.com/mods/207698 ]],
+    ["Assets"] = [[Insurgency: Modern Infrantry Combat]],
 }
 
-SWEP.ViewModel = "models/weapons/myt_ins1/c_pist_deagle.mdl"
-SWEP.WorldModel = "models/weapons/myt_ins1/c_pist_deagle.mdl"
+SWEP.ViewModel = "models/weapons/myt_ins1/c_mach_m249.mdl"
+SWEP.WorldModel = "models/weapons/myt_ins1/c_mach_m249.mdl"
 
-SWEP.Weight = 1
-SWEP.Slot = 1
+SWEP.Weight = 25
+SWEP.Slot = 2
 
 SWEP.MirrorVMWM = true
-SWEP.WorldModelMirror = "models/weapons/myt_ins1/c_pist_deagle.mdl"
+SWEP.WorldModelMirror = "models/weapons/myt_ins1/c_mach_m249.mdl"
 SWEP.WorldModelOffset = {
     Pos = Vector(-9, 5, -5),
     Ang = Angle(-5, 0, 180),
-    TPIKPos = Vector(-16, 3, -5),
+    TPIKPos = Vector(-5, 3, -7),
     TPIKAng = Angle(-5, 0, 180),
     Scale = 1
 }
@@ -36,13 +36,13 @@ SWEP.RecoilAutoControlMultHipFire = 0.5
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 80
-SWEP.DamageMin = 24
+SWEP.DamageMax = 72
+SWEP.DamageMin = 34
 
 SWEP.RangeMin = 500
 SWEP.RangeMax = 3000
 
-SWEP.Penetration = 2 -- Units of wood that can be penetrated by this gun.
+SWEP.Penetration = 15 -- Units of wood that can be penetrated by this gun.
 
 SWEP.BodyDamageMults = {
     [HITGROUP_HEAD] = 1.75,
@@ -59,18 +59,18 @@ SWEP.PhysBulletMuzzleVelocity = 1280 * 12
 
 -------------------------- MAGAZINE
 
-SWEP.Ammo = "pistol" -- What ammo type this gun uses.
+SWEP.Ammo = "ar2" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 1 -- The amount of rounds this gun can chamber.
-SWEP.ClipSize = 7 -- Self-explanatory.
-SWEP.SupplyLimit = 6 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
+SWEP.ClipSize = 120 -- Self-explanatory.
+SWEP.SupplyLimit = 2 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
 SWEP.SecondarySupplyLimit = 2 -- Amount of reserve UBGL magazines you can take.
 
 SWEP.ReloadInSights = false -- This weapon can aim down sights while reloading.
 
 -------------------------- FIREMODES
 
-SWEP.RPM = 400
+SWEP.RPM = 650
 
 -- Works different to ArcCW
 
@@ -82,62 +82,70 @@ SWEP.RPM = 400
 -- n: n-round burst.
 SWEP.Firemodes = {
     {
+        Mode = -1,
+    },
+    {
         Mode = 1,
     }
 }
 -------------------------- RECOIL
 
 -- General recoil multiplier
-SWEP.Recoil = 1.5
+SWEP.Recoil = 1
 
 -- These multipliers affect the predictible recoil by making the pattern taller, shorter, wider, or thinner.
-SWEP.RecoilUp = 0.85 -- Multiplier for vertical recoil
-SWEP.RecoilSide = 0.45 -- Multiplier for vertical recoil
+SWEP.RecoilUp = 0.5 -- Multiplier for vertical recoil
+SWEP.RecoilSide = 0.15 -- Multiplier for vertical recoil
 
 -- These values determine how much extra movement is applied to the recoil entirely randomly, like in a circle.
 -- This type of recoil CANNOT be predicted.
 SWEP.RecoilRandomUp = 0.45
-SWEP.RecoilRandomSide = 0.45
+SWEP.RecoilRandomSide = 0.325
 
-SWEP.RecoilDissipationRate = 10
-SWEP.RecoilResetTime = 0
+SWEP.RecoilDissipationRate = 25 -- How much recoil dissipates per second.
+SWEP.RecoilResetTime = 0 -- How long the gun must go before the recoil pattern starts to reset.
 
 SWEP.RecoilAutoControl = 0 -- Multiplier for automatic recoil control.
 
-SWEP.RecoilKick = 1.5
+SWEP.RecoilKick = 1.75
 
-SWEP.RecoilMultRecoil = 1.15 -- Looks stupid but it means expoential recoil growth.
+SWEP.RecoilMultRecoil = 1.075 -- Looks stupid but it means expoential recoil growth.
 
 -------------------------- SPREAD
 
-SWEP.Spread = 0.004
+SWEP.Spread = 0.01
 
 SWEP.SpreadAddRecoil = 0
-SWEP.SpreadMultRecoil = 1.3
-SWEP.RecoilModifierCap = 7
+SWEP.SpreadMultRecoil = 1.22
+SWEP.RecoilModifierCap = 8
 
 SWEP.SpreadAddHipFire = 0.0012
-SWEP.SpreadMultHipFire = 1.3
+SWEP.SpreadMultHipFire = 1.5
+
 
 -------------------------- HANDLING
 
-SWEP.FreeAimRadius = 4 -- In degrees, how much this gun can free aim in hip fire.
-SWEP.Sway = 1.25
+SWEP.FreeAimRadius = 7.5
+SWEP.FreeAimRadiusSights = 0.125
+
+SWEP.Sway = 1
 
 SWEP.SwayMultMidAir = 2
-SWEP.SwayMultMove = 1.5
-SWEP.SwayMultCrouch = 0.667
+SWEP.SwayAddMove = 0.33
+SWEP.SwayMultMove = 1
+SWEP.SwayMultCrouch = 0.5
 SWEP.SwayMultShooting = 1.5
-SWEP.SwayMultSights = 0.5
+SWEP.SwayMultSights = 0.25
 
-SWEP.AimDownSightsTime = 0.2
-SWEP.SprintToFireTime = 0.17
+SWEP.AimDownSightsTime = 0.31
+SWEP.SprintToFireTime = 0.35
 
-SWEP.SpeedMult = 1
+SWEP.SpeedMult = 0.95
 SWEP.SpeedMultSights = 0.75
 SWEP.SpeedMultShooting = 0.7
 SWEP.SpeedMultMelee = 0.75
-SWEP.SpeedMultCrouch = 0.8
+SWEP.SpeedMultCrouch = 1
+SWEP.SpeedMultBlindFire = 1
 
 -------------------------- MELEE
 
@@ -158,8 +166,8 @@ SWEP.TracerColor = Color(255, 225, 200) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-3.05, -5, 1.9),
-    Ang = Angle(0, 0, 0),
+    Pos = Vector(-5.2, -5, 2.75),
+    Ang = Angle(0, -0.45, 0),
     Midpoint = { -- Where the gun should be at the middle of it's irons
         Pos = Vector(0, 15, -4),
         Ang = Angle(-10, 60, -25),
@@ -171,22 +179,22 @@ SWEP.IronSights = {
 
 SWEP.Crosshair = false
 
-SWEP.SprintAng = Angle(10, -15, -10)
-SWEP.SprintPos = Vector(0, 2, 0)
+SWEP.SprintAng = Angle(45, -15, -5)
+SWEP.SprintPos = Vector(5, 1.25, 0.25)
 
 SWEP.SprintMidPoint = {
     Pos = Vector(0, -5, -3),
     Ang = Angle(5, 20, 15)
 }
 
-SWEP.MovingPos = Vector(0, 0.5, 0.5)
+SWEP.MovingPos = Vector(0, 0, 0.5)
 SWEP.MovingAng = Angle(0, -2, 0)
 
 SWEP.ViewModelFOVBase = 70
-SWEP.ActivePos = Vector(0, 1, 0)
+SWEP.ActivePos = Vector(0, 0.25, -0.75)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.CrouchPos = Vector(-0.5, 1, -1)
+SWEP.CrouchPos = Vector(-0.5, 0.25, -1)
 SWEP.CrouchAng = Angle(0, 0, -10)
 
 SWEP.CustomizeAng = Angle(90, -5, 0)
@@ -197,21 +205,25 @@ SWEP.CustomizeNoRotate = false
 
 SWEP.CustomizeRotateAnchor = Vector(12, -3.25, -5.23)
 
+SWEP.BarrelLength = 36
+
+SWEP.NearWallPos = Vector(2, 0, -10)
+SWEP.NearWallAng = Angle(45, 30, 0)
+
 SWEP.StandardPresets = {
 }
 
 -------------------------- HoldTypes
 
-SWEP.HoldType = "revolver"
+SWEP.HoldType = "ar2"
 SWEP.HoldTypeSprint = "passive"
 SWEP.HoldTypeHolstered = "passive"
-SWEP.HoldTypeSights = "revolver"
+SWEP.HoldTypeSights = "ar2"
 SWEP.HoldTypeCustomize = "slam"
 SWEP.HoldTypeBlindfire = "pistol"
 
-SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
-SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_MAGIC -- While in TPIK only -- Tip: if you dont want any additional anim put ACT_HL2MP_GESTURE_RELOAD_MAGIC here instead!
-SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_PISTOL -- Non TPIK
+SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
+SWEP.AnimReload = false
 SWEP.AnimDraw = false
 
 -------------------------- EFFECTS
@@ -226,8 +238,8 @@ SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 
 -------------------------- SOUNDS
 
-SWEP.ShootSound = "myt_ins1/deagle-1.wav"
-SWEP.DistantShootSound = "myt_ins1/makarov-01_echo.wav"
+SWEP.ShootSound = {"myt_ins1/ak47-1.wav", "myt_ins1/ak47-2.wav"}
+SWEP.DistantShootSound = {"myt_ins1/ak47-1_echo.wav", "myt_ins1/ak47-2_echo.wav"}
 SWEP.ShootSoundSilenced = "gekolt_css/9mm_sd.wav"
 SWEP.DryFireSound = "myt_ins1/makarov-empty.wav"
 
@@ -268,93 +280,86 @@ SWEP.Attachments = {
         DefaultName = "None",
         InstalledElements = {"has_tac"},
 
-        Category = {"mount_css"},
+        Category = {"mountl_css"},
         Bone = "Weapon_Controller",
         Pos = Vector(5.8, -0.6, 0),
         Ang = Angle(0, 0, 90),
     },
 }
 
+SWEP.BulletBones = {
+    [1] = {"bullet01", "link01"},
+    [2] = {"bullet02", "link02"}, 
+	[3] = {"bullet03", "link03"},
+	[4] = {"bullet04", "link04"},
+	[5] = {"bullet05", "link05"},	
+	[6] = {"bullet06", "link06"},	
+	[7] = {"bullet07", "link07"},
+	[8] = {"bullet08", "link08"},
+	[9] = {"bullet09", "link09"},
+	[10] = {"bullet10", "link10"},
+}
+
 SWEP.InstantSightIdle = true
 SWEP.Animations = {
     ["idle"] = {
-        Source = "makarov_idle",
+        Source = "m249_idle",
     },
     ["idle_sights"] = {
-        Source = "makarov_idle_sight",
+        Source = "m249_idle",
 		Time = 0
-    }, 
-	["idle_sights_empty"] = {
-        Source = "makarov_idle_sight_empty",
-		Time = 0
-    },
-    ["idle_empty"] = {
-        Source = "makarov_idle_empty",
     },
     ["draw"] = {
-        Source = "makarov_draw",
+        Source = "m249_draw",
         EventTable = {
             {s =  "myt_ins1/universal/uni-draw.wav" ,   t = 0 / 30},
-            {s =  "myt_ins1/makarov-safety.wav" ,   t = 13 / 30},
-        },
-    },
-    ["draw_empty"] = {
-        Source = "makarov_draw_empty", -- QC sequence source, can be {"table", "of", "strings"} or "string"
-        --Time = 0.5, -- overrides the duration of the sequence
-        Mult = 1, -- multiplies time
-        EventTable = {
-            {s =  "myt_ins1/universal/uni-draw.wav" ,   t = 0 / 30},
-            {s =  "myt_ins1/makarov-safety.wav" ,   t = 13 / 30},
         },
     },
     ["ready"] = {
-        Source = "makarov_deploy2", -- QC sequence source, can be {"table", "of", "strings"} or "string"
+        Source = "m249_ready", -- QC sequence source, can be {"table", "of", "strings"} or "string"
         --Time = 0.5, -- overrides the duration of the sequence
         Mult = 1, -- multiplies time
         EventTable = {
-            {s =  "myt_ins1/makarov-slideback.wav" ,    t = 18 / 40},
-            {s =  "myt_ins1/makarov-slideforward.wav" ,    t = 31 / 40},
+            {s =  "myt_ins1/ak47-boltback.wav" ,    t = 6 / 30},  
+			{s =  "myt_ins1/ak47-boltrelease.wav" ,    t = 14 / 30}, 
         },
     },
     ["holster"] = {
-        Source = "makarov_down",
-        --Time = 0
-    },
-    ["holster_empty"] = {
-        Source = "makarov_down_empty",
+        Source = "m249_down",
         --Time = 0
     },
     ["fire"] = {
-        Source = {"makarov_shoot1", "makarov_shoot2", "makarov_shoot3"},
-    },
-    ["fire_empty"] = {
-        Source = "makarov_shoot_last",
+        Source = {"m249_fire1"},
     },
 
     ["reload"] = {
-        Source = "makarov_reload2",
+        Source = "m249_reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FireASAP = true,
-        MinProgress = 0.775,
+        MinProgress = 0.7,
         EventTable = {
-            {s =  "myt_ins1/de_clipout.wav" ,   t = 7 / 30},
-            {s =  "myt_ins1/de_clipin.wav" ,    t = 45 / 30},
+            {s =  "myt_ins1/ak47-magout.wav" ,   t = 10 / 30},
+            {s =  "myt_ins1/ak47-magin1.ogg" ,    t = 38 / 30},  
+			{s =  "myt_ins1/ak47-magin2.ogg" ,    t = 48 / 30},
         },
+        MagSwapTime = 60 / 30,
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
         { t = 0.1, lhik = 0, rhik = 1, },{ t = 0.8, lhik = 0, rhik = 1, },{ t = 0.95, lhik = 1, rhik = 1, },
         },
     },
     ["reload_empty"] = {
-        Source = "makarov_reload_empty3",
+        Source = "m249_reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FireASAP = true,
-        MinProgress = 0.85,
+        MinProgress = 0.75,
+        MagSwapTime = 40 / 30,
         EventTable = {
-            {s =  "myt_ins1/de_clipout.wav" ,   t = 7 / 30},
-            {s =  "myt_ins1/de_clipin.wav" ,    t = 52 / 30},
-            {s =  "myt_ins1/de_slideback.wav" ,    t = 83 / 30}, 
-			{s =  "myt_ins1/de_slideforward.wav" ,    t = 92 / 30},
+            {s =  "myt_ins1/ak47-magout.wav" ,   t = 10 / 30},
+            {s =  "myt_ins1/ak47-magin1.ogg" ,    t = 38 / 30},  
+			{s =  "myt_ins1/ak47-magin2.ogg" ,    t = 48 / 30},
+            {s =  "myt_ins1/ak47-boltback.wav" ,    t = 62 / 30},  
+			{s =  "myt_ins1/ak47-boltrelease.wav" ,    t = 69 / 30}, 
             },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
