@@ -328,6 +328,7 @@ SWEP.Animations = {
         Source = "l42_reload_start2",
         RestoreAmmo = 0,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        EjectAt = 15 / 40,
         EventTable = {
             {s =  "myt_ins1/enfield-boltback.wav" ,   t = 5 / 30},
             {s =  "myt_ins1/enfield-roundin.wav" ,   t = 30 / 30},
@@ -340,7 +341,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         EventTable = {
             {s =  "myt_ins1/enfield-boltback.wav" ,   t = 5 / 30},
-            {s =  "myt_ins1/enfield-roundin.wav" ,   t = 30 / 30},
+            {s =  "myt_ins1/enfield-roundin.wav" ,   t = 22 / 30},
         },
         IKTimeLine = {	{ t = 0, lhik = 1, rhik = 1, }, { t = 0.5, lhik = 0, rhik = 1, }, { t = 1, lhik = 0, rhik = 1, }	},
     },
