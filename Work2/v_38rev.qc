@@ -1,30 +1,12 @@
 // Created by Crowbar 0.74
 
-$modelname "weapons\v_38rev.mdl"
-
+$modelname "weapons/myt_ins1/c_pist_revovler.mdl"
+$include c_ins2_to_gmod_hands.qci
+$scale 1.3
 $bodygroup "Weapon"
 {
-	studio "38rev_reference.smd"
-}
-$bodygroup "Belt"
-{
+	studio "revolver.smd"
 	blank
-	studio "38rev_bullets_1.smd"
-	studio "38rev_bullets_2.smd"
-	studio "38rev_bullets_3.smd"
-	studio "38rev_bullets_4.smd"
-	studio "38rev_bullets_5.smd"
-	studio "38rev_bullets_6.smd"
-}
-$bodygroup "shells"
-{
-	blank
-	studio "38rev_casings_1.smd"
-	studio "38rev_casings_2.smd"
-	studio "38rev_casings_3.smd"
-	studio "38rev_casings_4.smd"
-	studio "38rev_casings_5.smd"
-	studio "38rev_casings_6.smd"
 }
 
 
@@ -34,7 +16,10 @@ $contents "solid"
 
 $illumposition 14.626 14.956 -11.648
 
-$cdmaterials "models\weapons\revolver\"
+$cdmaterials "models\myt_ins1_vmt\"
+$cdmaterials "models\myt_ins1_vmt\revolver\"
+$cdmaterials "models\myt_ins1_vmt\att"
+$cdmaterials "ins\models\hands\"
 
 $attachment "muzzle" "A_Muzzle" 0 0 0 rotate 0 0 0
 $attachment "shell" "A_Eject" 0 0 0 rotate 0 0 0
@@ -192,17 +177,6 @@ $ikchain "lhand" "L Hand" knee 0.707 0.707 0
 $animation "@delta_iron_corrective_animation" "v_38rev_anims\@delta_iron_corrective_animation.smd" {
 }
 
-$sequence "menu" {
-	"v_38rev_anims\menu.smd"
-	activity "ACT_VM_MENU" 1
-	fadein 0.2
-	fadeout 0.2
-	snap
-	fps 30
-	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 0
-	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 1
-}
-
 $sequence "idle" {
 	"v_38rev_anims\idle.smd"
 	fadein 0.2
@@ -212,16 +186,6 @@ $sequence "idle" {
 	loop
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 0
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 1
-}
-
-$sequence "delta_iron" {
-	"v_38rev_anims\delta_iron.smd"
-	delta
-	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
-	subtract "@delta_iron_corrective_animation" 0
-	fadein 0.2
-	fadeout 0.2
-	fps 30
 }
 
 $sequence "base_idle" {
@@ -235,18 +199,36 @@ $sequence "base_idle" {
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 0
 }
 
+
+$sequence "menu" {
+	"v_38rev_anims\menu.smd"
+	activity "ACT_VM_MENU" 1
+	fadein 0.2
+	fadeout 0.2
+	snap
+	fps 30
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 1
+}
+
+
+$sequence "delta_iron" {
+	"v_38rev_anims\delta_iron.smd"
+	delta
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "@delta_iron_corrective_animation" 0
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
 $sequence "base_ready" {
-	"v_38rev_anims\base_ready.smd"
+	"anims\ready.smd"
 	activity "ACT_VM_READY" 1
-	{ event 5004 0 "Universal.PistolDraw" }
-	{ event 5004 27 "Weapon_revolver.OpenChamber" }
-	{ event 5004 46 "Weapon_revolver.CloseChamber" }
 	fadein 0.2
 	fadeout 0.2
 	snap
 	fps 28
-	ikrule "lhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 71 71 target 1
-	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 71 71 target 0
 }
 
 $sequence "base_draw" {
@@ -382,26 +364,12 @@ $sequence "base_reload_end" {
 }
 
 $sequence "base_reload_speed" {
-	"v_38rev_anims\base_reload_speed.smd"
+	"anims\base_reload_speed.smd"
 	activity "ACT_VM_RELOAD_SPEED" 1
-	{ event 5004 1 "Universal.LeanIn" }
-	{ event 5004 24 "Weapon_revolver.OpenChamber" }
-	{ event 5004 51 "Weapon_revolver.DumpRounds" }
-	{ event AE_CL_CREATE_PARTICLE_BRASS 58 "" }
-	{ event AE_CL_CREATE_PARTICLE_BRASS 58 "" }
-	{ event AE_CL_CREATE_PARTICLE_BRASS 58 "" }
-	{ event AE_CL_CREATE_PARTICLE_BRASS 58 "" }
-	{ event AE_CL_CREATE_PARTICLE_BRASS 58 "" }
-	{ event AE_CL_CREATE_PARTICLE_BRASS 58 "" }
-	{ event 5004 81 "Weapon_revolver.RoundInsertSpeedLoader" }
-	{ event 46 65 "" }
-	{ event 5004 113 "Weapon_revolver.CloseChamber" }
 	fadein 0.2
 	fadeout 0.2
 	snap
 	fps 33.5
-	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 142 142 target 0
-	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 142 142 target 1
 }
 
 $sequence "base_sprint" {
@@ -450,4 +418,15 @@ $sequence "iron_dryfire" {
 	fps 30
 	ikrule "lhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 20 20 target 1
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 20 20 target 0
+}
+
+
+$collisionmodel "revolver.smd"
+{
+	$mass 30
+	$inertia 10
+	$damping 0.01
+	$rotdamping 1.5
+	$rootbone " "
+
 }
