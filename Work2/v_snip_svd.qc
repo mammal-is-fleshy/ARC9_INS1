@@ -24,6 +24,11 @@ $bodygroup "3"
 	blank
 	studio "svd_rail_bot.smd"
 }
+$bodygroup "4"
+{
+	studio "svd_muz.smd"
+	blank
+}
 
 $surfaceprop "default"
 

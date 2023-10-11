@@ -190,7 +190,7 @@ SWEP.CrouchPos = Vector(-0.5, 2, -1)
 SWEP.CrouchAng = Angle(0, 0, -10)
 
 SWEP.CustomizeAng = Angle(90, -5, 0)
-SWEP.CustomizePos = Vector(13, 32, 2)
+SWEP.CustomizePos = Vector(20, 32, 6)
 
 SWEP.CustomizeSnapshotFOV = 110
 SWEP.CustomizeNoRotate = false
@@ -238,51 +238,11 @@ SWEP.FiremodeSound = "arc9/firemode.wav"
 SWEP.DefaultBodygroups = "00000000"
 
 SWEP.AttachmentElements = {
-    ["f_auto"] = {
-        Bodygroups = {{3, 1},{2, 3}},
-        AttPosMods = { [3] = { Pos = Vector(0, 0, 7.65), } }
-    },
-    ["f_burst"] = {
-        Bodygroups = {{3, 2},{1, 1},{2, 3},{0, 3}},
-        AttPosMods = { [3] = { Pos = Vector(0, 0, 10.25), } }
-    },
-    ["f_carbine"] = {
-        Bodygroups = {{3, 5},{1, 2},{2, 1},{4, 2}},
-        AttPosMods = { [2] = { Pos = Vector(0, -1.3, -4.75), },  [3] = { Pos = Vector(0, 0, 9.25), } }
-    },
-    ["f_artillery"] = {
-        Bodygroups = {{3, 6},{1, 2},{2, 1},{5, 2}},
-        AttPosMods = { [3] = { Pos = Vector(0, 0, 15.75), } }
-    },
-    ["f_sd"] = {
-        Bodygroups = {{3, 4},{1, 2}},
-    },
-    ["f_p38"] = {
-        Bodygroups = {{3, 3},{1, 2}},
-    },
-    ["f_welrod"] = {
-        Bodygroups = {{3, 4},{1, 3},{2, 2},{0, 1}},
-    },
-
-    ["g_1"] = { Bodygroups = {{6, 1}}, },
-    ["s_1"] = { Bodygroups = {{5, 1}}, },
-
-    ["akimbose"] = {
-        SprintPosOverride = Vector(0, 2, -3),
-        SprintAngOverride = Angle(0, 18, 0),
-    },
+    ["has_optic"] = { Bodygroups = {{2, 1}}, },
+    ["has_tac"] = { Bodygroups = {{3, 1}}, },
 }
-SWEP.InstantSightIdle = true
-SWEP.Attachments = {
-    {
-        PrintName = "Frame",
-        DefaultName = "Standard Frame",
 
-        Category = "css_m9_frame",
-        Bone = "W_Main",
-        Pos = Vector(0, 3, -0.5),
-        Ang = Angle(0, 0, 0),
-    },
+SWEP.Attachments = {
     {
         PrintName = "Optic",
         DefaultName = "None",
@@ -290,9 +250,9 @@ SWEP.Attachments = {
 
         ExcludeElements = {"pre_optic"},
         Category = {"optic_css_s"},
-        Bone = "W_Main",
-        Pos = Vector(0, -1.1, 2),
-        Ang = Angle(90, 0, -90),
+        Bone = "Weapon_Controller",
+        Pos = Vector(2.5, -3, 0),
+        Ang = Angle(0, 0, -90),
     },
     {
         PrintName = "Muzzle",
@@ -300,22 +260,20 @@ SWEP.Attachments = {
 
         ExcludeElements = {"pre_muzzed"},
         Category = {"muzzle_css"},
-        Bone = "W_Main",
-        Pos = Vector(0, 0, 6),
-        Ang = Angle(90, 0, -90),
+        Bone = "Weapon_Controller",
+        Pos = Vector(7.5, -2.1, 0),
+        Ang = Angle(0, 0, -90),
     },
 
     {
-        PrintName = "Off-Hand",
+        PrintName = "Tac Mount",
         DefaultName = "None",
-        InstalledElements = {"akimbo"},
-        Hidden = true,
+        InstalledElements = {"has_tac"},
 
-        ExcludeElements = {"akantbo"},
-        Category = {"css_akimbo"},
-        Bone = "Akimbo_Base",
-        Pos = Vector(0, 0, 0),
-        Ang = Angle(90, 0, -90),
+        Category = {"tac_css"},
+        Bone = "Weapon_Controller",
+        Pos = Vector(5, -0.1, 0),
+        Ang = Angle(0, 0, 90),
     },
 }
 

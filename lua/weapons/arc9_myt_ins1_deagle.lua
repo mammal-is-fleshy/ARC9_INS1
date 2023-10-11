@@ -268,7 +268,7 @@ SWEP.Attachments = {
         DefaultName = "None",
         InstalledElements = {"has_tac"},
 
-        Category = {"mount_css"},
+        Category = {"tac_css"},
         Bone = "Weapon_Controller",
         Pos = Vector(5.8, -0.6, 0),
         Ang = Angle(0, 0, 90),

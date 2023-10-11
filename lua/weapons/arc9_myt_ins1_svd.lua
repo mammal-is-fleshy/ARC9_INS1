@@ -110,7 +110,7 @@ SWEP.RecoilMultRecoil = 1.2 -- Looks stupid but it means expoential recoil growt
 
 -------------------------- SPREAD
 
-SWEP.Spread = 0.0175
+SWEP.Spread = 0.0025
 
 SWEP.SpreadAddRecoil = 0
 SWEP.SpreadMultRecoil = 1.2
@@ -246,40 +246,62 @@ SWEP.FiremodeSound = "arc9/firemode.wav"
 SWEP.DefaultBodygroups = "00000000"
 
 SWEP.AttachmentElements = {
-    ["has_tac"] = { Bodygroups = {{2, 1}}, },
+    ["scope"] = {Bodygroups = {{2, 1}},},
+    ["rail_top"] = {Bodygroups = {{2, 2}},}, 
+	["rail_bot"] = {Bodygroups = {{3, 1}},},
+	["has_muz"] = {Bodygroups = {{4, 1}},},
 }
+
+SWEP.Hook_ModifyBodygroups = function(wep, data)
+    local model = data.model  -- most insufficient method ever
+    if wep:HasElement("scope") 	then model:SetBodygroup(2,1) end
+end
+
 
 SWEP.Attachments = {
     {
         PrintName = "Optic",
         DefaultName = "None",
-        InstalledElements = {"has_optic"},
 
-        ExcludeElements = {"pre_optic"},
-        Category = {"optic_css"},
+        Category = { "ins1_optic_svd"},
         Bone = "Weapon_Controller",
-        Pos = Vector(6, -3.15, 0),
+        Pos = Vector(-1, -1.7, 0),
         Ang = Angle(0, 0, -90),
+		MergeSlots = {4},
     },
     {
         PrintName = "Muzzle",
         DefaultName = "None",
-
+        InstalledElements = {"has_muz"},
+		
         ExcludeElements = {"pre_muzzed"},
         Category = {"muzzle_css"},
         Bone = "Weapon_Controller",
-        Pos = Vector(8.65, -2.4, 0),
+        Pos = Vector(34.5, -0.6, 0),
         Ang = Angle(0, 0, -90),
     },
     {
-        PrintName = "Tac Mount",
+        PrintName = "Foregrip",
         DefaultName = "None",
-        InstalledElements = {"has_tac"},
+        InstalledElements = {"rail_bot", "optic_css_free", "has_grip"},
 
-        Category = {"mountl_css"},
+        ExcludeElements = {"nogrip", "awp_f_obrez"},
+        Category = {"grip_css"},
         Bone = "Weapon_Controller",
-        Pos = Vector(5.8, -0.6, 0),
-        Ang = Angle(0, 0, 90),
+        Pos = Vector(11, 1.25, 0),
+        Ang = Angle(0, 0, -90),
+    },
+
+    {
+        PrintName = "Optic",
+        DefaultName = "None",
+        InstalledElements = {"rail_top"},
+        Hidden = true,
+		
+        Category = {"optic_css"},
+        Bone = "Weapon_Controller",
+        Pos = Vector(4, -2.5, 0),
+        Ang = Angle(0, 0, -90),
     },
 }
 
@@ -332,7 +354,7 @@ SWEP.Animations = {
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
-        { t = 0.1, lhik = 0, rhik = 1, },{ t = 0.8, lhik = 0, rhik = 1, },{ t = 0.95, lhik = 1, rhik = 1, },
+        { t = 0.15, lhik = 0, rhik = 1, },{ t = 0.6, lhik = 0, rhik = 1, },{ t = 0.75, lhik = 1, rhik = 1, },
         },
     },
     ["reload_empty"] = {
@@ -349,7 +371,7 @@ SWEP.Animations = {
             },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
-        { t = 0.2, lhik = 0, rhik = 1, },{ t = 0.85, lhik = 0, rhik = 1, },{ t = 0.975, lhik = 1, rhik = 1, },
+        { t = 0.1, lhik = 0, rhik = 1, },{ t = 0.4, lhik = 0, rhik = 1, },{ t = 0.55, lhik = 1, rhik = 1, },
         },
     },
 }

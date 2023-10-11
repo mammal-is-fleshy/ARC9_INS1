@@ -13,6 +13,16 @@ $bodygroup "arms"
 	blank
 	studio "v_pist_m9_body1_model0.smd"
 }
+$bodygroup "2"
+{
+	blank
+	studio "m9_rail_top.smd"
+}
+$bodygroup "2"
+{
+	blank
+	studio "m9_rail_bot.smd"
+}
 
 
 $surfaceprop "default"
@@ -22,6 +32,7 @@ $contents "solid"
 $illumposition 0.106 -12.487 -13.084
 
 $cdmaterials "models\myt_ins1_vmt\"
+$cdmaterials "models\myt_ins1_vmt\att\"
 $cdmaterials "ins\models\hands\"
 
 $attachment "muzzle" "muzzle_flash" 0 0 0 rotate 0 0 90
