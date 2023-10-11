@@ -241,6 +241,7 @@ SWEP.DefaultBodygroups = "00000000"
 
 SWEP.AttachmentElements = {
     ["has_tac"] = { Bodygroups = {{2, 1}}, },
+    ["has_optic"] = { Bodygroups = {{1, 1}}, },
 }
 
 SWEP.TriggerDelay = true -- Add a delay before the weapon fires.
@@ -254,30 +255,20 @@ SWEP.Attachments = {
         InstalledElements = {"has_optic"},
 
         ExcludeElements = {"pre_optic"},
-        Category = {"optic_css"},
-        Bone = "Weapon_Controller",
-        Pos = Vector(6, -3.15, 0),
-        Ang = Angle(0, 0, -90),
-    },
-    {
-        PrintName = "Muzzle",
-        DefaultName = "None",
-
-        ExcludeElements = {"pre_muzzed"},
-        Category = {"muzzle_css"},
-        Bone = "Weapon_Controller",
-        Pos = Vector(8.65, -2.4, 0),
-        Ang = Angle(0, 0, -90),
+        Category = {"optic_css_s"},
+        Bone = "weapon",
+        Pos = Vector(0, 1.5, 3.25),
+        Ang = Angle(0, -90, 0),
     },
     {
         PrintName = "Tac Mount",
         DefaultName = "None",
         InstalledElements = {"has_tac"},
 
-        Category = {"mount_css"},
-        Bone = "Weapon_Controller",
-        Pos = Vector(5.8, -0.6, 0),
-        Ang = Angle(0, 0, 90),
+        Category = {"tac_css"},
+        Bone = "weapon",
+        Pos = Vector(0, 2, 0.8),
+        Ang = Angle(0, -90, 180),
     },
 }
 

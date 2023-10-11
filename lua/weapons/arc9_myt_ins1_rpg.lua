@@ -130,7 +130,7 @@ SWEP.SpreadAddRecoil = 0.0002 -- Applied per unit of recoil.
 -------------------------- HANDLING
 
 SWEP.FreeAimRadius = 10 -- In degrees, how much this gun can free aim in hip fire.
-SWEP.Sway = 1 -- How much the gun sways.
+SWEP.Sway = 0 -- How much the gun sways.
 
 SWEP.SwayMultMidAir = 2.5
 SWEP.SwayMultMove = 1.2
@@ -190,8 +190,8 @@ SWEP.TracerColor = Color(255, 225, 200) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-4.89, -2, -0.8),
-    Ang = Angle(0,1.5,0),
+    Pos = Vector(-3.725, -4, -2.25),
+    Ang = Angle(0,0.5,0),
     Midpoint = { -- Where the gun should be at the middle of it's irons
         Pos = Vector(0, 15, -4),
         Ang = Angle(0, 0, -45),
@@ -253,9 +253,9 @@ SWEP.MuzzleEffectQCAUBGL = 1
 
 -------------------------- SOUNDS
 
-SWEP.ShootSound = "gekolt_pr2/m72_fire_1p.wav"
+SWEP.ShootSound = "myt_ins1/rpg7-fire.wav"
 SWEP.ShootSoundSilenced = "gekolt_css/m4a1-1.wav"
-SWEP.DryFireSound = "weapons/clipempty_rifle.wav"
+SWEP.DryFireSound = "myt_ins1/rpg7-fire_echo.wav"
 
 SWEP.FiremodeSound = "arc9/firemode.wav"
 
@@ -267,6 +267,7 @@ SWEP.BulletBones = {
 
 SWEP.DefaultBodygroups = "00000000000000000000"
 
+SWEP.InstantSightIdle = true
 SWEP.Animations = {
     ["fire"] = {
         Source = {"rpg7_fire1"},
@@ -276,7 +277,8 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.83,
         EventTable = {
-            {s =  "gekolt_pr2/reload.ogg" ,   t = 0 / 40},
+            {s =  "myt_ins1/rpg7-reload.wav" ,    t = 40 / 30},  
+            {s =  "myt_ins1/rpg7-load.wav" ,    t = 55 / 30},  
         },
     },
     ["ready"] = {
@@ -284,8 +286,7 @@ SWEP.Animations = {
         --Time = 0.5, -- overrides the duration of the sequence
         Mult = 1, -- multiplies time
         EventTable = {
-            {s =  "myt_ins1/ak47-boltback.wav" ,    t = 6 / 30},  
-			{s =  "myt_ins1/ak47-boltrelease.wav" ,    t = 14 / 30}, 
+            {s =  "myt_ins1/rpg7-load.wav" ,    t = 6 / 30},  
         },
     },
 --------------------------------------------------------
@@ -314,6 +315,14 @@ SWEP.Animations = {
     },
     ["idle_empty"] = {
         Source = "rpg7_idle_empty",
+    }, 
+	["idle_sights"] = {
+        Source = "rpg7_idle",
+		Time = 0
+    },
+    ["idle_sights_empty"] = {
+        Source = "rpg7_idle_empty",
+		Time = 0
     },
 }
 

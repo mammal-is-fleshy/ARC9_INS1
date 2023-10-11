@@ -243,35 +243,34 @@ SWEP.ShootSoundSilenced = "magmacow_smor/AWM-SIL.wav"
 
 SWEP.FiremodeSound = "arc9/firemode.wav"
 
-SWEP.DefaultBodygroups = "0001"
+SWEP.DefaultBodygroups = "0000000"
 
-SWEP.AttachmentElements = {
-    ["awp_s_smg"] = {Bodygroups = {{2, 1}},},
+SWEP.AttachmentElements = { 
+	["rail_bot"] = {Bodygroups = {{2, 1}},},
 }
 
 SWEP.Attachments = {
     {
-        PrintName = "Optic",
-        DefaultName = "None",
-		
-        Category = {"optic_css"},
-        Bone = "W_Main",
-        Pos = Vector(0, -1, 4),
-        Ang = Angle(90, 0, -90),
-    },
-    {
         PrintName = "Foregrip",
         DefaultName = "None",
-        InstalledElements = {"rail_bot", "optic_css_free", "has_grip"},
+        InstalledElements = {"rail_bot", "has_grip"},
 
-        ExcludeElements = {"nogrip", "awp_f_obrez"},
-        Category = {"grip_css", "optic_css_free"},
-        Bone = "W_Main",
-        Pos = Vector(0, 3.25, 12),
-        Ang = Angle(90, 0, -90),
-        MergeSlots = {9}
+        Category = {"grip_css"},
+        Bone = "pump",
+        Pos = Vector(1.5,1, 0),
+        Ang = Angle(180, 0, -90),
+    },
+    {
+        PrintName = "Ammo Type",
+        DefaultName = "Default Type",
+		
+        Category = {"css_ammo_sg"},
+        Bone = "Weapon_Controller",
+        Pos = Vector(18, 1, 0),
+        Ang = Angle(0, 0, -90),
     },
 }
+
 SWEP.InstantSightIdle = true
 SWEP.Animations = {
     ["idle"] = {
@@ -325,7 +324,6 @@ SWEP.Animations = {
         EventTable = {
             {s =  "myt_ins1/spas_insert.wav" ,   t = 8 / 30},
         },
-        IKTimeLine = {	{ t = 0, lhik = 1, rhik = 1, }, { t = 0.5, lhik = 0, rhik = 1, }, { t = 1, lhik = 0, rhik = 1, }	},
     }, 
 	["reload_start_empty"] = {
         Source = "spas_reload_start_empty",
@@ -335,15 +333,13 @@ SWEP.Animations = {
             {s =  "myt_ins1/spas_insert.wav" ,   t = 8 / 30},
             {s =  "myt_ins1/spas_pump.wav" ,   t = 31 / 30},
         },
-        IKTimeLine = {	{ t = 0, lhik = 1, rhik = 1, }, { t = 0.5, lhik = 0, rhik = 1, }, { t = 1, lhik = 0, rhik = 1, }	},
-    },
+	},
     ["reload_insert"] = {
         Source = "spas_reload_insert",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         EventTable = {
             {s =  "myt_ins1/spas_insert.wav" ,   t = 3 / 30},
         },
-        IKTimeLine = {	{ t = 0, lhik = 0, rhik = 0, }, { t = 1, lhik = 0, rhik = 0, },	},
     },
     ["reload_finish"] = {
         Source = "m1014_reload_end",
@@ -353,6 +349,5 @@ SWEP.Animations = {
         EventTable = {
 
         },
-        IKTimeLine = {	{ t = 0, lhik = 0, rhik = 1, }, { t = 0.85, lhik = 1, rhik = 1, }, { t = 1, lhik = 1, rhik = 1, }	},
     }, 
 }

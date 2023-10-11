@@ -95,7 +95,7 @@ function ENT:Detonate()
         self:EmitSound("weapons/underwater_explode3.wav", 125, 100, 1, CHAN_AUTO)
     else
         util.Effect( "Explosion", effectdata)
-        self:EmitSound("phx/kaboom.wav", 125, 100, 1, CHAN_AUTO)
+        self:EmitSound("phx/kaboom.wav", 255, 150, 1, CHAN_AUTO)
     end
 
     local attacker = self

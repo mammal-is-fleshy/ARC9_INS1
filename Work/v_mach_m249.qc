@@ -19,6 +19,16 @@ $bodygroup "bullets"
 	studio "v_mach_m249_body2_model0.smd"
 	blank
 }
+$bodygroup "3"
+{
+	studio "m249_muz.smd"
+	blank
+}
+$bodygroup "4"
+{
+	studio "m249_iron.smd"
+	blank
+}
 
 
 $surfaceprop "default"

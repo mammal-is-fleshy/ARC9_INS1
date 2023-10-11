@@ -8,6 +8,16 @@ $bodygroup "Weapon"
 	studio "revolver.smd"
 	blank
 }
+$bodygroup "1"
+{
+	blank
+	studio "rev_rail_top.smd"
+}
+$bodygroup "2"
+{
+	blank
+	studio "rev_rail_bot.smd"
+}
 
 
 $surfaceprop "default"

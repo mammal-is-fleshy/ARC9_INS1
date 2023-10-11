@@ -242,7 +242,7 @@ SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 
 SWEP.ShootSound = {"myt_ins1/ak47-1.wav", "myt_ins1/ak47-2.wav"}
 SWEP.DistantShootSound = {"myt_ins1/ak47-1_echo.wav", "myt_ins1/ak47-2_echo.wav"}
-SWEP.ShootSoundSilenced = "gekolt_css/9mm_sd.wav"
+SWEP.ShootSoundSilenced = "myt_ins1_sd/rifle.wav"
 SWEP.DryFireSound = "myt_ins1/makarov-empty.wav"
 
 SWEP.EjectDelay = 0

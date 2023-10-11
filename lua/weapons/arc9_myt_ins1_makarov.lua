@@ -228,14 +228,14 @@ SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 
 SWEP.ShootSound = "myt_ins1/makarov-01.wav"
 SWEP.DistantShootSound = "myt_ins1/makarov-01_echo.wav"
-SWEP.ShootSoundSilenced = "gekolt_css/9mm_sd.wav"
+SWEP.ShootSoundSilenced = "myt_ins1_sd/pistol.wav"
 SWEP.DryFireSound = "myt_ins1/makarov-empty.wav"
 
 SWEP.EjectDelay = 0
 
 SWEP.FiremodeSound = "arc9/firemode.wav"
 
-SWEP.DefaultBodygroups = "00000000"
+SWEP.DefaultBodygroups = "00000000000"
 
 SWEP.AttachmentElements = {
     ["has_optic"] = { Bodygroups = {{2, 1}}, },

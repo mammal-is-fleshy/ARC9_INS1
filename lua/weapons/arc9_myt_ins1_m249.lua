@@ -61,7 +61,7 @@ SWEP.PhysBulletMuzzleVelocity = 1280 * 12
 
 SWEP.Ammo = "ar2" -- What ammo type this gun uses.
 
-SWEP.ChamberSize = 1 -- The amount of rounds this gun can chamber.
+SWEP.ChamberSize = 0 -- The amount of rounds this gun can chamber.
 SWEP.ClipSize = 120 -- Self-explanatory.
 SWEP.SupplyLimit = 2 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
 SWEP.SecondarySupplyLimit = 2 -- Amount of reserve UBGL magazines you can take.
@@ -228,7 +228,7 @@ SWEP.AnimDraw = false
 
 -------------------------- EFFECTS
 
-SWEP.MuzzleParticle = "muzzleflash_pistol"
+SWEP.MuzzleParticle = "muzzleflash_4"
 SWEP.MuzzleEffectQCA = 1
 
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
@@ -238,9 +238,9 @@ SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 
 -------------------------- SOUNDS
 
-SWEP.ShootSound = {"myt_ins1/ak47-1.wav", "myt_ins1/ak47-2.wav"}
-SWEP.DistantShootSound = {"myt_ins1/ak47-1_echo.wav", "myt_ins1/ak47-2_echo.wav"}
-SWEP.ShootSoundSilenced = "gekolt_css/9mm_sd.wav"
+SWEP.ShootSound = {"myt_ins1/m249-1.wav"}
+SWEP.DistantShootSound = {"myt_ins1/m249-1_echo.wav"}
+SWEP.ShootSoundSilenced = "myt_ins1_sd/rifle2.wav"
 SWEP.DryFireSound = "myt_ins1/makarov-empty.wav"
 
 SWEP.EjectDelay = 0
@@ -250,7 +250,8 @@ SWEP.FiremodeSound = "arc9/firemode.wav"
 SWEP.DefaultBodygroups = "00000000"
 
 SWEP.AttachmentElements = {
-    ["has_tac"] = { Bodygroups = {{2, 1}}, },
+    ["has_muz"] = { Bodygroups = {{3, 1}}, }, 
+	["has_optic"] = { Bodygroups = {{4, 1}}, },
 }
 
 SWEP.Attachments = {
@@ -261,29 +262,30 @@ SWEP.Attachments = {
 
         ExcludeElements = {"pre_optic"},
         Category = {"optic_css"},
-        Bone = "Weapon_Controller",
-        Pos = Vector(6, -3.15, 0),
+        Bone = "cover",
+        Pos = Vector(-5, -0.75, 0),
         Ang = Angle(0, 0, -90),
     },
     {
         PrintName = "Muzzle",
         DefaultName = "None",
-
+        InstalledElements = {"has_muz"},
+		
         ExcludeElements = {"pre_muzzed"},
         Category = {"muzzle_css"},
         Bone = "Weapon_Controller",
-        Pos = Vector(8.65, -2.4, 0),
+        Pos = Vector(26, -0.95, 0),
         Ang = Angle(0, 0, -90),
     },
     {
-        PrintName = "Tac Mount",
+        PrintName = "Foregrip",
         DefaultName = "None",
-        InstalledElements = {"has_tac"},
+        InstalledElements = {"rail_bot", "has_grip"},
 
-        Category = {"mountl_css"},
+        Category = {"grip_css"},
         Bone = "Weapon_Controller",
-        Pos = Vector(5.8, -0.6, 0),
-        Ang = Angle(0, 0, 90),
+        Pos = Vector(14, 3.2, 0),
+        Ang = Angle(0, 0, -90),
     },
 }
 
@@ -320,8 +322,7 @@ SWEP.Animations = {
         --Time = 0.5, -- overrides the duration of the sequence
         Mult = 1, -- multiplies time
         EventTable = {
-            {s =  "myt_ins1/ak47-boltback.wav" ,    t = 6 / 30},  
-			{s =  "myt_ins1/ak47-boltrelease.wav" ,    t = 14 / 30}, 
+            {s =  "myt_ins1/m249-boltback.wav" ,    t = 6 / 30},  
         },
     },
     ["holster"] = {
@@ -338,14 +339,17 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.7,
         EventTable = {
-            {s =  "myt_ins1/ak47-magout.wav" ,   t = 10 / 30},
-            {s =  "myt_ins1/ak47-magin1.ogg" ,    t = 38 / 30},  
-			{s =  "myt_ins1/ak47-magin2.ogg" ,    t = 48 / 30},
+            {s =  "myt_ins1/m249-open.wav" ,   t = 5 / 30}, 
+			{s =  "myt_ins1/m249-beltout.wav" ,    t = 30 / 30},
+			{s =  "myt_ins1/m249-boxout.wav" ,    t = 45 / 30},	
+			{s =  "myt_ins1/m249-boxin.wav" ,    t = 65 / 30},
+			{s =  "myt_ins1/m249-beltin.wav" ,    t = 72 / 30},	
+			{s =  "myt_ins1/m249-close.wav" ,    t = 110 / 30},
         },
         MagSwapTime = 60 / 30,
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
-        { t = 0.1, lhik = 0, rhik = 1, },{ t = 0.8, lhik = 0, rhik = 1, },{ t = 0.95, lhik = 1, rhik = 1, },
+        { t = 0.1, lhik = 0, rhik = 1, },{ t = 0.75, lhik = 0, rhik = 1, },{ t = 0.9, lhik = 1, rhik = 1, },
         },
     },
     ["reload_empty"] = {
@@ -355,15 +359,16 @@ SWEP.Animations = {
         MinProgress = 0.75,
         MagSwapTime = 40 / 30,
         EventTable = {
-            {s =  "myt_ins1/ak47-magout.wav" ,   t = 10 / 30},
-            {s =  "myt_ins1/ak47-magin1.ogg" ,    t = 38 / 30},  
-			{s =  "myt_ins1/ak47-magin2.ogg" ,    t = 48 / 30},
-            {s =  "myt_ins1/ak47-boltback.wav" ,    t = 62 / 30},  
-			{s =  "myt_ins1/ak47-boltrelease.wav" ,    t = 69 / 30}, 
+            {s =  "myt_ins1/m249-open.wav" ,   t = 5 / 30}, 
+			{s =  "myt_ins1/m249-boxout.wav" ,    t = 37 / 30},	
+			{s =  "myt_ins1/m249-boxin.wav" ,    t = 57 / 30},
+			{s =  "myt_ins1/m249-beltin.wav" ,    t = 74 / 30},	
+			{s =  "myt_ins1/m249-close.wav" ,    t = 95 / 30},
+            {s =  "myt_ins1/m249-boltback.wav" ,    t = 120 / 30},  
             },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
-        { t = 0.2, lhik = 0, rhik = 1, },{ t = 0.85, lhik = 0, rhik = 1, },{ t = 0.975, lhik = 1, rhik = 1, },
+        { t = 0.05, lhik = 0, rhik = 1, },{ t = 0.65, lhik = 0, rhik = 1, },{ t = 0.8, lhik = 1, rhik = 1, },
         },
     },
 }

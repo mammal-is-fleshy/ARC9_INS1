@@ -237,7 +237,7 @@ SWEP.NoShellEject = true
 SWEP.ShootSound = {"myt_ins1/enfield-01.wav", "myt_ins1/enfield-02.wav"}
 SWEP.DistantShootSound = {"myt_ins1/enfield-01_echo.wav", "myt_ins1/enfield-02_echo.wav"}
 SWEP.DryFireSound = "myt_ins1/enfield-empty.wav"
-SWEP.ShootSoundSilenced = "magmacow_smor/AWM-SIL.wav"
+SWEP.ShootSoundSilenced = "myt_ins1_sd/sniper.wav"
 
 SWEP.FiremodeSound = "arc9/firemode.wav"
 
@@ -278,9 +278,8 @@ SWEP.Attachments = {
     {
         PrintName = "Foregrip",
         DefaultName = "None",
-        InstalledElements = {"rail_bot", "optic_css_free", "has_grip"},
+        InstalledElements = {"rail_bot", "has_grip"},
 
-        ExcludeElements = {"nogrip", "awp_f_obrez"},
         Category = {"grip_css"},
         Bone = "Weapon_Controller",
         Pos = Vector(7, 1.85, 0),
