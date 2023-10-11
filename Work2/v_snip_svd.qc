@@ -17,6 +17,12 @@ $bodygroup "2"
 {
 	blank
 	studio "v_snip_svd_scope.smd"
+	studio "svd_rail_top.smd"
+}
+$bodygroup "3"
+{
+	blank
+	studio "svd_rail_bot.smd"
 }
 
 $surfaceprop "default"
@@ -26,6 +32,7 @@ $contents "solid"
 $illumposition -3.641 -19.34 -12.357
 
 $cdmaterials "models\myt_ins1_vmt\"
+$cdmaterials "models\myt_ins1_vmt\m249\"
 $cdmaterials "models\myt_ins1_vmt\att"
 $cdmaterials "ins\models\hands\"
 

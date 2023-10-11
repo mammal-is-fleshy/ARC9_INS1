@@ -13,7 +13,16 @@ $bodygroup "arms"
 	blank
 	studio "v_shot_toz_body1_model0.smd"
 }
-
+$bodygroup "2"
+{
+	blank
+	studio "toz_rail_bot.smd"
+}
+$bodygroup "3"
+{
+	blank
+	studio "toz_rail_top.smd"
+}
 
 $surfaceprop "default"
 

@@ -13,6 +13,26 @@ $bodygroup "arms"
 	blank
 	studio "v_rif_fnfal_body1_model0.smd"
 }
+$bodygroup "2"
+{
+	studio "fal_iron.smd"
+	blank
+}
+$bodygroup "3"
+{
+	blank
+	studio "fal_rail_top.smd"
+}
+$bodygroup "4"
+{
+	blank
+	studio "fal_rail_bot.smd"
+}
+$bodygroup "5"
+{
+	blank
+	studio "fal_muzzle.smd"
+}
 
 
 $surfaceprop "default"

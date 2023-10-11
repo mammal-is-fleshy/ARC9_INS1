@@ -176,6 +176,9 @@ SWEP.IronSights = {
     CrosshairInSights = false,
 }
 
+SWEP.BipodPos = Vector(-1.95, 2, -0.5)
+SWEP.BipodAng = Angle(0, 0, 0)
+
 SWEP.Crosshair = false
 
 SWEP.SprintAng = Angle(45, -15, -5)
@@ -197,7 +200,7 @@ SWEP.CrouchPos = Vector(-0.5, 1, -1)
 SWEP.CrouchAng = Angle(0, 0, -10)
 
 SWEP.CustomizeAng = Angle(90, -5, 0)
-SWEP.CustomizePos = Vector(13, 32, 2)
+SWEP.CustomizePos = Vector(20, 32, 7)
 
 SWEP.CustomizeSnapshotFOV = 110
 SWEP.CustomizeNoRotate = false
@@ -246,10 +249,12 @@ SWEP.EjectDelay = 0
 
 SWEP.FiremodeSound = "arc9/firemode.wav"
 
-SWEP.DefaultBodygroups = "00000000"
+SWEP.DefaultBodygroups = "00000100"
 
 SWEP.AttachmentElements = {
-    ["has_tac"] = { Bodygroups = {{2, 1}}, },
+    ["rail_bot"] = { Bodygroups = {{4, 1}}, }, 
+	["has_muzzle"] = { Bodygroups = {{5, 0}}, },
+    ["has_optic"] = { Bodygroups = {{2, 1}, {3, 1}}, },
 }
 
 SWEP.Attachments = {
@@ -261,17 +266,18 @@ SWEP.Attachments = {
         ExcludeElements = {"pre_optic"},
         Category = {"optic_css"},
         Bone = "Weapon_Controller",
-        Pos = Vector(-5, -2.5, 0),
+        Pos = Vector(-6, -2.5, 0),
         Ang = Angle(0, 0, -90),
     },
     {
         PrintName = "Muzzle",
         DefaultName = "None",
-
+        InstalledElements = {"has_muzzle"},
+		
         ExcludeElements = {"pre_muzzed"},
         Category = {"muzzle_css"},
         Bone = "Weapon_Controller",
-        Pos = Vector(8.65, -2.4, 0),
+        Pos = Vector(25, -0.75, 0),
         Ang = Angle(0, 0, -90),
     },
     {
@@ -282,6 +288,17 @@ SWEP.Attachments = {
         Category = {"grip_css"},
         Bone = "Weapon_Controller",
         Pos = Vector(8, 0.7, 0),
+        Ang = Angle(0, 0, -90),
+        MergeSlots = {4},
+    },
+
+    {   --4 permanent ubgl, affected separately from the changes of the above attachment
+        PrintName = "",
+        DefaultName = "",
+        Hidden = true,
+        Category = {"css_ubgl"},
+        Bone = "Weapon_Controller",
+        Pos = Vector(4, 0 , 0),
         Ang = Angle(0, 0, -90),
     },
 }
@@ -306,6 +323,10 @@ SWEP.Animations = {
         Mult = 1, -- multiplies time
         EventTable = {
             {s =  "myt_ins1/fal_chamber.wav" ,    t = 7 / 30}, 
+        },
+        IKTimeLine = {
+        { t = 0, lhik = 1, rhik = 1, },
+        { t = 0.2, lhik = 0, rhik = 1, },{ t = 0.5, lhik = 0, rhik = 1, },{ t = 0.65, lhik = 1, rhik = 1, },
         },
     },
     ["holster"] = {

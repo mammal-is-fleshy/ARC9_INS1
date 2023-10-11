@@ -178,6 +178,9 @@ SWEP.IronSights = {
 
 SWEP.Crosshair = false
 
+SWEP.BipodPos = Vector(-2.34, 2, -1)
+SWEP.BipodAng = Angle(0, 0, 0)
+
 SWEP.SprintAng = Angle(45, -15, -5)
 SWEP.SprintPos = Vector(5, 1.25, 0.25)
 
@@ -249,8 +252,11 @@ SWEP.FiremodeSound = "arc9/firemode.wav"
 SWEP.DefaultBodygroups = "00000000"
 
 SWEP.AttachmentElements = {
-    ["has_tac"] = { Bodygroups = {{2, 1}}, },
+	["has_optic"] = { Bodygroups = {{2, 1}}, },
+	["rail_bot"] = { Bodygroups = {{3, 1}}, },	
+	["has_muzzle"] = { Bodygroups = {{4, 1}}, },
 }
+
 
 SWEP.Attachments = {
     {
@@ -261,28 +267,40 @@ SWEP.Attachments = {
         ExcludeElements = {"pre_optic"},
         Category = {"optic_css"},
         Bone = "Weapon_Controller",
-        Pos = Vector(6, -3.15, 0),
+        Pos = Vector(-5.75, -1.75, 0),
         Ang = Angle(0, 0, -90),
     },
     {
         PrintName = "Muzzle",
         DefaultName = "None",
-
+        InstalledElements = {"has_muzzle"},
+		
         ExcludeElements = {"pre_muzzed"},
         Category = {"muzzle_css"},
         Bone = "Weapon_Controller",
-        Pos = Vector(8.65, -2.4, 0),
+        Pos = Vector(17.5, 0.1, 0),
         Ang = Angle(0, 0, -90),
     },
     {
-        PrintName = "Tac Mount",
+        PrintName = "Foregrip",
         DefaultName = "None",
-        InstalledElements = {"has_tac"},
+        InstalledElements = {"rail_bot"},
 
-        Category = {"mountl_css"},
+        Category = {"grip_css"},
         Bone = "Weapon_Controller",
-        Pos = Vector(5.8, -0.6, 0),
-        Ang = Angle(0, 0, 90),
+        Pos = Vector(5, 2.5, 0),
+        Ang = Angle(0, 0, -90),
+        MergeSlots = {4},
+    },
+
+    {   --4 permanent ubgl, affected separately from the changes of the above attachment
+        PrintName = "",
+        DefaultName = "",
+        Hidden = true,
+        Category = {"css_ubgl"},
+        Bone = "Weapon_Controller",
+        Pos = Vector(1, 2 , 0),
+        Ang = Angle(0, 0, -90),
     },
 }
 
@@ -323,10 +341,6 @@ SWEP.Animations = {
             {s =  "myt_ins1/ak47-magin1.ogg" ,    t = 38 / 30},  
 			{s =  "myt_ins1/ak47-magin2.ogg" ,    t = 48 / 30},
         },
-        IKTimeLine = {
-        { t = 0, lhik = 1, rhik = 1, },
-        { t = 0.1, lhik = 0, rhik = 1, },{ t = 0.8, lhik = 0, rhik = 1, },{ t = 0.95, lhik = 1, rhik = 1, },
-        },
     },
     ["reload_empty"] = {
         Source = "galil_reload_empty",
@@ -340,9 +354,5 @@ SWEP.Animations = {
             {s =  "myt_ins1/ak47-boltback.wav" ,    t = 62 / 30},  
 			{s =  "myt_ins1/ak47-boltrelease.wav" ,    t = 69 / 30}, 
             },
-        IKTimeLine = {
-        { t = 0, lhik = 1, rhik = 1, },
-        { t = 0.2, lhik = 0, rhik = 1, },{ t = 0.85, lhik = 0, rhik = 1, },{ t = 0.975, lhik = 1, rhik = 1, },
-        },
     },
 }

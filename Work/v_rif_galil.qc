@@ -14,7 +14,22 @@ $bodygroup "arms"
 	blank
 	studio "v_rif_ak47_body1_model0.smd"
 }
-
+$bodygroup "2"
+{
+	studio "galil_iron.smd"
+	studio "galil_rail_top.smd"
+	blank
+}
+$bodygroup "3"
+{
+	blank
+	studio "galil_rail_bot.smd"
+}
+$bodygroup "4"
+{
+	studio "galil_muz.smd"
+	blank
+}
 
 $surfaceprop "default"
 

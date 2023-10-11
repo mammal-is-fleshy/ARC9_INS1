@@ -13,6 +13,11 @@ $bodygroup "arms"
 	blank
 	studio "v_shot_m1014_body1_model0.smd"
 }
+$bodygroup "2"
+{
+	blank
+	studio "spas_rail_bot.smd"
+}
 
 
 $surfaceprop "default"
