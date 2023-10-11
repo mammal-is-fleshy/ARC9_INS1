@@ -25,6 +25,16 @@ $bodygroup "3"
 	studio "l42_scope.smd"
 	blank
 }
+$bodygroup "4"
+{
+	blank
+	studio "l42_rail_top.smd"
+}
+$bodygroup "5"
+{
+	blank
+	studio "l42_rail_bot.smd"
+}
 
 $surfaceprop "default"
 
@@ -33,7 +43,8 @@ $contents "solid"
 $illumposition 3.136 -16.763 -6.412
 
 $cdmaterials "models\myt_ins1_vmt\"
-$cdmaterials "models\myt_ins1_vmt\att"
+$cdmaterials "models\myt_ins1_vmt\m249\"
+$cdmaterials "models\myt_ins1_vmt\att\"
 $cdmaterials "ins\models\hands\"
 
 $attachment "muzzle" "muzzle_flash" 0 0 0 rotate 0 0 90

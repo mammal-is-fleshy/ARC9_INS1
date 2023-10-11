@@ -173,7 +173,7 @@ SWEP.IronSights = {
 SWEP.SprintAng = Angle(45, -15, -5)
 SWEP.SprintPos = Vector(5, 1.25, 0.25)
 
-SWEP.BipodPos = Vector(-3.935, 0, -1)
+SWEP.BipodPos = Vector(-2.85, -5, -1)
 SWEP.BipodAng = Angle(0, 0, 0)
 
 SWEP.SprintMidPoint = {
@@ -241,24 +241,29 @@ SWEP.ShootSoundSilenced = "magmacow_smor/AWM-SIL.wav"
 
 SWEP.FiremodeSound = "arc9/firemode.wav"
 
-SWEP.DefaultBodygroups = "0001"
+SWEP.DefaultBodygroups = "000100"
 
 SWEP.AttachmentElements = {
-
-    ["rail_top"] = {Bodygroups = {{2, 1}},},
-
+    ["scope"] = {Bodygroups = {{3, 0}, {4, 0}},},
+    ["rail_top"] = {Bodygroups = {{2, 1},{4, 1}},}, 
+	["rail_bot"] = {Bodygroups = {{5, 1}},},
 }
+
+SWEP.Hook_ModifyBodygroups = function(wep, data)
+    local model = data.model  -- most insufficient method ever
+    if wep:HasElement("scope") 	then model:SetBodygroup(4,0) end
+end
 
 SWEP.Attachments = {
     {
         PrintName = "Optic",
         DefaultName = "None",
-        InstalledElements = {"rail_top"},
 
-        Category = {"optic_css", "ins1_optic_l42"},
+        Category = { "ins1_optic_l42"},
         Bone = "Weapon_Controller",
-        Pos = Vector(0, -2, 0),
+        Pos = Vector(-2.5, -0.2, 0),
         Ang = Angle(0, 0, -90),
+		MergeSlots = {4},
     },
     {
         PrintName = "Muzzle",
@@ -278,7 +283,19 @@ SWEP.Attachments = {
         ExcludeElements = {"nogrip", "awp_f_obrez"},
         Category = {"grip_css"},
         Bone = "Weapon_Controller",
-        Pos = Vector(8.65, 2, 0),
+        Pos = Vector(7, 1.85, 0),
+        Ang = Angle(0, 0, -90),
+    },
+
+    {
+        PrintName = "Optic",
+        DefaultName = "None",
+        InstalledElements = {"rail_top"},
+        Hidden = true,
+		
+        Category = {"optic_css"},
+        Bone = "Weapon_Controller",
+        Pos = Vector(0, -2, 0),
         Ang = Angle(0, 0, -90),
     },
 }

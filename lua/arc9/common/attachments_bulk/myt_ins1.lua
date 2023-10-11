@@ -16,11 +16,12 @@ ATT.SortOrder = -1000
 ATT.Model = "models/weapons/myt_ins1/atts/lens.mdl"
 
 ATT.Category = {"ins1_optic_l42"}
+ATT.ActivateElements = {"scope"}
 
 -- Allows a custom sight position to be defined
 ATT.Sights = {
     {
-        Pos = Vector(-0.00325, 7.25, -1.285),
+        Pos = Vector(-0.00325, 10, -2.64),
         Ang = Angle(0, 0, 0),
         Magnification = 1.5,
         ViewModelFOV = 60
@@ -42,7 +43,7 @@ ATT.RTScopeShadowIntensity = 10
 
 ATT.ScopeScreenRatio = 0.7
 
-ATT.Scale = 1
+ATT.Scale = 1.75
 ATT.ModelOffset = Vector(0, 0, -0.175)
 
 ATT.SwayAdd = 0.075

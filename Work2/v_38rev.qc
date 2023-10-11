@@ -280,27 +280,17 @@ $sequence "base_crawl" {
 $sequence "base_fire" {
 	"v_38rev_anims\base_fire.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
-	{ event 5004 0 "Weapon_revolver.CockHammer" }
-	{ event AE_MUZZLEFLASH 0 "" }
 	fadein 0.2
 	fadeout 0.2
-	snap
 	fps 30
-	ikrule "lhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 29 29 target 1
-	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 29 29 target 0
 }
 
 $sequence "base_fire2" {
 	"v_38rev_anims\base_fire2.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
-	{ event 5004 0 "Weapon_revolver.CockHammer" }
-	{ event AE_MUZZLEFLASH 0 "" }
 	fadein 0.2
 	fadeout 0.2
-	snap
 	fps 30
-	ikrule "lhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 29 29 target 1
-	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 29 29 target 0
 }
 
 $sequence "base_dryfire" {

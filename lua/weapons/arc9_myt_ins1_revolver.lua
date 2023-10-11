@@ -309,7 +309,7 @@ SWEP.Animations = {
         Source = "base_reload_speed",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FireASAP = true,
-        MinProgress = 0.775,
+        MinProgress = 0.85,
         EventTable = {
             {s =  "myt_ins1/38S-Reload.ogg" ,   t = 0 / 30},
         },

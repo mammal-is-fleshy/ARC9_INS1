@@ -1,6 +1,6 @@
 "VertexLitGeneric"
 {
-	"$basetexture"			"models\myt_ins1_vmt\revolver\frame"
+	"$basetexture"			"models\myt_ins1_vmt\revolver\framesilv"
 	"$envmap" "env_cubemap"
 	"$envmaptint" "[.1 .1 .1]"
 	"$envmapcontrast" "0.9"	
