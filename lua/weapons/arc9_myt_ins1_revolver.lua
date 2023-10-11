@@ -243,6 +243,10 @@ SWEP.AttachmentElements = {
     ["has_tac"] = { Bodygroups = {{2, 1}}, },
 }
 
+SWEP.TriggerDelay = true -- Add a delay before the weapon fires.
+SWEP.TriggerDelayTime = 0.075 -- Time until weapon fires.
+SWEP.TriggerDelayCancellable = false -- Whether it is possible to cancel trigger delay by releasing the trigger before it is done.
+
 SWEP.Attachments = {
     {
         PrintName = "Optic",
@@ -301,7 +305,7 @@ SWEP.Animations = {
         Source = "base_down",
         --Time = 0
     },
-    ["fire"] = {
+    ["trigger"] = {
         Source = {"base_fire","base_fire2"},
     },
 

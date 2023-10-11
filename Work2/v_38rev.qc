@@ -191,12 +191,10 @@ $sequence "idle" {
 $sequence "base_idle" {
 	"v_38rev_anims\base_idle.smd"
 	activity "ACT_VM_IDLE" 1
-	fadein 0.2
-	fadeout 0.2
+	fadein 0.02
+	fadeout 0.02
 	fps 30
 	loop
-	ikrule "lhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 1
-	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 0
 }
 
 
@@ -280,7 +278,7 @@ $sequence "base_crawl" {
 $sequence "base_fire" {
 	"v_38rev_anims\base_fire.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
-	fadein 0.2
+	fadein 0.02
 	fadeout 0.2
 	fps 30
 }
@@ -288,7 +286,7 @@ $sequence "base_fire" {
 $sequence "base_fire2" {
 	"v_38rev_anims\base_fire2.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
-	fadein 0.2
+	fadein 0.02
 	fadeout 0.2
 	fps 30
 }
