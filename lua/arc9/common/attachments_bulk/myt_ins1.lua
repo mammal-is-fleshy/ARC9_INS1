@@ -1,0 +1,58 @@
+local ATT = {}
+
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+
+ATT = {}
+
+ATT.PrintName = [[Scope]]
+ATT.CompactName = [[Scope]]
+ATT.Icon = Material("entities/arc9_gekolt_remix_uzio.png", "mips smooth")
+ATT.Description = [[
+]]
+
+ATT.SortOrder = -1000
+
+ATT.Model = "models/weapons/myt_ins1/atts/lens.mdl"
+
+ATT.Category = {"ins1_optic_l42"}
+
+-- Allows a custom sight position to be defined
+ATT.Sights = {
+    {
+        Pos = Vector(-0.00325, 7.25, -1.285),
+        Ang = Angle(0, 0, 0),
+        Magnification = 1.5,
+        ViewModelFOV = 60
+    },
+}
+
+ATT.RTScopeFOVMax = 5
+ATT.RTScopeFOVMin = 12
+ATT.RTScopeAdjustable = true
+ATT.RTScopeAdjustmentLevels = 2
+
+ATT.RTScope = true
+ATT.RTScopeSubmatIndex = 1
+ATT.RTScopeFOV = 10
+ATT.RTScopeReticle = Material("arc9_css/scope5_border.png", "mips smooth")
+ATT.RTScopeReticleScale = 0.95
+ATT.RTScopeColorable = true
+ATT.RTScopeShadowIntensity = 10
+
+ATT.ScopeScreenRatio = 0.7
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, -0.175)
+
+ATT.SwayAdd = 0.075
+ATT.FreeAimRadiusMultSights = 0.1
+ATT.AimDownSightsTimeAdd = 0.14
+ATT.SprintToFireTimeAdd = 0.08
+
+ARC9.LoadAttachment(ATT, "myt_ins1_scope_42")
+
+
+
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------

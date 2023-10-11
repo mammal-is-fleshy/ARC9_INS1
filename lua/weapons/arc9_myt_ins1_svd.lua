@@ -6,7 +6,7 @@ SWEP.Spawnable = true
 SWEP.Category = "ARC9 - INS1"
 SWEP.SubCategory = "Primary"
 
-SWEP.PrintName = "FAL"
+SWEP.PrintName = "SVD"
 
 SWEP.Class = "Rifle"
 
@@ -14,14 +14,14 @@ SWEP.Credits = {
     ["Assets"] = [[Insurgency: Modern Infrantry Combat]],
 }
 
-SWEP.ViewModel = "models/weapons/myt_ins1/c_rif_fnfal.mdl"
-SWEP.WorldModel = "models/weapons/myt_ins1/c_rif_fnfal.mdl"
+SWEP.ViewModel = "models/weapons/myt_ins1/c_snip_svd.mdl"
+SWEP.WorldModel = "models/weapons/myt_ins1/c_snip_svd.mdl"
 
 SWEP.Weight = 25
 SWEP.Slot = 2
 
 SWEP.MirrorVMWM = true
-SWEP.WorldModelMirror = "models/weapons/myt_ins1/c_rif_fnfal.mdl"
+SWEP.WorldModelMirror = "models/weapons/myt_ins1/c_snip_svd.mdl"
 SWEP.WorldModelOffset = {
     Pos = Vector(-9, 5, -5),
     Ang = Angle(-5, 0, 180),
@@ -36,8 +36,8 @@ SWEP.RecoilAutoControlMultHipFire = 0.5
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 75
-SWEP.DamageMin = 31
+SWEP.DamageMax = 42
+SWEP.DamageMin = 95
 
 SWEP.RangeMin = 500
 SWEP.RangeMax = 3000
@@ -62,7 +62,7 @@ SWEP.PhysBulletMuzzleVelocity = 1280 * 12
 SWEP.Ammo = "ar2" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 1 -- The amount of rounds this gun can chamber.
-SWEP.ClipSize = 20 -- Self-explanatory.
+SWEP.ClipSize = 10 -- Self-explanatory.
 SWEP.SupplyLimit = 4 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
 SWEP.SecondarySupplyLimit = 2 -- Amount of reserve UBGL magazines you can take.
 
@@ -70,7 +70,7 @@ SWEP.ReloadInSights = false -- This weapon can aim down sights while reloading.
 
 -------------------------- FIREMODES
 
-SWEP.RPM = 600
+SWEP.RPM = 300
 
 -- Works different to ArcCW
 
@@ -82,11 +82,8 @@ SWEP.RPM = 600
 -- n: n-round burst.
 SWEP.Firemodes = {
     {
-        Mode = -1,
-    },
-    {
         Mode = 1,
-    }
+    },
 }
 -------------------------- RECOIL
 
@@ -94,8 +91,8 @@ SWEP.Firemodes = {
 SWEP.Recoil = 1
 
 -- These multipliers affect the predictible recoil by making the pattern taller, shorter, wider, or thinner.
-SWEP.RecoilUp = 0.95 -- Multiplier for vertical recoil
-SWEP.RecoilSide = 0.75 -- Multiplier for vertical recoil
+SWEP.RecoilUp = 1.2 -- Multiplier for vertical recoil
+SWEP.RecoilSide = 0.95 -- Multiplier for vertical recoil
 
 -- These values determine how much extra movement is applied to the recoil entirely randomly, like in a circle.
 -- This type of recoil CANNOT be predicted.
@@ -165,7 +162,7 @@ SWEP.TracerColor = Color(255, 225, 200) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-1.95, -3, 1.075),
+    Pos = Vector(-4.525, -5, 3.225),
     Ang = Angle(0, 0, 0),
     Midpoint = { -- Where the gun should be at the middle of it's irons
         Pos = Vector(0, 15, -4),
@@ -197,7 +194,7 @@ SWEP.CrouchPos = Vector(-0.5, 1, -1)
 SWEP.CrouchAng = Angle(0, 0, -10)
 
 SWEP.CustomizeAng = Angle(90, -5, 0)
-SWEP.CustomizePos = Vector(13, 32, 2)
+SWEP.CustomizePos = Vector(22, 32, 5)
 
 SWEP.CustomizeSnapshotFOV = 110
 SWEP.CustomizeNoRotate = false
@@ -237,8 +234,8 @@ SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 
 -------------------------- SOUNDS
 
-SWEP.ShootSound = "myt_ins1/fal-01.wav"
-SWEP.DistantShootSound = "myt_ins1/fal-01_echo.wav"
+SWEP.ShootSound = "myt_ins1/svd-fire.wav"
+SWEP.DistantShootSound = "myt_ins1/svd-fire_echo.wav"
 SWEP.ShootSoundSilenced = "gekolt_css/9mm_sd.wav"
 SWEP.DryFireSound = "myt_ins1/makarov-empty.wav"
 
@@ -261,7 +258,7 @@ SWEP.Attachments = {
         ExcludeElements = {"pre_optic"},
         Category = {"optic_css"},
         Bone = "Weapon_Controller",
-        Pos = Vector(-5, -2.5, 0),
+        Pos = Vector(6, -3.15, 0),
         Ang = Angle(0, 0, -90),
     },
     {
@@ -275,78 +272,84 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, -90),
     },
     {
-        PrintName = "Foregrip",
+        PrintName = "Tac Mount",
         DefaultName = "None",
-        InstalledElements = {"rail_bot"},
+        InstalledElements = {"has_tac"},
 
-        Category = {"grip_css"},
+        Category = {"mountl_css"},
         Bone = "Weapon_Controller",
-        Pos = Vector(8, 0.7, 0),
-        Ang = Angle(0, 0, -90),
+        Pos = Vector(5.8, -0.6, 0),
+        Ang = Angle(0, 0, 90),
     },
 }
 
 SWEP.InstantSightIdle = true
 SWEP.Animations = {
     ["idle"] = {
-        Source = "fal_idle",
+        Source = "svd_idle",
     },
     ["idle_sights"] = {
-        Source = "fal_idle_sight",
+        Source = "svd_idle",
+		Time = 0
     }, 
     ["draw"] = {
-        Source = "fal_draw",
+        Source = "svd_draw",
         EventTable = {
             {s =  "myt_ins1/universal/uni-draw.wav" ,   t = 0 / 30},
+            {s =  "myt_ins1/ak47-selectordown.wav" ,   t = 18 / 30},
         },
     },
     ["ready"] = {
-        Source = "fal_ready2", -- QC sequence source, can be {"table", "of", "strings"} or "string"
+        Source = "svd_ready", -- QC sequence source, can be {"table", "of", "strings"} or "string"
         --Time = 0.5, -- overrides the duration of the sequence
         Mult = 1, -- multiplies time
         EventTable = {
-            {s =  "myt_ins1/fal_chamber.wav" ,    t = 7 / 30}, 
+			{s =  "myt_ins1/svd-boltback.wav" ,    t = 5 / 30},
+			{s =  "myt_ins1/svd-boltforward.wav" ,    t = 16 / 30},
         },
     },
     ["holster"] = {
-        Source = "fal_down",
+        Source = "svd_down",
         --Time = 0
     },
     ["holster_empty"] = {
-        Source = "fal_down_empty",
+        Source = "svd_down_empty",
         --Time = 0
     },
     ["fire"] = {
-        Source = {"fal_fire1", "fal_fire2", "fal_fire3"},
+        Source = {"svd_fire1", "svd_fire2", "svd_fire3"},
     },
 
     ["reload"] = {
-        Source = "fal_reload2",
+        Source = "svd_reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FireASAP = true,
         MinProgress = 0.775,
         EventTable = {
-            {s =  "myt_ins1/fal_clip_out.wav" ,   t = 6 / 30},
-            {s =  "myt_ins1/fal_clip_in.wav" ,    t = 24 / 30},
+            {s =  "myt_ins1/svd-clipout.wav" ,   t = 10 / 30},
+            {s =  "myt_ins1/svd-clipin1.wav" ,    t = 38 / 30},  
+			{s =  "myt_ins1/svd-clipin2.wav" ,    t = 45 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
-        { t = 0.2, lhik = 0, rhik = 1, },{ t = 0.65, lhik = 0, rhik = 1, },{ t = 0.85, lhik = 1, rhik = 1, },
+        { t = 0.1, lhik = 0, rhik = 1, },{ t = 0.8, lhik = 0, rhik = 1, },{ t = 0.95, lhik = 1, rhik = 1, },
         },
     },
     ["reload_empty"] = {
-        Source = "fal_reload_empty2",
+        Source = "svd_reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FireASAP = true,
         MinProgress = 0.85,
         EventTable = {
-            {s =  "myt_ins1/fal_clip_out.wav" ,   t = 6 / 30},
-            {s =  "myt_ins1/fal_clip_in.wav" ,    t = 24 / 30},
-            {s =  "myt_ins1/fal_chamber.wav" ,    t = 55 / 30}, 
+            {s =  "myt_ins1/svd-clipout.wav" ,   t = 10 / 30},
+            {s =  "myt_ins1/svd-clipin1.wav" ,    t = 38 / 30},  
+			{s =  "myt_ins1/svd-clipin2.wav" ,    t = 45 / 30},	
+			{s =  "myt_ins1/svd-boltback.wav" ,    t = 77 / 30},
+			{s =  "myt_ins1/svd-boltforward.wav" ,    t = 88 / 30},
             },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
-        { t = 0.15, lhik = 0, rhik = 1, },{ t = 0.7, lhik = 0, rhik = 1, },{ t = 0.85, lhik = 1, rhik = 1, },
+        { t = 0.2, lhik = 0, rhik = 1, },{ t = 0.85, lhik = 0, rhik = 1, },{ t = 0.975, lhik = 1, rhik = 1, },
         },
     },
 }

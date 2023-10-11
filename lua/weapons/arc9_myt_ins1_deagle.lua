@@ -4,7 +4,7 @@ SWEP.Base = "arc9_base"
 
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - INS1"
-SWEP.SubCategory = "Pistol"
+SWEP.SubCategory = "Sidearm"
 
 SWEP.PrintName = "Desert Eagle"
 

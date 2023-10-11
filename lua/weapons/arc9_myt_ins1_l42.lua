@@ -245,9 +245,7 @@ SWEP.DefaultBodygroups = "0001"
 
 SWEP.AttachmentElements = {
 
-    ["awp_s_smg"] = {Bodygroups = {{2, 1}},},
-    ["awp_s_no"] = {Bodygroups = { {2, 2}},},
-    ["awp_s_short"] = {Bodygroups = { {2, 3}},},
+    ["rail_top"] = {Bodygroups = {{2, 1}},},
 
 }
 
@@ -255,11 +253,12 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         DefaultName = "None",
-		
-        Category = {"optic_css"},
-        Bone = "W_Main",
-        Pos = Vector(0, -1, 4),
-        Ang = Angle(90, 0, -90),
+        InstalledElements = {"rail_top"},
+
+        Category = {"optic_css", "ins1_optic_l42"},
+        Bone = "Weapon_Controller",
+        Pos = Vector(0, -2, 0),
+        Ang = Angle(0, 0, -90),
     },
     {
         PrintName = "Muzzle",
@@ -267,9 +266,9 @@ SWEP.Attachments = {
 
         ExcludeElements = {"pre_muzzed"},
         Category = {"muzzle_css"},
-        Bone = "W_Main",
-        Pos = Vector(0, 0.1, 30),
-        Ang = Angle(90, 0, -90),
+        Bone = "Weapon_Controller",
+        Pos = Vector(34.5, -0.5, 0),
+        Ang = Angle(0, 0, -90),
     },
     {
         PrintName = "Foregrip",
@@ -277,11 +276,10 @@ SWEP.Attachments = {
         InstalledElements = {"rail_bot", "optic_css_free", "has_grip"},
 
         ExcludeElements = {"nogrip", "awp_f_obrez"},
-        Category = {"grip_css", "optic_css_free"},
-        Bone = "W_Main",
-        Pos = Vector(0, 3.25, 12),
-        Ang = Angle(90, 0, -90),
-        MergeSlots = {9}
+        Category = {"grip_css"},
+        Bone = "Weapon_Controller",
+        Pos = Vector(8.65, 2, 0),
+        Ang = Angle(0, 0, -90),
     },
 }
 SWEP.InstantSightIdle = true
@@ -333,7 +331,6 @@ SWEP.Animations = {
             {s =  "myt_ins1/enfield-boltback.wav" ,   t = 5 / 30},
             {s =  "myt_ins1/enfield-roundin.wav" ,   t = 30 / 30},
         },
-        IKTimeLine = {	{ t = 0, lhik = 1, rhik = 1, }, { t = 0.5, lhik = 0, rhik = 1, }, { t = 1, lhik = 0, rhik = 1, }	},
     }, 
 	["reload_start_empty"] = {
         Source = "l42_reload_start2",
@@ -341,9 +338,8 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         EventTable = {
             {s =  "myt_ins1/enfield-boltback.wav" ,   t = 5 / 30},
-            {s =  "myt_ins1/enfield-roundin.wav" ,   t = 22 / 30},
+            {s =  "myt_ins1/enfield-roundin.wav" ,   t = 30 / 30},
         },
-        IKTimeLine = {	{ t = 0, lhik = 1, rhik = 1, }, { t = 0.5, lhik = 0, rhik = 1, }, { t = 1, lhik = 0, rhik = 1, }	},
     },
     ["reload_insert"] = {
         Source = "l42_reload_insert2",
@@ -351,7 +347,6 @@ SWEP.Animations = {
         EventTable = {
             {s =  "myt_ins1/enfield-roundin.wav" ,   t = 8 / 30},
         },
-        IKTimeLine = {	{ t = 0, lhik = 0, rhik = 0, }, { t = 1, lhik = 0, rhik = 0, },	},
     },
     ["reload_finish"] = {
         Source = "l42_reload_insert_end2",
@@ -361,6 +356,5 @@ SWEP.Animations = {
         EventTable = {
             {s =  "myt_ins1/enfield-boltforward.wav" ,   t = 0 / 30},
         },
-        IKTimeLine = {	{ t = 0, lhik = 0, rhik = 1, }, { t = 0.85, lhik = 1, rhik = 1, }, { t = 1, lhik = 1, rhik = 1, }	},
     }, 
 }
