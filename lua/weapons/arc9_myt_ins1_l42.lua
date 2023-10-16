@@ -241,7 +241,7 @@ SWEP.ShootSoundSilenced = "myt_ins1_sd/sniper.wav"
 
 SWEP.FiremodeSound = "arc9/firemode.wav"
 
-SWEP.DefaultBodygroups = "000100"
+SWEP.DefaultBodygroups = "0001000000"
 
 SWEP.AttachmentElements = {
     ["scope"] = {Bodygroups = {{3, 0}, {4, 0}},},
@@ -251,7 +251,8 @@ SWEP.AttachmentElements = {
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local model = data.model  -- most insufficient method ever
-    if wep:HasElement("scope") 	then model:SetBodygroup(4,0) end
+    if wep:HasElement("scope") then model:SetBodygroup(4,0) end 
+	if wep:HasElement("scope") then model:SetBodygroup(2,1) end
 end
 
 SWEP.Attachments = {

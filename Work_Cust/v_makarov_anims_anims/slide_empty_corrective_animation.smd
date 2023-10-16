@@ -1,0 +1,76 @@
+// Created by Crowbar 0.74
+version 1
+nodes
+  0 "Weapon" -1
+  1 "Trigger" 0
+  2 "Hammer" 0
+  3 "Slide" 0
+  4 "Barrel" 0
+  5 "A_Muzzle_Supp" 4
+  6 "A_Muzzle" 4
+  7 "A_Suppressor" 4
+  8 "Slide_Lock" 0
+  9 "A_Eject" 0
+  10 "A_Muzzle_Ironsight" 0
+  11 "A_Underbarrel" 0
+  12 "Magazine" 0
+  13 "Bullet_1" 12
+  14 "L Clavicle" -1
+  15 "L UpperArm" 14
+  16 "L Forearm" 15
+  17 "L Hand" 16
+  18 "L Finger0" 17
+  19 "L Finger01" 18
+  20 "L Finger02" 19
+  21 "L Finger1" 17
+  22 "L Finger11" 21
+  23 "L Finger12" 22
+  24 "L Finger2" 17
+  25 "L Finger21" 24
+  26 "L Finger22" 25
+  27 "L Finger3" 17
+  28 "L Finger31" 27
+  29 "L Finger32" 28
+  30 "L Finger4" 17
+  31 "L Finger41" 30
+  32 "L Finger42" 31
+  33 "L ForeTwist" 15
+  34 "L ForeTwist1" 33
+  35 "L ForeTwist2" 34
+  36 "L ForeTwist3" 35
+  37 "L ForeTwist4" 36
+  38 "L ForeTwist5" 37
+  39 "L ForeTwist6" 38
+  40 "R Clavicle" -1
+  41 "R UpperArm" 40
+  42 "R Forearm" 41
+  43 "R Hand" 42
+  44 "R Finger0" 43
+  45 "R Finger01" 44
+  46 "R Finger02" 45
+  47 "R Finger1" 43
+  48 "R Finger11" 47
+  49 "R Finger12" 48
+  50 "R Finger2" 43
+  51 "R Finger21" 50
+  52 "R Finger22" 51
+  53 "R Finger3" 43
+  54 "R Finger31" 53
+  55 "R Finger32" 54
+  56 "R Finger4" 43
+  57 "R Finger41" 56
+  58 "R Finger42" 57
+  59 "R ForeTwist" 41
+  60 "R ForeTwist1" 59
+  61 "R ForeTwist2" 60
+  62 "R ForeTwist3" 61
+  63 "R ForeTwist4" 62
+  64 "R ForeTwist5" 63
+  65 "R ForeTwist6" 64
+end
+skeleton
+  time 0
+    0 0.000000 0.000000 0.000000 0.000000 0.000000 -1.570796
+    14 0.000000 0.000000 0.000000 0.000000 0.000000 -1.570796
+    40 0.000000 0.000000 0.000000 0.000000 0.000000 -1.570796
+end

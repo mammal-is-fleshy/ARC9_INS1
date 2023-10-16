@@ -7,7 +7,7 @@ ATT = {}
 
 ATT.PrintName = [[Scope]]
 ATT.CompactName = [[Scope]]
-ATT.Icon = Material("entities/arc9_gekolt_remix_uzio.png", "mips smooth")
+ATT.Icon = Material("entities/arc9_myt_ins1_generic_scope.png", "mips smooth")
 ATT.Description = [[
 ]]
 
@@ -62,7 +62,7 @@ ATT = {}
 
 ATT.PrintName = [[Scope]]
 ATT.CompactName = [[Scope]]
-ATT.Icon = Material("entities/arc9_gekolt_remix_uzio.png", "mips smooth")
+ATT.Icon = Material("entities/arc9_myt_ins1_generic_scope.png", "mips smooth")
 ATT.Description = [[
 ]]
 
