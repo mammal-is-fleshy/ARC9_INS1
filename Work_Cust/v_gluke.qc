@@ -8,6 +8,16 @@ $bodygroup "Weapon"
 	studio "gluke18.smd"
 	blank
 }
+$bodygroup "1"
+{
+	blank
+	studio "gluke_rail_top.smd"
+}
+$bodygroup "2"
+{
+	blank
+	studio "gluke_rail_bot.smd"
+}
 
 
 $surfaceprop "default"
@@ -96,17 +106,17 @@ $bonemerge "Barrel"
 
 $sectionframes 30 36
 
-$animation "slide_base" "v_m45_anims_anims\slide_base.smd" {
+$animation "slide_base" "v_makarov_anims_anims\slide_base.smd" {
 	fps 30
 }
 
-$animation "slide_empty" "v_m45_anims_anims\slide_empty.smd" {
+$animation "slide_empty" "v_makarov_anims_anims\slide_empty.smd" {
 	fps 30
 }
 
 
 $sequence "idle" {
-	"v_m45_anims_anims\idle.smd"
+	"v_makarov_anims_anims\idle.smd"
 	fadein 0.2
 	fadeout 0.2
 	hidden
@@ -123,7 +133,7 @@ $sequence "glock_idle" {
 }
 
 $sequence "menu" {
-	"v_m45_anims_anims\menu.smd"
+	"v_makarov_anims_anims\menu.smd"
 	activity "ACT_VM_MENU" 1
 	fadein 0.2
 	fadeout 0.2
@@ -161,8 +171,6 @@ $sequence "glock_draw" {
 $sequence "glock_holster" {
 	"anims\glock_holster.smd"
 	activity "ACT_VM_HOLSTER" 1
-	{ event 5004 0 "Universal.PistolHolster" }
-	{ event 5004 11 "Weapon_M45.Magrelease" }
 	fadein 0.2
 	fadeout 0.2
 	fps 35
@@ -180,15 +188,13 @@ $sequence "glock_draw_empty" {
 $sequence "glock_holster_empty" {
 	"anims\glock_holster_empty.smd"
 	activity "ACT_VM_HOLSTER" 1
-	{ event 5004 0 "Universal.PistolHolster" }
-	{ event 5004 11 "Weapon_M45.Magrelease" }
 	fadein 0.2
 	fadeout 0.2
 	fps 35
 }
 
 $sequence "base_down" {
-	"v_m45_anims_anims\base_down.smd"
+	"v_makarov_anims_anims\base_down.smd"
 	activity "ACT_VM_DOWN" 1
 	fadein 0.2
 	fadeout 0.2
@@ -197,7 +203,7 @@ $sequence "base_down" {
 }
 
 $sequence "base_crawl" {
-	"v_m45_anims_anims\base_crawl.smd"
+	"v_makarov_anims_anims\base_crawl.smd"
 	activity "ACT_VM_CRAWL" 1
 	{ event 5004 4 "Universal.LeftCrawl" }
 	{ event 5004 30 "Universal.RightCrawl" }
@@ -240,7 +246,7 @@ $sequence "glock_firelast" {
 }
 
 $sequence "base_dryfire" {
-	"v_m45_anims_anims\base_dryfire.smd"
+	"v_makarov_anims_anims\base_dryfire.smd"
 	activity "ACT_VM_DRYFIRE" 1
 	{ event 5004 0 "Weapon_M45.Empty" }
 	fadein 0.2
@@ -250,7 +256,7 @@ $sequence "base_dryfire" {
 }
 
 $sequence "base_reload" {
-	"v_m45_anims_anims\base_reload.smd"
+	"v_makarov_anims_anims\base_reload.smd"
 	activity "ACT_VM_RELOAD" 1
 	{ event 5004 20 "Weapon_M45.Magrelease" }
 	{ event 5004 30 "Weapon_M45.Magout" }
@@ -263,7 +269,7 @@ $sequence "base_reload" {
 }
 
 $sequence "base_reloadempty" {
-	"v_m45_anims_anims\base_reloadempty.smd"
+	"v_makarov_anims_anims\base_reloadempty.smd"
 	activity "ACT_VM_RELOADEMPTY" 1
 	{ event 5004 17 "Weapon_M45.Magrelease" }
 	{ event 5004 20 "Weapon_M45.Magout" }
@@ -293,7 +299,7 @@ $sequence "glock_reloadempty_extmag" {
 }
 
 $sequence "base_sprint" {
-	"v_m45_anims_anims\base_sprint.smd"
+	"v_makarov_anims_anims\base_sprint.smd"
 	activity "ACT_VM_SPRINT" 1
 	fadein 0.2
 	fadeout 0.2
@@ -302,7 +308,7 @@ $sequence "base_sprint" {
 }
 
 $sequence "empty_idle" {
-	"v_m45_anims_anims\empty_idle.smd"
+	"v_makarov_anims_anims\empty_idle.smd"
 	activity "ACT_VM_IDLE_EMPTY" 1
 	fadein 0.2
 	fadeout 0.2
@@ -311,7 +317,7 @@ $sequence "empty_idle" {
 }
 
 $sequence "empty_draw" {
-	"v_m45_anims_anims\empty_draw.smd"
+	"v_makarov_anims_anims\empty_draw.smd"
 	activity "ACT_VM_DRAW_EMPTY" 1
 	{ event 5004 0 "Universal.PistolDraw" }
 	{ event 5004 9 "Weapon_M45.Magrelease" }
@@ -321,7 +327,7 @@ $sequence "empty_draw" {
 }
 
 $sequence "empty_holster" {
-	"v_m45_anims_anims\empty_holster.smd"
+	"v_makarov_anims_anims\empty_holster.smd"
 	activity "ACT_VM_HOLSTER_EMPTY" 1
 	{ event 5004 0 "Universal.PistolHolster" }
 	{ event 5004 11 "Weapon_M45.Magrelease" }
@@ -331,7 +337,7 @@ $sequence "empty_holster" {
 }
 
 $sequence "empty_down" {
-	"v_m45_anims_anims\empty_down.smd"
+	"v_makarov_anims_anims\empty_down.smd"
 	activity "ACT_VM_DOWN_EMPTY" 1
 	fadein 0.2
 	fadeout 0.2
@@ -340,7 +346,7 @@ $sequence "empty_down" {
 }
 
 $sequence "empty_crawl" {
-	"v_m45_anims_anims\empty_crawl.smd"
+	"v_makarov_anims_anims\empty_crawl.smd"
 	activity "ACT_VM_CRAWL_EMPTY" 1
 	{ event 5004 0 "Universal.LeftCrawl" }
 	{ event 5004 22 "Universal.RightCrawl" }
@@ -351,7 +357,7 @@ $sequence "empty_crawl" {
 }
 
 $sequence "empty_sprint" {
-	"v_m45_anims_anims\empty_sprint.smd"
+	"v_makarov_anims_anims\empty_sprint.smd"
 	activity "ACT_VM_SPRINT_EMPTY" 1
 	fadein 0.2
 	fadeout 0.2

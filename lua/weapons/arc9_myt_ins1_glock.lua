@@ -8,7 +8,7 @@ SWEP.SubCategory = "Sidearm"
 
 SWEP.PrintName = "Glock 18"
 
-SWEP.Class = "Pistol"
+SWEP.Class = "Machine Pistol"
 
 SWEP.Credits = {
     ["Assets"] = [[Insurgency: Modern Infrantry Combat]],
@@ -62,7 +62,7 @@ SWEP.PhysBulletMuzzleVelocity = 1280 * 12
 SWEP.Ammo = "pistol" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 1 -- The amount of rounds this gun can chamber.
-SWEP.ClipSize = 32 -- Self-explanatory.
+SWEP.ClipSize = 33 -- Self-explanatory.
 SWEP.SupplyLimit = 6 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
 SWEP.SecondarySupplyLimit = 2 -- Amount of reserve UBGL magazines you can take.
 
@@ -70,7 +70,7 @@ SWEP.ReloadInSights = false -- This weapon can aim down sights while reloading.
 
 -------------------------- FIREMODES
 
-SWEP.RPM = 1050
+SWEP.RPM = 1100
 
 -- Works different to ArcCW
 
@@ -122,13 +122,13 @@ SWEP.SpreadMultHipFire = 1.5
 -------------------------- HANDLING
 
 SWEP.FreeAimRadius = 4 -- In degrees, how much this gun can free aim in hip fire.
-SWEP.Sway = 1.25
+SWEP.Sway = 1.3
 
 SWEP.SwayMultMidAir = 2
-SWEP.SwayMultMove = 1.5
-SWEP.SwayMultCrouch = 0.667
-SWEP.SwayMultShooting = 1.5
-SWEP.SwayMultSights = 0.5
+SWEP.SwayMultMove = 1.667
+SWEP.SwayMultCrouch = 0.5
+SWEP.SwayMultShooting = 1.25
+SWEP.SwayMultSights = 0.625
 
 SWEP.AimDownSightsTime = 0.2
 SWEP.SprintToFireTime = 0.17
@@ -226,7 +226,7 @@ SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 
 -------------------------- SOUNDS
 
-SWEP.ShootSound = "myt_ins1/m9-1.wav"
+SWEP.ShootSound = {"myt_ins1/glock-1.wav", "myt_ins1/glock-2.wav", "myt_ins1/glock-3.wav"}
 SWEP.DistantShootSound = "myt_ins1/m9-1_echo.wav"
 SWEP.ShootSoundSilenced = "myt_ins1_sd/pistol.wav"
 SWEP.DryFireSound = "myt_ins1/m9-empty.wav"
@@ -239,8 +239,8 @@ SWEP.FiremodeSound = "arc9/firemode.wav"
 SWEP.DefaultBodygroups = "00000000"
 
 SWEP.AttachmentElements = {
-    ["has_optic"] = { Bodygroups = {{2, 1}}, },
-    ["has_tac"] = { Bodygroups = {{3, 1}}, },
+    ["has_optic"] = { Bodygroups = {{1, 1}}, },
+    ["has_tac"] = { Bodygroups = {{2, 1}}, },
 }
 
 SWEP.Attachments = {
@@ -251,9 +251,9 @@ SWEP.Attachments = {
 
         ExcludeElements = {"pre_optic"},
         Category = {"optic_css_s"},
-        Bone = "Weapon_Controller",
-        Pos = Vector(2.5, -3, 0),
-        Ang = Angle(0, 0, -90),
+        Bone = "Weapon",
+        Pos = Vector(-0.15, 3.5, 1.75),
+        Ang = Angle(0, -90, 0),
     },
     {
         PrintName = "Muzzle",
@@ -261,9 +261,9 @@ SWEP.Attachments = {
 
         ExcludeElements = {"pre_muzzed"},
         Category = {"muzzle_css"},
-        Bone = "Weapon_Controller",
-        Pos = Vector(7.5, -2.1, 0),
-        Ang = Angle(0, 0, -90),
+        Bone = "Barrel",
+        Pos = Vector(-0.15, 4.85, 0.35),
+        Ang = Angle(0, -90, 0),
     },
 
     {
@@ -272,9 +272,9 @@ SWEP.Attachments = {
         InstalledElements = {"has_tac"},
 
         Category = {"tac_css"},
-        Bone = "Weapon_Controller",
-        Pos = Vector(5, -0.1, 0),
-        Ang = Angle(0, 0, 90),
+        Bone = "Weapon",
+        Pos = Vector(-0.15, 3.5, -1.25),
+        Ang = Angle(0, -90, 180),
     },
 }
 
@@ -312,9 +312,11 @@ SWEP.Animations = {
     },
     ["holster"] = {
         Source = "glock_holster",
+		Time = 0.5
     },
     ["holster_empty"] = {
         Source = "glock_holster_empty",
+		Time = 0.5
     },
     ["fire"] = {
         Source = {"glock_fire", "glock_fire2", "glock_fire3"},
@@ -345,7 +347,8 @@ SWEP.Animations = {
         EventTable = {
             {s =  "myt_ins1/m9-magout.wav" ,   t = 7 / 30},
             {s =  "myt_ins1/m9-magin.wav" ,    t = 18 / 30},
-            {s =  "myt_ins1/m9-slideforward.wav" ,    t = 45 / 30},
+            {s =  "myt_ins1/m9-slideback.wav" ,    t = 43 / 30}, 
+			{s =  "myt_ins1/m9-slideforward.wav" ,    t = 45 / 30},
             },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
