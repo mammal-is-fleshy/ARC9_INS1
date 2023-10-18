@@ -257,7 +257,7 @@ SWEP.DefaultBodygroups = "00000100"
 SWEP.AttachmentElements = {
     ["rail_bot"] = { Bodygroups = {{4, 1}}, }, 
 	["has_muzzle"] = { Bodygroups = {{5, 0}}, },
-    ["has_optic"] = { Bodygroups = {{2, 1}, {3, 1}}, },
+    ["has_optic"] = { Bodygroups = {{1, 2},}, },
 }
 
 SWEP.Attachments = {
@@ -268,9 +268,9 @@ SWEP.Attachments = {
 
         ExcludeElements = {"pre_optic"},
         Category = {"optic_css"},
-        Bone = "Weapon_Controller",
-        Pos = Vector(-6, -2.5, 0),
-        Ang = Angle(0, 0, -90),
+        Bone = "Point002",
+        Pos = Vector(0, 1, 3.5),
+        Ang = Angle(0, -90, 0),
     },
     {
         PrintName = "Muzzle",
@@ -279,9 +279,9 @@ SWEP.Attachments = {
 		
         ExcludeElements = {"pre_muzzed"},
         Category = {"muzzle_css"},
-        Bone = "Weapon_Controller",
-        Pos = Vector(25, -0.75, 0),
-        Ang = Angle(0, 0, -90),
+        Bone = "Point002",
+        Pos = Vector(0, 13, 0.75),
+        Ang = Angle(0, -90, 0),
     },
     {
         PrintName = "Foregrip",
@@ -289,9 +289,9 @@ SWEP.Attachments = {
         InstalledElements = {"rail_bot"},
 
         Category = {"grip_css"},
-        Bone = "Weapon_Controller",
-        Pos = Vector(8, 0.7, 0),
-        Ang = Angle(0, 0, -90),
+        Bone = "Point002",
+        Pos = Vector(0, 9, -2),
+        Ang = Angle(0, -90, 0),
         MergeSlots = {4},
     },
 
@@ -300,9 +300,9 @@ SWEP.Attachments = {
         DefaultName = "",
         Hidden = true,
         Category = {"css_ubgl"},
-        Bone = "Weapon_Controller",
-        Pos = Vector(4, 0 , 0),
-        Ang = Angle(0, 0, -90),
+        Bone = "Point002",
+        Pos = Vector(0, 7.5, -1.5),
+        Ang = Angle(0, -90, 0),
     },
 }
 
@@ -343,20 +343,20 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FireASAP = true,
         MinProgress = 0.775,
-        Mult = 0.8,
+        Mult = 0.9,
         EventTable = {
             {s =  "myt_ins1/tavor_clipout.wav" ,   t = 22 / 30},
             {s =  "myt_ins1/tavor_clipin.wav" ,    t = 53 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
-        { t = 0.2, lhik = 0, rhik = 1, },{ t = 0.65, lhik = 0, rhik = 1, },{ t = 0.85, lhik = 1, rhik = 1, },
+        { t = 0.2, lhik = 0, rhik = 1, },{ t = 0.75, lhik = 0, rhik = 1, },{ t = 0.95, lhik = 1, rhik = 1, },
         },
     },
     ["reload_empty"] = {
         Source = "tavor_reloadempty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Mult = 0.8,
+        Mult = 0.9,
         FireASAP = true,
         MinProgress = 0.85,
         EventTable = {
@@ -367,7 +367,7 @@ SWEP.Animations = {
             },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
-        { t = 0.15, lhik = 0, rhik = 1, },{ t = 0.7, lhik = 0, rhik = 1, },{ t = 0.85, lhik = 1, rhik = 1, },
+        { t = 0.2, lhik = 0, rhik = 1, },{ t = 0.75, lhik = 0, rhik = 1, },{ t = 0.95, lhik = 1, rhik = 1, },
         },
     },
 }
