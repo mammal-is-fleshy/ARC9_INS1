@@ -12,6 +12,7 @@ SWEP.Class = "Pistol"
 
 SWEP.Credits = {
     ["Assets"] = [[ https://gamebanana.com/mods/207698 ]],
+    ["Sound"] = [[ oneshotofficial https://gamebanana.com/sounds/63272  ]],
 }
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_pist_deagle.mdl"

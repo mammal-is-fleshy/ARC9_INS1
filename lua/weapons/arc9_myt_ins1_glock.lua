@@ -11,7 +11,9 @@ SWEP.PrintName = "Glock 18"
 SWEP.Class = "Machine Pistol"
 
 SWEP.Credits = {
-    ["Assets"] = [[Insurgency: Modern Infrantry Combat]],
+    ["Assets"] = [[ https://gamebanana.com/mods/211512 ]],
+    ["Sound"] = [[ Navaro https://gamebanana.com/sounds/22261 ]],	
+    ["Original Animation"] = [[ MzK ]],	
 }
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_pist_g18.mdl"
@@ -190,7 +192,7 @@ SWEP.CrouchPos = Vector(-0.5, -0.5, -1)
 SWEP.CrouchAng = Angle(0, 0, -10)
 
 SWEP.CustomizeAng = Angle(90, -5, 0)
-SWEP.CustomizePos = Vector(20, 32, 6)
+SWEP.CustomizePos = Vector(20, 26, 6)
 
 SWEP.CustomizeSnapshotFOV = 110
 SWEP.CustomizeNoRotate = false
@@ -289,7 +291,6 @@ SWEP.Animations = {
         Source = "glock_draw",
         EventTable = {
             {s =  "myt_ins1/universal/uni-draw.wav" ,   t = 0 / 30},
-            {s =  "myt_ins1/m9-safety.wav" ,   t = 13 / 30},
         },
     },
     ["draw_empty"] = {
@@ -298,7 +299,6 @@ SWEP.Animations = {
         Mult = 1, -- multiplies time
         EventTable = {
             {s =  "myt_ins1/universal/uni-draw.wav" ,   t = 0 / 30},
-            {s =  "myt_ins1/m9-safety.wav" ,   t = 13 / 30},
         },
     },
     ["ready"] = {

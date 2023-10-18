@@ -9,6 +9,19 @@ $bodygroup "Weapon"
 	blank
 }
 
+$bodygroup "1"
+{
+	studio "uzi_iron.smd"
+	studio "uzi_rail_top.smd"
+	blank
+}
+
+$bodygroup "2"
+{
+	blank
+	studio "uzi_rail_bot.smd"
+}
+
 
 $surfaceprop "default"
 
@@ -190,6 +203,7 @@ $sequence "uzi_fire" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	fadein 0.05
 	fadeout 0.05
+	snap
 	fps 30
 }
 
@@ -245,7 +259,7 @@ $sequence "uzi_reload" {
 }
 
 $sequence "uzi_reload_empty" {
-	"anims\uzi_reload_empty.smd"
+	"anims\uzi_reload_empty2.smd"
 	activity "ACT_VM_RELOADEMPTY" 1
 	fadein 0.2
 	fadeout 0.2

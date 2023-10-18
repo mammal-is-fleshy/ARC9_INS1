@@ -11,7 +11,9 @@ SWEP.PrintName = "Uzi"
 SWEP.Class = "Sub-Machine Gun"
 
 SWEP.Credits = {
-    ["Assets"] = [[Insurgency: Modern Infrantry Combat]],
+    ["Assets"] = [[ https://gamebanana.com/mods/209036 ]],
+    ["Original Animation"] = [[ MzK ]],	
+	["Sound"] = [[ oneshotofficial https://gamebanana.com/sounds/63272  ]],
 }
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_pist_uzi.mdl"
@@ -190,7 +192,7 @@ SWEP.CrouchPos = Vector(-0.5, -2.5, -3)
 SWEP.CrouchAng = Angle(0, 0, -10)
 
 SWEP.CustomizeAng = Angle(90, -5, 0)
-SWEP.CustomizePos = Vector(20, 32, 6)
+SWEP.CustomizePos = Vector(16, 28, 4)
 
 SWEP.CustomizeSnapshotFOV = 110
 SWEP.CustomizeNoRotate = false
@@ -226,7 +228,7 @@ SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 
 -------------------------- SOUNDS
 
-SWEP.ShootSound = "myt_ins1/m9-1.wav"
+SWEP.ShootSound = "myt_ins1/uzi-1.wav"
 SWEP.DistantShootSound = "myt_ins1/m9-1_echo.wav"
 SWEP.ShootSoundSilenced = "myt_ins1_sd/pistol.wav"
 SWEP.DryFireSound = "myt_ins1/m9-empty.wav"
@@ -239,8 +241,8 @@ SWEP.FiremodeSound = "arc9/firemode.wav"
 SWEP.DefaultBodygroups = "00000000"
 
 SWEP.AttachmentElements = {
-    ["has_optic"] = { Bodygroups = {{2, 1}}, },
-    ["has_tac"] = { Bodygroups = {{3, 1}}, },
+    ["has_optic"] = { Bodygroups = {{1, 1}}, },
+    ["has_tac"] = { Bodygroups = {{2, 1}}, },
 }
 
 SWEP.Attachments = {
@@ -251,9 +253,9 @@ SWEP.Attachments = {
 
         ExcludeElements = {"pre_optic"},
         Category = {"optic_css_s"},
-        Bone = "Weapon_Controller",
-        Pos = Vector(2.5, -3, 0),
-        Ang = Angle(0, 0, -90),
+        Bone = "Weapon",
+        Pos = Vector(0, 2, 2.35),
+        Ang = Angle(0, -90, 0),
     },
     {
         PrintName = "Muzzle",
@@ -261,9 +263,9 @@ SWEP.Attachments = {
 
         ExcludeElements = {"pre_muzzed"},
         Category = {"muzzle_css"},
-        Bone = "Weapon_Controller",
-        Pos = Vector(7.5, -2.1, 0),
-        Ang = Angle(0, 0, -90),
+        Bone = "Weapon",
+        Pos = Vector(0, 3.9, 0.675),
+        Ang = Angle(0, -90, 0),
     },
 
     {
@@ -272,9 +274,9 @@ SWEP.Attachments = {
         InstalledElements = {"has_tac"},
 
         Category = {"tac_css"},
-        Bone = "Weapon_Controller",
-        Pos = Vector(5, -0.1, 0),
-        Ang = Angle(0, 0, 90),
+        Bone = "Weapon",
+        Pos = Vector(0, 2.5, -0.6),
+        Ang = Angle(0, -90, 180),
     },
 }
 
@@ -286,7 +288,7 @@ SWEP.Animations = {
         Source = "base_draw",
         EventTable = {
             {s =  "myt_ins1/universal/uni-draw.wav" ,   t = 0 / 30},
-            {s =  "myt_ins1/m9-safety.wav" ,   t = 13 / 30},
+            {s =  "myt_ins1/m9-safety.wav" ,   t = 8 / 30},
         },
     },
     ["ready"] = {
@@ -295,11 +297,15 @@ SWEP.Animations = {
         Mult = 1, -- multiplies time
         EventTable = {
             {s =  "myt_ins1/m9-slideback.wav" ,    t = 12 / 40},
-            {s =  "myt_ins1/m9-slideforward.wav" ,    t = 25 / 40},
+            {s =  "myt_ins1/m9-slideforward.wav" ,    t = 22 / 40},
         },
     },
     ["holster"] = {
         Source = "base_holster",
+        EventTable = {
+            {s =  "myt_ins1/universal/uni-draw.wav" ,   t = 0 / 30},
+            {s =  "myt_ins1/m9-safety.wav" ,   t = 8 / 30},
+        },
 		Time = 0.5
     },
     ["fire"] = {
@@ -313,7 +319,9 @@ SWEP.Animations = {
         MinProgress = 0.775,
         EventTable = {
             {s =  "myt_ins1/m9-magout.wav" ,   t = 7 / 30},
-            {s =  "myt_ins1/m9-magin.wav" ,    t = 18 / 30},
+            {s =  "myt_ins1/m9-magin1.ogg" ,    t = 18 / 30},
+            {s =  "myt_ins1/makarov-magin.wav" ,    t = 32 / 30},
+            {s =  "myt_ins1/m9-magin2.ogg" ,    t = 49 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -327,8 +335,11 @@ SWEP.Animations = {
         MinProgress = 0.85,
         EventTable = {
             {s =  "myt_ins1/m9-magout.wav" ,   t = 7 / 30},
-            {s =  "myt_ins1/m9-magin.wav" ,    t = 18 / 30},
-            {s =  "myt_ins1/m9-slideforward.wav" ,    t = 45 / 30},
+            {s =  "myt_ins1/m9-magin1.ogg" ,    t = 18 / 30},
+            {s =  "myt_ins1/makarov-magin.wav" ,    t = 32 / 30},
+            {s =  "myt_ins1/m9-magin2.ogg" ,    t = 49 / 30},
+            {s =  "myt_ins1/m9-slideback.wav" ,    t = 75 / 40},
+            {s =  "myt_ins1/m9-slideforward.wav" ,    t = 85 / 40},
             },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
