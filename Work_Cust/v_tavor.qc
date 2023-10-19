@@ -19,6 +19,17 @@ $bodygroup "2"
 {
 	blank
 	studio "tavor_holo.smd"
+	studio "tavor_rail_top.smd"
+}
+$bodygroup "3"
+{
+	blank
+	studio "tavor_rail_bot.smd"
+}
+$bodygroup "4"
+{
+	studio "tavor_muz.smd"
+	blank
 }
 
 
@@ -256,6 +267,15 @@ $sequence "tavor_holster" {
 
 $sequence "tavor_fire" {
 	"anims\tavor_fire.smd"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	fadein 0.2
+	fadeout 0.2
+	snap
+	fps 30
+}
+
+$sequence "tavor_fire_iron" {
+	"anims\tavor_fire_iron.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
 	fadein 0.2
 	fadeout 0.2

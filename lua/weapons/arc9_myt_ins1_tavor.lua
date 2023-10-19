@@ -11,7 +11,8 @@ SWEP.PrintName = "Tavor"
 SWEP.Class = "Rifle"
 
 SWEP.Credits = {
-    ["Assets"] = [[Insurgency: Modern Infrantry Combat]],
+    ["Assets"] = [[ https://gamebanana.com/mods/211744 ]],  
+	["Sound"] = [[Navaro]],
 }
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_rif_tavor.mdl"
@@ -207,7 +208,7 @@ SWEP.CustomizeNoRotate = false
 
 SWEP.CustomizeRotateAnchor = Vector(12, -3.25, -5.23)
 
-SWEP.BarrelLength = 36
+SWEP.BarrelLength = 24
 
 SWEP.NearWallPos = Vector(2, 0, -10)
 SWEP.NearWallAng = Angle(45, 30, 0)
@@ -240,9 +241,9 @@ SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 
 -------------------------- SOUNDS
 
-SWEP.ShootSound = "myt_ins1/fal-01.wav"
+SWEP.ShootSound = {"myt_ins1/tavor-1.wav", "myt_ins1/tavor-2.wav"}
 SWEP.DistantShootSound = "myt_ins1/fal-01_echo.wav"
-SWEP.ShootSoundSilenced = "myt_ins1_sd/rifle.wav"
+SWEP.ShootSoundSilenced = "myt_ins1_sd/tavor.wav"
 SWEP.DryFireSound = "myt_ins1/makarov-empty.wav"
 
 SWEP.EjectDelay = 0
@@ -252,12 +253,12 @@ SWEP.CaseEffectQCA = 3
 
 SWEP.FiremodeSound = "arc9/firemode.wav"
 
-SWEP.DefaultBodygroups = "00000100"
+SWEP.DefaultBodygroups = "00000000"
 
 SWEP.AttachmentElements = {
-    ["rail_bot"] = { Bodygroups = {{4, 1}}, }, 
-	["has_muzzle"] = { Bodygroups = {{5, 0}}, },
-    ["has_optic"] = { Bodygroups = {{1, 2},}, },
+    ["rail_bot"] = { Bodygroups = {{3, 1}}, }, 
+	["has_muzzle"] = { Bodygroups = {{4, 1}}, },
+    ["has_optic"] = { Bodygroups = {{1, 2},{2, 2},}, },
 }
 
 SWEP.Attachments = {
@@ -269,7 +270,7 @@ SWEP.Attachments = {
         ExcludeElements = {"pre_optic"},
         Category = {"optic_css"},
         Bone = "Point002",
-        Pos = Vector(0, 1, 3.5),
+        Pos = Vector(0.05, 1, 3.3),
         Ang = Angle(0, -90, 0),
     },
     {
@@ -280,7 +281,7 @@ SWEP.Attachments = {
         ExcludeElements = {"pre_muzzed"},
         Category = {"muzzle_css"},
         Bone = "Point002",
-        Pos = Vector(0, 13, 0.75),
+        Pos = Vector(0.05, 13, 0.75),
         Ang = Angle(0, -90, 0),
     },
     {
@@ -290,7 +291,7 @@ SWEP.Attachments = {
 
         Category = {"grip_css"},
         Bone = "Point002",
-        Pos = Vector(0, 9, -2),
+        Pos = Vector(0.05, 9, -2.2),
         Ang = Angle(0, -90, 0),
         MergeSlots = {4},
     },
@@ -301,7 +302,7 @@ SWEP.Attachments = {
         Hidden = true,
         Category = {"css_ubgl"},
         Bone = "Point002",
-        Pos = Vector(0, 7.5, -1.5),
+        Pos = Vector(0.05, 7.5, -1.5),
         Ang = Angle(0, -90, 0),
     },
 }
@@ -336,6 +337,9 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = {"tavor_fire"},
+    },
+    ["fire_iron"] = {
+        Source = {"tavor_fire_iron"},
     },
 
     ["reload"] = {
