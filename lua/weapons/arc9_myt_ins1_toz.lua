@@ -225,14 +225,14 @@ SWEP.AnimDraw = false
 
 -------------------------- EFFECTS
 
-SWEP.MuzzleParticle = "muzzleflash_m82"
+SWEP.MuzzleParticle = "muzzleflash_shotgun"
 SWEP.MuzzleEffectQCA = 1
 
-SWEP.ShellModel = "models/shells/shell_338mag.mdl"
-SWEP.ShellCorrectAng = Angle(0, 180, 0)
+SWEP.ShellModel = "models/shells/shell_12gauge.mdl"
+SWEP.ShellCorrectPos = Vector(0, 0, 0)
+SWEP.ShellCorrectAng = Angle(0, 0, 90)
 SWEP.ShellScale = 1
 SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
-SWEP.NoShellEject = true
 
 -------------------------- SOUNDS
 

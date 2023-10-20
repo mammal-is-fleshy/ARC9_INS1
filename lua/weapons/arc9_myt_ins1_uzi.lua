@@ -174,7 +174,7 @@ SWEP.IronSights = {
 SWEP.Crosshair = false
 
 SWEP.SprintAng = Angle(10, -15, -10)
-SWEP.SprintPos = Vector(0, -1, 0)
+SWEP.SprintPos = Vector(0, -2, -1.5)
 
 SWEP.SprintMidPoint = {
     Pos = Vector(0, -5, -3),

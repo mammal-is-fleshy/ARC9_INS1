@@ -135,10 +135,8 @@ SWEP.ShellSmoke = false
 
 -------------------------- SOUNDS
 
-SWEP.ShootSound = "myt_ins1/deagle-1.wav"
-SWEP.DistantShootSound = "myt_ins1/makarov-01_echo.wav"
-SWEP.ShootSoundSilenced = "myt_ins1_sd/pistol.wav"
-SWEP.DryFireSound = "myt_ins1/makarov-empty.wav"
+SWEP.MeleeHitWallSound = "myt_ins1/knife_slash_01.wav"
+SWEP.MeleeHitSound = "myt_ins1/knife_slash_01.wav"
 
 SWEP.EjectDelay = 0
 

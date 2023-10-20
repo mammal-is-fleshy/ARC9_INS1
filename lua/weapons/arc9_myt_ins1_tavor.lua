@@ -37,8 +37,8 @@ SWEP.RecoilAutoControlMultHipFire = 0.5
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 75
-SWEP.DamageMin = 31
+SWEP.DamageMax = 45
+SWEP.DamageMin = 26
 
 SWEP.RangeMin = 500
 SWEP.RangeMax = 3000

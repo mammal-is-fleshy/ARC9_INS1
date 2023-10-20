@@ -50,7 +50,7 @@ SWEP.ForceDefaultAmmo = 4
 SWEP.DoNotEquipmentAmmo = true
 
 SWEP.Throwable = true -- Set to true to give this weapon throwing capabilities.
-SWEP.Tossable = false -- When grenade is enabled, right click will toss. Set to false to disable, allowing you to aim down sights.
+SWEP.Tossable = true -- When grenade is enabled, right click will toss. Set to false to disable, allowing you to aim down sights.
 SWEP.ThrowAnimSpeed = 1
 
 SWEP.FuseTimer = 4 -- Length of time that the grenade will take to explode in your hands. -1 = Won't explode.
@@ -91,7 +91,7 @@ SWEP.CrouchPos = Vector(-0.5, -0, -1)
 SWEP.CrouchAng = Angle(0, 0, 0)
 
 SWEP.CustomizeAng = Angle(90, 55, -81)
-SWEP.CustomizePos = Vector(0, 30, 10)
+SWEP.CustomizePos = Vector(2, 30, 17)
 
 SWEP.CustomizeSnapshotPos = Vector(0, 20, 0)
 SWEP.CustomizeSnapshotFOV = 90
@@ -121,12 +121,23 @@ SWEP.Attachments = {
 
 SWEP.InstantSightIdle = true
 SWEP.Animations = {
-    ["idle"] = false, 
+    ["idle"] = {
+        Source = "idle",
+    },
 	["idle_primed"] = {
         Source = "drawbackhigh_idle",
     },
+	["idle_primed_toss"] = {
+        Source = "drawbacklow_idle",
+    },
     ["pullpin"] = {
         Source = "drawbackhigh",
+    }, 
+	["pullpin_toss"] = {
+        Source = "drawbacklow",
+    },
+    ["toss"] = {
+        Source = "low_throw",
     },
     ["draw"] = {
         Source = "draw",
