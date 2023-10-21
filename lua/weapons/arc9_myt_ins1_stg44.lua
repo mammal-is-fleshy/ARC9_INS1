@@ -71,7 +71,7 @@ SWEP.ReloadInSights = false -- This weapon can aim down sights while reloading.
 
 -------------------------- FIREMODES
 
-SWEP.RPM = 700
+SWEP.RPM = 600
 
 -- Works different to ArcCW
 
@@ -108,7 +108,7 @@ SWEP.RecoilResetTime = 0
 
 SWEP.RecoilAutoControl = 0 -- Multiplier for automatic recoil control.
 
-SWEP.RecoilKick = 1.5
+SWEP.RecoilKick = 1.4
 
 SWEP.RecoilMultRecoil = 1.125 -- Looks stupid but it means expoential recoil growth.
 
@@ -128,14 +128,14 @@ SWEP.SpreadMultHipFire = 1.25
 SWEP.FreeAimRadius = 8
 SWEP.FreeAimRadiusSights = 0
 
-SWEP.Sway = 1.25
+SWEP.Sway = 0
 
 SWEP.SwayMultMidAir = 2
 SWEP.SwayAddMove = 0.33
 SWEP.SwayMultMove = 1
 SWEP.SwayMultCrouch = 0.5
 SWEP.SwayMultShooting = 1.5
-SWEP.SwayMultSights = 0.125
+SWEP.SwayMultSights = 0.00000125
 
 SWEP.AimDownSightsTime = 0.31
 SWEP.SprintToFireTime = 0.35
@@ -166,8 +166,8 @@ SWEP.TracerColor = Color(255, 225, 200) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-3.16, -3, 0.1),
-    Ang = Angle(0, 0, 0),
+    Pos = Vector(-3.025, -10, 0.45),
+    Ang = Angle(0, 0.8, 0),
     Midpoint = { -- Where the gun should be at the middle of it's irons
         Pos = Vector(0, 15, -4),
         Ang = Angle(-10, 60, -25),
@@ -201,7 +201,7 @@ SWEP.CrouchPos = Vector(-0.5, 1, -1)
 SWEP.CrouchAng = Angle(0, 0, -10)
 
 SWEP.CustomizeAng = Angle(90, -5, 0)
-SWEP.CustomizePos = Vector(12, 28, 7)
+SWEP.CustomizePos = Vector(18, 28, 7)
 
 SWEP.CustomizeSnapshotFOV = 110
 SWEP.CustomizeNoRotate = false
@@ -234,19 +234,17 @@ SWEP.AnimDraw = false
 SWEP.MuzzleParticle = "muzzleflash_pistol"
 SWEP.MuzzleEffectQCA = 1
 
-SWEP.ShellModel = "models/shells/shell_9mm.mdl"
+SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellCorrectAng = Angle(0, 180, 0)
 SWEP.ShellScale = 1
 SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 
 -------------------------- SOUNDS
 
-SWEP.ShootSound = {"myt_ins1/tavor-1.wav", "myt_ins1/tavor-2.wav"}
+SWEP.ShootSound = {"myt_ins1/stg_fire.ogg"}
 SWEP.DistantShootSound = "myt_ins1/fal-01_echo.wav"
 SWEP.ShootSoundSilenced = "myt_ins1_sd/tavor.wav"
 SWEP.DryFireSound = "myt_ins1/makarov-empty.wav"
-
-SWEP.EjectDelay = 0
 
 SWEP.EjectDelay = 0
 SWEP.CaseEffectQCA = 2
@@ -269,8 +267,8 @@ SWEP.Attachments = {
 
         ExcludeElements = {"pre_optic"},
         Category = {"optic_css"},
-        Bone = "Point002",
-        Pos = Vector(0.05, 1, 3.3),
+        Bone = "STG44",
+        Pos = Vector(-0.5, 2, 7),
         Ang = Angle(0, -90, 0),
     },
     {
@@ -280,8 +278,8 @@ SWEP.Attachments = {
 		
         ExcludeElements = {"pre_muzzed"},
         Category = {"muzzle_css"},
-        Bone = "Point002",
-        Pos = Vector(0.05, 13, 0.75),
+        Bone = "STG44",
+        Pos = Vector(-0.5, 22, 4.21),
         Ang = Angle(0, -90, 0),
     },
     {
@@ -290,8 +288,8 @@ SWEP.Attachments = {
         InstalledElements = {"rail_bot"},
 
         Category = {"grip_css"},
-        Bone = "Point002",
-        Pos = Vector(0.05, 9, -2.2),
+        Bone = "STG44",
+        Pos = Vector(-0.5, 7, 2.5),
         Ang = Angle(0, -90, 0),
         MergeSlots = {4},
     },
@@ -301,8 +299,8 @@ SWEP.Attachments = {
         DefaultName = "",
         Hidden = true,
         Category = {"css_ubgl"},
-        Bone = "Point002",
-        Pos = Vector(0.05, 7.5, -1.5),
+        Bone = "STG44",
+        Pos = Vector(-0.5, 4.5, 3.5),
         Ang = Angle(0, -90, 0),
     },
 }
@@ -323,8 +321,7 @@ SWEP.Animations = {
         --Time = 0.5, -- overrides the duration of the sequence
         Mult = 1, -- multiplies time
         EventTable = {
-            {s =  "myt_ins1/base_boltpull.wav" ,    t = 7 / 30},
-			{s =  "myt_ins1/base_boltrel.wav" ,    t = 10 / 30}, 
+			{s =  "myt_ins1/stg_reload2.ogg" ,    t = 4 / 30}, 
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -338,9 +335,9 @@ SWEP.Animations = {
     ["fire"] = {
         Source = {"base_fire","base_fire2","base_fire3"},
     },
-    ["fire_iron"] = {
-        Source = {"iron_fire_1","iron_fire_2","iron_fire_3"},
-    },
+    --["fire_iron"] = {
+        -- Source = {"iron_fire_1","iron_fire_2","iron_fire_3"},
+   -- },
 
     ["reload"] = {
         Source = "base_reload",
@@ -348,8 +345,7 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.775,
         EventTable = {
-            {s =  "myt_ins1/base_clipout.wav" ,   t = 22 / 30},
-            {s =  "myt_ins1/base_clipin.wav" ,    t = 53 / 30},
+            {s =  "myt_ins1/stg_reload1.ogg" ,   t = 0 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -362,14 +358,12 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.85,
         EventTable = {
-            {s =  "myt_ins1/base_clipout.wav" ,   t = 22 / 30},
-            {s =  "myt_ins1/base_clipin.wav" ,    t = 53 / 30},
-            {s =  "myt_ins1/base_boltpull.wav" ,    t = 75 / 30},
-			{s =  "myt_ins1/base_boltrel.wav" ,    t = 80 / 30}, 
+            {s =  "myt_ins1/stg_reload1.ogg" ,   t = 0 / 30},
+			{s =  "myt_ins1/stg_reload2.ogg" ,    t = 54 / 30}, 
             },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
-        { t = 0.2, lhik = 0, rhik = 1, },{ t = 0.75, lhik = 0, rhik = 1, },{ t = 0.95, lhik = 1, rhik = 1, },
+        { t = 0.15, lhik = 0, rhik = 1, },{ t = 0.75, lhik = 0, rhik = 1, },{ t = 0.95, lhik = 1, rhik = 1, },
         },
     },
 }

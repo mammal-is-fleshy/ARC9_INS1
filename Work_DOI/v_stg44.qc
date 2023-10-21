@@ -196,7 +196,7 @@ $sequence "base_deploy" {
 	fadein 0.2
 	fadeout 0.2
 	snap
-	fps 31
+	fps 30
 }
 
 $sequence "base_holster" {
@@ -240,7 +240,7 @@ $sequence "base_reload" {
 	{ event 46 64 "" }
 	fadein 0.2
 	fadeout 0.2
-	fps 35
+	fps 30
 }
 
 $sequence "base_reloadempty" {
@@ -248,7 +248,7 @@ $sequence "base_reloadempty" {
 	activity "ACT_VM_RELOAD_EMPTY" 1
 	fadein 0.2
 	fadeout 0.2
-	fps 35
+	fps 30
 }
 
 $sequence "base_sprint" {
