@@ -9,6 +9,17 @@ $bodygroup "Weapon"
 	studio "stg.smd"
 	blank
 }
+$bodygroup "1"
+{
+	studio "stg_iron.smd"
+	studio "stg_rail_top.smd"
+	blank
+}
+$bodygroup "2"
+{
+	blank
+	studio "stg_rail_bot.smd"
+}
 
 
 $surfaceprop "default"
@@ -205,6 +216,15 @@ $sequence "base_holster" {
 	fadein 0.2
 	fadeout 0.2
 	fps 34
+}
+
+$sequence "base_fire_iron" {
+	"anims\base_fire_iron.smd"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	fadein 0.2
+	fadeout 0.2
+	snap
+	fps 30
 }
 
 $sequence "base_fire" {

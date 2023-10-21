@@ -190,14 +190,14 @@ SWEP.SprintMidPoint = {
     Ang = Angle(5, 20, 15)
 }
 
-SWEP.MovingPos = Vector(0, 0.5, 0.5)
+SWEP.MovingPos = Vector(0, -0.5, 0.5)
 SWEP.MovingAng = Angle(0, -2, 0)
 
 SWEP.ViewModelFOVBase = 70
-SWEP.ActivePos = Vector(0, 1, 0)
+SWEP.ActivePos = Vector(0, -1, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.CrouchPos = Vector(-0.5, 1, -1)
+SWEP.CrouchPos = Vector(-0.5, -1, -1)
 SWEP.CrouchAng = Angle(0, 0, -10)
 
 SWEP.CustomizeAng = Angle(90, -5, 0)
@@ -254,9 +254,9 @@ SWEP.FiremodeSound = "arc9/firemode.wav"
 SWEP.DefaultBodygroups = "00000000"
 
 SWEP.AttachmentElements = {
-    ["rail_bot"] = { Bodygroups = {{3, 1}}, }, 
+    ["rail_bot"] = { Bodygroups = {{2, 1}}, }, 
 	["has_muzzle"] = { Bodygroups = {{4, 1}}, },
-    ["has_optic"] = { Bodygroups = {{1, 2},{2, 2},}, },
+    ["has_optic"] = { Bodygroups = {{1, 1},}, },
 }
 
 SWEP.Attachments = {
@@ -268,7 +268,7 @@ SWEP.Attachments = {
         ExcludeElements = {"pre_optic"},
         Category = {"optic_css"},
         Bone = "STG44",
-        Pos = Vector(-0.5, 2, 7),
+        Pos = Vector(-0.5, 1.5, 6.4),
         Ang = Angle(0, -90, 0),
     },
     {
@@ -289,7 +289,7 @@ SWEP.Attachments = {
 
         Category = {"grip_css"},
         Bone = "STG44",
-        Pos = Vector(-0.5, 7, 2.5),
+        Pos = Vector(-0.5, 6.75, 2.75),
         Ang = Angle(0, -90, 0),
         MergeSlots = {4},
     },
@@ -334,6 +334,9 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = {"base_fire","base_fire2","base_fire3"},
+    }, 
+	["fire_iron"] = {
+        Source = {"base_fire_iron"},
     },
     --["fire_iron"] = {
         -- Source = {"iron_fire_1","iron_fire_2","iron_fire_3"},

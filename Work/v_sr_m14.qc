@@ -1,14 +1,44 @@
 // Created by Crowbar 0.74
 
-$modelname "ins\weapons\v_sr_m14.mdl"
+$modelname "weapons/myt_ins1/c_sr_m14.mdl"
+$include c_ins2_to_gmod_hands.qci
+$scale 1.3
 
 $bodygroup "sights"
 {
 	studio "v_sr_m14_body0_model0.smd"
+	blank
 }
 $bodygroup "arms"
 {
+	blank
 	studio "v_sr_m14_body1_model0.smd"
+}
+$bodygroup "2"
+{
+	blank
+	studio "m14_rail.smd"
+}
+$bodygroup "3"
+{
+	blank
+	studio "m14_scope.smd"
+}
+$bodygroup "4"
+{
+	studio "m14_bipod.smd"
+	studio "m14_bipod_down.smd"
+	blank
+}
+$bodygroup "5"
+{
+	blank
+	studio "m14_rail_bot.smd"
+}
+$bodygroup "6"
+{
+	studio "m14_muz.smd"
+	blank
 }
 
 
@@ -18,9 +48,9 @@ $contents "solid"
 
 $illumposition -3.724 -16.684 -11.768
 
+$cdmaterials "models\myt_ins1_vmt\"
+$cdmaterials "models\myt_ins1_vmt\att"
 $cdmaterials "ins\models\hands\"
-$cdmaterials "ins\models\weapons\m14\"
-$cdmaterials "ins\models\weapons\lense\"
 
 $attachment "muzzle" "muzzle_flash" 0 0 0 rotate 0 0 90
 $attachment "2" "eject" 0 0 0 rotate 0 0 0
@@ -123,8 +153,6 @@ $sequence "m14_idle" {
 $sequence "m14_fire1" {
 	"v_sr_m14_anims\m14_fire1.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
-	{ event AE_MUZZLEFLASH 0 "PISTOL MUZZLE" }
-	{ event AE_CLIENT_EFFECT_ATTACH 0 "EjectBrass_762Nato 2 75" }
 	fadein 0.2
 	fadeout 0.2
 	snap
@@ -134,8 +162,6 @@ $sequence "m14_fire1" {
 $sequence "m14_fire2" {
 	"v_sr_m14_anims\m14_fire2.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
-	{ event AE_MUZZLEFLASH 0 "PISTOL MUZZLE" }
-	{ event AE_CLIENT_EFFECT_ATTACH 0 "EjectBrass_762Nato 2 115" }
 	fadein 0.2
 	fadeout 0.2
 	snap
@@ -145,8 +171,6 @@ $sequence "m14_fire2" {
 $sequence "m14_fire3" {
 	"v_sr_m14_anims\m14_fire3.smd"
 	activity "ACT_VM_PRIMARYATTACK_1" 1
-	{ event AE_MUZZLEFLASH 0 "PISTOL MUZZLE" }
-	{ event AE_CLIENT_EFFECT_ATTACH 0 "EjectBrass_762Nato 2 100" }
 	fadein 0.2
 	fadeout 0.2
 	snap
@@ -156,8 +180,6 @@ $sequence "m14_fire3" {
 $sequence "m14_fire4" {
 	"v_sr_m14_anims\m14_fire4.smd"
 	activity "ACT_VM_PRIMARYATTACK_2" 1
-	{ event AE_MUZZLEFLASH 0 "PISTOL MUZZLE" }
-	{ event AE_CLIENT_EFFECT_ATTACH 0 "EjectBrass_762Nato 2 115" }
 	fadein 0.2
 	fadeout 0.2
 	snap
@@ -167,8 +189,6 @@ $sequence "m14_fire4" {
 $sequence "m14_firelast" {
 	"v_sr_m14_anims\m14_firelast.smd"
 	activity "ACT_VM_PRIMARYATTACK_EMPTY" 1
-	{ event AE_MUZZLEFLASH 0 "PISTOL MUZZLE" }
-	{ event AE_CLIENT_EFFECT_ATTACH 0 "EjectBrass_762Nato 2 115" }
 	fadein 0.2
 	fadeout 0.2
 	snap
@@ -178,7 +198,6 @@ $sequence "m14_firelast" {
 $sequence "m14_ironin" {
 	"v_sr_m14_anims\m14_ironin.smd"
 	activity "ACT_VM_DEPLOY" 1
-	{ event 5004 0 "Universal_INS.IronIn" }
 	fadein 0.2
 	fadeout 0.2
 	fps 50
@@ -187,7 +206,6 @@ $sequence "m14_ironin" {
 $sequence "m14_ironidle" {
 	"v_sr_m14_anims\m14_ironidle.smd"
 	activity "ACT_VM_IDLE_DEPLOYED" 1
-	{ event 5004 0 "Universal_INS.IronIdle" }
 	fadein 0.2
 	fadeout 0.2
 	snap
@@ -198,8 +216,6 @@ $sequence "m14_ironidle" {
 $sequence "m14_ironshoot" {
 	"v_sr_m14_anims\m14_ironshoot.smd"
 	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
-	{ event AE_MUZZLEFLASH 0 "PISTOL MUZZLE" }
-	{ event AE_CLIENT_EFFECT_ATTACH 0 "EjectBrass_762Nato 2 100" }
 	fadein 0.2
 	fadeout 0.2
 	snap
@@ -209,8 +225,6 @@ $sequence "m14_ironshoot" {
 $sequence "m14_ironshoot2" {
 	"v_sr_m14_anims\m14_ironshoot2.smd"
 	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
-	{ event AE_MUZZLEFLASH 0 "PISTOL MUZZLE" }
-	{ event AE_CLIENT_EFFECT_ATTACH 0 "EjectBrass_762Nato 2 100" }
 	fadein 0.2
 	fadeout 0.2
 	snap
@@ -220,8 +234,6 @@ $sequence "m14_ironshoot2" {
 $sequence "m14_ironshoot3" {
 	"v_sr_m14_anims\m14_ironshoot3.smd"
 	activity "ACT_VM_PRIMARYATTACK_DEPLOYED_1" 1
-	{ event AE_MUZZLEFLASH 0 "PISTOL MUZZLE" }
-	{ event AE_CLIENT_EFFECT_ATTACH 0 "EjectBrass_762Nato 2 100" }
 	fadein 0.2
 	fadeout 0.2
 	snap
@@ -231,8 +243,6 @@ $sequence "m14_ironshoot3" {
 $sequence "m14_ironshoot4" {
 	"v_sr_m14_anims\m14_ironshoot4.smd"
 	activity "ACT_VM_PRIMARYATTACK_DEPLOYED_2" 1
-	{ event AE_MUZZLEFLASH 0 "PISTOL MUZZLE" }
-	{ event AE_CLIENT_EFFECT_ATTACH 0 "EjectBrass_762Nato 2 100" }
 	fadein 0.2
 	fadeout 0.2
 	snap
@@ -242,8 +252,6 @@ $sequence "m14_ironshoot4" {
 $sequence "m14_ironshootlast" {
 	"v_sr_m14_anims\m14_ironshootlast.smd"
 	activity "ACT_VM_PRIMARYATTACK_DEPLOYED_EMPTY" 1
-	{ event AE_MUZZLEFLASH 0 "PISTOL MUZZLE" }
-	{ event AE_CLIENT_EFFECT_ATTACH 0 "EjectBrass_762Nato 2 100" }
 	fadein 0.2
 	fadeout 0.2
 	snap
@@ -253,50 +261,37 @@ $sequence "m14_ironshootlast" {
 $sequence "m14_ironout" {
 	"v_sr_m14_anims\m14_ironout.smd"
 	activity "ACT_VM_UNDEPLOY" 1
-	{ event 5004 0 "Universal_INS.IronOut" }
 	fadein 0.2
 	fadeout 0.2
 	fps 50
 }
 
 $sequence "m14_reload" {
-	"v_sr_m14_anims\m14_reload.smd"
+	"anims\m14_reload.smd"
 	activity "ACT_VM_RELOAD" 1
-	{ event 5004 20 "Weapon_INS_M14.Clipout" }
-	{ event 5004 51 "Weapon_INS_M14.Clipin" }
-	{ event 5004 77 "Weapon_INS_M14.Hit" }
 	fadein 0.2
 	fadeout 0.2
 	fps 30
 }
 
 $sequence "m14_reload_empty" {
-	"v_sr_m14_anims\m14_reload_empty.smd"
+	"anims\m14_reload_empty.smd"
 	activity "ACT_VM_RELOAD_EMPTY" 1
-	{ event 5004 20 "Weapon_INS_M14.Clipout" }
-	{ event 5004 51 "Weapon_INS_M14.Clipin" }
-	{ event 5004 77 "Weapon_INS_M14.Hit" }
-	{ event 5004 118 "Weapon_INS_M14.Boltback" }
-	{ event 5004 124 "Weapon_INS_M14.Boltforward" }
 	fadein 0.2
 	fadeout 0.2
 	fps 30
 }
 
 $sequence "m14_ready" {
-	"v_sr_m14_anims\m14_ready.smd"
+	"anims\m14_ready.smd"
 	activity "ACT_DEPLOY" 1
-	{ event 5004 16 "Weapon_INS_M14.Clipin" }
-	{ event 5004 39 "Weapon_INS_M14.Hit" }
-	{ event 5004 55 "Weapon_INS_M14.Boltback" }
-	{ event 5004 60 "Weapon_INS_M14.Boltforward" }
 	fadein 0.2
 	fadeout 0.2
 	fps 30
 }
 
 $sequence "m14_draw" {
-	"v_sr_m14_anims\m14_draw.smd"
+	"anims\m14_draw.smd"
 	activity "ACT_VM_DRAW" 1
 	{ event 5004 0 "Universal_INS.Draw" }
 	fadein 0.2
