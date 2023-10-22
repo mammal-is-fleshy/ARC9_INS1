@@ -336,11 +336,7 @@ SWEP.Animations = {
     },
     ["holster"] = {
         Source = "m14_down",
-        --Time = 0
-    },
-    ["holster_empty"] = {
-        Source = "m14_down_empty",
-        --Time = 0
+        Time = 0.5
     },
     ["fire"] = {
         Source = {"m14_fire1", "m14_fire2", "m14_fire3"},

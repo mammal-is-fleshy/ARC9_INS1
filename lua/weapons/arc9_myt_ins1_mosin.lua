@@ -256,7 +256,8 @@ SWEP.Attachments = {
         PrintName = "Optic",
         DefaultName = "None",
         InstalledElements = {"rail_top"},
-		
+
+        ExcludeElements = {"pre_optic"},
         Category = {"optic_css"},
         Bone = "Weapon",
         Pos = Vector(0, 3, 1.9),

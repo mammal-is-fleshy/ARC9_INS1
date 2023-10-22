@@ -112,3 +112,27 @@ ARC9.LoadAttachment(ATT, "myt_ins1_scope_svd")
 
 ------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------
+
+ATT = {}
+
+ATT.PrintName = [[IK]]
+ATT.Icon = Material("entities/arc9_myt_ins1_generic_scope.png", "mips smooth")
+ATT.Description = [[
+]]
+
+ATT.RHIK = true
+ATT.RHIK_Priority = 0
+ATT.Category = {"ins1_bodge_xm21"}
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(-7.5, -2, 3)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+ATT.Model = "models/weapons/myt_ins1/c_shot_toz.mdl"
+ATT.ModelBodygroups = "10000"
+
+ARC9.LoadAttachment(ATT, "myt_ins1_rhik_xm21")
+
+
+
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------

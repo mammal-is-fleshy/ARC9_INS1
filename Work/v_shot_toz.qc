@@ -7,6 +7,7 @@ $scale 1.3
 $bodygroup "toz"
 {
 	studio "v_shot_toz_body0_model0.smd"
+	blank
 }
 $bodygroup "arms"
 {
