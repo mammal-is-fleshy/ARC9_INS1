@@ -42,7 +42,7 @@ SWEP.DamageMin = 140 -- Damage done at maximum range
 SWEP.RangeMin = 500
 SWEP.RangeMax = 3000
 
-SWEP.Penetration = 15 -- Units of wood that can be penetrated by this gun.
+SWEP.Penetration = 25 -- Units of wood that can be penetrated by this gun.
 
 SWEP.BodyDamageMults = {
     [HITGROUP_HEAD] = 1.5,
@@ -247,7 +247,7 @@ SWEP.FiremodeSound = "arc9/firemode.wav"
 SWEP.DefaultBodygroups = "0000000000"
 
 SWEP.AttachmentElements = {
-    ["rail_top"] = {Bodygroups = {{1, 1}},},
+    ["rail_top"] = {Bodygroups = {{1, 2}, {3, 1}},},
 	["rail_bot"] = {Bodygroups = {{2, 1}},},
 }
 
@@ -260,8 +260,9 @@ SWEP.Attachments = {
         ExcludeElements = {"pre_optic"},
         Category = {"optic_css"},
         Bone = "Weapon",
-        Pos = Vector(0, 3, 1.9),
+        Pos = Vector(0, -5, 2.2),
         Ang = Angle(0, -90, 0),
+		ExtraSightDistance = 1,
     },
     {
         PrintName = "Muzzle",
@@ -288,8 +289,20 @@ SWEP.Attachments = {
 SWEP.ManualAction = true
 SWEP.ManualActionNoLastCycle = true
 
+SWEP.Hook_TranslateAnimation = function(wep, anim)
+    if wep:HasElement("rail_top") then
+            if anim == "cycle" then  		return "cycle_scope" end
+            if anim == "cycle_iron" then  	return "cycle_iron_scope" end 
+			if anim == "reload_start" then  		return "reload_start_scope" end
+			if anim == "reload_finish" then  	return "reload_finish_scope" end 
+			if anim == "reload_start_empty" then  		return "reload_start_empty_scope" end
+    end
+end
+
 SWEP.Animations = {
-    ["idle"] = false,
+    ["idle"] = {	Source = "base_idle",	}, 
+	["idle_uncycled"] = {	Source = "mosin_idle_dry",	},	
+	["idle_empty"] = {	Source = "mosin_idle_dry",	},
     ["draw"] = {
         Source = "base_draw",
         EventTable = {
@@ -310,6 +323,27 @@ SWEP.Animations = {
 		Time = 0.5,
     },
 
+    ["cycle_scope"] = {
+        Source = "base_fire_end_scope",
+        EjectAt = 8 / 30,
+        EventTable = {
+            {s =  "myt_ins1/MosinBack.wav" ,   t = 1 / 30},
+            {s =  "myt_ins1/MosinFoward.wav" ,   t = 11 / 30},
+        },
+        FireASAP = true,
+        MinProgress = 0.9,
+    }, 
+	["cycle_iron_scope"] = {
+        Source = "iron_fire_end_scope",
+        EjectAt = 8 / 30,
+        EventTable = {
+            {s =  "myt_ins1/MosinBack.wav" ,   t = 1 / 30},
+            {s =  "myt_ins1/MosinFoward.wav" ,   t = 11 / 30},
+        },
+        FireASAP = true,
+        MinProgress = 0.9, 
+	},
+	
     ["cycle"] = {
         Source = "base_fire_end",
         EjectAt = 8 / 30,
@@ -368,6 +402,35 @@ SWEP.Animations = {
     },
     ["reload_finish"] = {
         Source = "reload_end",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        FireASAP = true,
+        MinProgress = 0.5,
+        EventTable = {
+            {s =  "myt_ins1/MosinFoward.wav" ,   t = 0 / 30},
+        },
+    }, 
+    ["reload_start_scope"] = {
+        Source = "reload_start_scope",
+        RestoreAmmo = 0,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        EjectAt = 8 / 30,
+        EventTable = {
+            {s =  "myt_ins1/MosinBack.wav" ,   t = 1 / 30},
+            {s =  "myt_ins1/MosinLoad.wav" ,   t = 20 / 30},
+        },
+    }, 
+	["reload_start_empty_scope"] = {
+        Source = "reload_start_scope",
+        EjectAt = 6 / 30,
+        RestoreAmmo = 1,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        EventTable = {
+            {s =  "myt_ins1/MosinBack.wav" ,   t = 1 / 30},
+            {s =  "myt_ins1/MosinLoad.wav" ,   t = 20 / 30},
+        },
+    },
+    ["reload_finish_scope"] = {
+        Source = "reload_end_scope",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FireASAP = true,
         MinProgress = 0.5,

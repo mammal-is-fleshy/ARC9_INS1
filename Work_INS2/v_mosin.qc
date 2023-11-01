@@ -10,17 +10,26 @@ $bodygroup "0"
 	blank
 }
 
-$bodygroup "0"
+$bodygroup "1"
 {
 	studio "mosin_iron.smd"
 	studio "mosin_rail_top.smd"
+	studio "mosin_rail_top2.smd"
 	blank
 }
 
-$bodygroup "0"
+$bodygroup "2"
 {
 	blank
 	studio "mosin_rail_bot.smd"
+}
+
+
+$bodygroup "3"
+{
+	studio "mosin_bolt.smd"
+	studio "mosin_bolt_scope.smd"
+	blank
 }
 
 
@@ -200,6 +209,15 @@ $sequence "base_idle" {
 	loop
 }
 
+$sequence "mosin_idle_dry" {
+	"anims\mosin_idle_dry.smd"
+	activity "ACT_VM_IDLE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
 $sequence "base_down" {
 	"v_mosin_anims\base_down.smd"
 	activity "ACT_VM_DOWN" 1
@@ -261,6 +279,14 @@ $sequence "base_fire_end" {
 	fps 30
 }
 
+$sequence "base_fire_end_scope" {
+	"anims\mosin_fire_end_scope.smd"
+	activity "ACT_VM_PRIMARYATTACK_END" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
 $sequence "base_firelast" {
 	"v_mosin_anims\base_firelast.smd"
 	activity "ACT_VM_SHOOTLAST" 1
@@ -289,6 +315,15 @@ $sequence "reload_start" {
 	fps 30
 }
 
+$sequence "reload_start_scope" {
+	"anims\mosin_start_scope.smd"
+	activity "ACT_VM_RELOAD" 1
+	fadein 0.2
+	fadeout 0.2
+	snap
+	fps 30
+}
+
 $sequence "reload_insert" {
 	"anims\mosin_insert.smd"
 	activity "ACT_VM_RELOAD_INSERT" 1
@@ -300,6 +335,15 @@ $sequence "reload_insert" {
 
 $sequence "reload_end" {
 	"anims\mosin_end.smd"
+	activity "ACT_VM_RELOAD_END" 1
+	fadein 0.2
+	fadeout 0.2
+	snap
+	fps 30
+}
+
+$sequence "reload_end_scope" {
+	"anims\mosin_end_scope.smd"
 	activity "ACT_VM_RELOAD_END" 1
 	fadein 0.2
 	fadeout 0.2
@@ -328,6 +372,15 @@ $sequence "iron_fire_start" {
 
 $sequence "iron_fire_end" {
 	"anims\mosin_iron_fire_end.smd"
+	activity "ACT_VM_ISHOOT_END" 1
+	fadein 0.2
+	fadeout 0.2
+	snap
+	fps 28.5
+}
+
+$sequence "iron_fire_end_scope" {
+	"anims\mosin_iron_fire_end_scope.smd"
 	activity "ACT_VM_ISHOOT_END" 1
 	fadein 0.2
 	fadeout 0.2

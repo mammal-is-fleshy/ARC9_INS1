@@ -159,16 +159,7 @@ $sequence "m14_bolt" {
 }
 
 $sequence "m14_fire1" {
-	"v_sr_m14_anims\m14_fire1.smd"
-	activity "ACT_VM_PRIMARYATTACK" 1
-	fadein 0.2
-	fadeout 0.2
-	snap
-	fps 30
-}
-
-$sequence "m14_fire2" {
-	"v_sr_m14_anims\m14_fire2.smd"
+	"anims\m14s_fire1.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
 	fadein 0.2
 	fadeout 0.2
@@ -177,26 +168,8 @@ $sequence "m14_fire2" {
 }
 
 $sequence "m14_fire3" {
-	"v_sr_m14_anims\m14_fire3.smd"
+	"anims\m14s_fire3.smd"
 	activity "ACT_VM_PRIMARYATTACK_1" 1
-	fadein 0.2
-	fadeout 0.2
-	snap
-	fps 30
-}
-
-$sequence "m14_fire4" {
-	"v_sr_m14_anims\m14_fire4.smd"
-	activity "ACT_VM_PRIMARYATTACK_2" 1
-	fadein 0.2
-	fadeout 0.2
-	snap
-	fps 30
-}
-
-$sequence "m14_firelast" {
-	"v_sr_m14_anims\m14_firelast.smd"
-	activity "ACT_VM_PRIMARYATTACK_EMPTY" 1
 	fadein 0.2
 	fadeout 0.2
 	snap

@@ -36,21 +36,21 @@ SWEP.RecoilAutoControlMultHipFire = 0.5
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 52
-SWEP.DamageMin = 75
+SWEP.DamageMax = 85
+SWEP.DamageMin = 105
 
 SWEP.RangeMin = 500
 SWEP.RangeMax = 3000
 
-SWEP.Penetration = 15 -- Units of wood that can be penetrated by this gun.
+SWEP.Penetration = 4 -- Units of wood that can be penetrated by this gun.
 
 SWEP.BodyDamageMults = {
-    [HITGROUP_HEAD] = 1.5,
+    [HITGROUP_HEAD] = 3,
     [HITGROUP_CHEST] = 1,
-    [HITGROUP_LEFTARM] = 0.8,
-    [HITGROUP_RIGHTARM] = 0.8,
-    [HITGROUP_LEFTLEG] = 0.75,
-    [HITGROUP_RIGHTLEG] = 0.75,
+    [HITGROUP_LEFTARM] = 0.5,
+    [HITGROUP_RIGHTARM] = 0.5,
+    [HITGROUP_LEFTLEG] = 0.5,
+    [HITGROUP_RIGHTLEG] = 0.5,
 }
 
 -------------------------- PHYS BULLET BALLISTICS
@@ -338,7 +338,6 @@ SWEP.Animations = {
         Source = "m14_draw",
         EventTable = {
             {s =  "myt_ins1/universal/uni-draw.wav" ,   t = 0 / 30},
-            {s =  "myt_ins1/ak47-selectordown.wav" ,   t = 18 / 30},
         },
     },
     ["ready"] = {
@@ -349,17 +348,17 @@ SWEP.Animations = {
 			{s =  "myt_ins1/m14-boltback.wav" ,    t = 6 / 30},
 			{s =  "myt_ins1/m14-boltforward.wav" ,    t = 12 / 30},
         },
+        IKTimeLine = {
+        { t = 0, lhik = 1, rhik = 1, },
+        { t = 0.15, lhik = 1, rhik = 0, },{ t = 0.6, lhik = 1, rhik = 0, },{ t = 0.75, lhik = 1, rhik = 1, },
+        },
     },
     ["holster"] = {
         Source = "m14_down",
-        --Time = 0
-    },
-    ["holster_empty"] = {
-        Source = "m14_down_empty",
-        --Time = 0
+        Time = 0.5
     },
     ["fire"] = {
-        Source = {"m14_fire1", "m14_fire2", "m14_fire3"},
+        Source = {"m14_fire1", "m14_fire3"},
     },
 
     ["cycle"] = {

@@ -322,7 +322,6 @@ SWEP.Animations = {
         Source = "m14_draw",
         EventTable = {
             {s =  "myt_ins1/universal/uni-draw.wav" ,   t = 0 / 30},
-            {s =  "myt_ins1/ak47-selectordown.wav" ,   t = 18 / 30},
         },
     },
     ["ready"] = {

@@ -306,3 +306,14 @@ $sequence "iron_fire_3" {
 	snap
 	fps 30
 }
+
+
+$collisionmodel "stg.smd"
+{
+	$mass 30
+	$inertia 10
+	$damping 0.01
+	$rotdamping 1.5
+	$rootbone " "
+
+}
