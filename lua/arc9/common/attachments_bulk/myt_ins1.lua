@@ -260,7 +260,7 @@ ATT = {}
 ATT.PrintName = [[One-Handed]]
 ATT.CompactName = [[1H]]
 ATT.Icon = Material("entities/arc9_myt_ins1_db_1h.png", "mips smooth")
-ATT.Description = [[Fold that stock and walk with style.
+ATT.Description = [[Wrist? Gone. Style? Over 9000.
 ]]
 
 ATT.SortOrder = 1
