@@ -331,8 +331,8 @@ SWEP.Animations = {
         Source = {"l42_fire11","l42_fire22"},
         EjectAt = 32 / 40,
         EventTable = {
-            {s =  "myt_ins1/enfield-boltback.wav" ,   t = 12 / 30},
-            {s =  "myt_ins1/enfield-boltforward.wav" ,   t = 16 / 30},
+            {s =  "myt_ins1/enfield-boltback.wav" ,   t = 14 / 30},
+            {s =  "myt_ins1/enfield-boltforward.wav" ,   t = 22 / 30},
         },
         FireASAP = true,
         MinProgress = 0.8,
@@ -345,7 +345,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         EjectAt = 15 / 40,
         EventTable = {
-            {s =  "myt_ins1/enfield-boltback.wav" ,   t = 5 / 30},
+            {s =  "myt_ins1/enfield-boltback.wav" ,   t = 3 / 30},
             {s =  "myt_ins1/enfield-roundin.wav" ,   t = 30 / 30},
         },
     }, 
@@ -354,7 +354,7 @@ SWEP.Animations = {
         RestoreAmmo = 1,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         EventTable = {
-            {s =  "myt_ins1/enfield-boltback.wav" ,   t = 5 / 30},
+            {s =  "myt_ins1/enfield-boltback.wav" ,   t = 3 / 30},
             {s =  "myt_ins1/enfield-roundin.wav" ,   t = 30 / 30},
         },
     },
@@ -371,7 +371,8 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.5,
         EventTable = {
-            {s =  "myt_ins1/enfield-boltforward.wav" ,   t = 0 / 30},
+            {s =  "myt_ins1/enfield-boltback.wav" ,   t = 1.1 / 30},
+	    {s =  "myt_ins1/enfield-boltforward.wav" ,   t = 2 / 35},
         },
     }, 
 }
