@@ -307,3 +307,13 @@ $sequence "m14_down" {
 	fps 30
 	loop
 }
+
+$collisionmodel "v_sr_m14_body0_model0.smd"
+{
+	$mass 30
+	$inertia 10
+	$damping 0.01
+	$rotdamping 1.5
+	$rootbone " "
+
+}
