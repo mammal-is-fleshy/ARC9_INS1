@@ -11,7 +11,7 @@ SWEP.PrintName = "Knife"
 SWEP.Class = "Melee"
 
 SWEP.Credits = {
-    ["Assets"] = [[Insurgency: Modern Infrantry Combat]],
+    ["Assets"] = [[Insurgency: Modern Infantry Combat]],
 }
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_knife.mdl"
