@@ -321,7 +321,7 @@ SWEP.Animations = {
         --Time = 0.5, -- overrides the duration of the sequence
         Mult = 1, -- multiplies time
         EventTable = {
-			{s =  "myt_ins1/stg_reload2.ogg" ,    t = 4 / 30}, 
+			{s =  "myt_ins1/stg44_chamber.wav" ,    t = 4 / 30}, 
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -348,7 +348,8 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.775,
         EventTable = {
-            {s =  "myt_ins1/stg_reload1.ogg" ,   t = 0 / 30},
+        	{s =  "myt_ins1/stg44_mag_out.wav" ,   t = 0 / 30},
+		{s =  "myt_ins1/stg44_mag_in.wav" ,   t = 35 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -361,9 +362,10 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.85,
         EventTable = {
-            {s =  "myt_ins1/stg_reload1.ogg" ,   t = 0 / 30},
-			{s =  "myt_ins1/stg_reload2.ogg" ,    t = 54 / 30}, 
-            },
+        	{s =  "myt_ins1/stg44_mag_out.wav" ,   t = 0 / 30},
+		{s =  "myt_ins1/stg44_mag_in.wav" ,   t = 35 / 30},
+		{s =  "myt_ins1/stg44_chamber.wav" ,    t = 52 / 30}, 
+        },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
         { t = 0.15, lhik = 0, rhik = 1, },{ t = 0.75, lhik = 0, rhik = 1, },{ t = 0.95, lhik = 1, rhik = 1, },
