@@ -11,7 +11,7 @@ SWEP.PrintName = "RGD5"
 SWEP.Class = "Grenade"
 
 SWEP.Credits = {
-    ["Assets"] = [[Insurgency: Modern Infrantry Combat]],
+    ["Assets"] = [[Insurgency: Modern Infantry Combat]],
 }
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_gren_rgd5.mdl"
