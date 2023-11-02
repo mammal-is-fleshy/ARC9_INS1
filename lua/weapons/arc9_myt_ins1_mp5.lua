@@ -8,7 +8,7 @@ SWEP.SubCategory = "Primary"
 
 SWEP.PrintName = "MP5"
 
-SWEP.Class = "Rifle"
+SWEP.Class = "Submachine Gun"
 
 SWEP.Credits = {
 	---["Assets"] = [[ https://gamebanana.com/mods/211744 ]],  
