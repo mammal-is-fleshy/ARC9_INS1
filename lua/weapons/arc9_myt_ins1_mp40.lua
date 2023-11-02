@@ -268,7 +268,7 @@ SWEP.Attachments = {
         ExcludeElements = {"pre_optic"},
         Category = {"optic_css"},
         Bone = "Weapon",
-        Pos = Vector(-0.25, -3.75, 2.225),
+        Pos = Vector(0, 4, 3.75),
         Ang = Angle(0, -90, 0),
     },
     {
@@ -279,7 +279,7 @@ SWEP.Attachments = {
         ExcludeElements = {"pre_muzzed"},
         Category = {"muzzle_css"},
         Bone = "Weapon",
-        Pos = Vector(-0.25, 12, -0.65),
+        Pos = Vector(0, 23.02, 2),
         Ang = Angle(0, -90, 0),
     },
 }
@@ -327,8 +327,8 @@ SWEP.Animations = {
         MinProgress = 0.775,
         Mult = 1.1,
         EventTable = {
-            {s =  "myt_ins1/mp40_mag1.wav" ,   t = 12 / 30},
-            {s =  "myt_ins1/mp40_mag2.wav" ,    t = 32 / 30},
+            {s =  "myt_ins1/mp40_mag2.wav" ,   t = 12 / 30},
+            {s =  "myt_ins1/mp40_mag1.wav" ,    t = 32 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -343,8 +343,8 @@ SWEP.Animations = {
         MinProgress = 0.85,
         EventTable = {
             {s =  "myt_ins1/mp40_bolt1.wav" ,   t = 6 / 30},
-            {s =  "myt_ins1/mp40_mag1.wav" ,   t = 28 / 30},
-            {s =  "myt_ins1/mp40_mag2.wav" ,    t = 45 / 30},
+            {s =  "myt_ins1/mp40_mag2.wav" ,   t = 28 / 30},
+            {s =  "myt_ins1/mp40_mag1.wav" ,    t = 45 / 30},
 			{s =  "myt_ins1/mp40_bolt2.wav" ,    t = 62 / 30}, 
         },
         IKTimeLine = {
