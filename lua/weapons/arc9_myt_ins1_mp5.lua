@@ -352,8 +352,8 @@ SWEP.Animations = {
         MinProgress = 0.775,
         Mult = 1,
         EventTable = {
-            {s =  "myt_ins1/mp5_mag1.wav" ,   t = 0 / 30},
-            {s =  "myt_ins1/mp5_mag2.wav" ,    t = 41 / 30},
+            {s =  "myt_ins1/mp5_mag2.wav" ,   t = 2 / 30},
+            {s =  "myt_ins1/mp5_mag1.wav" ,    t = 34 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -368,10 +368,10 @@ SWEP.Animations = {
         MinProgress = 0.85,
         EventTable = {
             {s =  "myt_ins1/mp5_bolt1.wav" ,   t = 0 / 30},
-            {s =  "myt_ins1/mp5_mag1.wav" ,   t = 20 / 30},
-            {s =  "myt_ins1/mp5_mag2.wav" ,    t = 61 / 30},
-			{s =  "myt_ins1/mp5_bolt2.wav" ,    t = 80 / 30}, 
-            },
+            {s =  "myt_ins1/mp5_mag2.wav" ,   t = 22 / 30},
+            {s =  "myt_ins1/mp5_mag1.wav" ,    t = 54 / 30},
+	    {s =  "myt_ins1/mp5_bolt2.wav" ,    t = 78 / 30}, 
+        },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
         { t = 0.15, lhik = 0, rhik = 1, },{ t = 0.8, lhik = 0, rhik = 1, },{ t = 0.95, lhik = 1, rhik = 1, },
