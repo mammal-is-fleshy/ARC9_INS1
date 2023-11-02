@@ -347,7 +347,7 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.775,
         EventTable = {
-            {s =  "myt_ins1/m14-magout.wav" ,   t = 10 / 30},
+            {s =  "myt_ins1/m14-magout.wav" ,   t = 8 / 30},
             {s =  "myt_ins1/m14-magin.wav" ,    t = 32 / 30},  
 			{s =  "myt_ins1/m14-hit.wav" ,    t = 40 / 30},
         },
@@ -362,7 +362,7 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.85,
         EventTable = {
-            {s =  "myt_ins1/m14-magout.wav" ,   t = 10 / 30},
+            {s =  "myt_ins1/m14-magout.wav" ,   t = 8 / 30},
             {s =  "myt_ins1/m14-magin.wav" ,    t = 32 / 30},  
 			{s =  "myt_ins1/m14-hit.wav" ,    t = 40 / 30},
 			{s =  "myt_ins1/m14-boltback.wav" ,    t = 84 / 30},
