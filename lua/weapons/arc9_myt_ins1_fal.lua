@@ -11,7 +11,7 @@ SWEP.PrintName = "FAL"
 SWEP.Class = "Rifle"
 
 SWEP.Credits = {
-    ["Assets"] = [[Insurgency: Modern Infrantry Combat]],
+    ["Assets"] = [[Insurgency: Modern Infantry Combat]],
 }
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_rif_fnfal.mdl"
