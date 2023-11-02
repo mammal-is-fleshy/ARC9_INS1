@@ -11,7 +11,7 @@ SWEP.PrintName = "L42A1"
 SWEP.Class = "Sniper Rifle"
 
 SWEP.Credits = {
-    ["Assets"] = [[Insurgency: Modern Infrantry Combat]],
+    ["Assets"] = [[Insurgency: Modern Infantry Combat]],
 }
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_sr_l42a1.mdl"
