@@ -8,6 +8,7 @@ $scale 1.3
 $bodygroup "Weapon"
 {
 	studio "mp40.smd"
+	studio "mp40_noironsights.smd"
 }
 
 
