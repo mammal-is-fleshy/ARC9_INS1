@@ -11,7 +11,7 @@ SWEP.PrintName = "RPG-7"
 SWEP.Class = "Rocket Launcher"
 
 SWEP.Credits = {
-    ["Assets"] = [[Insurgency: Modern Infrantry Combat]],
+    ["Assets"] = [[Insurgency: Modern Infantry Combat]],
 }
 SWEP.Description = [[Reloading-disposable rocket package.]]
 
