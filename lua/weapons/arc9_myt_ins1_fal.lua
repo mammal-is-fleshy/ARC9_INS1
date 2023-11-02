@@ -348,7 +348,7 @@ SWEP.Animations = {
         MinProgress = 0.775,
         EventTable = {
             {s =  "myt_ins1/fal_clip_out.wav" ,   t = 6 / 30},
-            {s =  "myt_ins1/fal_clip_in.wav" ,    t = 24 / 30},
+            {s =  "myt_ins1/fal_clip_in.wav" ,    t = 21 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -362,7 +362,7 @@ SWEP.Animations = {
         MinProgress = 0.85,
         EventTable = {
             {s =  "myt_ins1/fal_clip_out.wav" ,   t = 6 / 30},
-            {s =  "myt_ins1/fal_clip_in.wav" ,    t = 24 / 30},
+            {s =  "myt_ins1/fal_clip_in.wav" ,    t = 21 / 30},
             {s =  "myt_ins1/fal_chamber.wav" ,    t = 55 / 30}, 
             },
         IKTimeLine = {
