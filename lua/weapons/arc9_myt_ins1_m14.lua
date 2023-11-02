@@ -365,8 +365,8 @@ SWEP.Animations = {
             {s =  "myt_ins1/m14-magout.wav" ,   t = 8 / 30},
             {s =  "myt_ins1/m14-magin.wav" ,    t = 32 / 30},  
 			{s =  "myt_ins1/m14-hit.wav" ,    t = 40 / 30},
-			{s =  "myt_ins1/m14-boltback.wav" ,    t = 84 / 30},
-			{s =  "myt_ins1/m14-boltforward.wav" ,    t = 92 / 30},
+			{s =  "myt_ins1/m14-boltback.wav" ,    t = 87 / 30},
+			{s =  "myt_ins1/m14-boltforward.wav" ,    t = 94 / 30},
             },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
