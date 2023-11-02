@@ -11,7 +11,7 @@ SWEP.PrintName = "TOZ"
 SWEP.Class = "Shotgun"
 
 SWEP.Credits = {
-    ["Assets"] = [[Insurgency: Modern Infrantry Combat]],
+    ["Assets"] = [[Insurgency: Modern Infantry Combat]],
 }
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_shot_toz.mdl"
