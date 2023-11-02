@@ -140,7 +140,7 @@ ARC9.LoadAttachment(ATT, "myt_ins1_rhik_xm21")
 ATT = {}
 
 ATT.PrintName = [[SD Kit]]
-ATT.Icon = Material("entities/arc9_myt_ins1_sd_glock.png", "mips smooth")
+ATT.Icon = Material("entities/arc9_myt_ins1_mp5sd.png", "mips smooth")
 ATT.Description = [[
 Integral Suppressor
 ]]
