@@ -331,8 +331,8 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.775,
         EventTable = {
-            {s =  "myt_ins1/m9-magout.wav" ,   t = 7 / 30},
-            {s =  "myt_ins1/m9-magin.wav" ,    t = 18 / 30},
+            {s =  "myt_ins1/glock_magout.wav" ,   t = 7 / 30},
+            {s =  "myt_ins1/glock_magin.wav" ,    t = 18 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -345,10 +345,10 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.85,
         EventTable = {
-            {s =  "myt_ins1/m9-magout.wav" ,   t = 7 / 30},
-            {s =  "myt_ins1/m9-magin.wav" ,    t = 18 / 30},
+            {s =  "myt_ins1/glock_magout.wav" ,   t = 7 / 30},
+            {s =  "myt_ins1/glock_magin.wav" ,    t = 18 / 30},
             {s =  "myt_ins1/m9-slideback.wav" ,    t = 43 / 30}, 
-			{s =  "myt_ins1/m9-slideforward.wav" ,    t = 45 / 30},
+	    {s =  "myt_ins1/glock_slideforward.wav" ,    t = 45 / 30},
             },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
