@@ -11,7 +11,7 @@ SWEP.PrintName = "M249"
 SWEP.Class = "Machine Gun"
 
 SWEP.Credits = {
-    ["Assets"] = [[Insurgency: Modern Infrantry Combat]],
+    ["Assets"] = [[Insurgency: Modern Infantry Combat]],
 }
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_mach_m249.mdl"
