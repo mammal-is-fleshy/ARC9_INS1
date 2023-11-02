@@ -297,3 +297,18 @@ end
 ARC9.LoadAttachment(ATT, "myt_ins1_db_1h")
 
 ----------------------------------------------------------------------------------
+
+ATT = {}
+
+ATT.PrintName = [[Alternative Bolt]]
+ATT.CompactName = [[Range]]
+ATT.Icon = Material("entities/arc9_myt_ins1_mosin_abolt.png", "mips smooth")
+ATT.Description = [[Scoping bolt without the scope]]
+
+ATT.SortOrder = 1
+ATT.Category = "ins1_optic_mosin"
+ATT.ActivateElements = {"abolt"}
+
+ARC9.LoadAttachment(ATT, "myt_ins1_mosin_abolt")
+
+----------------------------------------------------------------------------------

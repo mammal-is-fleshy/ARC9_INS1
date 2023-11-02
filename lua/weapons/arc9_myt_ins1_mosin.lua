@@ -45,10 +45,10 @@ SWEP.RangeMax = 3000
 SWEP.Penetration = 25 -- Units of wood that can be penetrated by this gun.
 
 SWEP.BodyDamageMults = {
-    [HITGROUP_HEAD] = 1.5,
+    [HITGROUP_HEAD] = 2,
     [HITGROUP_CHEST] = 1,
-    [HITGROUP_LEFTARM] = 0.75,
-    [HITGROUP_RIGHTARM] = 0.75,
+    [HITGROUP_LEFTARM] = 0.825,
+    [HITGROUP_RIGHTARM] = 0.825,
 }
 
 -------------------------- PHYS BULLET BALLISTICS
@@ -250,6 +250,11 @@ SWEP.AttachmentElements = {
     ["rail_top"] = {Bodygroups = {{1, 2}, {3, 1}},},
 	["rail_bot"] = {Bodygroups = {{2, 1}},},
 }
+SWEP.Hook_ModifyBodygroups = function(wep, data)
+    local model = data.model  -- most insufficient method ever
+    if wep:HasElement("abolt") 	then model:SetBodygroup(1,0) end
+end
+
 
 SWEP.Attachments = {
     {
@@ -258,7 +263,7 @@ SWEP.Attachments = {
         InstalledElements = {"rail_top"},
 
         ExcludeElements = {"pre_optic"},
-        Category = {"optic_css"},
+        Category = {"optic_css", "ins1_optic_mosin"},
         Bone = "Weapon",
         Pos = Vector(0, -5, 2.2),
         Ang = Angle(0, -90, 0),
