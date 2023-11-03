@@ -320,8 +320,8 @@ SWEP.Animations = {
         --Time = 0.5, -- overrides the duration of the sequence
         Mult = 1, -- multiplies time
         EventTable = {
-            {s =  "myt_ins1/ak47-boltback.wav" ,    t = 6 / 30},  
-			{s =  "myt_ins1/ak47-boltrelease.wav" ,    t = 14 / 30}, 
+            {s =  "myt_ins1/galil-boltback.wav" ,    t = 6 / 30},  
+			{s =  "myt_ins1/galil-boltrelease.wav" ,    t = 14 / 30}, 
         },
     },
     ["holster"] = {
@@ -352,8 +352,8 @@ SWEP.Animations = {
             {s =  "myt_ins1/ak47-magout.wav" ,   t = 10 / 30},
             {s =  "myt_ins1/ak47-magin1.ogg" ,    t = 38 / 30},  
 			{s =  "myt_ins1/ak47-magin2.ogg" ,    t = 48 / 30},
-            {s =  "myt_ins1/ak47-boltback.wav" ,    t = 62 / 30},  
-			{s =  "myt_ins1/ak47-boltrelease.wav" ,    t = 69 / 30}, 
+            {s =  "myt_ins1/galil-boltback.wav" ,    t = 62 / 30},  
+			{s =  "myt_ins1/galil-boltrelease.wav" ,    t = 69 / 30}, 
             },
     },
 }
