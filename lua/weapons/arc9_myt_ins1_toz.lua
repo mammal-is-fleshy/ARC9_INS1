@@ -6,7 +6,7 @@ SWEP.Spawnable = true
 SWEP.Category = "ARC9 - INS1"
 SWEP.SubCategory = "Primary"
 
-SWEP.PrintName = "TOZ"
+SWEP.PrintName = "TOZ-87"
 
 SWEP.Class = "Shotgun"
 
