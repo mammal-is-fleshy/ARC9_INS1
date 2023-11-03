@@ -13,6 +13,8 @@ SWEP.Class = "Rifle"
 SWEP.Credits = {
     ["Assets"] = [[Insurgency: Modern Infantry Combat]],
 }
+SWEP.Description = [[Modified iraqi SVD, named "Al-Kadesiah".
+Roughly a hybrid between an SVD and a Romanian PSL.]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_snip_svd.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_snip_svd.mdl"
@@ -255,6 +257,12 @@ SWEP.AttachmentElements = {
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local model = data.model  -- most insufficient method ever
     if wep:HasElement("scope") 	then model:SetBodygroup(2,1) end
+end
+
+SWEP.HookP_NameChange = function(self, name)
+    local attached = self:GetElements()
+    local gunname = "Al-Kadesiah"
+    return gunname
 end
 
 
