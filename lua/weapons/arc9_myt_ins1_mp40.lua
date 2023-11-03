@@ -255,8 +255,8 @@ SWEP.FiremodeSound = "arc9/firemode.wav"
 SWEP.DefaultBodygroups = "00000000"
 
 SWEP.AttachmentElements = {
-    ["rail_bot"] = { Bodygroups = {{5, 1},{1, 2}}, }, 
-    ["has_optic"] = { Bodygroups = {{4, 1},}, },
+    ["rail_bot"] = { Bodygroups = {{2, 1}}, }, 
+    ["has_optic"] = { Bodygroups = {{1, 1},}, },
 }
 
 SWEP.Attachments = {
@@ -268,7 +268,7 @@ SWEP.Attachments = {
         ExcludeElements = {"pre_optic"},
         Category = {"optic_css"},
         Bone = "Weapon",
-        Pos = Vector(0, 4, 3.75),
+        Pos = Vector(0, 2, 3.25),
         Ang = Angle(0, -90, 0),
     },
     {
@@ -280,6 +280,16 @@ SWEP.Attachments = {
         Category = {"muzzle_css"},
         Bone = "Weapon",
         Pos = Vector(0, 23.02, 2),
+        Ang = Angle(0, -90, 0),
+    },
+    {
+        PrintName = "Foregrip",
+        DefaultName = "None",
+        InstalledElements = {"rail_bot", "has_grip"},
+
+        Category = {"grip_css"},
+        Bone = "Weapon",
+        Pos = Vector(0, 5, -1.25),
         Ang = Angle(0, -90, 0),
     },
 }
@@ -315,6 +325,9 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = {"base_fire"},
+    }, 
+	["fire_iron"] = {
+        Source = {"base_fire_iron"},
     },
     ["fire_empty"] = {
         Source = {"base_firelast"},

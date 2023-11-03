@@ -4,10 +4,22 @@ $modelname "weapons/myt_ins1/c_smg_mp40.mdl"
 $include c_ins2_to_gmod_hands.qci
 $scale 1.3
 
-
-$bodygroup "Weapon"
+$bodygroup "0"
 {
 	studio "mp40.smd"
+	blank
+}
+
+$bodygroup "1"
+{
+	studio "mp40_iron.smd"
+	studio "mp40_rail_top.smd"
+	blank
+}
+$bodygroup "2"
+{
+	blank
+	studio "mp40_rail_bottom.smd"
 }
 
 
@@ -185,6 +197,14 @@ $sequence "base_holster" {
 
 $sequence "base_fire" {
 	"v_mp40_anims\base_fire.smd"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	fadein 0.02
+	fadeout 0.02
+	fps 30
+}
+
+$sequence "base_fire_iron" {
+	"anims\mp40_fire_iron.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
 	fadein 0.02
 	fadeout 0.02
