@@ -6,13 +6,14 @@ SWEP.Spawnable = true
 SWEP.Category = "ARC9 - INS1"
 SWEP.SubCategory = "Primary"
 
-SWEP.PrintName = "TOZ-87"
+SWEP.PrintName = "TOZ"
 
 SWEP.Class = "Shotgun"
 
 SWEP.Credits = {
     ["Assets"] = [[Insurgency: Modern Infantry Combat]],
 }
+SWEP.Description = [[The Tula Arms TOZ-87, the predecessor to the pump-action TOZ-194 seen in later games.]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_shot_toz.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_shot_toz.mdl"
