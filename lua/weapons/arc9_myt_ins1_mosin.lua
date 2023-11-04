@@ -6,7 +6,7 @@ SWEP.Spawnable = true
 SWEP.Category = "ARC9 - INS1"
 SWEP.SubCategory = "Primary"
 
-SWEP.PrintName = "Mosin Nagant"
+SWEP.PrintName = "Mosin-Nagant"
 
 SWEP.Class = "Sniper Rifle"
 
@@ -14,6 +14,7 @@ SWEP.Credits = {
     ["Assets"] = [[Call Of Duty 2]],  
 	["Sound"] = [[Navaro]],
 }
+SWEP.Description = [[Eastern europe really likes this gun.]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_sr_mosin.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_sr_mosin.mdl"

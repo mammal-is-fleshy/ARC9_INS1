@@ -14,6 +14,8 @@ SWEP.Credits = {
     ["Assets"] = [[ https://gamebanana.com/mods/207698 ]],
     ["Sound"] = [[ oneshotofficial https://gamebanana.com/sounds/63272  ]],
 }
+SWEP.Description = [[Not very wieldy to be honest.
+Still cool though.]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_pist_deagle.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_pist_deagle.mdl"

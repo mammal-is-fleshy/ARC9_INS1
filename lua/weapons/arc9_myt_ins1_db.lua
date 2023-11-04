@@ -13,6 +13,7 @@ SWEP.Class = "Shotgun"
 SWEP.Credits = {
     ["Assets"] = [[Born To Kill/CSO2]],
 }
+SWEP.Description = [[Watch those wrist-shotguns.]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_shot_db.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_shot_db.mdl"

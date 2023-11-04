@@ -13,6 +13,7 @@ SWEP.Class = "Machine Gun"
 SWEP.Credits = {
     ["Assets"] = [[Insurgency: Modern Infantry Combat]],
 }
+SWEP.Description = [[it go brrrt]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_mach_m249.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_mach_m249.mdl"

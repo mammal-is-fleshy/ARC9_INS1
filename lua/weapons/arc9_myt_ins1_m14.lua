@@ -13,6 +13,9 @@ SWEP.Class = "Rifle"
 SWEP.Credits = {
     ["Assets"] = [[Insurgency: Modern Infantry Combat]],
 }
+SWEP.Description = [[The M14 rifle, equipped with a completely unusable full-auto switch.
+
+Why did all the cold-war designers think using full-auto with 7.62 was a good idea?]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_sr_m14.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_sr_m14.mdl"

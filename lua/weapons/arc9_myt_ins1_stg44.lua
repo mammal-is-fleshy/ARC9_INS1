@@ -14,6 +14,7 @@ SWEP.Credits = {
     ["Assets"] = [[Project Reality]],  
 	["Animation"] = [[Day of Infamy]],
 }
+SWEP.Description = [[Arguably the first real "assault rifle".]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_rif_stg44.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_rif_stg44.mdl"

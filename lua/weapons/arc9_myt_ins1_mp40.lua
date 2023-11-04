@@ -15,6 +15,7 @@ SWEP.Credits = {
 	["Sound"] = [[Navaro]],
 	["Animation"] = [[Day Of Defeat]],
 }
+SWEP.Description = [[Not the first, but definitely not the last MaschinenPistole.]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_smg_mp40.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_smg_mp40.mdl"

@@ -13,6 +13,10 @@ SWEP.Class = "Grenade"
 SWEP.Credits = {
     ["Assets"] = [[Insurgency: Modern Infantry Combat]],
 }
+SWEP.Description = [[Soviet RGD-5 fragmentation grenade.
+
+
+What? Were you expecting some snarky description? Not this time.]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_gren_rgd5.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_gren_rgd5.mdl"

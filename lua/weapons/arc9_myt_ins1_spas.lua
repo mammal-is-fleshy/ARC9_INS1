@@ -13,6 +13,7 @@ SWEP.Class = "Shotgun"
 SWEP.Credits = {
     ["Assets"] = [[ https://gamebanana.com/mods/208522 ]],
 }
+SWEP.Description = [[I'm so clever.]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_shot_spas.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_shot_spas.mdl"

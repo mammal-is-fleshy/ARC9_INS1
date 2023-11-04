@@ -13,6 +13,7 @@ SWEP.Class = "Grenade Launcher"
 SWEP.Credits = {
     ["Assets"] = [[Born To Kill/Project Reality 2]],
 }
+SWEP.Description = [[it go a-thoomp]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_at_m79.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_at_m79.mdl"

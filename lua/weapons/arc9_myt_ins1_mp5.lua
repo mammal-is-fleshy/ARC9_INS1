@@ -14,6 +14,7 @@ SWEP.Credits = {
 	---["Assets"] = [[ https://gamebanana.com/mods/211744 ]],  
 	["Sound"] = [[Navaro]],
 }
+SWEP.Description = [[So popular that even it's successors couldn't surpass it.]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_smg_mp5.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_smg_mp5.mdl"

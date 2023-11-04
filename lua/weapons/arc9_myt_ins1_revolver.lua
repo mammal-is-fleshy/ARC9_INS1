@@ -13,6 +13,7 @@ SWEP.Class = "Pistol"
 SWEP.Credits = {
     ["Assets"] = [[ https://gamebanana.com/mods/207542 ]],
 }
+SWEP.Description = [[Real snazzy, huh?]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_pist_revovler.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_pist_revovler.mdl"

@@ -13,6 +13,7 @@ SWEP.Class = "Rifle"
 SWEP.Credits = {
     ["Assets"] = [[Insurgency: Modern Infrantry Combat]],
 }
+SWEP.Description = [[A single-shot M14...]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_sr_xm21.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_sr_xm21.mdl"

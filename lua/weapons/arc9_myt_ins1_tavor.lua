@@ -11,9 +11,10 @@ SWEP.PrintName = "Tavor"
 SWEP.Class = "Rifle"
 
 SWEP.Credits = {
-    ["Assets"] = [[ https://gamebanana.com/mods/211744 ]],  
+    ["Assets"] = [[https://gamebanana.com/mods/211744]],  
 	["Sound"] = [[Navaro]],
 }
+SWEP.Description = [[bulpup israeli gun]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_rif_tavor.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_rif_tavor.mdl"
