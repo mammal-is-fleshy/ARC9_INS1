@@ -43,7 +43,7 @@ SWEP.DamageMin = 140
 SWEP.RangeMin = 200
 SWEP.RangeMax = 3000
 
-SWEP.Penetration = 2 -- Units of wood that can be penetrated by this gun.
+SWEP.Penetration = 15 -- Units of wood that can be penetrated by this gun.
 
 SWEP.BodyDamageMults = {
     [HITGROUP_HEAD] = 1.75,
