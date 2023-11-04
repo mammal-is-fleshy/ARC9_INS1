@@ -13,6 +13,8 @@ SWEP.Class = "Sniper Rifle"
 SWEP.Credits = {
     ["Assets"] = [[Insurgency: Modern Infantry Combat]],
 }
+SWEP.Description = [[A Lee-Enfield. Can't go wrong with this one, can you?
+That was rhetorical. Please don't answer that.]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_sr_l42a1.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_sr_l42a1.mdl"
