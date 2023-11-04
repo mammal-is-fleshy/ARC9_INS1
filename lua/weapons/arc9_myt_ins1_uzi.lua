@@ -15,7 +15,7 @@ SWEP.Credits = {
     ["Original Animation"] = [[ MzK ]],	
 	["Sound"] = [[ oneshotofficial https://gamebanana.com/sounds/63272  ]],
 }
-SWEP.Description = [[One of the first successful modern submachine-gun.]]
+SWEP.Description = [[One of the first successful modern submachineguns.]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_pist_uzi.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_pist_uzi.mdl"
