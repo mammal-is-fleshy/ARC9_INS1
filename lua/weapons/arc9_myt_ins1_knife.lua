@@ -13,6 +13,7 @@ SWEP.Class = "Melee"
 SWEP.Credits = {
     ["Assets"] = [[Insurgency: Modern Infantry Combat]],
 }
+SWEP.Description = [[stab stab stab]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_knife.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_knife.mdl"
