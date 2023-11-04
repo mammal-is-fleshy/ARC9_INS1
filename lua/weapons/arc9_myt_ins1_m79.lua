@@ -376,7 +376,10 @@ SWEP.Animations = {
         MinProgress = 0.775,
         Mult = 1,
         EventTable = {
-            {s =  "myt_ins1/m79_reload.ogg" ,   t = 0 / 30},
+            {s =  "myt_ins1/m79_open.wav" ,   t = 0},
+			{s =  "myt_ins1/m79_shellout.wav" ,   t = 0.61},
+			{s =  "myt_ins1/m79_insert.wav" ,   t = 1.7},
+			{s =  "myt_ins1/m79_close.wav" ,   t = 2.49},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },        { t = 0.15, lhik = 1, rhik = 1, },
