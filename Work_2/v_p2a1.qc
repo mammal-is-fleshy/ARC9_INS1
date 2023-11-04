@@ -186,7 +186,7 @@ $sequence "draw2" {
 	fps 30
 }
 
-$collisionmodel "g2.smd"
+$collisionmodel "g2_phys.smd"
 {
 	$mass 30
 	$inertia 10
