@@ -13,6 +13,7 @@ SWEP.Class = "Rifle"
 SWEP.Credits = {
     ["Assets"] = [[Insurgency: Modern Infantry Combat]],
 }
+SWEP.Description = [[Not sure if this counts as a right arm, definitely from the free world though.]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_rif_fnfal.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_rif_fnfal.mdl"
