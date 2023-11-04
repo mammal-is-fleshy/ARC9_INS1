@@ -38,8 +38,8 @@ SWEP.RecoilAutoControlMultHipFire = 0.5
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 32
-SWEP.DamageMin = 18
+SWEP.DamageMax = 40
+SWEP.DamageMin = 21
 
 SWEP.RangeMin = 500
 SWEP.RangeMax = 3000
@@ -96,7 +96,7 @@ SWEP.Firemodes = {
 SWEP.Recoil = 1
 
 -- These multipliers affect the predictible recoil by making the pattern taller, shorter, wider, or thinner.
-SWEP.RecoilUp = 0.5 -- Multiplier for vertical recoil
+SWEP.RecoilUp = 0.45 -- Multiplier for vertical recoil
 SWEP.RecoilSide = 0.25 -- Multiplier for vertical recoil
 
 -- These values determine how much extra movement is applied to the recoil entirely randomly, like in a circle.
