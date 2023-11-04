@@ -321,7 +321,7 @@ SWEP.Animations = {
         Mult = 1, -- multiplies time
         EventTable = {
             {s =  "myt_ins1/galil-boltback.wav" ,    t = 6 / 30},  
-			{s =  "myt_ins1/galil-boltrelease.wav" ,    t = 14 / 30}, 
+			{s =  "myt_ins1/galil-boltrelease.wav" ,    t = 13 / 30}, 
         },
     },
     ["holster"] = {
@@ -338,9 +338,9 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.7,
         EventTable = {
-            {s =  "myt_ins1/ak47-magout.wav" ,   t = 10 / 30},
-            {s =  "myt_ins1/ak47-magin1.ogg" ,    t = 38 / 30},  
-			{s =  "myt_ins1/ak47-magin2.ogg" ,    t = 48 / 30},
+            {s =  "myt_ins1/galil-magout.wav" ,   t = 10 / 30},
+            {s =  "myt_ins1/galil-magin1.wav" ,    t = 38 / 30},  
+			{s =  "myt_ins1/galil-magin2.wav" ,    t = 48 / 30},
         },
     },
     ["reload_empty"] = {
@@ -350,10 +350,10 @@ SWEP.Animations = {
         MinProgress = 0.75,
         EventTable = {
             {s =  "myt_ins1/ak47-magout.wav" ,   t = 10 / 30},
-            {s =  "myt_ins1/ak47-magin1.ogg" ,    t = 38 / 30},  
-			{s =  "myt_ins1/ak47-magin2.ogg" ,    t = 48 / 30},
+            {s =  "myt_ins1/galil-magin1.wav" ,    t = 38 / 30},  
+			{s =  "myt_ins1/galil-magin2.wav" ,    t = 48 / 30},
             {s =  "myt_ins1/galil-boltback.wav" ,    t = 62 / 30},  
-			{s =  "myt_ins1/galil-boltrelease.wav" ,    t = 69 / 30}, 
+			{s =  "myt_ins1/galil-boltrelease.wav" ,    t = 68 / 30}, 
             },
     },
 }
