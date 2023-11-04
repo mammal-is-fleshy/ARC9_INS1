@@ -336,7 +336,8 @@ SWEP.Animations = {
     ["draw"] = {
         Source = "base_draw",
         EventTable = {
-            --{s =  "myt_ins1/uni-draw.wav" ,   t = 0 / 40},
+            {s =  "myt_ins1/universal/uni-draw.wav" ,   t = 0 / 30},
+            {s =  "myt_ins1/ak47-selectordown.wav" ,   t = 13 / 30},
         },
     },  
 	["ready"] = {
@@ -352,7 +353,10 @@ SWEP.Animations = {
         },
     },
     ["holster"] = {
-        Source = "base_down",
+        Source = "base_holster",
+        EventTable = {
+            {s =  "myt_ins1/ak47-selectordown.wav" ,   t = 4 / 30},
+        },
 		Time = 0.5,
     },
 
