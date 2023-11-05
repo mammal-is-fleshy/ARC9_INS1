@@ -122,7 +122,7 @@ SWEP.RPMEmpty = 600
 SWEP.Firemodes = {
     {
         Mode = 1,
-        PrintName = "PUMP"
+        PrintName = "SINGLE-SHOT"
     }
 }
 -------------------------- RECOIL
@@ -295,6 +295,7 @@ SWEP.AttachmentElements = {
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local model = data.model  -- most insufficient method ever
     if wep:HasElement("onehand") 	then model:SetBodygroup(1,0) end
+	-- make bodygroup for red colored shell pls (flare)
 end
 
 
@@ -323,7 +324,7 @@ SWEP.Attachments = {
         PrintName = "Ammo Type",
         DefaultName = "Default Type",
 		
-        Category = {"css_ammo_sg"},
+        Category = {"css_ammo_glauncher"},
         Bone = "BarrelTube",
         Pos = Vector(0.7, -10, 1.5),
         Ang = Angle(0, 90, 0),
