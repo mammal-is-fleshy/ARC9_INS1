@@ -13,7 +13,7 @@ SWEP.Class = "Pistol"
 SWEP.Credits = {
     ["Assets"] = [[ https://gamebanana.com/mods/207542 ]],
 }
-SWEP.Description = [[Real snazzy, huh?]]
+SWEP.Description = [[Real snazzy, huh? Too bad there's no engravings.]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_pist_revovler.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_pist_revovler.mdl"
@@ -231,12 +231,12 @@ SWEP.NoShellEject = true
 
 SWEP.ShootSound = {"myt_ins1/38S-1.wav", "myt_ins1/38S-2.wav", "myt_ins1/38S-3.wav"}
 SWEP.DistantShootSound = "myt_ins1/makarov-01_echo.wav"
-SWEP.ShootSoundSilenced = "gekolt_css/9mm_sd.wav"
-SWEP.DryFireSound = "myt_ins1/makarov-empty.wav"
+SWEP.ShootSoundSilenced = "myt_ins1_sd/deagle.wav"
+SWEP.DryFireSound = "myt_ins1/revolver-empty.wav"
 
 SWEP.EjectDelay = 0
 
-SWEP.FiremodeSound = "arc9/firemode.wav"
+SWEP.FiremodeSound = "myt_ins1/firemode_light.wav"
 
 SWEP.DefaultBodygroups = "00000000"
 

@@ -231,12 +231,12 @@ SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 
 SWEP.ShootSound = "myt_ins1/deagle-1.wav"
 SWEP.DistantShootSound = "myt_ins1/makarov-01_echo.wav"
-SWEP.ShootSoundSilenced = "myt_ins1_sd/pistol.wav"
-SWEP.DryFireSound = "myt_ins1/makarov-empty.wav"
+SWEP.ShootSoundSilenced = "myt_ins1_sd/deagle.wav"
+SWEP.DryFireSound = "myt_ins1/revolver-empty.wav"
 
 SWEP.EjectDelay = 0
 
-SWEP.FiremodeSound = "arc9/firemode.wav"
+SWEP.FiremodeSound = "myt_ins1/firemode_light.wav"
 
 SWEP.DefaultBodygroups = "00000000"
 

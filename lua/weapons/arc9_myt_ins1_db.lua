@@ -241,10 +241,10 @@ SWEP.NoShellEject = true
 
 SWEP.ShootSound = {"myt_ins1/db-1.wav"}
 SWEP.DistantShootSound = {"myt_ins1/toz_01_echo.wav", "myt_ins1/toz_02_echo.wav"}
+SWEP.ShootSoundSilenced = "myt_ins1_sd/deagle.wav"
 SWEP.DryFireSound = "myt_ins1/enfield-empty.wav"
-SWEP.ShootSoundSilenced = "magmacow_smor/AWM-SIL.wav"
 
-SWEP.FiremodeSound = "arc9/firemode.wav"
+SWEP.FiremodeSound = "myt_ins1/firemode_medium.wav"
 
 SWEP.DefaultBodygroups = "0000000"
 
