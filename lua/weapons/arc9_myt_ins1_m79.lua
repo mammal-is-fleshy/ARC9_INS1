@@ -345,7 +345,7 @@ SWEP.Animations = {
 	["ready"] = {
         Source = "base_ready",
         EventTable = {
-            {s =  "myt_ins1/m79_close.ogg" ,   t = 11 / 30},
+            {s =  "myt_ins1/m79_close.wav" ,   t = 11 / 30},
         },
         FireASAP = true,
         MinProgress = 0.7,

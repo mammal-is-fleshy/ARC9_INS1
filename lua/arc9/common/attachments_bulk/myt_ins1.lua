@@ -312,3 +312,26 @@ ATT.ActivateElements = {"abolt"}
 ARC9.LoadAttachment(ATT, "myt_ins1_mosin_abolt")
 
 ----------------------------------------------------------------------------------
+
+ATT = {}
+
+ATT.PrintName = [[50-Rounder]]
+ATT.CompactName = [[50-RND]]
+ATT.Icon = Material("entities/arc9_myt_ins1_mosin_abolt.png", "mips smooth")
+ATT.Description = [[Drummer]]
+
+ATT.SortOrder = 1
+ATT.Category = "ins1_mag_thomp"
+ATT.ActivateElements = {"50rnd"}
+
+ATT.Hook_TranslateAnimation = function(wep, anim)
+
+    return anim .. "_drum"
+
+end
+
+ATT.ClipSizeOverride = 50
+
+ARC9.LoadAttachment(ATT, "myt_ins1_thomp_drum")
+
+----------------------------------------------------------------------------------
