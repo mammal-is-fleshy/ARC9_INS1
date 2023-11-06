@@ -277,27 +277,24 @@ $sequence "base_deploy2" {
 $sequence "base_fire_1" {
 	"v_thompson1928_anims\base_fire_1.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
-	fadein 0.2
-	fadeout 0.2
-	snap
+	fadein 0.075
+	fadeout 0.075
 	fps 30
 }
 
 $sequence "base_fire_2" {
 	"v_thompson1928_anims\base_fire_2.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
-	fadein 0.2
-	fadeout 0.2
-	snap
+	fadein 0.075
+	fadeout 0.075
 	fps 30
 }
 
 $sequence "base_firelast" {
 	"v_thompson1928_anims\base_firelast.smd"
 	activity "ACT_VM_PRIMARYATTACK_EMPTY" 1
-	fadein 0.2
-	fadeout 0.2
-	snap
+	fadein 0.02
+	fadeout 0.02
 	fps 30
 }
 

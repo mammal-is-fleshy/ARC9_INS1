@@ -168,7 +168,7 @@ SWEP.TracerColor = Color(255, 225, 200) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-3.25, -5, 0.6),
+    Pos = Vector(-2.875, -3, 1.4),
     Ang = Angle(0, 0, 0),
     Midpoint = { -- Where the gun should be at the middle of it's irons
         Pos = Vector(0, 15, -4),
@@ -243,7 +243,7 @@ SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 
 -------------------------- SOUNDS
 
-SWEP.ShootSound = {"myt_ins1/mp40-1.wav"} --- this shits so ugly ong
+SWEP.ShootSound = {"myt_ins1/thompson-1.wav", "myt_ins1/thompson-2.wav"}
 SWEP.DistantShootSound = "myt_ins1/fal-01_echo.wav"
 SWEP.ShootSoundSilenced = "myt_ins1_sd/pistol.wav"
 SWEP.DryFireSound = "myt_ins1/makarov-empty.wav"
@@ -301,8 +301,8 @@ SWEP.Attachments = {
         DefaultName = "30-Rounder",
 		
         Category = {"ins1_mag_thomp"},
-        Bone = "Weapon",
-        Pos = Vector(0, 23.02, 2),
+        Bone = "M1928A1",
+        Pos = Vector(0, 4.2, -1),
         Ang = Angle(0, -90, 0),
     },
 }
@@ -325,7 +325,7 @@ SWEP.Animations = {
         --Time = 0.5, -- overrides the duration of the sequence
         Mult = 1, -- multiplies time
         EventTable = {
-			{s =  "myt_ins1/mp40_bolt2.wav" ,    t = 5 / 30}, 
+			{s =  "myt_ins1/thompson_bolt.wav" ,    t = 5 / 30}, 
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -350,8 +350,8 @@ SWEP.Animations = {
         MinProgress = 0.775,
         Mult = 1.1,
         EventTable = {
-            {s =  "myt_ins1/mp40_mag2.wav" ,   t = 12 / 30},
-            {s =  "myt_ins1/mp40_mag1.wav" ,    t = 32 / 30},
+            {s =  "myt_ins1/thompson_mag1.wav" ,   t = 5 / 30},
+            {s =  "myt_ins1/thompson_mag1.wav" ,    t = 42 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -365,10 +365,9 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.85,
         EventTable = {
-            {s =  "myt_ins1/mp40_bolt1.wav" ,   t = 6 / 30},
-            {s =  "myt_ins1/mp40_mag2.wav" ,   t = 28 / 30},
-            {s =  "myt_ins1/mp40_mag1.wav" ,    t = 45 / 30},
-			{s =  "myt_ins1/mp40_bolt2.wav" ,    t = 62 / 30}, 
+            {s =  "myt_ins1/thompson_bolt.wav" ,   t = 6 / 30},
+            {s =  "myt_ins1/thompson_mag1.wav" ,   t = 25 / 30},
+            {s =  "myt_ins1/thompson_mag2.wav" ,    t = 58 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -384,8 +383,8 @@ SWEP.Animations = {
         MinProgress = 0.775,
         Mult = 1.25,
         EventTable = {
-            {s =  "myt_ins1/mp40_mag2.wav" ,   t = 12 / 30},
-            {s =  "myt_ins1/mp40_mag1.wav" ,    t = 32 / 30},
+            {s =  "myt_ins1/thompson_mag1.wav" ,   t = 5 / 30},
+            {s =  "myt_ins1/thompson_mag1.wav" ,    t = 42 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -399,10 +398,9 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.85,
         EventTable = {
-            {s =  "myt_ins1/mp40_bolt1.wav" ,   t = 6 / 30},
-            {s =  "myt_ins1/mp40_mag2.wav" ,   t = 28 / 30},
-            {s =  "myt_ins1/mp40_mag1.wav" ,    t = 45 / 30},
-			{s =  "myt_ins1/mp40_bolt2.wav" ,    t = 62 / 30}, 
+            {s =  "myt_ins1/thompson_bolt.wav" ,   t = 6 / 30},
+            {s =  "myt_ins1/thompson_mag1.wav" ,   t = 25 / 30},
+            {s =  "myt_ins1/thompson_mag2.wav" ,    t = 58 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
