@@ -19,12 +19,19 @@ $bodygroup "1"
 $bodygroup "2"
 {
 	studio "thompson_grip_a1.smd"
-	studio "thompson_grip.smd"
+	studio "thompson_grip.smd"	
+	studio "thompson_grip_rail.smd"
 	blank
 }
 $bodygroup "3"
 {
 	studio "thompson_stock.smd"
+	blank
+}
+$bodygroup "4"
+{
+	studio "thompson_iron.smd"
+	studio "thompson_rail_top.smd"
 	blank
 }
 

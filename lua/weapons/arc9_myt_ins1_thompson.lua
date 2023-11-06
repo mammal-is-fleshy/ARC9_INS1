@@ -256,8 +256,8 @@ SWEP.FiremodeSound = "arc9/firemode.wav"
 SWEP.DefaultBodygroups = "00000000"
 
 SWEP.AttachmentElements = {
-	["rail_bot"] = { Bodygroups = {{2, 1}}, },
-	["has_optic"] = { Bodygroups = {{1, 1},}, },
+	["rail_bot"] = { Bodygroups = {{2, 2}}, },
+	["has_optic"] = { Bodygroups = {{4, 1},}, },
 
 	["50rnd"] = { Bodygroups = {{1, 1},}, },
 }
@@ -270,8 +270,8 @@ SWEP.Attachments = {
 
         ExcludeElements = {"pre_optic"},
         Category = {"optic_css"},
-        Bone = "Weapon",
-        Pos = Vector(0, 2, 3.25),
+        Bone = "M1928A1",
+        Pos = Vector(0.025, -4, 2.7),
         Ang = Angle(0, -90, 0),
     },
     {
@@ -281,7 +281,7 @@ SWEP.Attachments = {
 		
         ExcludeElements = {"pre_muzzed"},
         Category = {"muzzle_css"},
-        Bone = "Weapon",
+        Bone = "M1928A1",
         Pos = Vector(0, 23.02, 2),
         Ang = Angle(0, -90, 0),
     },
@@ -291,8 +291,8 @@ SWEP.Attachments = {
         InstalledElements = {"rail_bot", "has_grip"},
 
         Category = {"grip_css"},
-        Bone = "Weapon",
-        Pos = Vector(0, 5, -1.25),
+        Bone = "M1928A1",
+        Pos = Vector(0, 10, -0.25),
         Ang = Angle(0, -90, 0),
     },
 	
@@ -355,7 +355,7 @@ SWEP.Animations = {
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
-        { t = 0.2, lhik = 0, rhik = 1, },{ t = 0.75, lhik = 0, rhik = 1, },{ t = 0.95, lhik = 1, rhik = 1, },
+        { t = 0.1, lhik = 0, rhik = 1, },{ t = 0.75, lhik = 0, rhik = 1, },{ t = 0.9, lhik = 1, rhik = 1, },
         },
     },
     ["reload_empty"] = {
@@ -371,7 +371,7 @@ SWEP.Animations = {
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
-        { t = 0.15, lhik = 0, rhik = 1, },{ t = 0.8, lhik = 0, rhik = 1, },{ t = 0.95, lhik = 1, rhik = 1, },
+        { t = 0.15, lhik = 0, rhik = 1, },{ t = 0.75, lhik = 0, rhik = 1, },{ t = 0.9, lhik = 1, rhik = 1, },
         },
     },
 	
@@ -388,7 +388,7 @@ SWEP.Animations = {
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
-        { t = 0.2, lhik = 0, rhik = 1, },{ t = 0.75, lhik = 0, rhik = 1, },{ t = 0.95, lhik = 1, rhik = 1, },
+        { t = 0.1, lhik = 0, rhik = 1, },{ t = 0.75, lhik = 0, rhik = 1, },{ t = 0.9, lhik = 1, rhik = 1, },
         },
     },
     ["reload_empty_drum"] = {
@@ -404,7 +404,7 @@ SWEP.Animations = {
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
-        { t = 0.15, lhik = 0, rhik = 1, },{ t = 0.8, lhik = 0, rhik = 1, },{ t = 0.95, lhik = 1, rhik = 1, },
+        { t = 0.15, lhik = 0, rhik = 1, },{ t = 0.75, lhik = 0, rhik = 1, },{ t = 0.9, lhik = 1, rhik = 1, },
         },
     },
 }
