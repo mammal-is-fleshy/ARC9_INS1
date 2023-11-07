@@ -335,3 +335,86 @@ ATT.ClipSizeOverride = 50
 ARC9.LoadAttachment(ATT, "myt_ins1_thomp_drum")
 
 ----------------------------------------------------------------------------------
+
+
+ATT = {}
+
+ATT.PrintName = [[Wooden Grip]]
+ATT.CompactName = "Wooden"
+ATT.Description = [[Stable.]]
+
+ATT.Icon = Material("entities/gekolt_fh2_thock_g.png", "mips smooth")
+
+ATT.SortOrder = -9000000
+ATT.Category = "ins1_grip_thomp"
+ATT.ActivateElements = {"g_thomp"}
+
+ATT.SwayAdd = 0.1
+ATT.AimDownSightsTimeMult = 1.05
+ATT.SprintToFireTimeMult = 1.075
+ATT.SpeedMult = 0.95
+ATT.RecoilMult = 0.85
+
+ATT.LHIK = true
+ATT.LHIK_Priority = 0
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(-20, -3.5, 6)
+ATT.ModelAngleOffset = Angle(2, 5, 0)
+ATT.Model = "models/weapons/geckololt_css/c_sten.mdl"
+ATT.ModelBodygroups = "56570000000"
+
+ARC9.LoadAttachment(ATT, "myt_ins1_thomp_grip")
+
+----------------------------------------------------------------------------------
+
+
+ATT = {}
+
+ATT.PrintName = [[No Grip]]
+ATT.CompactName = "1H"
+ATT.Description = [[What.]]
+
+ATT.Icon = Material("entities/arc9_myt_ins1_empty.png", "mips smooth")
+
+ATT.SortOrder = -9000000
+ATT.Category = "ins1_grip_thomp"
+ATT.ActivateElements = {"g_thomp2"}
+
+ATT.SwayAdd = 0.1
+ATT.AimDownSightsTimeMult = 1.05
+ATT.SprintToFireTimeMult = 1.075
+ATT.SpeedMult = 0.95
+ATT.RecoilMult = 0.85
+
+ATT.LHIK = true
+ATT.LHIK_Priority = 0
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(-40, -2, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+ATT.Model = "models/weapons/myt_ins1/c_shot_db.mdl"
+ATT.ModelBodygroups = "10000"
+
+ATT.SprintAngOverride = Angle(-10, 60, -10)
+ATT.SprintPosOverride = Vector(2, 3, -10)
+
+
+ARC9.LoadAttachment(ATT, "myt_ins1_thomp_grip2")
+
+----------------------------------------------------------------------------------
+
+
+ATT = {}
+
+ATT.PrintName = [[No Stock]]
+ATT.CompactName = "No Stock"
+ATT.Description = [[What.]]
+
+ATT.Icon = Material("entities/arc9_myt_ins1_empty.png", "mips smooth")
+
+ATT.SortOrder = -9000000
+ATT.Category = "ins1_stock"
+ATT.ActivateElements = {"no_stock"}
+
+ARC9.LoadAttachment(ATT, "myt_ins1_nostock")

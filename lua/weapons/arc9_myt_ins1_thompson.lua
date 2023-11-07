@@ -261,7 +261,15 @@ SWEP.AttachmentElements = {
 	["has_muzzle"] = { Bodygroups = {{5, 1},}, },
 
 	["50rnd"] = { Bodygroups = {{1, 1},}, },
+	["no_stock"] = { Bodygroups = {{3, 1},}, },
 }
+
+SWEP.Hook_ModifyBodygroups = function(wep, data)
+    local model = data.model  -- most insufficient method ever
+    if wep:HasElement("g_thomp") 	then model:SetBodygroup(2,1) end 
+	if wep:HasElement("g_thomp2") 	then model:SetBodygroup(2,3) end
+end
+
 
 SWEP.Attachments = {
     {
@@ -291,7 +299,7 @@ SWEP.Attachments = {
         DefaultName = "None",
         InstalledElements = {"rail_bot", "has_grip"},
 
-        Category = {"grip_css"},
+        Category = {"grip_css", "ins1_grip_thomp"},
         Bone = "M1928A1",
         Pos = Vector(0, 10, -0.25),
         Ang = Angle(0, -90, 0),
@@ -304,6 +312,16 @@ SWEP.Attachments = {
         Category = {"ins1_mag_thomp"},
         Bone = "M1928A1",
         Pos = Vector(0, 4.2, -1),
+        Ang = Angle(0, -90, 0),
+    },	
+
+    {
+        PrintName = "Stock",
+        DefaultName = "Wooden Stock",
+		
+        Category = {"ins1_stock"},
+        Bone = "M1928A1",
+        Pos = Vector(0, -5, 0),
         Ang = Angle(0, -90, 0),
     },
 }
@@ -356,7 +374,7 @@ SWEP.Animations = {
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
-        { t = 0.1, lhik = 0, rhik = 1, },{ t = 0.75, lhik = 0, rhik = 1, },{ t = 0.9, lhik = 1, rhik = 1, },
+        { t = 0.1, lhik = 0, rhik = 1, },{ t = 0.7, lhik = 0, rhik = 1, },{ t = 0.9, lhik = 1, rhik = 1, },
         },
     },
     ["reload_empty"] = {
@@ -389,7 +407,7 @@ SWEP.Animations = {
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
-        { t = 0.1, lhik = 0, rhik = 1, },{ t = 0.75, lhik = 0, rhik = 1, },{ t = 0.9, lhik = 1, rhik = 1, },
+        { t = 0.1, lhik = 0, rhik = 1, },{ t = 0.7, lhik = 0, rhik = 1, },{ t = 0.9, lhik = 1, rhik = 1, },
         },
     },
     ["reload_empty_drum"] = {
