@@ -6,7 +6,7 @@ SWEP.Spawnable = true
 SWEP.Category = "ARC9 - INS1"
 SWEP.SubCategory = "Primary"
 
-SWEP.PrintName = "Thompson 1928"
+SWEP.PrintName = "Thompson"
 
 SWEP.Class = "Submachine Gun"
 
@@ -258,6 +258,7 @@ SWEP.DefaultBodygroups = "00000000"
 SWEP.AttachmentElements = {
 	["rail_bot"] = { Bodygroups = {{2, 2}}, },
 	["has_optic"] = { Bodygroups = {{4, 1},}, },
+	["has_muzzle"] = { Bodygroups = {{5, 1},}, },
 
 	["50rnd"] = { Bodygroups = {{1, 1},}, },
 }
@@ -282,7 +283,7 @@ SWEP.Attachments = {
         ExcludeElements = {"pre_muzzed"},
         Category = {"muzzle_css"},
         Bone = "M1928A1",
-        Pos = Vector(0, 23.02, 2),
+        Pos = Vector(0, 15.75, 1.7),
         Ang = Angle(0, -90, 0),
     },
     {
@@ -351,7 +352,7 @@ SWEP.Animations = {
         Mult = 1.1,
         EventTable = {
             {s =  "myt_ins1/thompson_mag1.wav" ,   t = 5 / 30},
-            {s =  "myt_ins1/thompson_mag1.wav" ,    t = 42 / 30},
+            {s =  "myt_ins1/thompson_mag2.wav" ,    t = 41 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -384,7 +385,7 @@ SWEP.Animations = {
         Mult = 1.25,
         EventTable = {
             {s =  "myt_ins1/thompson_mag1.wav" ,   t = 5 / 30},
-            {s =  "myt_ins1/thompson_mag1.wav" ,    t = 42 / 30},
+            {s =  "myt_ins1/thompson_mag2.wav" ,    t = 41 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },

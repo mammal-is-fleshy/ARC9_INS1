@@ -34,6 +34,12 @@ $bodygroup "4"
 	studio "thompson_rail_top.smd"
 	blank
 }
+$bodygroup "5"
+{
+	studio "thompson_muzzle.smd"
+	studio "thompson_muzzle_iron.smd"
+	blank
+}
 
 
 $surfaceprop "default"
