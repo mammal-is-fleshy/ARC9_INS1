@@ -39,8 +39,8 @@ SWEP.RecoilAutoControlMultHipFire = 0.5
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 40
-SWEP.DamageMin = 21
+SWEP.DamageMax = 38
+SWEP.DamageMin = 19
 
 SWEP.RangeMin = 500
 SWEP.RangeMax = 3000
@@ -97,8 +97,8 @@ SWEP.Firemodes = {
 SWEP.Recoil = 1
 
 -- These multipliers affect the predictible recoil by making the pattern taller, shorter, wider, or thinner.
-SWEP.RecoilUp = 0.45 -- Multiplier for vertical recoil
-SWEP.RecoilSide = 0.25 -- Multiplier for vertical recoil
+SWEP.RecoilUp = 0.475 -- Multiplier for vertical recoil
+SWEP.RecoilSide = 0.35 -- Multiplier for vertical recoil
 
 -- These values determine how much extra movement is applied to the recoil entirely randomly, like in a circle.
 -- This type of recoil CANNOT be predicted.
@@ -110,13 +110,13 @@ SWEP.RecoilResetTime = 0
 
 SWEP.RecoilAutoControl = 0 -- Multiplier for automatic recoil control.
 
-SWEP.RecoilKick = 1.125
+SWEP.RecoilKick = 1.15
 
-SWEP.RecoilMultRecoil = 1.125 -- Looks stupid but it means expoential recoil growth.
+SWEP.RecoilMultRecoil = 1.1 -- Looks stupid but it means expoential recoil growth.
 
 -------------------------- SPREAD
 
-SWEP.Spread = 0.015
+SWEP.Spread = 0.0125
 
 SWEP.SpreadAddRecoil = 0
 SWEP.SpreadMultRecoil = 1.2
@@ -338,6 +338,12 @@ SWEP.Animations = {
         EventTable = {
             {s =  "myt_ins1/universal/uni-draw.wav" ,   t = 0 / 30},
         },
+    },   
+	["draw_empty"] = {
+        Source = "base_draw_empty",
+        EventTable = {
+            {s =  "myt_ins1/universal/uni-draw.wav" ,   t = 0 / 30},
+        },
     },
     ["ready"] = {
         Source = "base_deploy2", -- QC sequence source, can be {"table", "of", "strings"} or "string"
@@ -352,7 +358,11 @@ SWEP.Animations = {
         },
     },
     ["holster"] = {
-        Source = "base_holster",
+        Source = "base_holster_empty",
+        --Time = 0
+    }, 
+	["holster_empty"] = {
+        Source = "base_holster_empty",
         --Time = 0
     },
     ["fire"] = {

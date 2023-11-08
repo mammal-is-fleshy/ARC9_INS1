@@ -269,6 +269,31 @@ $sequence "base_draw" {
 	fps 31
 }
 
+$sequence "base_draw_empty" {
+	"anims\thomp_draw_empty.smd"
+	activity "ACT_VM_DRAW" 1
+	fadein 0.2
+	fadeout 0.2
+	snap
+	fps 31
+}
+
+$sequence "base_holster" {
+	"anims\thomp_holster.smd"
+	activity "ACT_VM_DRAW" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 31
+}
+
+$sequence "base_holster_empty" {
+	"anims\thomp_holster_empty.smd"
+	activity "ACT_VM_DRAW" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 31
+}
+
 $sequence "base_deploy" {
 	"anims\thomp_deploy.smd"
 	activity "ACT_VM_DRAW" 1
