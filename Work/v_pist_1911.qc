@@ -313,10 +313,8 @@ $sequence "m9_deploy2" {
 }
 
 $sequence "m9_draw" {
-	"v_pist_m9_anims\m9_draw.smd"
+	"anims\1911_draw.smd"
 	activity "ACT_VM_DRAW" 1
-	{ event 5004 0 "Universal_INS.Draw" }
-	{ event 5004 12 "Weapon_INS_M9.safety" }
 	fadein 0.2
 	fadeout 0.2
 	fps 30
