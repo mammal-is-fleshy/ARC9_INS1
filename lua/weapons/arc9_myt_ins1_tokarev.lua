@@ -37,8 +37,8 @@ SWEP.RecoilAutoControlMultHipFire = 0.5
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 43
-SWEP.DamageMin = 18
+SWEP.DamageMax = 39
+SWEP.DamageMin = 15
 
 SWEP.RangeMin = 500
 SWEP.RangeMax = 3000
@@ -63,8 +63,8 @@ SWEP.PhysBulletMuzzleVelocity = 1280 * 12
 SWEP.Ammo = "pistol" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 1 -- The amount of rounds this gun can chamber.
-SWEP.ClipSize = 7 -- Self-explanatory.
-SWEP.SupplyLimit = 6 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
+SWEP.ClipSize = 12 -- Self-explanatory.
+SWEP.SupplyLimit = 4 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
 SWEP.SecondarySupplyLimit = 2 -- Amount of reserve UBGL magazines you can take.
 
 SWEP.ReloadInSights = false -- This weapon can aim down sights while reloading.
@@ -92,8 +92,8 @@ SWEP.Firemodes = {
 SWEP.Recoil = 1
 
 -- These multipliers affect the predictible recoil by making the pattern taller, shorter, wider, or thinner.
-SWEP.RecoilUp = 0.5 -- Multiplier for vertical recoil
-SWEP.RecoilSide = 0.15 -- Multiplier for vertical recoil
+SWEP.RecoilUp = 0.35 -- Multiplier for vertical recoil
+SWEP.RecoilSide = 0.35 -- Multiplier for vertical recoil
 
 -- These values determine how much extra movement is applied to the recoil entirely randomly, like in a circle.
 -- This type of recoil CANNOT be predicted.
@@ -251,7 +251,7 @@ SWEP.Attachments = {
 
         ExcludeElements = {"pre_optic"},
         Category = {"optic_css_s"},
-        Bone = "Weapon_Controller",
+        Bone = "Weapon",
         Pos = Vector(2, -3.2, 0),
         Ang = Angle(0, 0, -90),
     },
@@ -261,7 +261,7 @@ SWEP.Attachments = {
 
         ExcludeElements = {"pre_muzzed"},
         Category = {"muzzle_css"},
-        Bone = "Weapon_Controller",
+        Bone = "Weapon",
         Pos = Vector(7.5, -2.1, 0),
         Ang = Angle(0, 0, -90),
     },
@@ -272,7 +272,7 @@ SWEP.Attachments = {
         InstalledElements = {"has_tac"},
 
         Category = {"tac_css"},
-        Bone = "Weapon_Controller",
+        Bone = "Weapon",
         Pos = Vector(4.5, -0.3, 0),
         Ang = Angle(0, 0, 90),
     },

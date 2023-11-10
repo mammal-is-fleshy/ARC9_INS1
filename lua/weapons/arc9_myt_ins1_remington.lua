@@ -251,9 +251,21 @@ SWEP.DefaultBodygroups = "0000000"
 
 SWEP.AttachmentElements = { 
 	["rail_bot"] = {Bodygroups = {{2, 1}},},
+	["has_optic"] = {Bodygroups = {{1, 1}},},
 }
 
 SWEP.Attachments = {
+    {
+        PrintName = "Optic",
+        DefaultName = "None",
+        InstalledElements = {"has_optic"},
+
+        ExcludeElements = {"pre_optic"},
+        Category = {"optic_css"},
+        Bone = "Weapon",
+        Pos = Vector(-0.05, 0.5, 1.45),
+        Ang = Angle(0, -90, 0),
+    },
     {
         PrintName = "Foregrip",
         DefaultName = "None",
@@ -261,7 +273,7 @@ SWEP.Attachments = {
 
         Category = {"grip_css"},
         Bone = "Pump",
-        Pos = Vector(0,4,-1),
+        Pos = Vector(-0.05,5.5,-1.15),
         Ang = Angle(0, -90, 0),
     },
     {
@@ -326,6 +338,10 @@ SWEP.Animations = {
         EventTable = {
             {s =  "myt_ins1/spas_insert.wav" ,   t = 8 / 30},
         },
+        IKTimeLine = {
+        { t = 0, lhik = 1, rhik = 1, },
+        { t = 0.2, lhik = 0, rhik = 1, }
+        },
     }, 
 	["reload_start_empty"] = {
         Source = "base_reload_start_empty",
@@ -336,6 +352,10 @@ SWEP.Animations = {
             {s =  "myt_ins1/spas_insert.wav" ,   t = 8 / 30},
             {s =  "myt_ins1/spas_pump.wav" ,   t = 31 / 30},
         },
+        IKTimeLine = {
+        { t = 0, lhik = 1, rhik = 1, },	{ t = 0.9, lhik = 1, rhik = 1, },
+        { t = 1, lhik = 0, rhik = 1, }
+        },
 	},
     ["reload_insert"] = {
         Source = "base_reload_insert",
@@ -344,6 +364,10 @@ SWEP.Animations = {
         EventTable = {
             {s =  "myt_ins1/spas_insert.wav" ,   t = 3 / 30},
         },
+        IKTimeLine = {
+        { t = 0, lhik = 0, rhik = 1, },
+        { t = 1, lhik = 0, rhik = 1, }
+        },
     },
     ["reload_finish"] = {
         Source = "base_reload_end",
@@ -351,8 +375,12 @@ SWEP.Animations = {
 		Mult = 0.8,
         FireASAP = true,
         MinProgress = 0.5,
-        EventTable = {
+        IKTimeLine = {
+        { t = 0, lhik = 0, rhik = 1, },
+        { t = 0.75, lhik = 1, rhik = 1, }
+        },
 
+        EventTable = {
         },
     }, 
 }

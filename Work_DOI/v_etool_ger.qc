@@ -1,10 +1,12 @@
 // Created by Crowbar 0.74
 
-$modelname "weapons\doi\v_etool_ger5.mdl"
+$modelname "weapons/myt_ins1/c_baseballbat.mdl"
+$include c_ins2_to_gmod_hands.qci
+$scale 1.3
 
 $bodygroup "Weapon"
 {
-	studio "v_etool_ger_reference.smd"
+	studio "baseballbat.smd"
 }
 
 
@@ -14,7 +16,9 @@ $contents "solid"
 
 $illumposition -1.337 -5.702 -6.472
 
-$cdmaterials "models\weapons\tfa_doi_wap\etool_german\"
+$cdmaterials "models\myt_ins1_vmt\"
+$cdmaterials "models\myt_ins1_vmt\att\"
+$cdmaterials "ins\models\hands\"
 
 $cbox 0 0 0 0 0 0
 
@@ -140,8 +144,6 @@ $sequence "base_idle" {
 $sequence "base_attack_1" {
 	"v_etool_ger_anims\base_attack_1.smd"
 	activity "ACT_VM_HITCENTER" 6
-	{ event 1338 8 "" }
-	{ event 5004 6 "tfa_doi_tool.Slash" }
 	fadein 0.2
 	fadeout 0.2
 	fps 20
@@ -150,8 +152,6 @@ $sequence "base_attack_1" {
 $sequence "base_attack_2" {
 	"v_etool_ger_anims\base_attack_2.smd"
 	activity "ACT_VM_HITCENTER" 3
-	{ event 1338 13 "" }
-	{ event 5004 10 "tfa_doi_tool.Slash" }
 	fadein 0.2
 	fadeout 0.2
 	fps 30
@@ -160,8 +160,6 @@ $sequence "base_attack_2" {
 $sequence "base_attack_3" {
 	"v_etool_ger_anims\base_attack_3.smd"
 	activity "ACT_VM_HITCENTER2" 1
-	{ event 1338 14 "" }
-	{ event 5004 12 "tfa_doi_tool.Slash" }
 	fadein 0.2
 	fadeout 0.2
 	fps 30
@@ -170,7 +168,6 @@ $sequence "base_attack_3" {
 $sequence "base_draw" {
 	"v_etool_ger_anims\base_draw.smd"
 	activity "ACT_VM_DRAW" 1
-	{ event 5004 0 "Universal.Draw" }
 	fadein 0.2
 	fadeout 0.2
 	snap
@@ -180,7 +177,6 @@ $sequence "base_draw" {
 $sequence "base_holster" {
 	"v_etool_ger_anims\base_holster.smd"
 	activity "ACT_VM_HOLSTER" 1
-	{ event 5004 0 "Universal.Holster" }
 	fadein 0.2
 	fadeout 0.2
 	fps 33
@@ -193,4 +189,15 @@ $sequence "base_sprint" {
 	fadeout 0.2
 	fps 30
 	loop
+}
+
+
+$collisionmodel "baseballbat.smd"
+{
+	$mass 30
+	$inertia 10
+	$damping 0.01
+	$rotdamping 1.5
+	$rootbone " "
+
 }
