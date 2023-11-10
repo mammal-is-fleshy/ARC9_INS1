@@ -227,7 +227,7 @@ SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 
 -------------------------- SOUNDS
 
-SWEP.ShootSound = "myt_ins1/1911-1.wav"
+SWEP.ShootSound = "myt_ins1/tkr-1.wav"
 SWEP.DistantShootSound = "myt_ins1/1911-1_echo.wav"
 SWEP.ShootSoundSilenced = "myt_ins1_sd/pistol.wav"
 SWEP.DryFireSound = "myt_ins1/1911-empty.wav"
@@ -304,8 +304,7 @@ SWEP.Animations = {
         --Time = 0.5, -- overrides the duration of the sequence
         Mult = 1, -- multiplies time
         EventTable = {
-            {s =  "myt_ins1/1911-slideback.wav" ,    t = 12 / 40},
-            {s =  "myt_ins1/1911-slideforward.wav" ,    t = 25 / 40},
+            {s =  "myt_ins1/tkr_bolt2.wav" ,    t = 20 / 40},
         },
     },
     ["holster"] = {
@@ -318,6 +317,7 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = {"base_fire"},
+		Time = 1,
     },
     ["fire_empty"] = {
         Source = "base_firelast",
@@ -329,8 +329,8 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.775,
         EventTable = {
-            {s =  "myt_ins1/1911-magout.wav" ,   t = 7 / 30},
-            {s =  "myt_ins1/1911-magin.wav" ,    t = 24 / 30},
+            {s =  "myt_ins1/tkr_mag2.wav" ,   t = 8 / 30},
+            {s =  "myt_ins1/tkr_mag1.wav" ,    t = 42 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -343,10 +343,9 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.85,
         EventTable = {
-            {s =  "myt_ins1/1911-magout.wav" ,   t = 7 / 30},
-            {s =  "myt_ins1/1911-magin.wav" ,    t = 24 / 30},
-            {s =  "myt_ins1/1911-slideback.wav" ,    t = 75 / 40},
-            {s =  "myt_ins1/1911-slideforward.wav" ,    t = 80 / 40},
+            {s =  "myt_ins1/tkr_mag2.wav" ,   t = 8 / 30},
+            {s =  "myt_ins1/tkr_mag1.wav" ,    t = 42 / 30},
+            {s =  "myt_ins1/tkr_bolt2.wav" ,    t = 80 / 40},
             },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
