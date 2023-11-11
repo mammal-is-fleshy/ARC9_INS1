@@ -13,13 +13,15 @@ SWEP.Class = "Melee"
 SWEP.Credits = {
     ["Assets"] = [[Insurgency: Modern Infantry Combat]],
 }
-SWEP.Description = [[its a home run]]
+SWEP.Description = [[its a home run
+batta swing baby - annoying fallout 4 vendor]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_baseballbat.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_baseballbat.mdl"
 
 SWEP.Weight = 1
 SWEP.Slot = 1
+SWEP.SlotPos = 1
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelMirror = "models/weapons/myt_ins1/c_baseballbat.mdl"

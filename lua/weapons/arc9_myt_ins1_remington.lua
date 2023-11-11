@@ -13,13 +13,14 @@ SWEP.Class = "Shotgun"
 SWEP.Credits = {
 ---["Assets"] = [[ https://gamebanana.com/mods/208522 ]],
 }
-SWEP.Description = [[I'm so clever.]]
+SWEP.Description = [[I don't hear the sound of the bees.. or the police, for that matter.]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_shot_r870.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_shot_r870.mdl"
 
 SWEP.Weight = 25
-SWEP.Slot = 2
+SWEP.Slot = 3
+SWEP.SlotPos = 3
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelMirror = "models/weapons/myt_ins1/c_shot_r870.mdl"

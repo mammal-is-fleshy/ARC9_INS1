@@ -20,6 +20,7 @@ SWEP.WorldModel = "models/weapons/myt_ins1/c_shot_db.mdl"
 
 SWEP.Weight = 25
 SWEP.Slot = 2
+SWEP.SlotPos = 5
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelMirror = "models/weapons/myt_ins1/c_shot_db.mdl"

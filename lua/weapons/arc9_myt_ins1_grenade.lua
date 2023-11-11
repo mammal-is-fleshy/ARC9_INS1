@@ -16,13 +16,16 @@ SWEP.Credits = {
 SWEP.Description = [[Soviet RGD-5 fragmentation grenade.
 
 
-What? Were you expecting some snarky description? Not this time.]]
+What? Were you expecting some snarky description or clever reference? Not this time.
+
+cocainum]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_gren_rgd5.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_gren_rgd5.mdl"
 
 SWEP.Weight = 1
-SWEP.Slot = 1
+SWEP.Slot = 4
+SWEP.SlotPos = 1
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelMirror = "models/weapons/myt_ins1/c_gren_rgd5.mdl"

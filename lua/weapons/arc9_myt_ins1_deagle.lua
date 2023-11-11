@@ -22,6 +22,7 @@ SWEP.WorldModel = "models/weapons/myt_ins1/c_pist_deagle.mdl"
 
 SWEP.Weight = 1
 SWEP.Slot = 1
+SWEP.SlotPos = 4
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelMirror = "models/weapons/myt_ins1/c_pist_deagle.mdl"
