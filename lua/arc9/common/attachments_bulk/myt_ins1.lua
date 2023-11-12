@@ -317,7 +317,7 @@ ATT = {}
 
 ATT.PrintName = [[50-Rounder]]
 ATT.CompactName = [[50-RND]]
-ATT.Icon = Material("entities/arc9_myt_ins1_mosin_abolt.png", "mips smooth")
+ATT.Icon = Material("entities/arc9_myt_ins1_thompson_50rnd.png", "mips smooth")
 ATT.Description = [[Drummer]]
 
 ATT.SortOrder = 1
