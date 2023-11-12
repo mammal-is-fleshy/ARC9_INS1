@@ -1,11 +1,13 @@
 // Created by Crowbar 0.74
 
-$modelname "weapons/private_arsenals/c_jericho.mdl"
+$modelname "weapons/myt_ins1/c_pist_usp.mdl"
 
-$bodygroup "Jericho"
+$bodygroup "0"
 {
-	studio "jericho.smd"
+	studio "usp.smd"
+	blank
 }
+
 
 
 $surfaceprop "default"
@@ -14,7 +16,9 @@ $contents "solid"
 
 $illumposition -1.731 -7.186 -30.72
 
-$cdmaterials "models\weapons\private_arsenals\jericho\"
+$cdmaterials "models\myt_ins1_vmt\"
+$cdmaterials "models\myt_ins1_vmt\att\"
+$cdmaterials "ins\models\hands\"
 
 $attachment "muzzle_flash" "f_frame" 0 6.4 1.75 rotate 0 90 0
 $attachment "flashlight" "f_frame" 0 6.4 0.4 rotate 0 90 0
@@ -237,77 +241,8 @@ $bonemerge "ValveBipod.Bip01_Spine1"
 $bonemerge "ValveBipod.Bip01_Spine2"
 
 
-$poseparameter "move_x" -1 1 loop 0
-$poseparameter "ver_aims" -1 1 loop 0
-
-$animation "@idle_layer_corrective_animation" "c_jericho_anims\@idle_layer_corrective_animation.smd" {
-}
-
-$animation "@deploy_layer_corrective_animation" "c_jericho_anims\@deploy_layer_corrective_animation.smd" {
-}
-
-$animation "@fire_layer_corrective_animation" "c_jericho_anims\@fire_layer_corrective_animation.smd" {
-}
-
-$animation "@fire_last_layer_corrective_animation" "c_jericho_anims\@fire_last_layer_corrective_animation.smd" {
-}
-
-$animation "look_down_corrective_animation" "c_jericho_anims\look_down_corrective_animation.smd" {
-}
-
-$animation "look_mid_corrective_animation" "c_jericho_anims\look_mid_corrective_animation.smd" {
-}
-
-$animation "look_up_corrective_animation" "c_jericho_anims\look_up_corrective_animation.smd" {
-}
-
-$animation "look_down_corrective_animation" "c_jericho_anims\look_down_corrective_animation.smd" {
-	fps 30
-}
-
-$animation "look_mid_corrective_animation" "c_jericho_anims\look_mid_corrective_animation.smd" {
-	fps 30
-}
-
-$animation "look_up_corrective_animation" "c_jericho_anims\look_up_corrective_animation.smd" {
-	fps 30
-}
-
-$animation "idle_1" "c_jericho_anims\idle_1.smd" {
-	fps 30
-	loop
-}
-
-$animation "idle_1_dry" "c_jericho_anims\idle_1_dry.smd" {
-	fps 40
-	loop
-}
-
-$animation "look_mid" "c_jericho_anims\look_mid.smd" {
-	fps 30
-	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
-	subtract "look_mid_corrective_animation" 0
-}
-
-$animation "look_down" "c_jericho_anims\look_down.smd" {
-	fps 30
-	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
-	subtract "look_down_corrective_animation" 0
-}
-
-$animation "look_up" "c_jericho_anims\look_up.smd" {
-	fps 30
-	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
-	subtract "look_up_corrective_animation" 0
-}
-
-$animation "run" "c_jericho_anims\run.smd" {
-	fps 45
-	loop
-}
-
 $sequence "idle" {
-	"c_jericho_anims\idle.smd"
+	"anims\usp_idle.smd"
 	activity "ACT_VM_IDLE" 1
 	fadein 0.2
 	fadeout 0.2
@@ -315,8 +250,8 @@ $sequence "idle" {
 	loop
 }
 
-$sequence "idle_dry" {
-	"c_jericho_anims\idle_dry.smd"
+$sequence "usp_idle_empty" {
+	"anims\usp_idle_empty.smd"
 	activity "ACT_VM_IDLE_EMPTY" 1
 	fadein 0.2
 	fadeout 0.2
@@ -324,34 +259,41 @@ $sequence "idle_dry" {
 	loop
 }
 
-$sequence "idle_layer" {
-	"c_jericho_anims\idle_layer.smd"
-	activity "ACT_VM_IDLE_LAYER" 1
-	delta
-	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
-	subtract "@idle_layer_corrective_animation" 0
-	fadein 0.2
-	fadeout 0.2
-	fps 30
-}
-
 $sequence "deploy" {
-	"c_jericho_anims\deploy.smd"
+	"anims\usp_deploy.smd"
 	activity "ACT_VM_DRAW" 1
 	fadein 0
 	fadeout 0.2
 	fps 30
 }
 
-$sequence "deploy_layer" {
-	"c_jericho_anims\deploy_layer.smd"
-	activity "ACT_VM_DEPLOY_LAYER" 1
-	delta
-	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
-	subtract "@deploy_layer_corrective_animation" 0
-	{ event 5004 1 "Magnum.Deploy" }
-	{ event 5004 6 "Magnum.SlideBack" }
-	{ event 5004 12 "Magnum.SlideForward" }
+$sequence "draw" {
+	"anims\usp_draw.smd"
+	activity "ACT_VM_DRAW" 1
+	fadein 0
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "draw_empty" {
+	"anims\usp_draw_empty.smd"
+	activity "ACT_VM_DRAW" 1
+	fadein 0
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "holster" {
+	"anims\usp_holster.smd"
+	activity "ACT_VM_DRAW" 1
+	fadein 0
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "holster_empty" {
+	"anims\usp_holster_empty.smd"
+	activity "ACT_VM_DRAW" 1
 	fadein 0
 	fadeout 0.2
 	fps 30
@@ -360,60 +302,30 @@ $sequence "deploy_layer" {
 $sequence "fire" {
 	"c_jericho_anims\fire.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
-	{ event AE_MUZZLEFLASH 0 "1" }
 	fadein 0
 	fadeout 0.2
-	snap
 	fps 40
 }
 
-$sequence "fire_layer" {
-	"c_jericho_anims\fire_layer.smd"
-	activity "ACT_VM_PRIMARYATTACK_LAYER" 1
-	delta
-	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
-	subtract "@fire_layer_corrective_animation" 0
-	{ event AE_MUZZLEFLASH 0 "1" }
-	{ event AE_CL_CREATE_PARTICLE_BRASS 1 "weapon_shell_casing_9mm_fp shell" }
+$sequence "fire2" {
+	"anims\usp_fire.smd"
+	activity "ACT_VM_PRIMARYATTACK" 1
 	fadein 0
 	fadeout 0.2
 	fps 40
 }
 
 $sequence "reload" {
-	"c_jericho_anims\reload.smd"
+	"anims\usp_reload.smd"
 	activity "ACT_VM_RELOAD" 1
 	fadein 0.2
 	fadeout 0.2
 	fps 40
 }
 
-$sequence "reload_layer" {
-	"c_jericho_anims\reload_layer.smd"
-	activity "ACT_VM_RELOAD_LAYER" 1
-	{ event 5004 9 "Magnum.ClipOut" }
-	{ event 5004 38 "Magnum.ClipIn" }
-	{ event 5004 52 "Pistol_Silver.ClipLocked" }
-	fadein 0.2
-	fadeout 0.2
-	fps 40
-}
-
 $sequence "reload_empty" {
-	"c_jericho_anims\reload_empty.smd"
+	"anims\usp_reload_empty.smd"
 	activity "ACT_VM_RELOAD_EMPTY" 1
-	fadein 0.2
-	fadeout 0.2
-	fps 40
-}
-
-$sequence "reload_empty_layer" {
-	"c_jericho_anims\reload_empty_layer.smd"
-	activity "ACT_VM_RELOAD_EMPTY_LAYER" 1
-	{ event 5004 9 "Magnum.ClipOut" }
-	{ event 5004 38 "Magnum.ClipIn" }
-	{ event 5004 52 "Pistol_Silver.ClipLocked" }
-	{ event 5004 68 "Magnum.SlideForward" }
 	fadein 0.2
 	fadeout 0.2
 	fps 40
@@ -422,21 +334,6 @@ $sequence "reload_empty_layer" {
 $sequence "fire_last" {
 	"c_jericho_anims\fire_last.smd"
 	activity "ACT_VM_PRIMARYATTACK_EMPTY" 1
-	{ event AE_MUZZLEFLASH 0 "1" }
-	fadein 0
-	fadeout 0.2
-	snap
-	fps 40
-}
-
-$sequence "fire_last_layer" {
-	"c_jericho_anims\fire_last_layer.smd"
-	activity "ACT_VM_DRYFIRE" 1
-	delta
-	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
-	subtract "@fire_last_layer_corrective_animation" 0
-	{ event AE_MUZZLEFLASH 0 "1" }
-	{ event AE_CL_CREATE_PARTICLE_BRASS 1 "weapon_shell_casing_9mm_fp shell" }
 	fadein 0
 	fadeout 0.2
 	fps 40
@@ -451,21 +348,13 @@ $sequence "melee" {
 	fps 30
 }
 
-$sequence "melee_layer" {
-	"c_jericho_anims\melee_layer.smd"
-	activity "ACT_VM_MELEE_LAYER" 1
-	fadein 0
-	fadeout 0.2
-	fps 30
-}
 
-$sequence "look_poses" {
-	"look_down"
-	"look_mid"
-	"look_up"
-	blend "ver_aims" -1 1
-	blendwidth 3
-	delta
-	fadein 0.2
-	fadeout 0.2
+$collisionmodel "usp.smd"
+{
+	$mass 30
+	$inertia 10
+	$damping 0.01
+	$rotdamping 1.5
+	$rootbone " "
+
 }

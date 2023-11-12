@@ -6,7 +6,7 @@ SWEP.Spawnable = true
 SWEP.Category = "ARC9 - INS1"
 SWEP.SubCategory = "Sidearm"
 
-SWEP.PrintName = "Tokarev"
+SWEP.PrintName = "USP45"
 
 SWEP.Class = "Pistol"
 
@@ -15,15 +15,15 @@ SWEP.Credits = {
 }
 SWEP.Description = [[Old]]
 
-SWEP.ViewModel = "models/weapons/myt_ins1/c_pist_tokarev.mdl"
-SWEP.WorldModel = "models/weapons/myt_ins1/c_pist_tokarev.mdl"
+SWEP.ViewModel = "models/weapons/myt_ins1/c_pist_usp.mdl"
+SWEP.WorldModel = "models/weapons/myt_ins1/c_pist_usp.mdl"
 
 SWEP.Weight = 4
 SWEP.Slot = 1
 SWEP.SlotPos = 3
 
 SWEP.MirrorVMWM = true
-SWEP.WorldModelMirror = "models/weapons/myt_ins1/c_pist_tokarev.mdl"
+SWEP.WorldModelMirror = "models/weapons/myt_ins1/c_pist_usp.mdl"
 SWEP.WorldModelOffset = {
     Pos = Vector(-9, 5, -5),
     Ang = Angle(-5, 0, 180),
@@ -64,7 +64,7 @@ SWEP.PhysBulletMuzzleVelocity = 1280 * 12
 SWEP.Ammo = "pistol" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 1 -- The amount of rounds this gun can chamber.
-SWEP.ClipSize = 12 -- Self-explanatory.
+SWEP.ClipSize = 14 -- Self-explanatory.
 SWEP.SupplyLimit = 4 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
 SWEP.SecondarySupplyLimit = 2 -- Amount of reserve UBGL magazines you can take.
 
@@ -160,7 +160,7 @@ SWEP.TracerColor = Color(255, 225, 200) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-2.425, -4, 0.85),
+    Pos = Vector(-3.275, -4, 1.25),
     Ang = Angle(0, 0, 0),
     Midpoint = { -- Where the gun should be at the middle of it's irons
         Pos = Vector(0, 15, -4),
@@ -228,7 +228,7 @@ SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 
 -------------------------- SOUNDS
 
-SWEP.ShootSound = "myt_ins1/tkr-1.wav"
+SWEP.ShootSound = "myt_ins1/usp-1.wav"
 SWEP.DistantShootSound = "myt_ins1/1911-1_echo.wav"
 SWEP.ShootSoundSilenced = "myt_ins1_sd/pistol.wav"
 SWEP.DryFireSound = "myt_ins1/1911-empty.wav"
@@ -282,19 +282,19 @@ SWEP.Attachments = {
 
 SWEP.Animations = {
     ["idle"] = {
-        Source = "base_idle",
+        Source = "idle",
     },
     ["idle_empty"] = {
-        Source = "empty_idle",
+        Source = "idle_empty",
     },
     ["draw"] = {
-        Source = "base_draw",
+        Source = "draw",
         EventTable = {
             {s =  "myt_ins1/universal/uni-draw.wav" ,   t = 0 / 30},
         },
     },
     ["draw_empty"] = {
-        Source = "base_draw_empty", -- QC sequence source, can be {"table", "of", "strings"} or "string"
+        Source = "draw_empty", -- QC sequence source, can be {"table", "of", "strings"} or "string"
         --Time = 0.5, -- overrides the duration of the sequence
         Mult = 1, -- multiplies time
         EventTable = {
@@ -302,37 +302,38 @@ SWEP.Animations = {
         },
     },
     ["ready"] = {
-        Source = "base_deploy", -- QC sequence source, can be {"table", "of", "strings"} or "string"
+        Source = "deploy", -- QC sequence source, can be {"table", "of", "strings"} or "string"
         --Time = 0.5, -- overrides the duration of the sequence
         Mult = 1, -- multiplies time
         EventTable = {
-            {s =  "myt_ins1/tkr_bolt2.wav" ,    t = 20 / 40},
+            {s =  "myt_ins1/tkr_bolt1.wav" ,    t = 15 / 40},   
+			{s =  "myt_ins1/tkr_bolt2.wav" ,    t = 22 / 40},  
         },
     },
     ["holster"] = {
-        Source = "base_holster",
+        Source = "holster",
         Time = 0.5
     },
     ["holster_empty"] = {
-        Source = "base_holster_empty",
+        Source = "holster_empty",
         Time = 0.5
     },
     ["fire"] = {
-        Source = {"base_fire"},
-		Time = 1,
+        Source = {"fire", "fire2"},
+		Time = 0.5,
     },
     ["fire_empty"] = {
-        Source = "base_firelast",
+        Source = "fire_last",
     },
 
     ["reload"] = {
-        Source = "base_reload",
+        Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FireASAP = true,
         MinProgress = 0.775,
         EventTable = {
-            {s =  "myt_ins1/tkr_mag2.wav" ,   t = 8 / 30},
-            {s =  "myt_ins1/tkr_mag1.wav" ,    t = 42 / 30},
+            {s =  "myt_ins1/usp_mag1.wav" ,   t = 8 / 40},
+            {s =  "myt_ins1/tkr_mag1.wav" ,    t = 38 / 40},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -340,14 +341,14 @@ SWEP.Animations = {
         },
     },
     ["reload_empty"] = {
-        Source = "base_reloadempty",
+        Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FireASAP = true,
         MinProgress = 0.85,
         EventTable = {
-            {s =  "myt_ins1/tkr_mag2.wav" ,   t = 8 / 30},
-            {s =  "myt_ins1/tkr_mag1.wav" ,    t = 42 / 30},
-            {s =  "myt_ins1/tkr_bolt2.wav" ,    t = 80 / 40},
+            {s =  "myt_ins1/usp_mag1.wav" ,   t = 8 / 40},
+            {s =  "myt_ins1/tkr_mag1.wav" ,    t = 38 / 40},
+            {s =  "myt_ins1/tkr_bolt2.wav" ,    t = 56 / 40},  
             },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
