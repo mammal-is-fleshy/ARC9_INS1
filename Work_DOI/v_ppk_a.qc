@@ -9,6 +9,16 @@ $bodygroup "0"
 	studio "tokarev.smd"
 	blank
 }
+$bodygroup "1"
+{
+	blank
+	studio "tkr_rail_top.smd"
+}
+$bodygroup "2"
+{
+	blank
+	studio "tkr_rail_bot.smd"
+}
 
 $surfaceprop "default"
 

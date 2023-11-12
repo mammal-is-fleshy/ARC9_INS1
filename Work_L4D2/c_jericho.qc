@@ -7,7 +7,16 @@ $bodygroup "0"
 	studio "usp.smd"
 	blank
 }
-
+$bodygroup "1"
+{
+	blank
+	studio "usp_rail_top.smd"
+}
+$bodygroup "2"
+{
+	blank
+	studio "usp_rail_bot.smd"
+}
 
 
 $surfaceprop "default"

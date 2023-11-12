@@ -192,7 +192,7 @@ SWEP.CrouchPos = Vector(-0.5, -1, -1)
 SWEP.CrouchAng = Angle(0, 0, -10)
 
 SWEP.CustomizeAng = Angle(90, -5, 0)
-SWEP.CustomizePos = Vector(20, 32, 6)
+SWEP.CustomizePos = Vector(16, 20, 3.5)
 
 SWEP.CustomizeSnapshotFOV = 110
 SWEP.CustomizeNoRotate = false
@@ -241,8 +241,8 @@ SWEP.FiremodeSound = "arc9/firemode.wav"
 SWEP.DefaultBodygroups = "00000000"
 
 SWEP.AttachmentElements = {
-    ["has_optic"] = { Bodygroups = {{2, 1}}, },
-    ["has_tac"] = { Bodygroups = {{3, 1}}, },
+    ["has_optic"] = { Bodygroups = {{1, 1}}, },
+    ["has_tac"] = { Bodygroups = {{2, 1}}, },
 }
 
 SWEP.Attachments = {
@@ -253,9 +253,9 @@ SWEP.Attachments = {
 
         ExcludeElements = {"pre_optic"},
         Category = {"optic_css_s"},
-        Bone = "Weapon",
-        Pos = Vector(2, -3.2, 0),
-        Ang = Angle(0, 0, -90),
+        Bone = "f_frame",
+        Pos = Vector(0, -2.75, 2.75),
+        Ang = Angle(0, 90, 0),
     },
     {
         PrintName = "Muzzle",
@@ -263,9 +263,9 @@ SWEP.Attachments = {
 
         ExcludeElements = {"pre_muzzed"},
         Category = {"muzzle_css"},
-        Bone = "Weapon",
-        Pos = Vector(7.5, -2.1, 0),
-        Ang = Angle(0, 0, -90),
+        Bone = "f_frame",
+        Pos = Vector(0, -5.2, 1.75),
+        Ang = Angle(0, 90, 0),
     },
 
     {
@@ -274,9 +274,9 @@ SWEP.Attachments = {
         InstalledElements = {"has_tac"},
 
         Category = {"tac_css"},
-        Bone = "Weapon",
-        Pos = Vector(4.5, -0.3, 0),
-        Ang = Angle(0, 0, 90),
+        Bone = "f_frame",
+        Pos = Vector(0, -4.75, 0.1),
+        Ang = Angle(0, 90, 180),
     },
 }
 
@@ -320,6 +320,10 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = {"fire", "fire2"},
+		Time = 0.5,
+    },
+    ["fire_iron"] = {
+        Source = {"fire2"},
 		Time = 0.5,
     },
     ["fire_empty"] = {
