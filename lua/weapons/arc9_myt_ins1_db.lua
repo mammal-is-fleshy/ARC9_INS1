@@ -20,6 +20,7 @@ SWEP.WorldModel = "models/weapons/myt_ins1/c_shot_db.mdl"
 
 SWEP.Weight = 25
 SWEP.Slot = 2
+SWEP.SlotPos = 5
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelMirror = "models/weapons/myt_ins1/c_shot_db.mdl"
@@ -241,8 +242,8 @@ SWEP.NoShellEject = true
 
 SWEP.ShootSound = {"myt_ins1/db-1.wav"}
 SWEP.DistantShootSound = {"myt_ins1/toz_01_echo.wav", "myt_ins1/toz_02_echo.wav"}
-SWEP.ShootSoundSilenced = "myt_ins1_sd/deagle.wav"
 SWEP.DryFireSound = "myt_ins1/enfield-empty.wav"
+SWEP.ShootSoundSilenced = "myt_ins1_sd/shotgun.wav"
 
 SWEP.FiremodeSound = "myt_ins1/firemode_medium.wav"
 

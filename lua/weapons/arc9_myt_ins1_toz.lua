@@ -19,7 +19,8 @@ SWEP.ViewModel = "models/weapons/myt_ins1/c_shot_toz.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_shot_toz.mdl"
 
 SWEP.Weight = 25
-SWEP.Slot = 2
+SWEP.Slot = 3
+SWEP.SlotPos = 3
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelMirror = "models/weapons/myt_ins1/c_shot_toz.mdl"
@@ -240,9 +241,9 @@ SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 SWEP.ShootSound = {"myt_ins1/toz_01.wav", "myt_ins1/toz_02.wav"}
 SWEP.DistantShootSound = {"myt_ins1/toz_01_echo.wav", "myt_ins1/toz_02_echo.wav"}
 SWEP.DryFireSound = "myt_ins1/enfield-empty.wav"
-SWEP.ShootSoundSilenced = "magmacow_smor/AWM-SIL.wav"
+SWEP.ShootSoundSilenced = "myt_ins1_sd/shotgun.wav"
 
-SWEP.FiremodeSound = "arc9/firemode.wav"
+SWEP.FiremodeSound = "myt_ins1/firemode_medium.wav"
 
 SWEP.DefaultBodygroups = "0000000"
 

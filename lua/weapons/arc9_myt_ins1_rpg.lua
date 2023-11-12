@@ -18,7 +18,8 @@ SWEP.Description = [[Reloading-disposable rocket package.]]
 SWEP.ViewModel = "models/weapons/myt_ins1/c_at_rpg7.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_at_rpg7.mdl"
 
-SWEP.Slot = 3
+SWEP.Slot = 4
+SWEP.SlotPos = 3
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelMirror = "models/weapons/myt_ins1/c_at_rpg7.mdl"
