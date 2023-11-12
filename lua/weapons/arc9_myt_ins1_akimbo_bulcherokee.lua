@@ -253,36 +253,34 @@ SWEP.AttachmentElements = {
 
 SWEP.Attachments = {
     {
-        PrintName = "Optic",
-        DefaultName = "None",
-        InstalledElements = {"has_optic"},
-
-        ExcludeElements = {"pre_optic"},
-        Category = {"optic_css_s"},
-        Bone = "Weapon_Controller",
-        Pos = Vector(2, -3.2, 0),
-        Ang = Angle(0, 0, -90),
-    },
-    {
         PrintName = "Muzzle",
         DefaultName = "None",
 
         ExcludeElements = {"pre_muzzed"},
         Category = {"muzzle_css"},
-        Bone = "Weapon_Controller",
-        Pos = Vector(7.5, -2.1, 0),
-        Ang = Angle(0, 0, -90),
+        Bone = "f2_frame",
+        Pos = Vector(0, -2, 4),
+        Ang = Angle(90, -90, 0),
+        DuplicateModels = {
+            {
+                Bone = "f_frame",
+            }
+        },
     },
-
     {
         PrintName = "Tac Mount",
         DefaultName = "None",
         InstalledElements = {"has_tac"},
 
         Category = {"tac_css"},
-        Bone = "Weapon_Controller",
-        Pos = Vector(4.5, -0.3, 0),
-        Ang = Angle(0, 0, 90),
+        Bone = "f2_frame",
+        Pos = Vector(0, -0.5, 2),
+        Ang = Angle(90, 90, 0),
+        DuplicateModels = {
+            {
+                Bone = "f_frame",
+            }
+        },
     },
 }
 SWEP.Akimbo = true
@@ -355,7 +353,7 @@ SWEP.Animations = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FireASAP = true,
-        MinProgress = 0.775,
+        MinProgress = 0.9,
         EventTable = {
             {s =  "myt_ins1/1911-magout.wav" ,   t = 6 / 30},
             {s =  "myt_ins1/1911-magin.wav" ,    t = 28 / 30},
@@ -385,7 +383,7 @@ SWEP.Animations = {
         Source = "reload_empty1",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FireASAP = true,
-        MinProgress = 0.85,
+        MinProgress = 1,
         EventTable = {
             {s =  "myt_ins1/1911-magout.wav" ,   t = 6 / 30},
             {s =  "myt_ins1/1911-magin.wav" ,    t = 28 / 30},
