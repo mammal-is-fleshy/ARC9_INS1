@@ -305,7 +305,7 @@ SWEP.Animations = {
         Source = "base_ready",
         EventTable = {
             {s =  "myt_ins1/r870-pumpback.wav" ,   t = 12 / 30}, 
-			{s =  "myt_ins1/r870-pumpforward.wav" ,   t = 20 / 30},
+			{s =  "myt_ins1/r870-pumpforward.wav" ,   t = 18 / 30},
         },
         FireASAP = true,
         MinProgress = 0.7,
@@ -325,7 +325,8 @@ SWEP.Animations = {
         EjectAt = 8 / 30,
 		Mult = 0.8,
         EventTable = {
-            {s =  "myt_ins1/r870_pump.wav" ,   t = 4 / 30},
+            {s =  "myt_ins1/r870-pumpback.wav" ,   t = 3 / 30},
+            {s =  "myt_ins1/r870-pumpforward.wav" ,   t = 10 / 30},
         },
         FireASAP = true,
         MinProgress = 0.9,
@@ -337,7 +338,7 @@ SWEP.Animations = {
 		Mult = 0.8,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         EventTable = {
-            {s =  "myt_ins1/r870_insert.wav" ,   t = 8 / 30},
+            {s =  "myt_ins1/r870_insert.wav" ,   t = 9 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -350,8 +351,9 @@ SWEP.Animations = {
 		Mult = 0.8,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         EventTable = {
-            {s =  "myt_ins1/r870_insert.wav" ,   t = 8 / 30},
-            {s =  "myt_ins1/r870_pump.wav" ,   t = 31 / 30},
+            {s =  "myt_ins1/r870-pumpback.wav" ,   t = 8 / 30},
+            {s =  "myt_ins1/r870_insert.wav" ,   t = 32 / 30},
+            {s =  "myt_ins1/r870-pumpforward.wav" ,   t = 48 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },	{ t = 0.9, lhik = 1, rhik = 1, },
@@ -363,7 +365,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
 		Mult = 0.8,
         EventTable = {
-            {s =  "myt_ins1/r870_insert.wav" ,   t = 3 / 30},
+            {s =  "myt_ins1/r870_insert.wav" ,   t = 4 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 0, rhik = 1, },
