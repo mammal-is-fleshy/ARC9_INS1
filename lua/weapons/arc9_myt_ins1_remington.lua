@@ -12,6 +12,7 @@ SWEP.Class = "Shotgun"
 
 SWEP.Credits = {
 ---["Assets"] = [[ https://gamebanana.com/mods/208522 ]],
+	["Sounds"] = [[ https://gamebanana.com/sounds/60460 ]],
 }
 SWEP.Description = [[I don't hear the sound of the bees.. or the police, for that matter.]]
 
@@ -327,7 +328,7 @@ SWEP.Animations = {
 		Mult = 0.8,
         EventTable = {
             {s =  "myt_ins1/r870-pumpback.wav" ,   t = 3 / 30},
-            {s =  "myt_ins1/r870-pumpforward.wav" ,   t = 10 / 30},
+            {s =  "myt_ins1/r870-pumpforward.wav" ,   t = 9 / 30},
         },
         FireASAP = true,
         MinProgress = 0.9,
@@ -339,7 +340,7 @@ SWEP.Animations = {
 		Mult = 0.8,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         EventTable = {
-            {s =  "myt_ins1/r870_insert.wav" ,   t = 9 / 30},
+            {s =  "myt_ins1/r870_insert.wav" ,   t = 10 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -354,7 +355,7 @@ SWEP.Animations = {
         EventTable = {
             {s =  "myt_ins1/r870-pumpback.wav" ,   t = 8 / 30},
             {s =  "myt_ins1/r870_insert.wav" ,   t = 32 / 30},
-            {s =  "myt_ins1/r870-pumpforward.wav" ,   t = 48 / 30},
+            {s =  "myt_ins1/r870-pumpforward.wav" ,   t = 50 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },	{ t = 0.9, lhik = 1, rhik = 1, },

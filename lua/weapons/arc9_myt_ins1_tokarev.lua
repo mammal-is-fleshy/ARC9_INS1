@@ -13,7 +13,8 @@ SWEP.Class = "Pistol"
 SWEP.Credits = {
     ["Assets"] = [[Insurgency: Modern Infantry Combat]],
 }
-SWEP.Description = [[Old]]
+SWEP.Description = [[Russian semi-automatic pistol with medium capacity and power. 
+Effective at close range.]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_pist_tokarev.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_pist_tokarev.mdl"
@@ -39,7 +40,7 @@ SWEP.RecoilAutoControlMultHipFire = 0.5
 -------------------------- DAMAGE PROFILE
 
 SWEP.DamageMax = 39
-SWEP.DamageMin = 15
+SWEP.DamageMin = 16
 
 SWEP.RangeMin = 500
 SWEP.RangeMax = 3000
@@ -64,7 +65,7 @@ SWEP.PhysBulletMuzzleVelocity = 1280 * 12
 SWEP.Ammo = "pistol" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 1 -- The amount of rounds this gun can chamber.
-SWEP.ClipSize = 12 -- Self-explanatory.
+SWEP.ClipSize = 8 -- Self-explanatory.
 SWEP.SupplyLimit = 4 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
 SWEP.SecondarySupplyLimit = 2 -- Amount of reserve UBGL magazines you can take.
 

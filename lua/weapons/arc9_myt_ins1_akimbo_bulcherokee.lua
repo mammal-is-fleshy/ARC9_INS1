@@ -20,6 +20,7 @@ SWEP.WorldModel = "models/weapons/myt_ins1/c_dual_bulcherokee.mdl"
 
 SWEP.Weight = 4
 SWEP.Slot = 1
+SWEP.SlotPos = 5
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelMirror = "models/weapons/myt_ins1/c_dual_bulcherokee.mdl"
@@ -206,8 +207,8 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.CrouchPos = Vector(0, 1, -1)
 SWEP.CrouchAng = Angle(0, 0, 0)
 
-SWEP.CustomizeAng = Angle(90, -5, 0)
-SWEP.CustomizePos = Vector(20, 32, 6)
+SWEP.CustomizeAng = Angle(90, 5, 0)
+SWEP.CustomizePos = Vector(20, 32, 5)
 
 SWEP.CustomizeSnapshotFOV = 110
 SWEP.CustomizeNoRotate = false
@@ -248,7 +249,7 @@ SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 
 SWEP.ShootSound = "myt_ins1/bkc-1.wav"
 SWEP.DistantShootSound = "myt_ins1/1911-1_echo.wav"
-SWEP.ShootSoundSilenced = "myt_ins1_sd/pistol.wav"
+SWEP.ShootSoundSilenced = "myt_ins1_sd/pistol1.wav"
 SWEP.DryFireSound = "myt_ins1/1911-empty.wav"
 
 SWEP.EjectDelay = 0
@@ -272,6 +273,7 @@ SWEP.Attachments = {
         Bone = "f2_frame",
         Pos = Vector(0, -2, 4),
         Ang = Angle(90, -90, 0),
+		Icon_Offset = Vector(0, 1, 0),
         DuplicateModels = {
             {
                 Bone = "f_frame",
@@ -335,8 +337,8 @@ SWEP.Animations = {
         --Time = 0.5, -- overrides the duration of the sequence
         Mult = 1, -- multiplies time
         EventTable = {
-			{s =  "myt_ins1/1911-slideforward.wav" ,    t = 12 / 40},
-            {s =  "myt_ins1/1911-slideforward.wav" ,    t = 16 / 40},
+			{s =  "myt_ins1/glock_slideforward.wav" ,    t = 12 / 40},
+            {s =  "myt_ins1/glock_slideforward.wav" ,    t = 16 / 40},
         },
     },
     ["holster"] = {
@@ -366,8 +368,8 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.9,
         EventTable = {
-            {s =  "myt_ins1/1911-magout.wav" ,   t = 6 / 30},
-            {s =  "myt_ins1/1911-magin.wav" ,    t = 28 / 30},
+            {s =  "myt_ins1/glock_magout.wav" ,   t = 6 / 30},
+            {s =  "myt_ins1/glock_magin.wav" ,    t = 28 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -380,10 +382,10 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.85,
         EventTable = {
-            {s =  "myt_ins1/1911-magout.wav" ,   t = 6 / 30},
-            {s =  "myt_ins1/1911-magin.wav" ,    t = 28 / 30},
-            {s =  "myt_ins1/1911-slideforward.wav" ,    t = 92 / 40}, 
-			{s =  "myt_ins1/1911-slideforward.wav" ,    t = 96 / 40},
+            {s =  "myt_ins1/glock_magout.wav" ,   t = 6 / 30},
+            {s =  "myt_ins1/glock_magin.wav" ,    t = 30 / 30},
+            {s =  "myt_ins1/glock_slideforward.wav" ,    t = 94 / 40}, 
+			{s =  "myt_ins1/glock_slideforward.wav" ,    t = 98 / 40},
             },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -396,9 +398,9 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 1,
         EventTable = {
-            {s =  "myt_ins1/1911-magout.wav" ,   t = 6 / 30},
-            {s =  "myt_ins1/1911-magin.wav" ,    t = 28 / 30},
-            {s =  "myt_ins1/1911-slideforward.wav" ,    t = 92 / 40}, 
+            {s =  "myt_ins1/glock_magout.wav" ,   t = 6 / 30},
+            {s =  "myt_ins1/glock_magin.wav" ,    t = 30 / 30},
+            {s =  "myt_ins1/glock_slideforward.wav" ,    t = 94 / 40}, 
             },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },

@@ -13,7 +13,7 @@ SWEP.Class = "Pistol"
 SWEP.Credits = {
     ["Assets"] = [[Insurgency: Modern Infantry Combat]],
 }
-SWEP.Description = [[Old]]
+SWEP.Description = [[Crew Expendable.]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_pist_usp.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_pist_usp.mdl"
@@ -38,13 +38,13 @@ SWEP.RecoilAutoControlMultHipFire = 0.5
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 39
+SWEP.DamageMax = 41
 SWEP.DamageMin = 15
 
 SWEP.RangeMin = 500
 SWEP.RangeMax = 3000
 
-SWEP.Penetration = 3 -- Units of wood that can be penetrated by this gun.
+SWEP.Penetration = 2 -- Units of wood that can be penetrated by this gun.
 
 SWEP.BodyDamageMults = {
     [HITGROUP_HEAD] = 1.75,
@@ -57,14 +57,14 @@ SWEP.BodyDamageMults = {
 
 -------------------------- PHYS BULLET BALLISTICS
 
-SWEP.PhysBulletMuzzleVelocity = 1280 * 12
+SWEP.PhysBulletMuzzleVelocity = 1200 * 12
 
 -------------------------- MAGAZINE
 
 SWEP.Ammo = "pistol" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 1 -- The amount of rounds this gun can chamber.
-SWEP.ClipSize = 14 -- Self-explanatory.
+SWEP.ClipSize = 12 -- Self-explanatory.
 SWEP.SupplyLimit = 4 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
 SWEP.SecondarySupplyLimit = 2 -- Amount of reserve UBGL magazines you can take.
 
@@ -230,7 +230,7 @@ SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 
 SWEP.ShootSound = "myt_ins1/usp-1.wav"
 SWEP.DistantShootSound = "myt_ins1/1911-1_echo.wav"
-SWEP.ShootSoundSilenced = "myt_ins1_sd/pistol.wav"
+SWEP.ShootSoundSilenced = "myt_ins1_sd/pistol1.wav"
 SWEP.DryFireSound = "myt_ins1/1911-empty.wav"
 
 SWEP.EjectDelay = 0
@@ -339,8 +339,9 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.775,
         EventTable = {
-            {s =  "myt_ins1/usp_mag1.wav" ,   t = 8 / 40},
-            {s =  "myt_ins1/tkr_mag1.wav" ,    t = 38 / 40},
+            {s =  "myt_ins1/usp-magout.wav" ,   t = 6 / 40},
+			{s =  "myt_ins1/usp-mag1.wav" ,    t = 32 / 40},
+            {s =  "myt_ins1/usp-mag2.wav" ,    t = 38 / 40},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -353,10 +354,11 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.85,
         EventTable = {
-            {s =  "myt_ins1/usp_mag1.wav" ,   t = 8 / 40},
-            {s =  "myt_ins1/tkr_mag1.wav" ,    t = 38 / 40},
-            {s =  "myt_ins1/tkr_bolt2.wav" ,    t = 56 / 40},  
-            },
+            {s =  "myt_ins1/usp-magout.wav" ,   t = 6 / 40},
+			{s =  "myt_ins1/usp-mag1.wav" ,    t = 32 / 40},
+            {s =  "myt_ins1/usp-mag2.wav" ,    t = 38 / 40},
+            {s =  "myt_ins1/usp-slide.wav" ,    t = 56 / 40},  
+        },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
         { t = 0.2, lhik = 0, rhik = 1, },{ t = 0.85, lhik = 0, rhik = 1, },{ t = 0.975, lhik = 1, rhik = 1, },

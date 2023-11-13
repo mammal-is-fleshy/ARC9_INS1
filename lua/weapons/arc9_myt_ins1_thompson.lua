@@ -380,8 +380,8 @@ SWEP.Animations = {
         MinProgress = 0.775,
         Mult = 1.1,
         EventTable = {
-            {s =  "myt_ins1/thompson_mag1.wav" ,   t = 5 / 30},
-            {s =  "myt_ins1/thompson_mag2.wav" ,    t = 41 / 30},
+            {s =  "myt_ins1/thompson_mag1.wav" ,   t = 3 / 30},
+            {s =  "myt_ins1/thompson_mag2.wav" ,    t = 46 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -396,8 +396,8 @@ SWEP.Animations = {
         MinProgress = 0.85,
         EventTable = {
             {s =  "myt_ins1/thompson_bolt.wav" ,   t = 6 / 30},
-            {s =  "myt_ins1/thompson_mag1.wav" ,   t = 25 / 30},
-            {s =  "myt_ins1/thompson_mag2.wav" ,    t = 58 / 30},
+            {s =  "myt_ins1/thompson_mag1.wav" ,   t = 23 / 30},
+            {s =  "myt_ins1/thompson_mag2.wav" ,    t = 63 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -413,8 +413,8 @@ SWEP.Animations = {
         MinProgress = 0.775,
         Mult = 1.25,
         EventTable = {
-            {s =  "myt_ins1/thompson_mag1.wav" ,   t = 5 / 30},
-            {s =  "myt_ins1/thompson_mag2.wav" ,    t = 41 / 30},
+            {s =  "myt_ins1/thompson_mag1.wav" ,   t = 3 / 30},
+            {s =  "myt_ins1/thompson_mag2.wav" ,    t = 47 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -428,9 +428,9 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.85,
         EventTable = {
-            {s =  "myt_ins1/thompson_bolt.wav" ,   t = 6 / 30},
-            {s =  "myt_ins1/thompson_mag1.wav" ,   t = 25 / 30},
-            {s =  "myt_ins1/thompson_mag2.wav" ,    t = 58 / 30},
+            {s =  "myt_ins1/thompson_bolt.wav" ,   t = 5 / 30},
+            {s =  "myt_ins1/thompson_mag1.wav" ,   t = 22 / 30},
+            {s =  "myt_ins1/thompson_mag2.wav" ,    t = 64 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },

@@ -53,8 +53,6 @@ ATT.SprintToFireTimeAdd = 0.08
 
 ARC9.LoadAttachment(ATT, "myt_ins1_scope_42")
 
-
-
 ------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------
 
@@ -108,8 +106,6 @@ ATT.SprintToFireTimeAdd = 0.08
 
 ARC9.LoadAttachment(ATT, "myt_ins1_scope_svd")
 
-
-
 ------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------
 
@@ -132,8 +128,6 @@ ATT.ModelBodygroups = "10000"
 
 ARC9.LoadAttachment(ATT, "myt_ins1_rhik_xm21")
 
-
-
 ------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------
 
@@ -141,9 +135,7 @@ ATT = {}
 
 ATT.PrintName = [[SD Kit]]
 ATT.Icon = Material("entities/arc9_myt_ins1_mp5sd.png", "mips smooth")
-ATT.Description = [[
-Integral Suppressor
-]]
+ATT.Description = [[Integrally suppressed barrel.]]
 
 ATT.Category = {"ins1_mp5_sd"}
 ATT.ActivateElements = {"mp5sd"}
@@ -166,22 +158,14 @@ ATT.RecoilRandomMult = 0.85
 
 ARC9.LoadAttachment(ATT, "myt_ins1_mp5_sd")
 
-
-
 ------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------
-
-
-
-
 
 ATT = {}
 
-ATT.PrintName = [[Suppressor P]]
+ATT.PrintName = [[SUPP. P]]
 ATT.Icon = Material("entities/arc9_myt_ins1_sd_glock.png", "mips smooth")
-ATT.Description = [[
-Pistol suppressor
-]]
+ATT.Description = [[Pistol suppressor]]
 ATT.SortOrder = 2
 
 ATT.Model = "models/weapons/myt_ins1/atts/sd_glock.mdl"
@@ -199,6 +183,7 @@ ATT.SprintToFireTimeMult = 1.03
 
 ATT.Silencer = true
 ATT.ShootVolumeMult = 0.8
+ATT.DistantShootSound = ""
 ATT.MuzzleParticleOverride = "muzzleflash_suppressed"
 ATT.MuzzleParticleOverride_Priority = 10
 ATT.MuzzleDevice = true
@@ -208,13 +193,8 @@ ATT.RecoilRandomMult = 0.975
 
 ARC9.LoadAttachment(ATT, "myt_ins1_sd_pist")
 
-
-
 ------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------
-
-
-----------------------------------------------------------------------------------
 
 ATT = {}
 
@@ -253,10 +233,11 @@ ATT.SprintToFireTimeAdd = 0.035
 
 ARC9.LoadAttachment(ATT, "myt_ins1_optic_mars")
 
-----------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
 
 ATT = {}
-
+-- db shotty one-hand
 ATT.PrintName = [[One-Handed]]
 ATT.CompactName = [[1H]]
 ATT.Icon = Material("entities/arc9_myt_ins1_db_1h.png", "mips smooth")
@@ -296,7 +277,8 @@ end
 
 ARC9.LoadAttachment(ATT, "myt_ins1_db_1h")
 
-----------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
 
 ATT = {}
 
@@ -311,14 +293,15 @@ ATT.ActivateElements = {"abolt"}
 
 ARC9.LoadAttachment(ATT, "myt_ins1_mosin_abolt")
 
-----------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
 
 ATT = {}
 
 ATT.PrintName = [[50-Rounder]]
 ATT.CompactName = [[50-RND]]
 ATT.Icon = Material("entities/arc9_myt_ins1_thompson_50rnd.png", "mips smooth")
-ATT.Description = [[Drummer]]
+ATT.Description = [[Not a typewriter or a violin.]]
 
 ATT.SortOrder = 1
 ATT.Category = "ins1_mag_thomp"
@@ -334,8 +317,8 @@ ATT.ClipSizeOverride = 50
 
 ARC9.LoadAttachment(ATT, "myt_ins1_thomp_drum")
 
-----------------------------------------------------------------------------------
-
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
 
 ATT = {}
 
@@ -366,9 +349,10 @@ ATT.ModelBodygroups = "56570000000"
 
 ARC9.LoadAttachment(ATT, "myt_ins1_thomp_grip")
 
-----------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
 
-
+-- thomp one-hand
 ATT = {}
 
 ATT.PrintName = [[No Grip]]
@@ -402,8 +386,8 @@ ATT.SprintPosOverride = Vector(2, 3, -10)
 
 ARC9.LoadAttachment(ATT, "myt_ins1_thomp_grip2")
 
-----------------------------------------------------------------------------------
-
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
 
 ATT = {}
 

@@ -139,9 +139,9 @@ SWEP.ShellSmoke = false
 -------------------------- SOUNDS
 
 SWEP.EjectDelay = 0
-SWEP.MeleeHitWallSound = {"myt_ins1/ent_tool_attack_1.wav", "myt_ins1/ent_tool_attack_2.wav"}
-SWEP.MeleeHitSound = {"myt_ins1/ent_tool_attack_1.wav", "myt_ins1/ent_tool_attack_2.wav"}
-SWEP.MeleeSwingSound = nil
+SWEP.MeleeHitWallSound = {"myt_ins1/melee_wall_blunt_1.wav", "myt_ins1/melee_wall_blunt_2.wav"}
+SWEP.MeleeHitSound = {"myt_ins1/melee_blunt_1.wav", "myt_ins1/melee_blunt_2.wav"}
+SWEP.MeleeSwingSound = {"myt_ins1/melee_swingmed_1.wav", "myt_ins1/melee_swingmed_2.wav"}
 
 SWEP.FiremodeSound = "arc9/firemode.wav"
 
