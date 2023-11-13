@@ -6,7 +6,7 @@ SWEP.Spawnable = true
 SWEP.Category = "ARC9 - INS1"
 SWEP.SubCategory = "Sidearm"
 
-SWEP.PrintName = "USP45"
+SWEP.PrintName = "P7M10"
 
 SWEP.Class = "Pistol"
 
@@ -15,15 +15,15 @@ SWEP.Credits = {
 }
 SWEP.Description = [[Old]]
 
-SWEP.ViewModel = "models/weapons/myt_ins1/c_pist_usp.mdl"
-SWEP.WorldModel = "models/weapons/myt_ins1/c_pist_usp.mdl"
+SWEP.ViewModel = "models/weapons/myt_ins1/c_pist_p7.mdl"
+SWEP.WorldModel = "models/weapons/myt_ins1/c_pist_p7.mdl"
 
 SWEP.Weight = 4
 SWEP.Slot = 1
 SWEP.SlotPos = 3
 
 SWEP.MirrorVMWM = true
-SWEP.WorldModelMirror = "models/weapons/myt_ins1/c_pist_usp.mdl"
+SWEP.WorldModelMirror = "models/weapons/myt_ins1/c_pist_p7.mdl"
 SWEP.WorldModelOffset = {
     Pos = Vector(-9, 5, -5),
     Ang = Angle(-5, 0, 180),
@@ -38,8 +38,8 @@ SWEP.RecoilAutoControlMultHipFire = 0.5
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 39
-SWEP.DamageMin = 15
+SWEP.DamageMax = 32
+SWEP.DamageMin = 28
 
 SWEP.RangeMin = 500
 SWEP.RangeMax = 3000
@@ -64,7 +64,7 @@ SWEP.PhysBulletMuzzleVelocity = 1280 * 12
 SWEP.Ammo = "pistol" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 1 -- The amount of rounds this gun can chamber.
-SWEP.ClipSize = 14 -- Self-explanatory.
+SWEP.ClipSize = 13 -- Self-explanatory.
 SWEP.SupplyLimit = 4 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
 SWEP.SecondarySupplyLimit = 2 -- Amount of reserve UBGL magazines you can take.
 
@@ -160,7 +160,7 @@ SWEP.TracerColor = Color(255, 225, 200) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-3.275, -4, 1.25),
+    Pos = Vector(-5.45, -8, 2.6),
     Ang = Angle(0, 0, 0),
     Midpoint = { -- Where the gun should be at the middle of it's irons
         Pos = Vector(0, 15, -4),
@@ -174,7 +174,7 @@ SWEP.IronSights = {
 SWEP.Crosshair = false
 
 SWEP.SprintAng = Angle(10, -15, -10)
-SWEP.SprintPos = Vector(0, 2, 0)
+SWEP.SprintPos = Vector(0, -6, 2.5)
 
 SWEP.SprintMidPoint = {
     Pos = Vector(0, -5, -3),
@@ -185,14 +185,14 @@ SWEP.MovingPos = Vector(0, -0.5, 0.5)
 SWEP.MovingAng = Angle(0, -2, 0)
 
 SWEP.ViewModelFOVBase = 70
-SWEP.ActivePos = Vector(0, 0, 0)
+SWEP.ActivePos = Vector(0, -4, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.CrouchPos = Vector(-0.5, -1, -1)
 SWEP.CrouchAng = Angle(0, 0, -10)
 
 SWEP.CustomizeAng = Angle(90, -5, 0)
-SWEP.CustomizePos = Vector(16, 20, 3.5)
+SWEP.CustomizePos = Vector(24, 22, 5)
 
 SWEP.CustomizeSnapshotFOV = 110
 SWEP.CustomizeNoRotate = false
@@ -254,8 +254,8 @@ SWEP.Attachments = {
         ExcludeElements = {"pre_optic"},
         Category = {"optic_css_s"},
         Bone = "f_frame",
-        Pos = Vector(0, -2.75, 2.75),
-        Ang = Angle(0, 90, 0),
+        Pos = Vector(0, -3, 0),
+        Ang = Angle(90, 0, -90),
     },
     {
         PrintName = "Muzzle",
@@ -264,8 +264,8 @@ SWEP.Attachments = {
         ExcludeElements = {"pre_muzzed"},
         Category = {"muzzle_css"},
         Bone = "f_frame",
-        Pos = Vector(0, -5.2, 1.75),
-        Ang = Angle(0, 90, 0),
+        Pos = Vector(0, -2.3, 2.55),
+        Ang = Angle(90, 0, -90),
     },
 
     {
@@ -275,8 +275,8 @@ SWEP.Attachments = {
 
         Category = {"tac_css"},
         Bone = "f_frame",
-        Pos = Vector(0, -4.75, 0.1),
-        Ang = Angle(0, 90, 180),
+        Pos = Vector(0, -0.9, 2.4),
+        Ang = Angle(90, 0, 90),
     },
 }
 
@@ -304,32 +304,24 @@ SWEP.Animations = {
     ["ready"] = {
         Source = "deploy", -- QC sequence source, can be {"table", "of", "strings"} or "string"
         --Time = 0.5, -- overrides the duration of the sequence
-        Mult = 1, -- multiplies time
-        EventTable = {
-            {s =  "myt_ins1/tkr_bolt1.wav" ,    t = 15 / 40},   
-			{s =  "myt_ins1/tkr_bolt2.wav" ,    t = 22 / 40},  
+        Mult = 2, -- multiplies time
+        EventTable = { 
+			{s =  "myt_ins1/tkr_bolt2.wav" ,    t = 5 / 40},  
         },
     },
     ["holster"] = {
         Source = "holster",
-        Time = 0.5
+        Time = 0.75
     },
     ["holster_empty"] = {
         Source = "holster_empty",
-        Time = 0.5
+        Time = 0.75
     },
     ["fire"] = {
-        Source = {"fire", "fire2"},
-		Time = 0.5,
-    },
-    ["fire_iron"] = {
-        Source = {"fire2"},
+        Source = {"fire"},
 		Time = 0.5,
     },
     ["fire_empty"] = {
-        Source = "fire_last",
-    },
-    ["fire_iron_empty"] = {
         Source = "fire_last",
     },
 
@@ -339,8 +331,8 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.775,
         EventTable = {
-            {s =  "myt_ins1/usp_mag1.wav" ,   t = 8 / 40},
-            {s =  "myt_ins1/tkr_mag1.wav" ,    t = 38 / 40},
+            {s =  "myt_ins1/tkr_mag2.wav" ,   t = 8 / 40},
+            {s =  "myt_ins1/tkr_mag1.wav" ,    t = 45 / 40},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -353,9 +345,9 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.85,
         EventTable = {
-            {s =  "myt_ins1/usp_mag1.wav" ,   t = 8 / 40},
-            {s =  "myt_ins1/tkr_mag1.wav" ,    t = 38 / 40},
-            {s =  "myt_ins1/tkr_bolt2.wav" ,    t = 56 / 40},  
+            {s =  "myt_ins1/tkr_mag2.wav" ,   t = 8 / 40},
+            {s =  "myt_ins1/tkr_mag1.wav" ,    t = 45 / 40},
+            {s =  "myt_ins1/tkr_bolt2.wav" ,    t = 60 / 40},  
             },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },

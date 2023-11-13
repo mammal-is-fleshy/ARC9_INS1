@@ -1,11 +1,11 @@
+
 // Created by Crowbar 0.74
 
-$modelname "weapons/myt_ins1/c_dual_bulcherokee.mdl"
+$modelname "weapons/myt_ins1/c_pist_p7.mdl"
 
-$bodygroup "0"
+$bodygroup "pistole"
 {
-	studio "bul_cherokee.smd"
-	blank
+	studio "hkp7.smd"
 }
 
 
@@ -15,16 +15,18 @@ $contents "solid"
 
 $illumposition 0 0 0
 
+
 $cdmaterials "models\myt_ins1_vmt\"
 $cdmaterials "models\myt_ins1_vmt\att\"
 $cdmaterials "ins\models\hands\"
 
-$attachment "muzzle_flash_l" "f2_frame" 0 2.25 11.5 rotate -90 0 0
-$attachment "muzzle_flash_r" "f_frame" 0 2.5 11.5 rotate -90 0 0
-$attachment "shell_l" "f2_frame" 0 2.2 -1.8 rotate 0 150 90
-$attachment "shell_r" "f_frame" -0.05 2.5 -1.8 rotate 0 150 90
+$attachment "muzzle_flash" "f_frame" 0 2.6 4.8 rotate -90 0 0
+$attachment "flashlight" "f_frame" 0 0.1 4.7 rotate -90 0 0
+$attachment "shell" "f_frame" 0 2.6 -2 rotate 0 150 90
 
 $cbox 0 0 0 0 0 0
+
+$bbox -2.183 -8.611 -28.316 29.529 21.941 3.497
 
 $hboxset "default"
 $hbox 0 "ValveBipod.Bip01" 0 0 -0.018 20.239 17.853001 4.89
@@ -136,20 +138,10 @@ $definebone "ValveBipod.weapon_trigger" "ValveBipod.weapon_bone" 0 0.375469 1.57
 $definebone "ValveBipod.weapon_clip_realease" "ValveBipod.weapon_bone" 0 0 5 0 0 0 0 0 0 0 0 0
 $definebone "ValveBipod.weapon_clip" "ValveBipod.weapon_bone" -0.000001 -0.000004 3.857136 0 0 0 0 0 0 0 0 0
 $definebone "ValveBipod.weapon_clip_bullets_l" "" 0 0.726 3.497 0 0 0 0 0 0 0 0 0
-$definebone "f_frame" "" 0.002113 -20.076433 53.739906 -0.002292 0.000458 90.255349 0 0 0 0 0 0
-$definebone "f_pd" "f_frame" 0.000024 1.256367 -3.846937 0 0 0 0 0 0 0 0 0
-$definebone "f_lw" "f_frame" 0.00001 2.639656 -0.951244 0 0 0 0 0 0 0 0 0
-$definebone "f_ie" "f_frame" 0.000003 0.820068 -0.448473 0 0 0 0 0 0 0 0 0
-$definebone "f_mag" "f_frame" 0.00003 1.41787 -2.283777 -0.000344 0.000115 16.999371 0 0 0 0 0 0
-$definebone "f_atmas" "f_mag" -0.000026 -0.00639 -0.538198 0.000229 -0.000286 -16.999538 0 0 0 0 0 0
-$definebone "f_blackcleaver" "f_mag" -0.000036 -0.421192 -0.409359 0.000229 -0.000286 -16.999538 0 0 0 0 0 0
-$definebone "f2_frame" "" 0.002113 -20.076431 38.73991 -0.002292 0.000458 90.255349 0 0 0 0 0 0
-$definebone "f2_pd" "f2_frame" 0.000024 1.256374 -3.846931 0 0 0 0 0 0 0 0 0
-$definebone "f2_lw" "f2_frame" 0.00001 2.639652 -0.951241 0 0 0 0 0 0 0 0 0
-$definebone "f2_ie" "f2_frame" 0.000003 0.820065 -0.448467 0 0 0 0 0 0 0 0 0
-$definebone "f2_mag" "f2_frame" 0.00003 1.41787 -2.283777 -0.000344 0.000115 16.999371 0 0 0 0 0 0
-$definebone "f2_impaler" "f2_mag" -0.000026 -0.00639 -0.538197 0.000229 -0.000286 -16.999538 0 0 0 0 0 0
-$definebone "f2_starks" "f2_mag" -0.000036 -0.421207 -0.40936 0.000229 -0.000286 -16.999538 0 0 0 0 0 0
+$definebone "f_frame" "" 0.002114 -20.076435 53.739906 -0.002292 0.000458 90.255636 0 0 0 0 0 0
+$definebone "f_slide" "f_frame" 0.00001 2.639671 -0.951248 0 0 0 0 0 0 0 0 0
+$definebone "f_mag" "f_frame" 0.00003 1.417873 -2.283772 -0.000344 0.000115 16.999084 0 0 0 0 0 0
+$definebone "f_ham" "f_frame" 0.000031 1.383686 -4.447504 0 0 0 0 0 0 0 0 0
 
 $bonemerge "ValveBipod.Bip01_Spine4"
 $bonemerge "ValveBipod.Bip01_L_Clavicle"
@@ -246,9 +238,8 @@ $bonemerge "ValveBipod.Bip01_Spine"
 $bonemerge "ValveBipod.Bip01_Spine1"
 $bonemerge "ValveBipod.Bip01_Spine2"
 
-
 $sequence "idle" {
-	"anims\akimbo_idle.smd"
+	"anims\p7_idle.smd"
 	activity "ACT_VM_IDLE" 1
 	fadein 0.2
 	fadeout 0.2
@@ -257,16 +248,7 @@ $sequence "idle" {
 }
 
 $sequence "idle_empty" {
-	"anims\akimbo_idle_empty.smd"
-	activity "ACT_VM_IDLE" 1
-	fadein 0.2
-	fadeout 0.2
-	fps 30
-	loop
-}
-
-$sequence "idle_empty1" {
-	"anims\akimbo_idle_empty1.smd"
+	"anims\p7_idle_empty.smd"
 	activity "ACT_VM_IDLE" 1
 	fadein 0.2
 	fadeout 0.2
@@ -275,63 +257,40 @@ $sequence "idle_empty1" {
 }
 
 $sequence "deploy" {
-	"anims\akimbo_deploy.smd"
+	"anims\p7_deploy.smd"
 	activity "ACT_VM_DRAW" 1
 	fadein 0.2
 	fadeout 0.2
-	fps 30
+	fps 45
 }
 
 $sequence "draw" {
-	"anims\akimbo_draw.smd"
+	"anims\p7_draw.smd"
 	activity "ACT_VM_DRAW" 1
 	fadein 0.2
 	fadeout 0.2
-	fps 30
+	fps 45
 }
 
 $sequence "draw_empty" {
-	"anims\akimbo_draw_empty.smd"
+	"anims\p7_draw_empty.smd"
 	activity "ACT_VM_DRAW" 1
 	fadein 0.2
 	fadeout 0.2
-	fps 30
+	fps 45
 }
 
-$sequence "holster" {
-	"anims\akimbo_holster.smd"
-	activity "ACT_VM_DRAW" 1
-	fadein 0.2
-	fadeout 0.2
-	fps 30
-}
-
-$sequence "holster_empty" {
-	"anims\akimbo_holster_empty.smd"
-	activity "ACT_VM_DRAW" 1
-	fadein 0.2
-	fadeout 0.2
-	fps 30
-}
-
-$sequence "fire_right" {
-	"c_dual_usp45_anims\fire_right.smd"
+$sequence "fire" {
+	"c_p99_anims\fire.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
 	fadein 0.02
 	fadeout 0.02
-	fps 34
+	fps 45
 }
 
-$sequence "fire_left" {
-	"anims\akimbo_fire_left.smd"
-	activity "ACT_VM_SECONDARYATTACK" 1
-	fadein 0.02
-	fadeout 0.02
-	fps 34
-}
 
 $sequence "reload" {
-	"anims\akimbo_reload.smd"
+	"anims\p7_reload.smd"
 	activity "ACT_VM_RELOAD" 1
 	fadein 0.2
 	fadeout 0.2
@@ -339,38 +298,31 @@ $sequence "reload" {
 }
 
 $sequence "reload_empty" {
-	"anims\akimbo_reload_empty.smd"
+	"anims\p7_reload_empty.smd"
 	activity "ACT_VM_RELOAD_EMPTY" 1
-	fadein 0.5
+	fadein 0.15
 	fadeout 0.2
 	fps 30
 }
 
-$sequence "reload_empty1" {
-	"anims\akimbo_reload_empty1.smd"
-	activity "ACT_VM_RELOAD_EMPTY" 1
-	fadein 0.5
-	fadeout 0.2
-	fps 30
-}
-
-$sequence "fire_last_right" {
-	"c_dual_usp45_anims\fire_last_right.smd"
-	fadein 0.02
-	fadeout 0.02
-	fps 30
-}
-
-$sequence "fire_last_left" {
-	"c_dual_usp45_anims\fire_last_left.smd"
+$sequence "fire_last" {
+	"c_p99_anims\fire_last.smd"
 	activity "ACT_VM_PRIMARYATTACK_EMPTY" 1
 	fadein 0.02
 	fadeout 0.02
+	fps 45
+}
+
+$sequence "melee" {
+	"c_p99_anims\melee.smd"
+	activity "ACT_VM_HITCENTER" 1
+	fadein 0.2
+	fadeout 0.2
+	snap
 	fps 30
 }
 
-
-$collisionmodel "bul_cherokee.smd"
+$collisionmodel "hkp7.smd"
 {
 	$mass 30
 	$inertia 10

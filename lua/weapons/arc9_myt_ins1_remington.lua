@@ -318,6 +318,7 @@ SWEP.Animations = {
     ["fire"] = {
         Source = {"base_fire_1", "base_fire_2"},
         FireASAP = true,
+		Time = 1,
         MinProgress = 0.8,
     },
     ["cycle"] = {
