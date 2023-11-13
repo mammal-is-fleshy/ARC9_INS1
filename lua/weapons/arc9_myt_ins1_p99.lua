@@ -6,24 +6,24 @@ SWEP.Spawnable = true
 SWEP.Category = "ARC9 - INS1"
 SWEP.SubCategory = "Sidearm"
 
-SWEP.PrintName = "P7M10"
+SWEP.PrintName = "P99"
 
 SWEP.Class = "Pistol"
 
 SWEP.Credits = {
-    ["Assets"] = [[Insurgency: Modern Infantry Combat]],
+    --["Assets"] = [[Insurgency: Modern Infantry Combat]],
 }
-SWEP.Description = [[Hey guys, thanks for tuning in to forgottenweapons.com, I'm Ian McCollum, and I'm here today at H&K's Gray Room at Ashburn, Virginia, taking a look some of their prototype and unusual handguns. Now this one's not quite a prototype, well this is a prototype, but it's a model that actually went into production. This is the P7M10.]]
+SWEP.Description = [[best pistol ever.]]
 
-SWEP.ViewModel = "models/weapons/myt_ins1/c_pist_p7.mdl"
-SWEP.WorldModel = "models/weapons/myt_ins1/c_pist_p7.mdl"
+SWEP.ViewModel = "models/weapons/myt_ins1/c_pist_p99.mdl"
+SWEP.WorldModel = "models/weapons/myt_ins1/c_pist_p99.mdl"
 
-SWEP.Weight = 4
+SWEP.Weight = 5
 SWEP.Slot = 1
 SWEP.SlotPos = 3
 
 SWEP.MirrorVMWM = true
-SWEP.WorldModelMirror = "models/weapons/myt_ins1/c_pist_p7.mdl"
+SWEP.WorldModelMirror = "models/weapons/myt_ins1/c_pist_p99.mdl"
 SWEP.WorldModelOffset = {
     Pos = Vector(-9, 5, -5),
     Ang = Angle(-5, 0, 180),
@@ -93,8 +93,8 @@ SWEP.Firemodes = {
 SWEP.Recoil = 1
 
 -- These multipliers affect the predictible recoil by making the pattern taller, shorter, wider, or thinner.
-SWEP.RecoilUp = 0.35 -- Multiplier for vertical recoil
-SWEP.RecoilSide = 0.35 -- Multiplier for vertical recoil
+SWEP.RecoilUp = 0.4 -- Multiplier for vertical recoil
+SWEP.RecoilSide = 0.2 -- Multiplier for vertical recoil
 
 -- These values determine how much extra movement is applied to the recoil entirely randomly, like in a circle.
 -- This type of recoil CANNOT be predicted.
@@ -106,20 +106,20 @@ SWEP.RecoilResetTime = 0
 
 SWEP.RecoilAutoControl = 0 -- Multiplier for automatic recoil control.
 
-SWEP.RecoilKick = 1.5
+SWEP.RecoilKick = 1.8
 
-SWEP.RecoilMultRecoil = 1.125 -- Looks stupid but it means expoential recoil growth.
+SWEP.RecoilMultRecoil = 1.125 -- Looks stupid but it means exponential recoil growth.
 
 -------------------------- SPREAD
 
-SWEP.Spread = 0.004
+SWEP.Spread = 0.003
 
 SWEP.SpreadAddRecoil = 0
 SWEP.SpreadMultRecoil = 1.3
 SWEP.RecoilModifierCap = 7
 
-SWEP.SpreadAddHipFire = 0.0012
-SWEP.SpreadMultHipFire = 1.3
+SWEP.SpreadAddHipFire = 0.0013
+SWEP.SpreadMultHipFire = 1.28
 
 -------------------------- HANDLING
 
@@ -132,8 +132,8 @@ SWEP.SwayMultCrouch = 0.667
 SWEP.SwayMultShooting = 1.5
 SWEP.SwayMultSights = 0.5
 
-SWEP.AimDownSightsTime = 0.2
-SWEP.SprintToFireTime = 0.17
+SWEP.AimDownSightsTime = 0.22
+SWEP.SprintToFireTime = 0.16
 
 SWEP.SpeedMult = 1
 SWEP.SpeedMultSights = 0.75
@@ -228,7 +228,7 @@ SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 
 -------------------------- SOUNDS
 
-SWEP.ShootSound = "myt_ins1/usp-1.wav"
+SWEP.ShootSound = "myt_ins1/p99-1.wav"
 SWEP.DistantShootSound = "myt_ins1/1911-1_echo.wav"
 SWEP.ShootSoundSilenced = "myt_ins1_sd/pistol.wav"
 SWEP.DryFireSound = "myt_ins1/1911-empty.wav"
