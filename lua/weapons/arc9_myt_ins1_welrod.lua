@@ -13,8 +13,9 @@ SWEP.Class = "Pistol"
 SWEP.Credits = {
     ["Assets"] = [[Day Of Infamy]],
 }
-SWEP.Description = [[Russian semi-automatic pistol with medium capacity and power. 
-Effective at close range.]]
+SWEP.Description = [[British integrally suppressed bolt-action pistol.
+
+I'd put a joke about the british here if this gun wasn't so good at it's job.]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_pist_welrod.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_pist_welrod.mdl"
@@ -39,8 +40,8 @@ SWEP.RecoilAutoControlMultHipFire = 0.5
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 62
-SWEP.DamageMin = 42
+SWEP.DamageMax = 64
+SWEP.DamageMin = 36
 
 SWEP.RangeMin = 500
 SWEP.RangeMax = 3000
@@ -230,8 +231,8 @@ SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 -------------------------- SOUNDS
 
 SWEP.ShootSound = "myt_ins1/welrod-1.wav"
-SWEP.DistantShootSound = "myt_ins1/1911-1_echo.wav"
-SWEP.ShootSoundSilenced = "myt_ins1_sd/pistol.wav"
+SWEP.DistantShootSound = ""
+SWEP.ShootSoundSilenced = "myt_ins1_sd/welrod-1.wav"
 SWEP.DryFireSound = "myt_ins1/1911-empty.wav"
 
 SWEP.EjectDelay = 0
@@ -239,7 +240,7 @@ SWEP.CaseEffectQCA = 2
 SWEP.NoShellEject = true
 SWEP.NoShellEjectManualAction = true
 
-SWEP.FiremodeSound = "arc9/firemode.wav"
+SWEP.FiremodeSound = "myt_ins1/firemode_light.wav"
 
 SWEP.DefaultBodygroups = "00000000"
 
@@ -301,7 +302,7 @@ SWEP.Animations = {
         --Time = 0.5, -- overrides the duration of the sequence
         Mult = 1, -- multiplies time
         EventTable = {
-            {s =  "myt_ins1/tkr_bolt2.wav" ,    t = 20 / 40},
+            {s =  "myt_ins1/welrod_forward.wav" ,    t = 20 / 40},
         },
     },
     ["holster"] = {
@@ -316,8 +317,8 @@ SWEP.Animations = {
         Source = "base_fire_end",
         EjectAt = 8 / 30,
         EventTable = {
-            {s =  "myt_ins1/MosinBack.wav" ,   t = 1 / 30},
-            {s =  "myt_ins1/MosinFoward.wav" ,   t = 11 / 30},
+            {s =  "myt_ins1/welrod_back.wav" ,   t = 1 / 30},
+            {s =  "myt_ins1/welrod_forward.wav" ,   t = 11 / 30},
         },
         FireASAP = true,
         MinProgress = 0.9,
@@ -329,8 +330,8 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.775,
         EventTable = {
-            {s =  "myt_ins1/tkr_mag2.wav" ,   t = 8 / 30},
-            {s =  "myt_ins1/tkr_mag1.wav" ,    t = 35 / 30},
+            {s =  "myt_ins1/welrod_mag1.wav" ,   t = 8 / 30},
+            {s =  "myt_ins1/welrod_mag2.wav" ,    t = 35 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -343,10 +344,10 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.85,
         EventTable = {
-            {s =  "myt_ins1/tkr_mag2.wav" ,   t = 8 / 30},
-            {s =  "myt_ins1/tkr_mag1.wav" ,    t = 35 / 30},
-            {s =  "myt_ins1/MosinBack.wav" ,   t = 50 / 30},
-            {s =  "myt_ins1/MosinFoward.wav" ,   t = 58 / 30},
+            {s =  "myt_ins1/welrod_mag1.wav" ,   t = 8 / 30},
+            {s =  "myt_ins1/welrod_mag2.wav" ,    t = 35 / 30},
+            {s =  "myt_ins1/welrod_back.wav" ,   t = 50 / 30},
+            {s =  "myt_ins1/welrod_forward.wav" ,   t = 58 / 30},
             },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },

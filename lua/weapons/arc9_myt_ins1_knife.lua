@@ -142,7 +142,7 @@ SWEP.MeleeHitSound = "myt_ins1/knife_slash_01.wav"
 
 SWEP.EjectDelay = 0
 
-SWEP.FiremodeSound = "arc9/firemode.wav"
+SWEP.FiremodeSound = "myt_ins1/firemode_light.wav"
 
 SWEP.DefaultBodygroups = "00000000"
 

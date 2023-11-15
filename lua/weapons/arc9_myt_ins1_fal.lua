@@ -249,7 +249,7 @@ SWEP.DryFireSound = "myt_ins1/makarov-empty.wav"
 
 SWEP.EjectDelay = 0
 
-SWEP.FiremodeSound = "arc9/firemode.wav"
+SWEP.FiremodeSound = "myt_ins1/firemode_medium.wav"
 
 SWEP.DefaultBodygroups = "00000100"
 

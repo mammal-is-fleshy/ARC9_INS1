@@ -2,7 +2,7 @@ AddCSLuaFile()
 
 SWEP.Base = "arc9_base"
 
-SWEP.Spawnable = true
+SWEP.Spawnable = false
 SWEP.Category = "ARC9 - INS1"
 SWEP.SubCategory = "Primary"
 
@@ -251,7 +251,7 @@ SWEP.DryFireSound = "myt_ins1/makarov-empty.wav"
 SWEP.EjectDelay = 0
 SWEP.CaseEffectQCA = 3
 
-SWEP.FiremodeSound = "arc9/firemode.wav"
+SWEP.FiremodeSound = "myt_ins1/firemode_light.wav"
 
 SWEP.DefaultBodygroups = "00000000"
 

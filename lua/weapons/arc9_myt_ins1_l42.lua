@@ -242,7 +242,7 @@ SWEP.DistantShootSound = {"myt_ins1/enfield-01_echo.wav", "myt_ins1/enfield-02_e
 SWEP.DryFireSound = "myt_ins1/enfield-empty.wav"
 SWEP.ShootSoundSilenced = "myt_ins1_sd/sniper.wav"
 
-SWEP.FiremodeSound = "arc9/firemode.wav"
+SWEP.FiremodeSound = "myt_ins1/firemode_medium.wav"
 
 SWEP.DefaultBodygroups = "0001000000"
 

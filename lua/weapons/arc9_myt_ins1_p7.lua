@@ -38,7 +38,7 @@ SWEP.RecoilAutoControlMultHipFire = 0.5
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 32
+SWEP.DamageMax = 33
 SWEP.DamageMin = 28
 
 SWEP.RangeMin = 500
@@ -64,7 +64,7 @@ SWEP.PhysBulletMuzzleVelocity = 1280 * 12
 SWEP.Ammo = "pistol" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 1 -- The amount of rounds this gun can chamber.
-SWEP.ClipSize = 13 -- Self-explanatory.
+SWEP.ClipSize = 12 -- Self-explanatory.
 SWEP.SupplyLimit = 4 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
 SWEP.SecondarySupplyLimit = 2 -- Amount of reserve UBGL magazines you can take.
 
@@ -115,10 +115,10 @@ SWEP.RecoilMultRecoil = 1.125 -- Looks stupid but it means expoential recoil gro
 SWEP.Spread = 0.004
 
 SWEP.SpreadAddRecoil = 0
-SWEP.SpreadMultRecoil = 1.3
+SWEP.SpreadMultRecoil = 1.39
 SWEP.RecoilModifierCap = 7
 
-SWEP.SpreadAddHipFire = 0.0012
+SWEP.SpreadAddHipFire = 0.0011
 SWEP.SpreadMultHipFire = 1.3
 
 -------------------------- HANDLING
@@ -228,7 +228,7 @@ SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 
 -------------------------- SOUNDS
 
-SWEP.ShootSound = "myt_ins1/usp-1.wav"
+SWEP.ShootSound = "myt_ins1/p7.wav"
 SWEP.DistantShootSound = "myt_ins1/1911-1_echo.wav"
 SWEP.ShootSoundSilenced = "myt_ins1_sd/pistol.wav"
 SWEP.DryFireSound = "myt_ins1/1911-empty.wav"
@@ -236,7 +236,7 @@ SWEP.DryFireSound = "myt_ins1/1911-empty.wav"
 SWEP.EjectDelay = 0
 SWEP.CaseEffectQCA = 3
 
-SWEP.FiremodeSound = "arc9/firemode.wav"
+SWEP.FiremodeSound = "myt_ins1/firemode_light.wav"
 
 SWEP.DefaultBodygroups = "00000000"
 

@@ -139,6 +139,10 @@ SWEP.Animations = {
     },
     ["pullpin"] = {
         Source = "drawbackhigh",
+		EventTable = {
+            {s =  "myt_ins1/universal/uni-draw.wav" ,   t = 0 / 30},
+            {s =  "myt_ins1/makarov-safety.wav" ,   t = 13 / 30},
+        },
     }, 
 	["pullpin_toss"] = {
         Source = "drawbacklow",
@@ -150,7 +154,6 @@ SWEP.Animations = {
         Source = "draw",
         EventTable = {
             {s =  "myt_ins1/universal/uni-draw.wav" ,   t = 0 / 30},
-            {s =  "myt_ins1/makarov-safety.wav" ,   t = 13 / 30},
         },
     },
 

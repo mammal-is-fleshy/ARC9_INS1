@@ -6,7 +6,7 @@ SWEP.Spawnable = true
 SWEP.Category = "ARC9 - INS1"
 SWEP.SubCategory = "Sidearm"
 
-SWEP.PrintName = "USP40"
+SWEP.PrintName = "USP45"
 
 SWEP.Class = "Pistol"
 
@@ -236,7 +236,7 @@ SWEP.DryFireSound = "myt_ins1/1911-empty.wav"
 SWEP.EjectDelay = 0
 SWEP.CaseEffectQCA = 3
 
-SWEP.FiremodeSound = "arc9/firemode.wav"
+SWEP.FiremodeSound = "myt_ins1/firemode_light.wav"
 
 SWEP.DefaultBodygroups = "00000000"
 

@@ -253,7 +253,7 @@ SWEP.EjectDelay = 0
 SWEP.EjectDelay = 0
 SWEP.CaseEffectQCA = 3
 
-SWEP.FiremodeSound = "arc9/firemode.wav"
+SWEP.FiremodeSound = "myt_ins1/firemode_light.wav"
 
 SWEP.DefaultBodygroups = "00000000"
 

@@ -143,7 +143,7 @@ SWEP.MeleeHitWallSound = {"myt_ins1/melee_wall_blunt_1.wav", "myt_ins1/melee_wal
 SWEP.MeleeHitSound = {"myt_ins1/melee_blunt_1.wav", "myt_ins1/melee_blunt_2.wav"}
 SWEP.MeleeSwingSound = {"myt_ins1/melee_swingmed_1.wav", "myt_ins1/melee_swingmed_2.wav"}
 
-SWEP.FiremodeSound = "arc9/firemode.wav"
+SWEP.FiremodeSound = "myt_ins1/firemode_light.wav"
 
 SWEP.DefaultBodygroups = "00000000"
 

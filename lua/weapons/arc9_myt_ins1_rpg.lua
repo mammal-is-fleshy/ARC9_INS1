@@ -258,7 +258,7 @@ SWEP.ShootSound = "myt_ins1/rpg7-fire.wav"
 SWEP.ShootSoundSilenced = "gekolt_css/m4a1-1.wav"
 SWEP.DryFireSound = "myt_ins1/rpg7-fire_echo.wav"
 
-SWEP.FiremodeSound = "arc9/firemode.wav"
+SWEP.FiremodeSound = "myt_ins1/firemode_light.wav"
 
 
 SWEP.BulletBones = {
