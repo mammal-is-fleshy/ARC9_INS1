@@ -2,7 +2,7 @@ AddCSLuaFile()
 
 SWEP.Base = "arc9_base"
 
-SWEP.Spawnable = false
+SWEP.Spawnable = true
 SWEP.Category = "ARC9 - INS1"
 SWEP.SubCategory = "Primary"
 
