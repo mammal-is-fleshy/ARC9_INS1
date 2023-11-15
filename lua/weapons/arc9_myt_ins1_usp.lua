@@ -6,7 +6,7 @@ SWEP.Spawnable = true
 SWEP.Category = "ARC9 - INS1"
 SWEP.SubCategory = "Sidearm"
 
-SWEP.PrintName = "USP45"
+SWEP.PrintName = "USP40"
 
 SWEP.Class = "Pistol"
 
