@@ -235,7 +235,7 @@ SWEP.ShootSoundSilenced = "myt_ins1_sd/pistol.wav"
 SWEP.DryFireSound = "myt_ins1/1911-empty.wav"
 
 SWEP.EjectDelay = 0
-SWEP.CaseEffectQCA = 3
+SWEP.CaseEffectQCA = 2
 
 SWEP.FiremodeSound = "myt_ins1/firemode_light.wav"
 

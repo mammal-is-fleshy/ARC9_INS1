@@ -185,7 +185,7 @@ SWEP.MovingPos = Vector(0, -0.5, 0.5)
 SWEP.MovingAng = Angle(0, -2, 0)
 
 SWEP.ViewModelFOVBase = 70
-SWEP.ActivePos = Vector(0, -4, 0)
+SWEP.ActivePos = Vector(0, -2, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.CrouchPos = Vector(-0.5, -1, -1)
@@ -234,7 +234,7 @@ SWEP.ShootSoundSilenced = "myt_ins1_sd/pistol.wav"
 SWEP.DryFireSound = "myt_ins1/1911-empty.wav"
 
 SWEP.EjectDelay = 0
-SWEP.CaseEffectQCA = 3
+SWEP.CaseEffectQCA = 2
 
 SWEP.FiremodeSound = "myt_ins1/firemode_light.wav"
 
@@ -280,21 +280,22 @@ SWEP.Attachments = {
     },
 }
 
+
 SWEP.Animations = {
     ["idle"] = {
-        Source = "idle",
+        Source = "base_idle",
     },
     ["idle_empty"] = {
-        Source = "idle_empty",
+        Source = "empty_idle",
     },
     ["draw"] = {
-        Source = "draw",
+        Source = "base_draw",
         EventTable = {
             {s =  "myt_ins1/universal/uni-draw.wav" ,   t = 0 / 30},
         },
     },
     ["draw_empty"] = {
-        Source = "draw_empty", -- QC sequence source, can be {"table", "of", "strings"} or "string"
+        Source = "base_draw_empty", -- QC sequence source, can be {"table", "of", "strings"} or "string"
         --Time = 0.5, -- overrides the duration of the sequence
         Mult = 1, -- multiplies time
         EventTable = {
@@ -302,37 +303,37 @@ SWEP.Animations = {
         },
     },
     ["ready"] = {
-        Source = "deploy", -- QC sequence source, can be {"table", "of", "strings"} or "string"
+        Source = "base_deploy", -- QC sequence source, can be {"table", "of", "strings"} or "string"
         --Time = 0.5, -- overrides the duration of the sequence
-        Mult = 2, -- multiplies time
-        EventTable = { 
-			{s =  "myt_ins1/tkr_bolt2.wav" ,    t = 5 / 40},  
+        Mult = 1, -- multiplies time
+        EventTable = {
+            {s =  "myt_ins1/tkr_bolt2.wav" ,    t = 20 / 40},
         },
     },
     ["holster"] = {
-        Source = "holster",
-        Time = 0.75
+        Source = "base_holster",
+        Time = 0.5
     },
     ["holster_empty"] = {
-        Source = "holster_empty",
-        Time = 0.75
+        Source = "base_holster_empty",
+        Time = 0.5
     },
     ["fire"] = {
-        Source = {"fire"},
-		Time = 0.5,
+        Source = {"base_fire","base_fire2","base_fire3"},
+		Time = 1,
     },
     ["fire_empty"] = {
-        Source = "fire_last",
+        Source = "base_firelast",
     },
 
     ["reload"] = {
-        Source = "reload",
+        Source = "base_reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FireASAP = true,
         MinProgress = 0.775,
         EventTable = {
-            {s =  "myt_ins1/tkr_mag2.wav" ,   t = 8 / 40},
-            {s =  "myt_ins1/tkr_mag1.wav" ,    t = 45 / 40},
+            {s =  "myt_ins1/tkr_mag2.wav" ,   t = 5 / 30},
+            {s =  "myt_ins1/tkr_mag1.wav" ,    t = 32 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -340,14 +341,14 @@ SWEP.Animations = {
         },
     },
     ["reload_empty"] = {
-        Source = "reload_empty",
+        Source = "base_reloadempty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FireASAP = true,
         MinProgress = 0.85,
         EventTable = {
-            {s =  "myt_ins1/tkr_mag2.wav" ,   t = 8 / 40},
-            {s =  "myt_ins1/tkr_mag1.wav" ,    t = 45 / 40},
-            {s =  "myt_ins1/tkr_bolt2.wav" ,    t = 60 / 40},  
+            {s =  "myt_ins1/tkr_mag2.wav" ,   t = 5 / 30},
+            {s =  "myt_ins1/tkr_mag1.wav" ,    t = 32 / 30},
+            {s =  "myt_ins1/tkr_bolt2.wav" ,    t = 55 / 40},
             },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },

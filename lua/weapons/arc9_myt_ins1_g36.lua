@@ -210,7 +210,7 @@ SWEP.CustomizeNoRotate = false
 
 SWEP.CustomizeRotateAnchor = Vector(12, -3.25, -5.23)
 
-SWEP.BarrelLength = 24
+SWEP.BarrelLength = 36
 
 SWEP.NearWallPos = Vector(2, 0, -10)
 SWEP.NearWallAng = Angle(45, 30, 0)
