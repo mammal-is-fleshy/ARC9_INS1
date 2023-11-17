@@ -10,6 +10,16 @@ $bodygroup "Weapon"
 	studio "welrod.smd"
 	blank
 }
+$bodygroup "1"
+{
+	blank
+	studio "welrod_rail_top.smd"
+}
+$bodygroup "2"
+{
+	blank
+	studio "welrod_rail_bot.smd"
+}
 
 
 $surfaceprop "default"
