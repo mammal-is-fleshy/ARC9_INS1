@@ -8,20 +8,20 @@ SWEP.SubCategory = "Sidearm"
 
 SWEP.PrintName = "Micro Uzi"
 
-SWEP.Class = "Sub-Machine Gun"
+SWEP.Class = "Machine Pistol..?"
 
 SWEP.Credits = {
     ["Assets"] = [[ https://gamebanana.com/mods/209036 ]],
     ["Original Animation"] = [[ MzK ]],	
 	["Sound"] = [[ oneshotofficial https://gamebanana.com/sounds/63272  ]],
 }
-SWEP.Description = [[One of the first successful modern submachineguns.
+SWEP.Description = [[One of the first successful modern submachine guns.
 It's predecessor, that is.]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_pist_uzi.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_pist_uzi.mdl"
 
-SWEP.Weight = 4
+SWEP.Weight = 7
 SWEP.Slot = 1
 SWEP.SlotPos = 4
 
