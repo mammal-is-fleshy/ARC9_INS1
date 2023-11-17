@@ -258,17 +258,7 @@ SWEP.Attachments = {
         ExcludeElements = {"pre_optic"},
         Category = {"optic_css_s"},
         Bone = "Weapon",
-        Pos = Vector(-0.05, 0.5, 1.6),
-        Ang = Angle(0, -90, 0),
-    },
-    {
-        PrintName = "Muzzle",
-        DefaultName = "None",
-
-        ExcludeElements = {"pre_muzzed"},
-        Category = {"muzzle_css"},
-        Bone = "Weapon",
-        Pos = Vector(-0.05, 3.75, 0.6),
+        Pos = Vector(0, -0.6, 2.9),
         Ang = Angle(0, -90, 0),
     },
 
@@ -279,7 +269,7 @@ SWEP.Attachments = {
 
         Category = {"tac_css"},
         Bone = "Weapon",
-        Pos = Vector(-0.05, 2.5, -0.75),
+        Pos = Vector(0, 2, 0.6),
         Ang = Angle(0, -90, 180),
     },
 }
