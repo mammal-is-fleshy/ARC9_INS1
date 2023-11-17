@@ -6,7 +6,7 @@ SWEP.Spawnable = true
 SWEP.Category = "ARC9 - INS1"
 SWEP.SubCategory = "Sidearm"
 
-SWEP.PrintName = "Uzi"
+SWEP.PrintName = "Micro Uzi"
 
 SWEP.Class = "Sub-Machine Gun"
 
@@ -15,7 +15,8 @@ SWEP.Credits = {
     ["Original Animation"] = [[ MzK ]],	
 	["Sound"] = [[ oneshotofficial https://gamebanana.com/sounds/63272  ]],
 }
-SWEP.Description = [[One of the first successful modern submachineguns.]]
+SWEP.Description = [[One of the first successful modern submachineguns.
+It's predecessor, that is.]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_pist_uzi.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_pist_uzi.mdl"

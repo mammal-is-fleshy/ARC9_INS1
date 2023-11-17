@@ -8,19 +8,19 @@ SWEP.SubCategory = "Sidearm"
 
 SWEP.PrintName = "Bul Cherokees"
 
-SWEP.Class = "Pistol"
+SWEP.Class = "Akimbo Pistols"
 
 SWEP.Credits = {
     ["Assets"] = [[Insurgency: Modern Infantry Combat]],
 }
-SWEP.Description = [[Old]]
+SWEP.Description = [[very jank]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_dual_bulcherokee.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_dual_bulcherokee.mdl"
 
-SWEP.Weight = 4
+SWEP.Weight = 12
 SWEP.Slot = 1
-SWEP.SlotPos = 5
+SWEP.SlotPos = 4
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelMirror = "models/weapons/myt_ins1/c_dual_bulcherokee.mdl"

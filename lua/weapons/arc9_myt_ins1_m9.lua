@@ -13,7 +13,7 @@ SWEP.Class = "Pistol"
 SWEP.Credits = {
     ["Assets"] = [[Insurgency: Modern Infantry Combat]],
 }
-SWEP.Description = [[Italian engineering strikes again..?]]
+SWEP.Description = [[Italian engineering at it's finest. Almost as clever as the shotgun.]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_pist_m9.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_pist_m9.mdl"

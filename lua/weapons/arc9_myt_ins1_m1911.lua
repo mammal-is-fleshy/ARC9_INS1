@@ -13,7 +13,7 @@ SWEP.Class = "Pistol"
 SWEP.Credits = {
     ["Assets"] = [[Insurgency: Modern Infantry Combat]],
 }
-SWEP.Description = [[Old]]
+SWEP.Description = [[Old but gold.]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_pist_1911.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_pist_1911.mdl"
