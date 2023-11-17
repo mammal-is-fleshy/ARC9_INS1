@@ -7,6 +7,16 @@ $bodygroup "pistole"
 {
 	studio "hkp7.smd"
 }
+$bodygroup "1"
+{
+	blank
+	studio "p7_rail_top.smd"
+}
+$bodygroup "2"
+{
+	blank
+	studio "p7_rail_bot.smd"
+}
 
 
 $surfaceprop "default"

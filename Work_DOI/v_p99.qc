@@ -10,7 +10,16 @@ $bodygroup "Weapon"
 	studio "p99.smd"
 	blank
 }
-
+$bodygroup "1"
+{
+	blank
+	studio "p99_rail_top.smd"
+}
+$bodygroup "2"
+{
+	blank
+	studio "p99_rail_bot.smd"
+}
 
 $surfaceprop "default"
 
@@ -215,6 +224,15 @@ $sequence "base_idle" {
 
 $sequence "base_draw" {
 	"v_browninghp_anims\base_draw.smd"
+	activity "ACT_VM_DRAW" 1
+	fadein 0.2
+	fadeout 0.2
+	snap
+	fps 35
+}
+
+$sequence "base_deploy" {
+	"anims\p99_deploy.smd"
 	activity "ACT_VM_DRAW" 1
 	fadein 0.2
 	fadeout 0.2

@@ -160,8 +160,8 @@ SWEP.TracerColor = Color(255, 225, 200) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-5.45, -8, 2.6),
-    Ang = Angle(0, 0, 0),
+    Pos = Vector(-2.75, -6, 0.75),
+    Ang = Angle(0, 0.75, 0),
     Midpoint = { -- Where the gun should be at the middle of it's irons
         Pos = Vector(0, 15, -4),
         Ang = Angle(-10, 60, -25),
@@ -192,7 +192,7 @@ SWEP.CrouchPos = Vector(-0.5, -1, -1)
 SWEP.CrouchAng = Angle(0, 0, -10)
 
 SWEP.CustomizeAng = Angle(90, -5, 0)
-SWEP.CustomizePos = Vector(24, 22, 5)
+SWEP.CustomizePos = Vector(17, 24, 4)
 
 SWEP.CustomizeSnapshotFOV = 110
 SWEP.CustomizeNoRotate = false
@@ -253,9 +253,9 @@ SWEP.Attachments = {
 
         ExcludeElements = {"pre_optic"},
         Category = {"optic_css_s"},
-        Bone = "f_frame",
-        Pos = Vector(0, -3, 0),
-        Ang = Angle(90, 0, -90),
+        Bone = "Weapon",
+        Pos = Vector(0, -0.5, 3.3),
+        Ang = Angle(0, -90, 0),
     },
     {
         PrintName = "Muzzle",
@@ -263,9 +263,9 @@ SWEP.Attachments = {
 
         ExcludeElements = {"pre_muzzed"},
         Category = {"muzzle_css"},
-        Bone = "f_frame",
-        Pos = Vector(0, -2.3, 2.55),
-        Ang = Angle(90, 0, -90),
+        Bone = "Weapon",
+        Pos = Vector(0, 2.35, 2.35),
+        Ang = Angle(0, -90, 0),
     },
 
     {
@@ -274,9 +274,9 @@ SWEP.Attachments = {
         InstalledElements = {"has_tac"},
 
         Category = {"tac_css"},
-        Bone = "f_frame",
-        Pos = Vector(0, -0.9, 2.4),
-        Ang = Angle(90, 0, 90),
+        Bone = "Weapon",
+        Pos = Vector(0, 2, 0.8),
+        Ang = Angle(0, -90, 180),
     },
 }
 

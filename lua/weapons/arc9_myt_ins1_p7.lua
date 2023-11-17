@@ -254,7 +254,7 @@ SWEP.Attachments = {
         ExcludeElements = {"pre_optic"},
         Category = {"optic_css_s"},
         Bone = "f_frame",
-        Pos = Vector(0, -3, 0),
+        Pos = Vector(0, -3.3, -0.5),
         Ang = Angle(90, 0, -90),
     },
     {
@@ -275,7 +275,7 @@ SWEP.Attachments = {
 
         Category = {"tac_css"},
         Bone = "f_frame",
-        Pos = Vector(0, -0.9, 2.4),
+        Pos = Vector(0, -0.75, 2.5),
         Ang = Angle(90, 0, 90),
     },
 }
