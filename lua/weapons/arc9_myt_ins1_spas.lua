@@ -37,8 +37,8 @@ SWEP.RecoilAutoControlMultHipFire = 0.5
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 14 -- Damage done at point blank range
-SWEP.DamageMin = 8 -- Damage done at maximum range
+SWEP.DamageMax = 20 -- Damage done at point blank range
+SWEP.DamageMin = 9 -- Damage done at maximum range
 SWEP.Num = 10
 
 SWEP.RangeMin = 1500 -- How far bullets retain their maximum damage for.
@@ -94,7 +94,7 @@ SWEP.Recoil = 1
 
 -- These multipliers affect the predictible recoil by making the pattern taller, shorter, wider, or thinner.
 SWEP.RecoilUp = 1
-SWEP.RecoilSide = 0.7
+SWEP.RecoilSide = 0.5
 
 SWEP.RecoilRandomUp = 0.3
 SWEP.RecoilRandomSide = 0.3
@@ -106,7 +106,7 @@ SWEP.RecoilAutoControl = 0
 
 SWEP.RecoilKick = 2
 
-SWEP.RecoilMultRecoil = 1.75
+SWEP.RecoilMultRecoil = 1.9
 
 -------------------------- SPREAD
 
@@ -124,7 +124,7 @@ SWEP.SpreadMultHipFire = 1.5
 SWEP.FreeAimRadius = 15
 SWEP.FreeAimRadiusSights = 5
 
-SWEP.Sway = 1.2
+SWEP.Sway = 1.1
 
 SWEP.SwayMultMidAir = 2
 SWEP.SwayAddMove = 2
@@ -132,7 +132,7 @@ SWEP.SwayMultMove = 1
 SWEP.SwayMultCrouch = 0.4
 SWEP.SwayMultShooting = 1.5
 
-SWEP.SwayMultSights = 0.5
+SWEP.SwayMultSights = 0.25
 
 SWEP.AimDownSightsTime = 0.35
 SWEP.SprintToFireTime = 0.5
