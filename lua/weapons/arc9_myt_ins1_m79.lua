@@ -305,6 +305,7 @@ SWEP.Attachments = {
         PrintName = "Optic",
         DefaultName = "None",
         InstalledElements = {"rail_top"},
+        Hidden = true,	-- temporary
 		
         Category = { "optic_css"},
         Bone = "BarrelTube",
@@ -315,7 +316,8 @@ SWEP.Attachments = {
         PrintName = "Foregrip",
         DefaultName = "None",
         InstalledElements = {"rail_bot", "has_grip"},
-
+        Hidden = true,	-- temporary
+		
         Category = {"grip_css", "ins1_grip_db"},
         Bone = "BarrelTube",
         Pos = Vector(0.7, -5, -1.1),
@@ -324,6 +326,7 @@ SWEP.Attachments = {
     {
         PrintName = "Ammo Type",
         DefaultName = "Default Type",
+        Hidden = true,	-- temporary
 		
         Category = {"css_ammo_glauncher"},
         Bone = "BarrelTube",
