@@ -307,7 +307,7 @@ SWEP.Animations = {
         Mult = 1, -- multiplies time
         EventTable = {
             {s =  "myt_ins1/tkr_bolt1.wav" ,    t = 15 / 40},   
-			{s =  "myt_ins1/tkr_bolt2.wav" ,    t = 22 / 40},  
+			{s =  "myt_ins1/usp-slide.wav" ,    t = 22 / 40},  
         },
     },
     ["holster"] = {
@@ -339,9 +339,9 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.775,
         EventTable = {
-            {s =  "myt_ins1/usp-magout.wav" ,   t = 6 / 40},
-			{s =  "myt_ins1/usp-mag1.wav" ,    t = 32 / 40},
-            {s =  "myt_ins1/usp-mag2.wav" ,    t = 38 / 40},
+            --{s =  "myt_ins1/usp-magout.wav" ,   t = 2 / 40},
+			{s =  "myt_ins1/usp-mag1.wav" ,    t = 36 / 40},
+            {s =  "myt_ins1/usp-mag2.wav" ,    t = 44 / 40},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -354,9 +354,9 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.85,
         EventTable = {
-            {s =  "myt_ins1/usp-magout.wav" ,   t = 6 / 40},
-			{s =  "myt_ins1/usp-mag1.wav" ,    t = 32 / 40},
-            {s =  "myt_ins1/usp-mag2.wav" ,    t = 38 / 40},
+            {s =  "myt_ins1/usp-magout.wav" ,   t = 2 / 40},
+			{s =  "myt_ins1/usp-mag1.wav" ,    t = 36 / 40},
+            {s =  "myt_ins1/usp-mag2.wav" ,    t = 44 / 40},
             {s =  "myt_ins1/usp-slide.wav" ,    t = 56 / 40},  
         },
         IKTimeLine = {

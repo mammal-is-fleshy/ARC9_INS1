@@ -347,7 +347,7 @@ SWEP.Animations = {
         EventTable = {
             {s =  "myt_ins1/tkr_mag2.wav" ,   t = 8 / 40},
             {s =  "myt_ins1/tkr_mag1.wav" ,    t = 45 / 40},
-            {s =  "myt_ins1/tkr_bolt2.wav" ,    t = 60 / 40},  
+            {s =  "myt_ins1/makarov-slideforward.wav" ,    t = 60 / 40},  
             },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
