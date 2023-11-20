@@ -39,21 +39,21 @@ SWEP.RecoilAutoControlMultHipFire = 0.5
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 45
-SWEP.DamageMin = 26
+SWEP.DamageMax = 42
+SWEP.DamageMin = 21
 
 SWEP.RangeMin = 500
 SWEP.RangeMax = 3000
 
-SWEP.Penetration = 15 -- Units of wood that can be penetrated by this gun.
+SWEP.Penetration = 7 -- Units of wood that can be penetrated by this gun.
 
 SWEP.BodyDamageMults = {
-    [HITGROUP_HEAD] = 1.75,
+    [HITGROUP_HEAD] = 1.5,
     [HITGROUP_CHEST] = 1,
-    [HITGROUP_LEFTARM] = 0.9,
-    [HITGROUP_RIGHTARM] = 0.9,
-    [HITGROUP_LEFTLEG] = 0.75,
-    [HITGROUP_RIGHTLEG] = 0.75,
+    [HITGROUP_LEFTARM] = 0.85,
+    [HITGROUP_RIGHTARM] = 0.85,
+    [HITGROUP_LEFTLEG] = 0.7,
+    [HITGROUP_RIGHTLEG] = 0.7,
 }
 
 -------------------------- PHYS BULLET BALLISTICS
@@ -233,17 +233,17 @@ SWEP.AnimDraw = false
 
 -------------------------- EFFECTS
 
-SWEP.MuzzleParticle = "muzzleflash_pistol"
+SWEP.MuzzleParticle = "muzzleflash_4"
 SWEP.MuzzleEffectQCA = 1
 
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellCorrectAng = Angle(0, 180, 0)
-SWEP.ShellScale = 1
+SWEP.ShellScale = 1.2
 SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 
 -------------------------- SOUNDS
 
-SWEP.ShootSound = {"myt_ins1/g36c-1.wav"}
+SWEP.ShootSound = "myt_ins1/g36c-1.wav"
 SWEP.DistantShootSound = "myt_ins1/fal-01_echo.wav"
 SWEP.ShootSoundSilenced = "myt_ins1_sd/tavor.wav"
 SWEP.DryFireSound = "myt_ins1/makarov-empty.wav"
