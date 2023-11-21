@@ -63,7 +63,7 @@ SWEP.PhysBulletMuzzleVelocity = 1280 * 12
 
 SWEP.Ammo = "pistol" -- What ammo type this gun uses.
 
-SWEP.ChamberSize = 1 -- The amount of rounds this gun can chamber.
+SWEP.ChamberSize = 0 -- The amount of rounds this gun can chamber.
 SWEP.ClipSize = 8 -- Self-explanatory.
 SWEP.SupplyLimit = 4 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
 SWEP.SecondarySupplyLimit = 2 -- Amount of reserve UBGL magazines you can take.
@@ -300,13 +300,14 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "base_draw",
+		Time = 0.75,
         EventTable = {
             {s =  "myt_ins1/universal/uni-draw.wav" ,   t = 0 / 30},
         },
     },
     ["draw_empty"] = {
         Source = "base_draw_empty", -- QC sequence source, can be {"table", "of", "strings"} or "string"
-        --Time = 0.5, -- overrides the duration of the sequence
+		Time = 0.75,
         Mult = 1, -- multiplies time
         EventTable = {
             {s =  "myt_ins1/universal/uni-draw.wav" ,   t = 0 / 30},

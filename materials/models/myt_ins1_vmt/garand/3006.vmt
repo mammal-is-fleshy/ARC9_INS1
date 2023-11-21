@@ -4,7 +4,7 @@
 	"$envmap" "env_cubemap"
 	"$envmaptint" "[.1 .1 .1]"
 	"$envmapcontrast" "0.9"	
-	"$color2"						"[1.25 1.25 1.25]"
+	"$color2"						"[1 1 1]"
 
 	"$nocull" 1
 
