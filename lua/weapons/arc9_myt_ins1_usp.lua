@@ -13,7 +13,8 @@ SWEP.Class = "Pistol"
 SWEP.Credits = {
     ["Assets"] = [[Insurgency: Modern Infantry Combat]],
 }
-SWEP.Description = [[Crew Expendable.]]
+SWEP.Description = [[Point Man loved the AT-14. 
+Maybe you'll like the source material.]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_pist_usp.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_pist_usp.mdl"
@@ -38,7 +39,7 @@ SWEP.RecoilAutoControlMultHipFire = 0.5
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 41
+SWEP.DamageMax = 40
 SWEP.DamageMin = 15
 
 SWEP.RangeMin = 500
@@ -57,14 +58,14 @@ SWEP.BodyDamageMults = {
 
 -------------------------- PHYS BULLET BALLISTICS
 
-SWEP.PhysBulletMuzzleVelocity = 1200 * 12
+SWEP.PhysBulletMuzzleVelocity = 1240 * 12
 
 -------------------------- MAGAZINE
 
 SWEP.Ammo = "pistol" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 1 -- The amount of rounds this gun can chamber.
-SWEP.ClipSize = 12 -- Self-explanatory.
+SWEP.ClipSize = 13 -- Self-explanatory.
 SWEP.SupplyLimit = 4 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
 SWEP.SecondarySupplyLimit = 2 -- Amount of reserve UBGL magazines you can take.
 
@@ -72,7 +73,7 @@ SWEP.ReloadInSights = false -- This weapon can aim down sights while reloading.
 
 -------------------------- FIREMODES
 
-SWEP.RPM = 800
+SWEP.RPM = 600
 
 -- Works different to ArcCW
 
@@ -339,9 +340,9 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.775,
         EventTable = {
-            --{s =  "myt_ins1/usp-magout.wav" ,   t = 2 / 40},
-			{s =  "myt_ins1/usp-mag1.wav" ,    t = 36 / 40},
-            {s =  "myt_ins1/usp-mag2.wav" ,    t = 44 / 40},
+            {s =  "myt_ins1/usp-magout.wav" ,   t = 2 / 40},
+			{s =  "myt_ins1/usp-mag1.wav" ,    t = 28 / 40},
+            {s =  "myt_ins1/usp-mag2.wav" ,    t = 38 / 40},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -355,9 +356,9 @@ SWEP.Animations = {
         MinProgress = 0.85,
         EventTable = {
             {s =  "myt_ins1/usp-magout.wav" ,   t = 2 / 40},
-			{s =  "myt_ins1/usp-mag1.wav" ,    t = 36 / 40},
-            {s =  "myt_ins1/usp-mag2.wav" ,    t = 44 / 40},
-            {s =  "myt_ins1/usp-slide.wav" ,    t = 56 / 40},  
+			{s =  "myt_ins1/usp-mag1.wav" ,    t = 28 / 40},
+            {s =  "myt_ins1/usp-mag2.wav" ,    t = 38 / 40},
+            {s =  "myt_ins1/usp-slide.wav" ,    t = 54 / 40},  
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },

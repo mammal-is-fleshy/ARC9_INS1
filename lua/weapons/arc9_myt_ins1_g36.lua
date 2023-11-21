@@ -14,7 +14,7 @@ SWEP.Credits = {
 ---	["Assets"] = [[https://gamebanana.com/mods/211744]],  
 ---	["Sound"] = [[Navaro]],
 }
-SWEP.Description = [[ger man]]
+SWEP.Description = [[Crew Expendable (2).]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_rif_g36.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_rif_g36.mdl"
@@ -347,8 +347,9 @@ SWEP.Animations = {
         MinProgress = 0.8,
         Mult = 0.95,
         EventTable = {
-            {s =  "myt_ins1/tavor_clipout.wav" ,   t = 22 / 30},
-            {s =  "myt_ins1/tavor_clipin.wav" ,    t = 75 / 30},
+            {s =  "myt_ins1/g36-magout.wav" ,   t = 17 / 30},
+			{s =  "myt_ins1/g36-magin1.wav" ,    t = 72 / 30},
+			{s =  "myt_ins1/g36-magin2.wav" ,    t = 78 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -362,11 +363,13 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.925,
         EventTable = {
-            {s =  "myt_ins1/tavor_clipout.wav" ,   t = 22 / 30},
-            {s =  "myt_ins1/tavor_clipin.wav" ,    t = 75 / 30},
-            {s =  "myt_ins1/tavor_boltpull.wav" ,    t = 100 / 30},
-			{s =  "myt_ins1/tavor_boltrel.wav" ,    t = 105 / 30}, 
-            },
+            {s =  "myt_ins1/g36-magout.wav" ,   t = 17 / 30},
+			{s =  "myt_ins1/g36-magin1.wav" ,    t = 72 / 30},
+            {s =  "myt_ins1/g36-magin2.wav" ,    t = 78 / 30},
+			{s =  "myt_ins1/g36-boltback1.wav" ,    t = 100 / 30},
+            {s =  "myt_ins1/g36-boltback2.wav" ,    t = 101 / 30},
+			{s =  "myt_ins1/g36-boltrelease.wav" ,    t = 110 / 30}, 
+        },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
         { t = 0.15, lhik = 0, rhik = 1, },{ t = 0.85, lhik = 0, rhik = 1, },{ t = 0.975, lhik = 1, rhik = 1, },
