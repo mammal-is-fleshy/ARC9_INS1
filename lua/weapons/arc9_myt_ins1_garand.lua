@@ -173,8 +173,8 @@ SWEP.IronSights = {
 
 SWEP.Crosshair = false
 
-SWEP.SprintAng = Angle(10, -15, -10)
-SWEP.SprintPos = Vector(0, 2, 0)
+SWEP.SprintAng = Angle(40, -15, -10)
+SWEP.SprintPos = Vector(5, 0, 1.25)
 
 SWEP.SprintMidPoint = {
     Pos = Vector(0, -5, -3),
@@ -218,12 +218,12 @@ SWEP.AnimDraw = false
 
 -------------------------- EFFECTS
 
-SWEP.MuzzleParticle = "muzzleflash_pistol"
+SWEP.MuzzleParticle = "muzzleflash_5"
 SWEP.MuzzleEffectQCA = 1
 
-SWEP.ShellModel = "models/shells/shell_9mm.mdl"
+SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellCorrectAng = Angle(0, 180, 0)
-SWEP.ShellScale = 1
+SWEP.ShellScale = 1.2
 SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 
 -------------------------- SOUNDS
