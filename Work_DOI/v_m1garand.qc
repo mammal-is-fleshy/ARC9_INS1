@@ -1,30 +1,25 @@
 // Created by Crowbar 0.74
 
-$modelname "weapons\khrcw2\doipack\v_m1garand.mdl"
+$modelname "weapons/myt_ins1/c_rif_garand.mdl"
+$include c_ins2_to_gmod_hands.qci
+$scale 1.3
 
 $bodygroup "Weapon"
 {
-	studio "v_m1garand_m1garand_body1_model0.smd"
-	studio "v_m1garand_m1garand_body1_model1.smd"
+	studio "v_garand.smd"
+	blank
 }
-$bodygroup "Sights"
-{
-	studio "v_m1garand_m1garand_body2_model1.smd"
-	studio "v_m1garand_m1garand_body2_model0.smd"
-}
-$bodygroup "Belt"
-{
-	studio "v_m1garand_m1garand_body3_model0.smd"
-}
-
 
 $surfaceprop "default"
 
 $contents "solid"
 
-$illumposition -1.608 7.375 -10.039
+$illumposition 0 0 0
 
-$cdmaterials "models\weapons\tfa_doi_wap\m1garand\"
+$cdmaterials "models\myt_ins1_vmt\"
+$cdmaterials "models\myt_ins1_vmt\att\"
+$cdmaterials "models\myt_ins1_vmt\garand\"
+$cdmaterials "ins\models\hands\"
 
 $attachment "1" "A_Muzzle" 0 0 0 rotate 0 0 0
 $attachment "2" "A_Eject" 0 0.4 0 rotate 10 25 0
@@ -238,7 +233,15 @@ $sequence "base_idle" {
 $sequence "base_draw" {
 	"v_m1garand_anims\base_draw.smd"
 	activity "ACT_VM_DRAW" 1
-	{ event 5004 0 "Universal.Draw" }
+	fadein 0.2
+	fadeout 0.2
+	snap
+	fps 32
+}
+
+$sequence "base_deploy" {
+	"anims\garand_deploy.smd"
+	activity "ACT_VM_DRAW" 1
 	fadein 0.2
 	fadeout 0.2
 	snap
@@ -248,67 +251,38 @@ $sequence "base_draw" {
 $sequence "base_fire_1" {
 	"v_m1garand_anims\base_fire_1.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_CL_CREATE_PARTICLE_BRASS 1 "" }
-	fadein 0.2
-	fadeout 0.2
-	snap
+	fadein 0.02
+	fadeout 0.02
 	fps 30
 }
 
 $sequence "base_fire_2" {
 	"v_m1garand_anims\base_fire_2.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_CL_CREATE_PARTICLE_BRASS 1 "" }
-	fadein 0.2
-	fadeout 0.2
-	snap
+	fadein 0.02
+	fadeout 0.02
 	fps 30
 }
 
 $sequence "base_fire_last" {
 	"v_m1garand_anims\base_fire_last.smd"
 	activity "ACT_VM_PRIMARYATTACK_EMPTY" 1
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_CL_CREATE_PARTICLE_BRASS 1 "" }
-	{ event AE_EMIT_SHELL_CLIP 1 "" }
-	{ event AE_VM_GLOBALSOUND 0 "Weapon_Garand.Ping" }
-	{ event 5004 0 "Weapon_Garand.Ping" }
-	fadein 0.2
-	fadeout 0.2
-	snap
+	fadein 0.02
+	fadeout 0.02
 	fps 30
 }
 
-$sequence "base_reloadfull" {
-	"v_m1garand_anims\base_reloadfull.smd"
+$sequence "base_reload" {
+	"anims\garand_reload.smd"
 	activity "ACT_VM_RELOAD" 1
-	{ event 5004 18 "Weapon_Garand.Magrelease" }
-	{ event 5004 32 "Weapon_Garand.Boltback" }
-	{ event 5004 35 "Weapon_Garand.Magout" }
-	{ event 5004 50 "Weapon_Garand.MagFetch" }
-	{ event 46 113 "" }
-	{ event AE_WPN_RELOAD_OFFSCREEN 80 "" }
-	{ event 5004 93 "Weapon_Garand.Magin" }
-	{ event 5004 110 "Weapon_Garand.MagHit" }
-	{ event 5004 120 "Weapon_Garand.Boltrelease" }
-	{ event 5004 137 "Weapon_Garand.Rattle" }
 	fadein 0.2
 	fadeout 0.2
 	fps 31.5
 }
 
 $sequence "base_reloadempty" {
-	"v_m1garand_anims\base_reloadempty.smd"
+	"anims\garand_reloadempty.smd"
 	activity "ACT_VM_RELOAD_EMPTY" 1
-	{ event 5004 1 "Weapon_Garand.MagFetch" }
-	{ event 46 68 "" }
-	{ event AE_WPN_RELOAD_OFFSCREEN 30 "" }
-	{ event 5004 47 "Weapon_Garand.Magin" }
-	{ event 5004 65 "Weapon_Garand.MagHit" }
-	{ event 5004 75 "Weapon_Garand.Boltrelease" }
-	{ event 5004 92 "Weapon_Garand.Rattle" }
 	fadein 0.2
 	fadeout 0.2
 	fps 31.5
@@ -326,46 +300,31 @@ $sequence "empty_idle" {
 $sequence "iron_fire_1" {
 	"v_m1garand_anims\iron_fire_1.smd"
 	activity "ACT_VM_PRIMARYATTACK_1" 1
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_CL_CREATE_PARTICLE_BRASS 1 "" }
-	fadein 0.2
-	fadeout 0.2
-	snap
+	fadein 0.02
+	fadeout 0.02
 	fps 30
 }
 
 $sequence "iron_fire_2" {
 	"v_m1garand_anims\iron_fire_2.smd"
 	activity "ACT_VM_PRIMARYATTACK_1" 1
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_CL_CREATE_PARTICLE_BRASS 1 "" }
-	fadein 0.2
-	fadeout 0.2
-	snap
+	fadein 0.02
+	fadeout 0.02
 	fps 30
 }
 
 $sequence "iron_fire_3" {
 	"v_m1garand_anims\iron_fire_3.smd"
 	activity "ACT_VM_PRIMARYATTACK_1" 1
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_CL_CREATE_PARTICLE_BRASS 1 "" }
-	fadein 0.2
-	fadeout 0.2
-	snap
+	fadein 0.02
+	fadeout 0.02
 	fps 30
 }
 
 $sequence "iron_fire_last" {
 	"v_m1garand_anims\iron_fire_last.smd"
 	activity "ACT_VM_PRIMARYATTACK_EMPTY_1" 1
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_CL_CREATE_PARTICLE_BRASS 1 "" }
-	{ event AE_EMIT_SHELL_CLIP 1 "" }
-	{ event AE_VM_GLOBALSOUND 0 "Weapon_Garand.Ping" }
-	{ event 5004 0 "Weapon_Garand.Ping" }
-	fadein 0.2
-	fadeout 0.2
-	snap
+	fadein 0.02
+	fadeout 0.02
 	fps 30
 }
