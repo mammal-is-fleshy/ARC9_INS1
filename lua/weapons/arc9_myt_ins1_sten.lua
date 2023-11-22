@@ -270,7 +270,7 @@ SWEP.Attachments = {
         ExcludeElements = {"pre_optic"},
         Category = {"optic_css"},
         Bone = "Weapon",
-        Pos = Vector(0, 2, 3.25),
+        Pos = Vector(-4.63, -2, 4.3),
         Ang = Angle(0, -90, 0),
     },
     {
@@ -281,7 +281,7 @@ SWEP.Attachments = {
         ExcludeElements = {"pre_muzzed"},
         Category = {"muzzle_css"},
         Bone = "Weapon",
-        Pos = Vector(0, 23.02, 2),
+        Pos = Vector(-4.63, 16, 3),
         Ang = Angle(0, -90, 0),
     },
     {
@@ -291,7 +291,7 @@ SWEP.Attachments = {
 
         Category = {"grip_css"},
         Bone = "Weapon",
-        Pos = Vector(0, 5, -1.25),
+        Pos = Vector(-4.63, 4, 1.75),
         Ang = Angle(0, -90, 0),
     },
 }
@@ -347,7 +347,7 @@ SWEP.Animations = {
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
-        { t = 0.2, lhik = 0, rhik = 1, },{ t = 0.75, lhik = 0, rhik = 1, },{ t = 0.95, lhik = 1, rhik = 1, },
+        { t = 0.2, lhik = 0, rhik = 1, },{ t = 0.775, lhik = 0, rhik = 1, },{ t = 0.85, lhik = 1, rhik = 1, },
         },
     },
     ["reload_empty"] = {
@@ -364,7 +364,7 @@ SWEP.Animations = {
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
-        { t = 0.15, lhik = 0, rhik = 1, },{ t = 0.8, lhik = 0, rhik = 1, },{ t = 0.95, lhik = 1, rhik = 1, },
+        { t = 0.15, lhik = 0, rhik = 1, },{ t = 0.7, lhik = 0, rhik = 1, },{ t = 0.85, lhik = 1, rhik = 1, },
         },
     },
 }

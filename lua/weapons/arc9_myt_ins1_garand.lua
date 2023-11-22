@@ -241,8 +241,8 @@ SWEP.FiremodeSound = "myt_ins1/firemode_light.wav"
 SWEP.DefaultBodygroups = "00000000"
 
 SWEP.AttachmentElements = {
-    ["has_optic"] = { Bodygroups = {{1, 1}}, },
-    ["has_tac"] = { Bodygroups = {{2, 1}}, },
+    ["has_optic"] = { Bodygroups = {{2, 1}}, },
+    ["has_grip"] = { Bodygroups = {{3, 1}}, },
 }
 
 SWEP.Attachments = {
@@ -252,9 +252,9 @@ SWEP.Attachments = {
         InstalledElements = {"has_optic"},
 
         ExcludeElements = {"pre_optic"},
-        Category = {"optic_css_s"},
+        Category = {"optic_css"},
         Bone = "Weapon",
-        Pos = Vector(-0.05, 0.5, 1.6),
+        Pos = Vector(0, 0.5, 3.9),
         Ang = Angle(0, -90, 0),
     },
     {
@@ -264,19 +264,19 @@ SWEP.Attachments = {
         ExcludeElements = {"pre_muzzed"},
         Category = {"muzzle_css"},
         Bone = "Weapon",
-        Pos = Vector(-0.05, 3.75, 0.6),
+        Pos = Vector(0, 23.5, 2.9),
         Ang = Angle(0, -90, 0),
     },
 
     {
-        PrintName = "Tac Mount",
+        PrintName = "Foregrip",
         DefaultName = "None",
-        InstalledElements = {"has_tac"},
+        InstalledElements = {"rail_bot", "has_grip"},
 
-        Category = {"tac_css"},
+        Category = {"grip_css"},
         Bone = "Weapon",
-        Pos = Vector(-0.05, 2.5, -0.75),
-        Ang = Angle(0, -90, 180),
+        Pos = Vector(0, 2, 0.1),
+        Ang = Angle(0, -90, 0),
     },
 }
 
@@ -354,7 +354,7 @@ SWEP.Animations = {
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
-        { t = 0.1, lhik = 0, rhik = 1, },{ t = 0.8, lhik = 0, rhik = 1, },{ t = 0.95, lhik = 1, rhik = 1, },
+        { t = 0.1, lhik = 0, rhik = 1, },{ t = 0.2, lhik = 0, rhik = 1, },{ t = 0.4, lhik = 1, rhik = 1, },
         },
     },
     ["reload_empty"] = {
@@ -368,8 +368,7 @@ SWEP.Animations = {
 			{s =  "myt_ins1/garand_boltforward.wav" ,    t = 35 / 30},
             },
         IKTimeLine = {
-        { t = 0, lhik = 1, rhik = 1, },
-        { t = 0.2, lhik = 0, rhik = 1, },{ t = 0.85, lhik = 0, rhik = 1, },{ t = 0.975, lhik = 1, rhik = 1, },
+        { t = 0, lhik = 1, rhik = 1, },	{ t = 1, lhik = 1, rhik = 1, },
         },
     },
 }
