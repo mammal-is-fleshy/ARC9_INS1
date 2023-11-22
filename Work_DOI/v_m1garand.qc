@@ -4,11 +4,27 @@ $modelname "weapons/myt_ins1/c_rif_garand.mdl"
 $include c_ins2_to_gmod_hands.qci
 $scale 1.3
 
-$bodygroup "Weapon"
+$bodygroup "0"
 {
 	studio "v_garand.smd"
 	blank
 }
+$bodygroup "1"
+{
+	blank
+	studio "v_garand_stab.smd"
+}
+$bodygroup "2"
+{
+	blank
+	studio "garand_rail_top.smd"
+}
+$bodygroup "3"
+{
+	blank
+	studio "garand_rail_bottom.smd"
+}
+
 
 $surfaceprop "default"
 

@@ -6,25 +6,24 @@ SWEP.Spawnable = true
 SWEP.Category = "ARC9 - INS1"
 SWEP.SubCategory = "Gadget"
 
-SWEP.PrintName = "Baseball Bat"
+SWEP.PrintName = "Fists"
 
 SWEP.Class = "Melee"
 
 SWEP.Credits = {
-    ["Assets"] = [[Day of Infamy]],
+    ["Assets"] = [[Born To Kill]],
 }
-SWEP.Description = [[its a home run
-batta swing baby - annoying fallout 4 vendor]]
+SWEP.Description = [[talk to the]]
 
-SWEP.ViewModel = "models/weapons/myt_ins1/c_baseballbat.mdl"
-SWEP.WorldModel = "models/weapons/myt_ins1/c_baseballbat.mdl"
+SWEP.ViewModel = "models/weapons/myt_ins1/c_fist.mdl"
+SWEP.WorldModel = "models/weapons/myt_ins1/c_fist.mdl"
 
 SWEP.Weight = 1
 SWEP.Slot = 1
 SWEP.SlotPos = 1
 
 SWEP.MirrorVMWM = true
-SWEP.WorldModelMirror = "models/weapons/myt_ins1/c_baseballbat.mdl"
+SWEP.WorldModelMirror = "models/weapons/myt_ins1/c_fist.mdl"
 SWEP.WorldModelOffset = {
     Pos = Vector(-9, 5, -5),
     Ang = Angle(-5, 0, 180),
@@ -74,11 +73,11 @@ SWEP.BashWhileSprint = true
 SWEP.Bash = true
 SWEP.PrimaryBash = true
 
-SWEP.BashDamage = 102
+SWEP.BashDamage = 30
 SWEP.BashLungeRange = 0
-SWEP.BashRange = 128
-SWEP.PreBashTime = 0.4
-SWEP.PostBashTime = 0.2
+SWEP.BashRange = 50
+SWEP.PreBashTime = 0.1
+SWEP.PostBashTime = 0.325
 
 SWEP.ShootWhileSprint = true
 SWEP.BashWhileSprint = true
@@ -140,7 +139,7 @@ SWEP.ShellSmoke = false
 
 SWEP.EjectDelay = 0
 SWEP.MeleeHitWallSound = {"myt_ins1/melee_wall_blunt_1.wav", "myt_ins1/melee_wall_blunt_2.wav"}
-SWEP.MeleeHitSound = {"myt_ins1/melee_blunt_1.wav", "myt_ins1/melee_blunt_2.wav"}
+SWEP.MeleeHitSound = {"myt_ins1/fist_hit.wav", "myt_ins1/fist_hit.wav"}
 SWEP.MeleeSwingSound = {"myt_ins1/melee_swingmed_1.wav", "myt_ins1/melee_swingmed_2.wav"}
 
 SWEP.FiremodeSound = "myt_ins1/firemode_light.wav"
@@ -157,25 +156,33 @@ SWEP.HasSights = false
 
 SWEP.Animations = {
     ["idle"] = {
-        Source = "base_idle",
+        Source = "idle",
     },  
 	["idle_sprint"] = {
-        Source = "base_sprint",
+        Source = "sprint",
+    },
+    ["ready"] = {
+        Source = "ready_1", 
+        Mult = 1,
+        EventTable = {
+			{s =  "myt_ins1/melee_blunt_1.wav" ,    t = 8 / 30},
+        },
     },
     ["draw"] = {
-        Source = "base_draw",
+        Source = "draw_2",
         EventTable = {
             {s =  "myt_ins1/universal/uni-draw.wav" ,   t = 0 / 30},
         },
     },
     ["holster"] = {
-        Source = "base_holster",
+        Source = "holster",
         --Time = 0
     },
     ["bash"] = {
-        Source = {"base_attack_1", "base_attack_2", "base_attack_3"},
+        Source = {"swing1", "swing2", "swing3"},
+        Mult = 0.8,
         EventTable = {
-            {s =  "myt_ins1/ent_tool_stabmiss1.wav" ,   t = 10 / 30},
+            {s =  "myt_ins1/ent_tool_stabmiss1.wav" ,   t = 0 / 30},
         },		
     },
 }
