@@ -27,7 +27,7 @@ SWEP.WorldModelMirror = "models/weapons/myt_ins1/c_fist.mdl"
 SWEP.WorldModelOffset = {
     Pos = Vector(-9, 5, -5),
     Ang = Angle(-5, 0, 180),
-    TPIKPos = Vector(-16, 3, -5),
+    TPIKPos = Vector(-16, 10, -10),
     TPIKAng = Angle(-5, 0, 180),
     Scale = 1
 }
@@ -100,12 +100,12 @@ SWEP.SprintAng = Angle(0, 0, 0)
 SWEP.SprintPos = Vector(0, -6, 0)
 
 SWEP.SprintMidPoint = {
-    Pos = Vector(0, 5, 10),
-    Ang = Angle(0, -3, -5)
+    Pos = Vector(0, 0, 0),
+    Ang = Angle(0, 0, 0)
 }
 
 SWEP.ViewModelFOVBase = 90
-SWEP.ActivePos = Vector(0, -5, 0)
+SWEP.ActivePos = Vector(0, -4, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.CustomizeAng = Angle(135, 0, 0)
@@ -156,10 +156,18 @@ SWEP.HasSights = false
 
 SWEP.Animations = {
     ["idle"] = {
-        Source = "idle",
+        Source = {"idle","idle","idle","idle","idle",		"idle_fidget" },  -- 1/5
     },  
 	["idle_sprint"] = {
         Source = "sprint",
+    },	
+	["enter_sprint"] = {
+        Source = "idle",
+		Time = 0
+    },
+	["exit_sprint"] = {
+        Source = "idle",
+		Time = 0
     },
     ["ready"] = {
         Source = "ready_1", 

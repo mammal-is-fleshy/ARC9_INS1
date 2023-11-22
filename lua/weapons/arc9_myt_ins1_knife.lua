@@ -161,6 +161,14 @@ SWEP.Animations = {
 	["idle_sprint"] = {
         Source = "sprint",
     },
+	["enter_sprint"] = {
+        Source = "idle",
+		Time = 0
+    },
+	["exit_sprint"] = {
+        Source = "idle",
+		Time = 0
+    },
     ["draw"] = {
         Source = "draw",
         EventTable = {
