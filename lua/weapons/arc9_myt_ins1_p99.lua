@@ -11,7 +11,7 @@ SWEP.PrintName = "P99"
 SWEP.Class = "Pistol"
 
 SWEP.Credits = {
-    --["Assets"] = [[Insurgency: Modern Infantry Combat]],
+    ["Sounds"] = [[https://gamebanana.com/sounds/69867]],
 }
 SWEP.Description = [[best pistol ever.]]
 
