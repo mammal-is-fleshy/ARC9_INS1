@@ -307,7 +307,7 @@ SWEP.Animations = {
         --Time = 0.5, -- overrides the duration of the sequence
         Mult = 1, -- multiplies time
         EventTable = {
-            {s =  "myt_ins1/de_slideforward.wav" ,    t = 14 / 40},
+            {s =  "myt_ins1/p99-slideforward.wav" ,    t = 12 / 40},
         },
     },
     ["holster"] = {
@@ -332,8 +332,8 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.775,
         EventTable = {
-            {s =  "myt_ins1/tkr_mag2.wav" ,   t = 5 / 30},
-            {s =  "myt_ins1/tkr_mag1.wav" ,    t = 32 / 30},
+            {s =  "myt_ins1/p99-magout.wav" ,   t = 4 / 30},
+            {s =  "myt_ins1/p99-magin.wav" ,    t = 32 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -346,10 +346,10 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.85,
         EventTable = {
-            {s =  "myt_ins1/tkr_mag2.wav" ,   t = 5 / 30},
-            {s =  "myt_ins1/tkr_mag1.wav" ,    t = 32 / 30},
-            {s =  "myt_ins1/de_slideforward.wav" ,    t = 57 / 40},
-            },
+            {s =  "myt_ins1/p99-magout.wav" ,   t = 4 / 30},
+            {s =  "myt_ins1/p99-magin.wav" ,    t = 32 / 30},
+			{s =  "myt_ins1/p99-slideforward.wav" ,    t = 58 / 40},
+        },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
         { t = 0.2, lhik = 0, rhik = 1, },{ t = 0.85, lhik = 0, rhik = 1, },{ t = 0.975, lhik = 1, rhik = 1, },

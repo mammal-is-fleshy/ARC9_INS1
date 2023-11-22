@@ -161,7 +161,7 @@ SWEP.TracerColor = Color(255, 225, 200) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-2.425, -4, 0.85),
+    Pos = Vector(-2.47, -4, 0.85),
     Ang = Angle(0, 0, 0),
     Midpoint = { -- Where the gun should be at the middle of it's irons
         Pos = Vector(0, 15, -4),
@@ -332,7 +332,7 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.775,
         EventTable = {
-            {s =  "myt_ins1/tkr_mag2.wav" ,   t = 8 / 30},
+            {s =  "myt_ins1/tkr_mag2.wav" ,   t = 6 / 30},
             {s =  "myt_ins1/tkr_mag1.wav" ,    t = 42 / 30},
         },
         IKTimeLine = {
@@ -346,10 +346,10 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.85,
         EventTable = {
-            {s =  "myt_ins1/tkr_mag2.wav" ,   t = 8 / 30},
+            {s =  "myt_ins1/tkr_mag2.wav" ,   t = 6 / 30},,
             {s =  "myt_ins1/tkr_mag1.wav" ,    t = 42 / 30},
             {s =  "myt_ins1/tkr_bolt2.wav" ,    t = 80 / 40},
-            },
+		},
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
         { t = 0.2, lhik = 0, rhik = 1, },{ t = 0.85, lhik = 0, rhik = 1, },{ t = 0.975, lhik = 1, rhik = 1, },
