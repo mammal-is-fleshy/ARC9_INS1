@@ -307,8 +307,8 @@ SWEP.Animations = {
         --Time = 0.5, -- overrides the duration of the sequence
         Mult = 1, -- multiplies time
         EventTable = {
-            {s =  "myt_ins1/m9-slideback.wav" ,    t = 12 / 40},
-            {s =  "myt_ins1/m9-slideforward.wav" ,    t = 25 / 40},
+            {s =  "myt_ins1/m9-slideback.wav" ,    t = 14 / 40},
+            {s =  "myt_ins1/glock_slideforward.wav" ,    t = 26 / 40},
         },
     },
     ["holster"] = {
@@ -349,8 +349,8 @@ SWEP.Animations = {
             {s =  "myt_ins1/glock_magout.wav" ,   t = 7 / 30},
             {s =  "myt_ins1/glock_magin.wav" ,    t = 18 / 30},
             {s =  "myt_ins1/m9-slideback.wav" ,    t = 43 / 30}, 
-	    {s =  "myt_ins1/glock_slideforward.wav" ,    t = 45 / 30},
-            },
+			{s =  "myt_ins1/glock_slideforward.wav" ,    t = 45 / 30},
+        },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
         { t = 0.2, lhik = 0, rhik = 1, },{ t = 0.85, lhik = 0, rhik = 1, },{ t = 0.975, lhik = 1, rhik = 1, },

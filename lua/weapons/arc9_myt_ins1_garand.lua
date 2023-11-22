@@ -350,7 +350,7 @@ SWEP.Animations = {
             {s =  "myt_ins1/garand_clipremoval.wav" ,   t = 0 / 30}, 
 			{s =  "myt_ins1/garand_boltback.wav" ,   t = 10 / 30},
             {s =  "myt_ins1/garand_blockin.wav" ,    t = 40 / 30},    
-			{s =  "myt_ins1/garand_boltforward.wav" ,    t = 60 / 30},
+			{s =  "myt_ins1/garand_boltforward.wav" ,    t = 64 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -365,8 +365,8 @@ SWEP.Animations = {
         MinProgress = 0.85,
         EventTable = {
             {s =  "myt_ins1/garand_blockin.wav" ,    t = 15 / 30},    
-			{s =  "myt_ins1/garand_boltforward.wav" ,    t = 35 / 30},
-            },
+			{s =  "myt_ins1/garand_boltforward.wav" ,    t = 36 / 30},
+        },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },	{ t = 1, lhik = 1, rhik = 1, },
         },

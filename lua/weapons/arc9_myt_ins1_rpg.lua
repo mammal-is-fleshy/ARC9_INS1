@@ -287,7 +287,7 @@ SWEP.Animations = {
         --Time = 0.5, -- overrides the duration of the sequence
         Mult = 1, -- multiplies time
         EventTable = {
-            {s =  "myt_ins1/rpg7-load.wav" ,    t = 6 / 30},  
+            {s =  "myt_ins1/rpg7-load.wav" ,    t = 5 / 30},  
         },
     },
 --------------------------------------------------------

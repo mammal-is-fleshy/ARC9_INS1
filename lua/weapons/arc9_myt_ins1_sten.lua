@@ -314,7 +314,8 @@ SWEP.Animations = {
         --Time = 0.5, -- overrides the duration of the sequence
         Mult = 1, -- multiplies time
         EventTable = {
-			{s =  "myt_ins1/mp40_bolt2.wav" ,    t = 5 / 30}, 
+			{s =  "myt_ins1/mp40_bolt1.wav" ,    t = 11 / 30},
+			{s =  "myt_ins1/mp40_bolt2.wav" ,    t = 13 / 30}, 			
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -359,8 +360,8 @@ SWEP.Animations = {
         EventTable = {
             {s =  "myt_ins1/mp40_mag2.wav" ,   t = 8 / 30},
             {s =  "myt_ins1/mp40_mag1.wav" ,    t = 35 / 30},
-			{s =  "myt_ins1/mp40_bolt2.wav" ,    t = 55 / 30}, 	
-			{s =  "myt_ins1/mp40_bolt1.wav" ,    t = 52 / 30}, 
+			{s =  "myt_ins1/mp40_bolt1.wav" ,    t = 52 / 30}, 	
+			{s =  "myt_ins1/mp40_bolt2.wav" ,    t = 54 / 30}, 
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },

@@ -173,7 +173,7 @@ SWEP.Animations = {
         Source = "ready_1", 
         Mult = 1,
         EventTable = {
-			{s =  "myt_ins1/melee_blunt_1.wav" ,    t = 8 / 30},
+			{s =  "myt_ins1/fist_hit.wav" ,    t = 6 / 30},
         },
     },
     ["draw"] = {

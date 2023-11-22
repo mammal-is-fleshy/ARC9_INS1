@@ -323,7 +323,7 @@ SWEP.Animations = {
         --Time = 0.5, -- overrides the duration of the sequence
         Mult = 1, -- multiplies time
         EventTable = {
-			{s =  "myt_ins1/stg44_chamber.wav" ,    t = 4 / 30}, 
+			{s =  "myt_ins1/stg44_chamber.wav" ,    t = 3 / 30}, 
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -351,7 +351,7 @@ SWEP.Animations = {
         MinProgress = 0.775,
         EventTable = {
         	{s =  "myt_ins1/stg44_mag_out.wav" ,   t = 0 / 30},
-		{s =  "myt_ins1/stg44_mag_in.wav" ,   t = 35 / 30},
+			{s =  "myt_ins1/stg44_mag_in.wav" ,   t = 35 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -365,8 +365,8 @@ SWEP.Animations = {
         MinProgress = 0.85,
         EventTable = {
         	{s =  "myt_ins1/stg44_mag_out.wav" ,   t = 0 / 30},
-		{s =  "myt_ins1/stg44_mag_in.wav" ,   t = 35 / 30},
-		{s =  "myt_ins1/stg44_chamber.wav" ,    t = 52 / 30}, 
+			{s =  "myt_ins1/stg44_mag_in.wav" ,   t = 35 / 30},
+			{s =  "myt_ins1/stg44_chamber.wav" ,    t = 52 / 30}, 
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },

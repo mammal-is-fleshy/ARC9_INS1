@@ -292,7 +292,7 @@ SWEP.Animations = {
         --Time = 0.5, -- overrides the duration of the sequence
         Mult = 1, -- multiplies time
         EventTable = {
-            {s =  "myt_ins1/welrod_forward.wav" ,    t = 20 / 40},
+            {s =  "myt_ins1/welrod_readydraw.wav" ,    t = 14 / 40},
         },
     },
     ["holster"] = {

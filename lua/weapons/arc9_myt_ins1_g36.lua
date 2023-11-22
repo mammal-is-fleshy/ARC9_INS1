@@ -321,8 +321,9 @@ SWEP.Animations = {
         --Time = 0.5, -- overrides the duration of the sequence
         Mult = 1, -- multiplies time
         EventTable = {
-            {s =  "myt_ins1/tavor_boltpull.wav" ,    t = 20 / 30},
-			{s =  "myt_ins1/tavor_boltrel.wav" ,    t = 25 / 30}, 
+			{s =  "myt_ins1/g36-boltback1.wav" ,    t = 18 / 30},
+            {s =  "myt_ins1/g36-boltback2.wav" ,    t = 21 / 30},
+			{s =  "myt_ins1/g36-boltrelease.wav" ,    t = 26 / 30}, 
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },

@@ -291,7 +291,7 @@ SWEP.Animations = {
         Mult = 1, -- multiplies time
         EventTable = {
             {s =  "myt_ins1/universal/uni-draw.wav" ,   t = 0 / 30},
-            {s =  "myt_ins1/38S-Close.wav" ,    t = 8 / 30},
+            {s =  "myt_ins1/38S-Close.wav" ,    t = 9 / 30},
         },
     },
     ["holster"] = {

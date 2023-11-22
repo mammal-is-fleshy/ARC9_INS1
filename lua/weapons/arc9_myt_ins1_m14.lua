@@ -333,8 +333,8 @@ SWEP.Animations = {
         --Time = 0.5, -- overrides the duration of the sequence
         Mult = 1, -- multiplies time
         EventTable = {
-			{s =  "myt_ins1/m14-boltback.wav" ,    t = 6 / 30},
-			{s =  "myt_ins1/m14-boltforward.wav" ,    t = 12 / 30},
+			{s =  "myt_ins1/m14-boltback.wav" ,    t = 8 / 30},
+			{s =  "myt_ins1/m14-boltforward.wav" ,    t = 14 / 30},
         },
     },
     ["holster"] = {
