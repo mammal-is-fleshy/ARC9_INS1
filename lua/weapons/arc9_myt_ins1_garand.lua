@@ -337,6 +337,12 @@ SWEP.Animations = {
         Source = {"base_fire_iron"},
 		Time = 1,
     },
+	["fire_iron_empty"] = {
+        Source = {"base_fire_last"},
+        EventTable = {
+            {s =  "myt_ins1/garand_ping.wav" ,   t = 0 / 30},
+        },
+    },
     ["fire_empty"] = {
         Source = "base_fire_last",
         EventTable = {
