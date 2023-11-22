@@ -258,7 +258,7 @@ SWEP.DefaultBodygroups = "00000000"
 
 SWEP.AttachmentElements = {
     ["rail_bot"] = { Bodygroups = {{2, 1}}, }, 
-    ["has_optic"] = { Bodygroups = {{1, 1},}, },
+    ["has_optic"] = { Bodygroups = {{1, 1},{3, 1},}, },
 }
 
 SWEP.Attachments = {
@@ -314,8 +314,7 @@ SWEP.Animations = {
         --Time = 0.5, -- overrides the duration of the sequence
         Mult = 1, -- multiplies time
         EventTable = {
-			{s =  "myt_ins1/mp40_bolt1.wav" ,    t = 11 / 30},
-			{s =  "myt_ins1/mp40_bolt2.wav" ,    t = 13 / 30}, 			
+			{s =  "myt_ins1/sten_bolt.wav" ,    t = 9 / 30}, 	
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -330,7 +329,7 @@ SWEP.Animations = {
         Source = {"base_fire_1", "base_fire_2"},
     }, 
 	["fire_iron"] = {
-        Source = {"base_fire_1", "base_fire_2"},
+        Source = {"base_fire_iron1", "base_fire_iron2"},
     },
     ["fire_empty"] = {
         Source = {"base_firelast"},
@@ -343,8 +342,8 @@ SWEP.Animations = {
         MinProgress = 0.775,
         Mult = 1.1,
         EventTable = {
-            {s =  "myt_ins1/mp40_mag2.wav" ,   t = 8 / 30},
-            {s =  "myt_ins1/mp40_mag1.wav" ,    t = 35 / 30},
+            {s =  "myt_ins1/sten_mag1.wav" ,   t = 8 / 30},
+            {s =  "myt_ins1/sten_mag2.wav" ,    t = 35 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -358,10 +357,9 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.85,
         EventTable = {
-            {s =  "myt_ins1/mp40_mag2.wav" ,   t = 8 / 30},
-            {s =  "myt_ins1/mp40_mag1.wav" ,    t = 35 / 30},
-			{s =  "myt_ins1/mp40_bolt1.wav" ,    t = 52 / 30}, 	
-			{s =  "myt_ins1/mp40_bolt2.wav" ,    t = 54 / 30}, 
+            {s =  "myt_ins1/sten_mag1.wav" ,   t = 8 / 30},
+            {s =  "myt_ins1/sten_mag2.wav" ,    t = 35 / 30},
+			{s =  "myt_ins1/sten_bolt.wav" ,    t = 55 / 30}, 	
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },

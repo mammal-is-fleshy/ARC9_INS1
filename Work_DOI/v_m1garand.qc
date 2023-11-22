@@ -272,6 +272,14 @@ $sequence "base_fire_1" {
 	fps 30
 }
 
+$sequence "base_fire_iron" {
+	"anims\garand_fire_iron.smd"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	fadein 0.02
+	fadeout 0.02
+	fps 30
+}
+
 $sequence "base_fire_2" {
 	"v_m1garand_anims\base_fire_2.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1

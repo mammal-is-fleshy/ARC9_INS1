@@ -333,6 +333,10 @@ SWEP.Animations = {
         Source = {"base_fire_1", "base_fire_2"},
 		Time = 1,
     },
+    ["fire_iron"] = {
+        Source = {"base_fire_iron"},
+		Time = 1,
+    },
     ["fire_empty"] = {
         Source = "base_fire_last",
         EventTable = {

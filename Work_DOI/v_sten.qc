@@ -20,6 +20,12 @@ $bodygroup "2"
 	studio "sten_rail_bot.smd"
 	blank
 }
+$bodygroup "3"
+{
+	studio "v_sten_iron.smd"
+	studio "v_sten_iron_filler.smd"
+	blank
+}
 
 $surfaceprop "default"
 
@@ -259,6 +265,21 @@ $sequence "base_fire_1" {
 
 $sequence "base_fire_2" {
 	"v_sten_anims\base_fire_2.smd"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	fadein 0.02
+	fadeout 0.02
+	fps 30
+}
+
+$sequence "base_fire_iron1" {
+	"anims\sten_fire_iron1.smd"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	fadein 0.02
+	fadeout 0.02
+	fps 30
+}
+$sequence "base_fire_iron2" {
+	"anims\sten_fire_iron2.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
 	fadein 0.02
 	fadeout 0.02
