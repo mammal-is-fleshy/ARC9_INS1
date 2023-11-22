@@ -128,7 +128,7 @@ SWEP.SpreadMultHipFire = 1.25
 
 -------------------------- HANDLING
 
-SWEP.FreeAimRadius = 9
+SWEP.FreeAimRadius = 6
 SWEP.FreeAimRadiusSights = 0
 
 SWEP.Sway = 1.375
@@ -322,8 +322,9 @@ SWEP.Animations = {
         },
     },
     ["holster"] = {
-        Source = "base_holster",
-        --Time = 0
+        Source = "base_draw",
+		Reverse = true,
+        Time = 0.5
     },
     ["fire"] = {
         Source = {"base_fire_1", "base_fire_2"},

@@ -123,14 +123,15 @@ SWEP.SpreadMultHipFire = 1.3
 
 -------------------------- HANDLING
 
-SWEP.FreeAimRadius = 4 -- In degrees, how much this gun can free aim in hip fire.
-SWEP.Sway = 1.25
+SWEP.FreeAimRadius = 5 -- In degrees, how much this gun can free aim in hip fire.
+SWEP.FreeAimRadiusMultSights = 0.1
+SWEP.Sway = 1.125
 
 SWEP.SwayMultMidAir = 2
 SWEP.SwayMultMove = 1.5
 SWEP.SwayMultCrouch = 0.667
 SWEP.SwayMultShooting = 1.5
-SWEP.SwayMultSights = 0.5
+SWEP.SwayMultSights = 0.2
 
 SWEP.AimDownSightsTime = 0.2
 SWEP.SprintToFireTime = 0.17
@@ -160,7 +161,7 @@ SWEP.TracerColor = Color(255, 225, 200) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-3.2, -5, 1.45),
+    Pos = Vector(-3.16, -5.5, 1.445),
     Ang = Angle(0, 0, 0),
     Midpoint = { -- Where the gun should be at the middle of it's irons
         Pos = Vector(0, 15, -4),
@@ -211,9 +212,7 @@ SWEP.HoldTypeSights = "revolver"
 SWEP.HoldTypeCustomize = "slam"
 SWEP.HoldTypeBlindfire = "pistol"
 
-SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
-SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_MAGIC -- While in TPIK only -- Tip: if you dont want any additional anim put ACT_HL2MP_GESTURE_RELOAD_MAGIC here instead!
-SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_PISTOL -- Non TPIK
+SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.AnimDraw = false
 
 -------------------------- EFFECTS
@@ -305,14 +304,6 @@ SWEP.Animations = {
             {s =  "myt_ins1/universal/uni-draw.wav" ,   t = 0 / 30},
         },
     },
-    ["draw_empty"] = {
-        Source = "base_draw_empty", -- QC sequence source, can be {"table", "of", "strings"} or "string"
-		Time = 0.75,
-        Mult = 1, -- multiplies time
-        EventTable = {
-            {s =  "myt_ins1/universal/uni-draw.wav" ,   t = 0 / 30},
-        },
-    },
     ["ready"] = {
         Source = "base_deploy", -- QC sequence source, can be {"table", "of", "strings"} or "string"
         --Time = 0.5, -- overrides the duration of the sequence
@@ -322,12 +313,9 @@ SWEP.Animations = {
         },
     },
     ["holster"] = {
-        Source = "base_holster",
-        Time = 0.5
-    },
-    ["holster_empty"] = {
-        Source = "base_holster_empty",
-        Time = 0.5
+        Source = "base_draw",
+		Reverse = true,
+        Time = 0.75
     },
     ["fire"] = {
         Source = {"base_fire_1", "base_fire_2"},
