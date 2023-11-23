@@ -261,6 +261,11 @@ SWEP.AttachmentElements = {
     ["has_optic"] = { Bodygroups = {{1, 1},{3, 1},}, },
 }
 
+SWEP.Hook_ModifyBodygroups = function(wep, data)
+    local model = data.model  -- most insufficient method ever
+    if wep:HasElement("g_sten") then model:SetBodygroup(2,0) end 
+end
+
 SWEP.Attachments = {
     {
         PrintName = "Optic",
@@ -289,7 +294,7 @@ SWEP.Attachments = {
         DefaultName = "None",
         InstalledElements = {"rail_bot", "has_grip"},
 
-        Category = {"grip_css"},
+        Category = {"grip_css", "ins1_grip_sten"},
         Bone = "Weapon",
         Pos = Vector(-4.63, 4, 1.75),
         Ang = Angle(0, -90, 0),
@@ -365,6 +370,39 @@ SWEP.Animations = {
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
         { t = 0.15, lhik = 0, rhik = 1, },{ t = 0.7, lhik = 0, rhik = 1, },{ t = 0.85, lhik = 1, rhik = 1, },
+        },
+    },
+	
+
+    ["reload_bodge"] = {
+        Source = "base_reload",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        FireASAP = true,
+        MinProgress = 0.775,
+        Mult = 1.1,
+        EventTable = {
+            {s =  "myt_ins1/sten_mag1.wav" ,   t = 8 / 30},
+            {s =  "myt_ins1/sten_mag2.wav" ,    t = 35 / 30},
+        },
+        IKTimeLine = {
+        { t = 0, lhik = 1, rhik = 1, },
+        { t = 0.075, lhik = 0, rhik = 1, },{ t = 0.65, lhik = 0, rhik = 1, },{ t = 0.85, lhik = 1, rhik = 1, },
+        },
+    },
+    ["reload_empty_bodge"] = {
+        Source = "base_reloadempty",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Mult = 1.1,
+        FireASAP = true,
+        MinProgress = 0.85,
+        EventTable = {
+            {s =  "myt_ins1/sten_mag1.wav" ,   t = 8 / 30},
+            {s =  "myt_ins1/sten_mag2.wav" ,    t = 35 / 30},
+			{s =  "myt_ins1/sten_bolt.wav" ,    t = 55 / 30}, 	
+        },
+        IKTimeLine = {
+        { t = 0, lhik = 1, rhik = 1, },
+        { t = 0.1, lhik = 0, rhik = 1, },{ t = 0.7, lhik = 0, rhik = 1, },{ t = 0.85, lhik = 1, rhik = 1, },
         },
     },
 }

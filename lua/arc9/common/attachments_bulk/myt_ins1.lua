@@ -281,6 +281,42 @@ ARC9.LoadAttachment(ATT, "myt_ins1_db_1h")
 ------------------------------------------------------------------------------------------
 
 ATT = {}
+-- db shotty one-hand
+ATT.PrintName = [['Correct' pose]]
+ATT.CompactName = [[1H]]
+ATT.Icon = Material("entities/arc9_myt_ins1_db_1h.png", "mips smooth")
+ATT.Description = [[Hot hot hot hot hot]]
+
+ATT.SortOrder = -9000000
+ATT.Category = "ins1_grip_sten"
+ATT.ActivateElements = {"g_sten"}
+
+ATT.SwayAdd = 0.1
+ATT.AimDownSightsTimeMult = 1.05
+ATT.SprintToFireTimeMult = 1.075
+ATT.SpeedMult = 0.95
+ATT.RecoilMult = 0.85
+
+ATT.LHIK = true
+ATT.LHIK_Priority = 0
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(-19.5, -2.5, 3.5)
+ATT.ModelAngleOffset = Angle(60, -10, 100)
+ATT.Model = "models/weapons/geckololt_css/c_sten.mdl"
+ATT.ModelBodygroups = "56570000000"
+
+ATT.Hook_TranslateAnimation = function(wep, anim) -- mang fuck that shit
+    if anim == "reload" then  return "reload_bodge" end   
+	if anim == "reload_empty" then  return "reload_empty_bodge" end
+end
+
+ARC9.LoadAttachment(ATT, "myt_ins1_sten_correct")
+
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+
+ATT = {}
 
 ATT.PrintName = [[Alternative Bolt]]
 ATT.CompactName = [[Range]]
