@@ -386,7 +386,7 @@ SWEP.Animations = {
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
-        { t = 0.075, lhik = 0, rhik = 1, },{ t = 0.65, lhik = 0, rhik = 1, },{ t = 0.85, lhik = 1, rhik = 1, },
+        { t = 0.075, lhik = 0, rhik = 1, },{ t = 0.625, lhik = 0, rhik = 1, },{ t = 0.825, lhik = 1, rhik = 1, },
         },
     },
     ["reload_empty_bodge"] = {
