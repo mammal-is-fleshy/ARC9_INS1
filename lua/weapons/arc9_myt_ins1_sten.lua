@@ -203,7 +203,7 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.CrouchPos = Vector(-0.5, 1, -1)
 SWEP.CrouchAng = Angle(0, 0, -10)
 
-SWEP.CustomizeAng = Angle(90, 5, 0)
+SWEP.CustomizeAng = Angle(90, 35, 0)
 SWEP.CustomizePos = Vector(18, 30, 5)
 
 SWEP.CustomizeSnapshotFOV = 110
@@ -284,7 +284,7 @@ SWEP.Attachments = {
         InstalledElements = {"has_muzzle"},
 		
         ExcludeElements = {"pre_muzzed"},
-        Category = {"muzzle_css"},
+        Category = {"muzzle_css", "ins1_sten_sd"},
         Bone = "Weapon",
         Pos = Vector(-4.63, 16, 3),
         Ang = Angle(0, -90, 0),
@@ -328,7 +328,7 @@ SWEP.Animations = {
     },
     ["holster"] = {
         Source = "base_draw",
-		Reverse = true,
+		Reverse = true, -- do not do this for any future guns, it forces you to wait for the anim to finish before swapping to new gun
         Time = 0.5
     },
     ["fire"] = {
@@ -372,9 +372,7 @@ SWEP.Animations = {
         { t = 0.15, lhik = 0, rhik = 1, },{ t = 0.7, lhik = 0, rhik = 1, },{ t = 0.85, lhik = 1, rhik = 1, },
         },
     },
-	
-
-    ["reload_bodge"] = {
+	["reload_bodge"] = {
         Source = "base_reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FireASAP = true,

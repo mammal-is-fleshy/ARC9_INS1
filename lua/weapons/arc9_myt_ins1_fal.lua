@@ -361,7 +361,7 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.62,
         EventTable = {
-            {s =  "myt_ins1/fal_clip_out.wav" ,   t = 6 / 30},
+            {s =  "myt_ins1/fal_clip_out.wav" ,   t = 8 / 30},
             {s =  "myt_ins1/fal_clip_in.wav" ,    t = 22 / 30},
         },
         IKTimeLine = {
@@ -375,7 +375,7 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.74,
         EventTable = {
-            {s =  "myt_ins1/fal_clip_out.wav" ,   t = 6 / 30},
+            {s =  "myt_ins1/fal_clip_out.wav" ,   t = 8 / 30},
             {s =  "myt_ins1/fal_clip_in.wav" ,    t = 22 / 30},
             {s =  "myt_ins1/fal_chamber.wav" ,    t = 55 / 30}, 
             },
@@ -419,7 +419,7 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.62,
         EventTable = {
-            {s =  "myt_ins1/fal_clip_out_ext.wav" ,   t = 8 / 30},
+            {s =  "myt_ins1/fal_clip_out.wav" ,   t = 8 / 30},
             {s =  "myt_ins1/fal_clip_in.wav" ,    t = 32 / 30},
         },
         IKTimeLine = {
@@ -433,7 +433,7 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.74,
         EventTable = {
-            {s =  "myt_ins1/fal_clip_out_ext.wav" ,   t = 8 / 30},
+            {s =  "myt_ins1/fal_clip_out.wav" ,   t = 8 / 30},
             {s =  "myt_ins1/fal_clip_in.wav" ,    t = 32 / 30},
             {s =  "myt_ins1/fal_chamber_small.wav" ,    t = 72 / 30}, 
             },

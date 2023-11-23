@@ -18,8 +18,8 @@ SWEP.Description = [[Why can't they just use a normal mag? Are they stupid?]]
 SWEP.ViewModel = "models/weapons/myt_ins1/c_rif_garand.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_rif_garand.mdl"
 
-SWEP.Weight = 25
-SWEP.Slot = 2
+SWEP.Weight = 20
+SWEP.Slot = 3
 SWEP.SlotPos = 4
 
 SWEP.MirrorVMWM = true
@@ -305,17 +305,15 @@ SWEP.Animations = {
         },
     },
     ["ready"] = {
-        Source = "base_deploy", -- QC sequence source, can be {"table", "of", "strings"} or "string"
-        --Time = 0.5, -- overrides the duration of the sequence
-        Mult = 1, -- multiplies time
+        Source = "base_deploy",
         EventTable = {
 			{s =  "myt_ins1/garand_boltforward.wav" ,    t = 10 / 30},
         },
     },
     ["holster"] = {
         Source = "base_draw",
-		Reverse = true,
-        Time = 0.75
+		Reverse = true, -- do not do this for any future guns, it forces you to wait for the anim to finish before swapping to new gun
+		Time = 0.5,
     },
     ["fire"] = {
         Source = {"base_fire_1", "base_fire_2"},

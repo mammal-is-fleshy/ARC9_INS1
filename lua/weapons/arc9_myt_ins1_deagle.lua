@@ -194,9 +194,9 @@ SWEP.CrouchPos = Vector(-0.5, -0.5, -1)
 SWEP.CrouchAng = Angle(0, 0, -10)
 
 SWEP.CustomizeAng = Angle(90, -5, 0)
-SWEP.CustomizePos = Vector(13, 32, 2)
+SWEP.CustomizePos = Vector(15, 25, 4)
 
-SWEP.CustomizeSnapshotFOV = 110
+SWEP.CustomizeSnapshotFOV = 90
 SWEP.CustomizeNoRotate = false
 
 SWEP.CustomizeRotateAnchor = Vector(12, -3.25, -5.23)
@@ -303,30 +303,24 @@ SWEP.Animations = {
         },
     },
     ["draw_empty"] = {
-        Source = "makarov_draw_empty", -- QC sequence source, can be {"table", "of", "strings"} or "string"
-        --Time = 0.5, -- overrides the duration of the sequence
-        Mult = 1, -- multiplies time
+        Source = "makarov_draw_empty",
         EventTable = {
             {s =  "myt_ins1/universal/uni-draw.wav" ,   t = 0 / 30},
             {s =  "myt_ins1/makarov-safety.wav" ,   t = 13 / 30},
         },
     },
     ["ready"] = {
-        Source = "makarov_deploy2", -- QC sequence source, can be {"table", "of", "strings"} or "string"
-        --Time = 0.5, -- overrides the duration of the sequence
-        Mult = 1, -- multiplies time
+        Source = "makarov_deploy2",
         EventTable = {
-            {s =  "myt_ins1/makarov-slideback.wav" ,    t = 18 / 40},
-            {s =  "myt_ins1/makarov-slideforward.wav" ,    t = 31 / 40},
+            {s =  "myt_ins1/de_slideback.wav" ,    t = 18 / 40},
+            {s =  "myt_ins1/de_slideforward.wav" ,    t = 31 / 40},
         },
     },
     ["holster"] = {
         Source = "makarov_down",
-        --Time = 0
     },
     ["holster_empty"] = {
         Source = "makarov_down_empty",
-        --Time = 0
     },
     ["fire"] = {
         Source = {"makarov_shoot1", "makarov_shoot2", "makarov_shoot3"},
@@ -334,7 +328,6 @@ SWEP.Animations = {
     ["fire_empty"] = {
         Source = "makarov_shoot_last",
     },
-
     ["reload"] = {
         Source = "makarov_reload2",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,

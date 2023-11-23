@@ -14,7 +14,7 @@ SWEP.Credits = {
 ---["Assets"] = [[ https://gamebanana.com/mods/208522 ]],
 	["Sounds"] = [[ https://gamebanana.com/sounds/60460 ]],
 }
-SWEP.Description = [[I don't hear the sound of the bees.. or the police, for that matter.]]
+SWEP.Description = [[yeah i got nothing, its just a regular ol pump action shotgun]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_shot_r870.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_shot_r870.mdl"

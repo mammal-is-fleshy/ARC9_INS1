@@ -281,13 +281,15 @@ ARC9.LoadAttachment(ATT, "myt_ins1_db_1h")
 ------------------------------------------------------------------------------------------
 
 ATT = {}
--- db shotty one-hand
+
+-- sten one-hand
+
 ATT.PrintName = [['Correct' pose]]
 ATT.CompactName = [[1H]]
 ATT.Icon = Material("entities/arc9_myt_ins1_db_1h.png", "mips smooth")
 ATT.Description = [[Hot hot hot hot hot]]
 
-ATT.SortOrder = -9000000
+ATT.SortOrder = 99
 ATT.Category = "ins1_grip_sten"
 ATT.ActivateElements = {"g_sten"}
 
@@ -311,15 +313,17 @@ ATT.Hook_TranslateAnimation = function(wep, anim) -- mang fuck that shit
 	if anim == "reload_empty" then  return "reload_empty_bodge" end
 end
 
-ARC9.LoadAttachment(ATT, "myt_ins1_sten_correct")
+ARC9.LoadAttachment(ATT, "myt_ins1_sten_1h")
 
 ------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------
+
+-- mosin alternate bolt
 
 ATT = {}
 
 ATT.PrintName = [[Alternative Bolt]]
-ATT.CompactName = [[Range]]
+ATT.CompactName = [[Alt]]
 ATT.Icon = Material("entities/arc9_myt_ins1_mosin_abolt.png", "mips smooth")
 ATT.Description = [[Scoping bolt without the scope]]
 
@@ -442,6 +446,8 @@ ARC9.LoadAttachment(ATT, "myt_ins1_nostock")
 ------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------
 
+-- fal small mag
+
 ATT = {}
 
 ATT.PrintName = [[10-Rounder]]
@@ -467,6 +473,8 @@ ARC9.LoadAttachment(ATT, "myt_ins1_fal_smallmag")
 ------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------
 
+-- fal ext mag
+
 ATT = {}
 
 ATT.PrintName = [[30-Rounder]]
@@ -485,6 +493,8 @@ ARC9.LoadAttachment(ATT, "myt_ins1_fal_extmag")
 
 ------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------
+
+-- fal wtf mag
 
 ATT = {}
 
@@ -511,6 +521,8 @@ ARC9.LoadAttachment(ATT, "myt_ins1_fal_wtfmag")
 ------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------
 
+-- fal wtf
+
 ATT = {}
 
 ATT.PrintName = [[WHY]]
@@ -536,3 +548,92 @@ ATT.Hook_TranslateAnimation = function(wep, anim)
 end
 
 ARC9.LoadAttachment(ATT, "myt_ins1_fal_wtf")
+
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+
+-- generic pistol ext mag
+
+ATT = {}
+
+ATT.PrintName = [[20-Rounder]]
+ATT.CompactName = [[20-RND]]
+ATT.Icon = Material("entities/arc9_myt_ins1_pistol.png", "mips smooth")
+ATT.Description = [[A small but nice upgrade.]]
+
+ATT.SortOrder = 1
+ATT.Category = "ins1_mag_pistol"
+ATT.ActivateElements = {"20rnd"}
+
+ATT.ClipSizeOverride = 20
+
+ARC9.LoadAttachment(ATT, "myt_ins1_pistol_20rnd")
+
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+
+-- mosin obrez
+
+ATT = {}
+
+ATT.PrintName = [[Obrez]]
+ATT.CompactName = [[OBREZ]]
+ATT.Icon = Material("entities/arc9_myt_ins1_obrez.png", "mips smooth")
+ATT.Description = [[heres the shorter]]
+
+ATT.SortOrder = 2
+ATT.Category = "ins1_mosin_frame"
+ATT.ActivateElements = {"obrez"}
+
+ATT.RecoilMult = 3.0
+ATT.SpreadMult = 1.5
+
+ATT.SpeedMult = 1
+ATT.SpeedMultSights = 0.6
+
+ATT.AimDownSightsTime = 0.2
+ATT.SprintToFireTime = 0.3
+
+ATT.Sway = 1.35
+ATT.SwayMultSights = 0.175
+
+ATT.ShootSound = {"myt_ins1/MosinObrez-1.wav","myt_ins1/MosinObrez-2.wav"}
+
+ARC9.LoadAttachment(ATT, "myt_ins1_mosin_obrez")
+
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+
+-- jank sten integeral suppressor
+
+ATT = {}
+
+ATT.PrintName = [[SD Kit]]
+ATT.Icon = Material("entities/arc9_myt_ins1_mp5sd.png", "mips smooth")
+ATT.Description = [[Integrally suppressed barrel.]]
+ATT.SortOrder = 2
+
+ATT.Model = "models/weapons/myt_ins1/atts/sd_glock.mdl"
+ATT.Category = "ins1_sten_sd"
+ATT.ActivateElements = {"stensd"}
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(-3.8, 0, 0)
+
+ATT.PhysBulletMuzzleVelocityMult = 1.5
+ATT.RangeMaxMult = 1.5
+ATT.RangeMinMult = 0.9
+
+ATT.AimDownSightsTimeMult = 1.05
+ATT.SprintToFireTimeMult = 1.06
+
+ATT.Silencer = true
+ATT.ShootVolumeMult = 0.8
+ATT.MuzzleParticleOverride = "muzzleflash_suppressed"
+ATT.MuzzleParticleOverride_Priority = 10
+ATT.MuzzleDevice = true
+
+ATT.RecoilUpMult = 1.15
+ATT.RecoilRandomMult = 0.85
+
+ARC9.LoadAttachment(ATT, "myt_ins1_sten_sd")

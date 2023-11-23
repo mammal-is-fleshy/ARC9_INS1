@@ -195,7 +195,7 @@ SWEP.CrouchPos = Vector(-1, 1, -1)
 SWEP.CrouchAng = Angle(0, 0, -5)
 
 SWEP.CustomizeAng = Angle(90, 5, 0)
-SWEP.CustomizePos = Vector(16.25, 40, 4)
+SWEP.CustomizePos = Vector(22.5, 45, 5)
 
 SWEP.CustomizeSnapshotFOV = 90
 SWEP.CustomizeNoRotate = false
@@ -251,6 +251,7 @@ SWEP.DefaultBodygroups = "0000000000"
 SWEP.AttachmentElements = {
     ["rail_top"] = {Bodygroups = {{1, 2}, {3, 1}},},
 	["rail_bot"] = {Bodygroups = {{2, 1}},},
+	["obrez"] = {Bodygroups = {{0, 1}}, AttPosMods = { [2] = { Pos = Vector(0, 20, 0.9), } }},
 }
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local model = data.model  -- most insufficient method ever
@@ -289,6 +290,15 @@ SWEP.Attachments = {
         Category = {"grip_css"},
         Bone = "Weapon",
         Pos = Vector(0, -0.5, -2.15),
+        Ang = Angle(0, -90, 0),
+    },
+	{
+        PrintName = "Frame",
+        DefaultName = "Default",
+
+        Category = {"ins1_mosin_frame"},
+        Bone = "Weapon",
+        Pos = Vector(0, -12, -0.5),
         Ang = Angle(0, -90, 0),
     },
 }
