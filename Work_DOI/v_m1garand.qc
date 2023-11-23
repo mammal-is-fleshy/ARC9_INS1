@@ -264,6 +264,13 @@ $sequence "base_deploy" {
 	fps 32
 }
 
+$sequence "base_holster" {
+	"anims\garand_holster.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 32
+}
+
 $sequence "base_fire_1" {
 	"v_m1garand_anims\base_fire_1.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1

@@ -311,9 +311,7 @@ SWEP.Animations = {
         },
     },
     ["holster"] = {
-        Source = "base_draw",
-		Reverse = true, -- do not do this for any future guns, it forces you to wait for the anim to finish before swapping to new gun
-		Time = 0.5,
+        Source = "base_holster",
     },
     ["fire"] = {
         Source = {"base_fire_1", "base_fire_2"},
