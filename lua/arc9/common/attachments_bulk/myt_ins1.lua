@@ -402,3 +402,101 @@ ATT.Category = "ins1_stock"
 ATT.ActivateElements = {"no_stock"}
 
 ARC9.LoadAttachment(ATT, "myt_ins1_nostock")
+
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+
+ATT = {}
+
+ATT.PrintName = [[10-Rounder]]
+ATT.CompactName = [[10-RND]]
+ATT.Icon = Material("entities/arc9_myt_ins1_fal_10rnd.png", "mips smooth")
+ATT.Description = [[Ammo conservation?]]
+
+ATT.SortOrder = 1
+ATT.Category = "ins1_mag_fal"
+ATT.ActivateElements = {"10rnd"}
+
+ATT.ClipSizeOverride = 10
+ATT.ReloadTimeMult = 0.8
+
+ATT.Hook_TranslateAnimation = function(wep, anim)
+
+    return anim .. "_small"
+
+end
+
+ARC9.LoadAttachment(ATT, "myt_ins1_fal_smallmag")
+
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+
+ATT = {}
+
+ATT.PrintName = [[30-Rounder]]
+ATT.CompactName = [[30-RND]]
+ATT.Icon = Material("entities/arc9_myt_ins1_fal_30rnd.png", "mips smooth")
+ATT.Description = [[Reasonable enough.]]
+
+ATT.SortOrder = 1
+ATT.Category = "ins1_mag_fal"
+ATT.ActivateElements = {"30rnd"}
+
+ATT.ClipSizeOverride = 30
+ATT.ReloadTimeMult = 1.05
+
+ARC9.LoadAttachment(ATT, "myt_ins1_fal_extmag")
+
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+
+ATT = {}
+
+ATT.PrintName = [[50-Rounder]]
+ATT.CompactName = [[50-RND]]
+ATT.Icon = Material("entities/arc9_myt_ins1_fal_50rnd.png", "mips smooth")
+ATT.Description = [[Why?]]
+
+ATT.SortOrder = 1
+ATT.Category = "ins1_mag_fal"
+ATT.ActivateElements = {"50rnd"}
+
+ATT.ClipSizeOverride = 50
+ATT.ReloadTimeMult = 1.05
+
+ATT.Hook_TranslateAnimation = function(wep, anim)
+
+    return anim .. "_ext"
+
+end
+
+ARC9.LoadAttachment(ATT, "myt_ins1_fal_wtfmag")
+
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+
+ATT = {}
+
+ATT.PrintName = [[WHY]]
+ATT.CompactName = [[WTF]]
+ATT.Icon = Material("entities/arc9_myt_ins1_unknown.png", "mips smooth")
+ATT.Description = [[do not equip this]]
+
+ATT.SortOrder = 99
+ATT.Category = "ins1_fal_wtf"
+ATT.ActivateElements = {"WTF"}
+
+ATT.ClipSizeOverride = 10
+ATT.ReloadTimeMult = 0.95
+ATT.RecoilMult = 2.0
+ATT.SpreadMult = 1.1
+
+ATT.ShootSound = {"myt_ins1/fal-01_wtf.wav","myt_ins1/fal-02_wtf.wav"}
+
+ATT.Hook_TranslateAnimation = function(wep, anim)
+
+    return anim .. "_small"
+
+end
+
+ARC9.LoadAttachment(ATT, "myt_ins1_fal_wtf")

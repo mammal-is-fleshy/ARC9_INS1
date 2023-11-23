@@ -346,7 +346,7 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.85,
         EventTable = {
-            {s =  "myt_ins1/tkr_mag2.wav" ,   t = 6 / 30},,
+            {s =  "myt_ins1/tkr_mag2.wav" ,   t = 6 / 30},
             {s =  "myt_ins1/tkr_mag1.wav" ,    t = 42 / 30},
             {s =  "myt_ins1/tkr_bolt2.wav" ,    t = 80 / 40},
 		},

@@ -242,8 +242,8 @@ SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 
 -------------------------- SOUNDS
 
-SWEP.ShootSound = "myt_ins1/fal-01.wav"
-SWEP.DistantShootSound = "myt_ins1/fal-01_echo.wav"
+SWEP.ShootSound = {"myt_ins1/fal-01.wav","myt_ins1/fal-02.wav"}
+SWEP.DistantShootSound = {"myt_ins1/fal-01_echo.wav","myt_ins1/fal-02_echo.wav"}
 SWEP.ShootSoundSilenced = "myt_ins1_sd/rifle.wav"
 SWEP.DryFireSound = "myt_ins1/makarov-empty.wav"
 
@@ -257,6 +257,10 @@ SWEP.AttachmentElements = {
     ["rail_bot"] = { Bodygroups = {{4, 1}}, }, 
 	["has_muzzle"] = { Bodygroups = {{5, 0}}, },
     ["has_optic"] = { Bodygroups = {{2, 1}, {3, 1}}, },
+	["10rnd"] = { Bodygroups = {{0, 3}}, },
+	["30rnd"] = { Bodygroups = {{0, 1}}, }, 
+	["50rnd"] = { Bodygroups = {{0, 2}}, }, 
+	["WTF"] = { Bodygroups = {{0, 4}, {5, 0}}, AttPosMods = { [2] = { Pos = Vector(17.5, -0.7, 0), } } }, 
 }
 
 SWEP.Attachments = {
@@ -279,10 +283,19 @@ SWEP.Attachments = {
         ExcludeElements = {"pre_muzzed"},
         Category = {"muzzle_css"},
         Bone = "Weapon_Controller",
-        Pos = Vector(25, -0.75, 0),
+        Pos = Vector(25, -0.7, 0),
         Ang = Angle(0, 0, -90),
     },
-    {
+	{
+        PrintName = "Magazine",
+        DefaultName = "20-RND",
+
+        Category = {"ins1_mag_fal", "ins1_fal_wtf"},
+        Bone = "mag",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, -90),
+    },
+	{
         PrintName = "Foregrip",
         DefaultName = "None",
         InstalledElements = {"rail_bot"},
@@ -291,16 +304,15 @@ SWEP.Attachments = {
         Bone = "Weapon_Controller",
         Pos = Vector(8, 0.7, 0),
         Ang = Angle(0, 0, -90),
-        MergeSlots = {4},
+        MergeSlots = {5},
     },
-
     {   --4 permanent ubgl, affected separately from the changes of the above attachment
         PrintName = "",
         DefaultName = "",
         Hidden = true,
         Category = {"css_ubgl"},
         Bone = "Weapon_Controller",
-        Pos = Vector(4, 0 , 0),
+        Pos = Vector(4, 0.1, 0),
         Ang = Angle(0, 0, -90),
     },
 }
@@ -347,7 +359,7 @@ SWEP.Animations = {
         Source = "fal_reload2",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FireASAP = true,
-        MinProgress = 0.775,
+        MinProgress = 0.62,
         EventTable = {
             {s =  "myt_ins1/fal_clip_out.wav" ,   t = 6 / 30},
             {s =  "myt_ins1/fal_clip_in.wav" ,    t = 22 / 30},
@@ -361,11 +373,69 @@ SWEP.Animations = {
         Source = "fal_reload_empty2",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FireASAP = true,
-        MinProgress = 0.85,
+        MinProgress = 0.74,
         EventTable = {
             {s =  "myt_ins1/fal_clip_out.wav" ,   t = 6 / 30},
             {s =  "myt_ins1/fal_clip_in.wav" ,    t = 22 / 30},
             {s =  "myt_ins1/fal_chamber.wav" ,    t = 55 / 30}, 
+            },
+        IKTimeLine = {
+        { t = 0, lhik = 1, rhik = 1, },
+        { t = 0.15, lhik = 0, rhik = 1, },{ t = 0.7, lhik = 0, rhik = 1, },{ t = 0.85, lhik = 1, rhik = 1, },
+        },
+    },
+	["reload_ext"] = {
+        Source = "fal_reload",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        FireASAP = true,
+        MinProgress = 0.62,
+        EventTable = {
+            {s =  "myt_ins1/fal_clip_out_ext.wav" ,   t = 12 / 30},
+            {s =  "myt_ins1/fal_clip_in_ext.wav" ,    t = 32 / 30},
+        },
+        IKTimeLine = {
+        { t = 0, lhik = 1, rhik = 1, },
+        { t = 0.2, lhik = 0, rhik = 1, },{ t = 0.65, lhik = 0, rhik = 1, },{ t = 0.85, lhik = 1, rhik = 1, },
+        },
+    },
+    ["reload_empty_ext"] = {
+        Source = "fal_reload_empty",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        FireASAP = true,
+        MinProgress = 0.74,
+        EventTable = {
+            {s =  "myt_ins1/fal_clip_out_ext.wav" ,   t = 12 / 30},
+            {s =  "myt_ins1/fal_clip_in_ext.wav" ,    t = 32 / 30},
+            {s =  "myt_ins1/fal_chamber.wav" ,    t = 72 / 30}, 
+            },
+        IKTimeLine = {
+        { t = 0, lhik = 1, rhik = 1, },
+        { t = 0.15, lhik = 0, rhik = 1, },{ t = 0.7, lhik = 0, rhik = 1, },{ t = 0.85, lhik = 1, rhik = 1, },
+        },
+    },
+	["reload_small"] = {
+        Source = "fal_reload",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        FireASAP = true,
+        MinProgress = 0.62,
+        EventTable = {
+            {s =  "myt_ins1/fal_clip_out_ext.wav" ,   t = 8 / 30},
+            {s =  "myt_ins1/fal_clip_in.wav" ,    t = 32 / 30},
+        },
+        IKTimeLine = {
+        { t = 0, lhik = 1, rhik = 1, },
+        { t = 0.2, lhik = 0, rhik = 1, },{ t = 0.65, lhik = 0, rhik = 1, },{ t = 0.85, lhik = 1, rhik = 1, },
+        },
+    },
+	["reload_empty_small"] = {
+        Source = "fal_reload_empty",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        FireASAP = true,
+        MinProgress = 0.74,
+        EventTable = {
+            {s =  "myt_ins1/fal_clip_out_ext.wav" ,   t = 8 / 30},
+            {s =  "myt_ins1/fal_clip_in.wav" ,    t = 32 / 30},
+            {s =  "myt_ins1/fal_chamber_small.wav" ,    t = 72 / 30}, 
             },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
