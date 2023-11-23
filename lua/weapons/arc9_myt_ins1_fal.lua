@@ -290,7 +290,7 @@ SWEP.Attachments = {
         PrintName = "Magazine",
         DefaultName = "20-RND",
 
-        Category = {"ins1_mag_fal", "ins1_fal_wtf"},
+        Category = {"ins1_mag_fal", --[["ins1_fal_wtf"]]},
         Bone = "mag",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, -90),
