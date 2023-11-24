@@ -28,7 +28,7 @@ SWEP.WorldModelMirror = "models/weapons/myt_ins1/c_baseballbat.mdl"
 SWEP.WorldModelOffset = {
     Pos = Vector(-9, 5, -5),
     Ang = Angle(-5, 0, 180),
-    TPIKPos = Vector(-16, 3, -5),
+    TPIKPos = Vector(-15, 10, -15),
     TPIKAng = Angle(-5, 0, 180),
     Scale = 1
 }
@@ -131,7 +131,7 @@ SWEP.HoldTypeCustomize = "slam"
 
 SWEP.AnimShoot = ACT_IDLE_MELEE --ACT_HL2MP_GESTURE_RANGE_ATTACK_MELEE
 -- SWEP.AnimMelee = ACT_IDLE_MELEE --ACT_HL2MP_GESTURE_RANGE_ATTACK_MELEE
-SWEP.NonTPIKAnimMelee = ACT_HL2MP_GESTURE_RANGE_ATTACK_FIST
+SWEP.NonTPIKAnimMelee = ACT_HL2MP_GESTURE_RANGE_ATTACK_MELEE
 SWEP.AnimReload = ACT_IDLE_MELEE
 SWEP.AnimDraw = false
 SWEP.ShellSmoke = false
