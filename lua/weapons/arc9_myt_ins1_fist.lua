@@ -19,8 +19,8 @@ SWEP.ViewModel = "models/weapons/myt_ins1/c_fist.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_fist.mdl"
 
 SWEP.Weight = 1
-SWEP.Slot = 1
-SWEP.SlotPos = 1
+SWEP.Slot = 0
+SWEP.SlotPos = 4
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelMirror = "models/weapons/myt_ins1/c_fist.mdl"
