@@ -13,8 +13,7 @@ SWEP.Class = "Pistol"
 SWEP.Credits = {
     ["Assets"] = [[Insurgency: Modern Infantry Combat]],
 }
-SWEP.Description = [[Point Man loved the AT-14. 
-Maybe you'll like the source material.]]
+SWEP.Description = [[Crew Expendable.]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_pist_usp.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_pist_usp.mdl"
