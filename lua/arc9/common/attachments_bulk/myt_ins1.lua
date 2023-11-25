@@ -5,6 +5,8 @@ local ATT = {}
 
 ATT = {}
 
+-- l42 scope
+
 ATT.PrintName = [[Scope]]
 ATT.CompactName = [[Scope]]
 ATT.Icon = Material("entities/arc9_myt_ins1_generic_scope.png", "mips smooth")
@@ -57,6 +59,8 @@ ARC9.LoadAttachment(ATT, "myt_ins1_scope_42")
 ------------------------------------------------------------------------------------------
 
 ATT = {}
+
+-- svd scope
 
 ATT.PrintName = [[Scope]]
 ATT.CompactName = [[Scope]]
@@ -201,7 +205,7 @@ ATT = {}
 ATT.PrintName = "MARS Sight"
 ATT.CompactName = "MARS"
 ATT.Icon = Material("entities/arc9_myt_ins1_holo_mars.png", "mips smooth")
-ATT.Description = [[Tavor's unique sighting system]]
+ATT.Description = [[The Tavor's unique holographic sight system]]
 ATT.SortOrder = 2.0
 
 ATT.Model = "models/weapons/myt_ins1/atts/holo_tavor.mdl"
@@ -237,7 +241,9 @@ ARC9.LoadAttachment(ATT, "myt_ins1_optic_mars")
 ------------------------------------------------------------------------------------------
 
 ATT = {}
+
 -- db shotty one-hand
+
 ATT.PrintName = [[One-Handed]]
 ATT.CompactName = [[1H]]
 ATT.Icon = Material("entities/arc9_myt_ins1_db_1h.png", "mips smooth")
@@ -318,9 +324,9 @@ ARC9.LoadAttachment(ATT, "myt_ins1_sten_1h")
 ------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------
 
--- mosin alternate bolt
-
 ATT = {}
+
+-- mosin alternate bolt
 
 ATT.PrintName = [[Alternative Bolt]]
 ATT.CompactName = [[Alt]]
@@ -337,6 +343,8 @@ ARC9.LoadAttachment(ATT, "myt_ins1_mosin_abolt")
 ------------------------------------------------------------------------------------------
 
 ATT = {}
+
+-- thompson drum mag
 
 ATT.PrintName = [[50-Rounder]]
 ATT.CompactName = [[50-RND]]
@@ -361,6 +369,8 @@ ARC9.LoadAttachment(ATT, "myt_ins1_thomp_drum")
 ------------------------------------------------------------------------------------------
 
 ATT = {}
+
+-- thompson foregrip
 
 ATT.PrintName = [[Wooden Grip]]
 ATT.CompactName = "Wooden"
@@ -392,8 +402,9 @@ ARC9.LoadAttachment(ATT, "myt_ins1_thomp_grip")
 ------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------
 
--- thomp one-hand
 ATT = {}
+
+-- thompson one-hand
 
 ATT.PrintName = [[No Grip]]
 ATT.CompactName = "1H"
@@ -431,6 +442,8 @@ ARC9.LoadAttachment(ATT, "myt_ins1_thomp_grip2")
 
 ATT = {}
 
+-- thompson no stock
+
 ATT.PrintName = [[No Stock]]
 ATT.CompactName = "No Stock"
 ATT.Description = [[What.]]
@@ -446,9 +459,9 @@ ARC9.LoadAttachment(ATT, "myt_ins1_nostock")
 ------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------
 
--- fal small mag
-
 ATT = {}
+
+-- fal small mag
 
 ATT.PrintName = [[10-Rounder]]
 ATT.CompactName = [[10-RND]]
@@ -473,9 +486,9 @@ ARC9.LoadAttachment(ATT, "myt_ins1_fal_smallmag")
 ------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------
 
--- fal ext mag
-
 ATT = {}
+
+-- fal ext mag
 
 ATT.PrintName = [[30-Rounder]]
 ATT.CompactName = [[30-RND]]
@@ -494,9 +507,9 @@ ARC9.LoadAttachment(ATT, "myt_ins1_fal_extmag")
 ------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------
 
--- fal wtf mag
-
 ATT = {}
+
+-- fal wtf mag
 
 ATT.PrintName = [[50-Rounder]]
 ATT.CompactName = [[50-RND]]
@@ -521,9 +534,9 @@ ARC9.LoadAttachment(ATT, "myt_ins1_fal_wtfmag")
 ------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------
 
--- fal wtf
-
 ATT = {}
+
+-- fal wtf
 
 ATT.PrintName = [[WHY]]
 ATT.CompactName = [[WTF]]
@@ -552,9 +565,9 @@ ARC9.LoadAttachment(ATT, "myt_ins1_fal_wtf")
 ------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------
 
--- generic pistol ext mag
-
 ATT = {}
+
+-- generic pistol ext mag
 
 ATT.PrintName = [[20-Rounder]]
 ATT.CompactName = [[20-RND]]
@@ -572,9 +585,9 @@ ARC9.LoadAttachment(ATT, "myt_ins1_pistol_20rnd")
 ------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------
 
--- mosin obrez
-
 ATT = {}
+
+-- mosin obrez
 
 ATT.PrintName = [[Obrez]]
 ATT.CompactName = [[OBREZ]]
@@ -604,9 +617,9 @@ ARC9.LoadAttachment(ATT, "myt_ins1_mosin_obrez")
 ------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------
 
--- jank sten integeral suppressor
-
 ATT = {}
+
+-- jank sten integeral suppressor
 
 ATT.PrintName = [[SD Kit]]
 ATT.Icon = Material("entities/arc9_myt_ins1_mp5sd.png", "mips smooth")
@@ -618,7 +631,7 @@ ATT.Category = "ins1_sten_sd"
 ATT.ActivateElements = {"stensd"}
 
 ATT.Scale = 1
-ATT.ModelOffset = Vector(-3.8, 0, 0)
+ATT.ModelOffset = Vector(-3.8, 0, 0) -- this is why its not just the mp5sd suppressor
 
 ATT.PhysBulletMuzzleVelocityMult = 1.5
 ATT.RangeMaxMult = 1.5
@@ -637,3 +650,60 @@ ATT.RecoilUpMult = 1.15
 ATT.RecoilRandomMult = 0.85
 
 ARC9.LoadAttachment(ATT, "myt_ins1_sten_sd")
+
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+
+ATT = {}
+
+-- garand scope
+
+ATT.PrintName = [[Scope]]
+ATT.CompactName = [[Scope]]
+ATT.Icon = Material("entities/arc9_myt_ins1_generic_scope.png", "mips smooth")
+ATT.Description = [[I... is this even the right scope?]]
+
+ATT.SortOrder = -1000
+
+ATT.Model = "models/weapons/myt_ins1/atts/lens.mdl"
+
+ATT.Category = {"ins1_optic_garand"}
+ATT.ActivateElements = {"zf41"}
+
+-- Allows a custom sight position to be defined
+ATT.Sights = {
+    {
+        Pos = Vector(-0.00325, 10, -2.64),
+        Ang = Angle(0, 0, 0),
+        Magnification = 1.5,
+        ViewModelFOV = 60
+    },
+}
+
+ATT.RTScopeFOVMax = 5
+ATT.RTScopeFOVMin = 12
+ATT.RTScopeAdjustable = true
+ATT.RTScopeAdjustmentLevels = 2
+
+ATT.RTScope = true
+ATT.RTScopeSubmatIndex = 1
+ATT.RTScopeFOV = 10
+ATT.RTScopeReticle = Material("arc9_myt_ins1/optic.png", "mips smooth")
+ATT.RTScopeReticleScale = 0.95
+ATT.RTScopeColorable = true
+ATT.RTScopeShadowIntensity = 10
+
+ATT.ScopeScreenRatio = 0.7
+
+ATT.Scale = 1.75
+ATT.ModelOffset = Vector(0, 0, -0.175)
+
+ATT.RecoilMult = 0
+ATT.SpreadMult = 0
+
+ATT.SwayAdd = 0.075
+ATT.FreeAimRadiusMultSights = 0.1
+ATT.AimDownSightsTimeAdd = 0.14
+ATT.SprintToFireTimeAdd = 0.08
+
+ARC9.LoadAttachment(ATT, "myt_ins1_scope_garandzf41")

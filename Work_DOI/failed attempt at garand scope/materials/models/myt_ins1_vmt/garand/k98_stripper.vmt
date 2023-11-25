@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/view_models/k98/k98_stripper"
+	"$phong" "1"
+
+	"$phongexponent" "8"
+	"$phongboost"	"0.5"
+	"$phongfresnelranges"	"[0.5 0.2 0.5]"
+}
+

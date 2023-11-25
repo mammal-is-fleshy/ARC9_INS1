@@ -242,6 +242,7 @@ SWEP.DefaultBodygroups = "00000000"
 SWEP.AttachmentElements = {
     ["has_optic"] = { Bodygroups = {{2, 1}}, },
     ["has_grip"] = { Bodygroups = {{3, 1}}, },
+	["zf41"] = { Bodygroups = {{4, 1}}, },
 }
 
 SWEP.Attachments = {
@@ -251,7 +252,7 @@ SWEP.Attachments = {
         InstalledElements = {"has_optic"},
 
         ExcludeElements = {"pre_optic"},
-        Category = {"optic_css"},
+        Category = {"optic_css", --[["ins1_optic_garand"]]},
         Bone = "Weapon",
         Pos = Vector(0, 0.5, 3.9),
         Ang = Angle(0, -90, 0),

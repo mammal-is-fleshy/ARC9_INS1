@@ -1,0 +1,11 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/view_models/k98/zf41"
+ 	"$bumpmap" "models/weapons/view_models/k98/zf41_normal"
+	"$phong" "1"
+	"$phongexponent" "22"
+	"$phongboost" "0.2"	
+	"$phongfresnelranges"	"[1 3 5]"
+//	"$halflambert" "1"
+	"$phongalbedotint" "1"
+}
