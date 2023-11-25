@@ -139,10 +139,13 @@ ATT = {}
 
 ATT.PrintName = [[SD Kit]]
 ATT.Icon = Material("entities/arc9_myt_ins1_mp5sd.png", "mips smooth")
-ATT.Description = [[Integrally suppressed barrel.]]
+ATT.Description = [[Integrally suppressed barrel.
+Incompatible with Alt Hold.]]
 
 ATT.Category = {"ins1_mp5_sd"}
 ATT.ActivateElements = {"mp5sd"}
+
+ATT.ExcludeElements = {"mp5slim"}
 
 ATT.PhysBulletMuzzleVelocityMult = 1.5
 ATT.RangeMaxMult = 1.5
@@ -707,3 +710,23 @@ ATT.AimDownSightsTimeAdd = 0.14
 ATT.SprintToFireTimeAdd = 0.08
 
 ARC9.LoadAttachment(ATT, "myt_ins1_scope_garandzf41")
+
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+
+ATT = {}
+
+-- mp5 foregrip handguard but no rail
+
+ATT.PrintName = [[Alternate Holding Position]]
+ATT.CompactName = [[ALT]]
+ATT.Icon = Material("entities/arc9_myt_ins1_unknown.png", "mips smooth")
+ATT.Description = [[Changes the holding style of the weapon.
+Incompatible with SD Kit.]]
+
+ATT.Category = {"mp5_handguard"}
+ATT.ActivateElements = {"mp5slim"}
+
+ATT.ExcludeElements = {"mp5sd"}
+
+ARC9.LoadAttachment(ATT, "myt_ins1_mp5_slim")

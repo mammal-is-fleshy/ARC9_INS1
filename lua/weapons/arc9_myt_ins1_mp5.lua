@@ -12,7 +12,7 @@ SWEP.Class = "Submachine Gun"
 
 SWEP.Credits = {
 	---["Assets"] = [[ https://gamebanana.com/mods/211744 ]],  
-	["Sound"] = [[Navaro]],
+	["Sound"] = [[Navaro (+ some mixing)]],
 }
 SWEP.Description = [[So popular that even it's successors couldn't surpass it.]]
 
@@ -168,7 +168,7 @@ SWEP.TracerColor = Color(255, 225, 200) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-3.28, -5, 0.3),
+    Pos = Vector(-3.29, -5, 0.3), --Vector(-3.29, -15, 0.3) for goofy frontsight only aimdownsights
     Ang = Angle(-0.1, 0.75, 0),
     Midpoint = { -- Where the gun should be at the middle of it's irons
         Pos = Vector(0, 15, -4),
@@ -259,6 +259,7 @@ SWEP.AttachmentElements = {
     ["rail_bot"] = { Bodygroups = {{5, 1},{1, 2}}, }, 
     ["has_optic"] = { Bodygroups = {{4, 1},}, },
     ["mp5sd"] = { Bodygroups = {{1, 1},}, },
+	["mp5slim"] = { Bodygroups = {{1, 2}}, },
 }
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
@@ -298,7 +299,7 @@ SWEP.Attachments = {
         Bone = "Weapon",
         Pos = Vector(-0.25, 5, -1.85),
         Ang = Angle(0, -90, 0),
-        MergeSlots = {4},
+        MergeSlots = {4, 5},
     },
 
     {   --4 permanent ubgl, affected separately from the changes of the above attachment
@@ -308,6 +309,16 @@ SWEP.Attachments = {
         Category = {"css_ubgl"},
         Bone = "Weapon",
         Pos = Vector(-0.25, 2.5, -1.75),
+        Ang = Angle(0, -90, 0),
+    },
+	
+	{
+        PrintName = "",
+        DefaultName = "",
+		Hidden = true,
+        Category = {"mp5_handguard"},
+        Bone = "Weapon",
+        Pos = Vector(-0.25, 5, -1.85),
         Ang = Angle(0, -90, 0),
     },
 }
@@ -352,7 +363,7 @@ SWEP.Animations = {
         MinProgress = 0.775,
         Mult = 1,
         EventTable = {
-            {s =  "myt_ins1/mp5_mag2.wav" ,   t = 2 / 30},
+            {s =  "myt_ins1/mp5_mag2.wav" ,   t = 4 / 30},
             {s =  "myt_ins1/mp5_mag1.wav" ,    t = 34 / 30},
         },
         IKTimeLine = {
@@ -368,9 +379,9 @@ SWEP.Animations = {
         MinProgress = 0.85,
         EventTable = {
             {s =  "myt_ins1/mp5_bolt1.wav" ,   t = 0 / 30},
-            {s =  "myt_ins1/mp5_mag2.wav" ,   t = 22 / 30},
+            {s =  "myt_ins1/mp5_mag2.wav" ,   t = 26 / 30},
             {s =  "myt_ins1/mp5_mag1.wav" ,    t = 54 / 30},
-	    {s =  "myt_ins1/mp5_bolt2.wav" ,    t = 78 / 30}, 
+			{s =  "myt_ins1/mp5_bolt2.wav" ,    t = 80 / 30}, 
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
