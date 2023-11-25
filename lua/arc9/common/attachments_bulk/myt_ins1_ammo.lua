@@ -1,10 +1,12 @@
 local ATT = {}
 
-----------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
 
 ATT = {}
 
 -- def not stolen from smorgasbord lmao
+
 ATT.PrintName = "40mm Signal Flare"
 ATT.CompactName = "FLARE"
 ATT.Icon = Material("entities/ammo/flare.png", "mips smooth")
@@ -26,4 +28,21 @@ ATT.RecoilMult = 0.25
 
 ARC9.LoadAttachment(ATT, "ins1_ammo_glauncher_flare")
 
-----------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+
+ATT = {}
+
+-- garand ar2 ammo switch
+
+ATT.PrintName = [[30-06 MATCH]]
+ATT.CompactName = [[AR2]]
+ATT.Icon = Material("entities/ammo/3006_2.png")
+ATT.Description = [[Changes ammo used to "30-06 MATCH", although it actually just switches to AR2 ammo.]]
+ATT.SortOrder = 0
+
+ATT.Category = {"ins1_ammo_garand"}
+ATT.ActivateElements = {"3006_2"}
+ATT.Ammo = "ar2"
+
+ARC9.LoadAttachment(ATT, "ins1_ammo_garand_ar2")

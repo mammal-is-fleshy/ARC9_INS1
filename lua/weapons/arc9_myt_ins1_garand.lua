@@ -243,6 +243,7 @@ SWEP.AttachmentElements = {
     ["has_optic"] = { Bodygroups = {{2, 1}}, },
     ["has_grip"] = { Bodygroups = {{3, 1}}, },
 	["zf41"] = { Bodygroups = {{4, 1}}, },
+	["3006_2"] = { Bodygroups = {{0, 1}}, },
 }
 
 SWEP.Attachments = {
@@ -267,7 +268,6 @@ SWEP.Attachments = {
         Pos = Vector(0, 23.5, 2.9),
         Ang = Angle(0, -90, 0),
     },
-
     {
         PrintName = "Foregrip",
         DefaultName = "None",
@@ -276,6 +276,15 @@ SWEP.Attachments = {
         Category = {"grip_css"},
         Bone = "Weapon",
         Pos = Vector(0, 2, 0.1),
+        Ang = Angle(0, -90, 0),
+    },
+	{
+        PrintName = "Ammunition",
+        DefaultName = "Ammo",
+
+        Category = {"ins1_ammo_garand"},
+        Bone = "Weapon",
+        Pos = Vector(0, 23.5, 2.9),
         Ang = Angle(0, -90, 0),
     },
 }
