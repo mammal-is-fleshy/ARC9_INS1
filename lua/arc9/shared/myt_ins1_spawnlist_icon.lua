@@ -1,0 +1,1 @@
+list.Set("ContentCategoryIcons", "ARC9 - INS1", "arc9/myt_ins1.png")
