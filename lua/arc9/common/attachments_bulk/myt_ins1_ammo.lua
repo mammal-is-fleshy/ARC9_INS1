@@ -46,3 +46,22 @@ ATT.ActivateElements = {"3006_2"}
 ATT.Ammo = "ar2"
 
 ARC9.LoadAttachment(ATT, "ins1_ammo_garand_ar2")
+
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+
+ATT = {}
+
+-- mp5 smg1 ammo switch
+
+ATT.PrintName = [[10mm]]
+ATT.CompactName = [[SMG1]]
+ATT.Icon = Material("entities/ammo/mp5_10mm.png")
+ATT.Description = [[Changes ammo used to "10mm", although it actually just switches to SMG1 ammo.]]
+ATT.SortOrder = 0
+
+ATT.Category = {"ins1_ammo_mp5"}
+ATT.ActivateElements = {"mp5straightmag"}
+ATT.Ammo = "smg1"
+
+ARC9.LoadAttachment(ATT, "ins1_ammo_mp5_smg1")

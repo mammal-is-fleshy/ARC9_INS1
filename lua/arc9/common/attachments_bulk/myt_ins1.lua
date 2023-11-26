@@ -716,7 +716,7 @@ ARC9.LoadAttachment(ATT, "myt_ins1_scope_garandzf41")
 
 ATT = {}
 
--- mp5 foregrip handguard but no rail
+-- mp5 foregrip handguard but no rail, aka slim
 
 ATT.PrintName = [[Alternate Holding Position]]
 ATT.CompactName = [[ALT]]
@@ -730,3 +730,53 @@ ATT.ActivateElements = {"mp5slim"}
 ATT.ExcludeElements = {"mp5sd"}
 
 ARC9.LoadAttachment(ATT, "myt_ins1_mp5_slim")
+
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+
+ATT = {}
+
+-- mp5 folded stock
+
+ATT.PrintName = [[Collapsed Stock]]
+ATT.CompactName = [[FOLD]]
+ATT.Description = [[Nice.]]
+
+ATT.Icon = Material("entities/arc9_myt_ins1_unknown.png", "mips smooth")
+
+ATT.SortOrder = -9000000
+ATT.Category = "ins1_stock_mp5"
+ATT.ActivateElements = {"mp5foldstock"}
+
+ATT.RecoilMult = 1.1
+
+ATT.DeployTimeMult = 0.8
+
+ATT.AimDownSightsTimeMult = 0.9
+ATT.SprintToFireTimeMult = 0.9
+
+ARC9.LoadAttachment(ATT, "myt_ins1_mp5_stockcollapse")
+
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+
+ATT = {}
+
+-- mp5a2 default stock (ignore clipping, matches sd kit)
+
+ATT.PrintName = [[Heavy Stock]]
+ATT.CompactName = [[HEAVY]]
+ATT.Description = [[Crew Expendable (3).]]
+
+ATT.Icon = Material("entities/arc9_myt_ins1_unknown.png", "mips smooth")
+
+ATT.SortOrder = -9000000
+ATT.Category = "ins1_stock_mp5"
+ATT.ActivateElements = {"mp5straightstock"}
+
+ATT.RecoilMult = 0.9
+
+ATT.AimDownSightsTimeMult = 1.1
+ATT.SprintToFireTimeMult = 1.1
+
+ARC9.LoadAttachment(ATT, "myt_ins1_mp5_straightstock")

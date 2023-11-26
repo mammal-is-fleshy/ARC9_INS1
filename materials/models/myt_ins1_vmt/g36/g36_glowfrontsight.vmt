@@ -1,0 +1,6 @@
+"UnlitGeneric"
+{
+	"$basetexture" "models/myt_ins1_vmt/g36/g36_glowfrontsight"
+	"$translucent" 1
+	"$selfillum" 1
+}

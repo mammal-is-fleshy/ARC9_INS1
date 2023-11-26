@@ -202,10 +202,10 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.CrouchPos = Vector(-0.5, 1, -2)
 SWEP.CrouchAng = Angle(0, 0, -10)
 
-SWEP.CustomizeAng = Angle(90, -5, 0)
-SWEP.CustomizePos = Vector(12, 28, 7)
+SWEP.CustomizeAng = Angle(90, 5, 0)
+SWEP.CustomizePos = Vector(14, 35, 6)
 
-SWEP.CustomizeSnapshotFOV = 110
+SWEP.CustomizeSnapshotFOV = 90
 SWEP.CustomizeNoRotate = false
 
 SWEP.CustomizeRotateAnchor = Vector(12, -3.25, -5.23)
@@ -260,11 +260,31 @@ SWEP.AttachmentElements = {
     ["has_optic"] = { Bodygroups = {{4, 1},}, },
     ["mp5sd"] = { Bodygroups = {{1, 1},}, },
 	["mp5slim"] = { Bodygroups = {{1, 2}}, },
+	["mp5straightmag"] = { Bodygroups = {{0, 1}}, },
+	["mp5foldstock"] = { Bodygroups = {{3, 1}}, },
+	["mp5straightstock"] = { Bodygroups = {{3, 2}}, },
 }
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local model = data.model  -- most insufficient method ever
     if wep:HasElement("mp5sd") 	then model:SetBodygroup(1,1) end
+end
+
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "MP5"
+	
+	if attached["mp5straightstock"] then
+        gunname = "MP5A2"
+    end
+	
+	if attached["mp5sd"] then
+        gunname = "MP5SD"
+    end
+
+    return gunname
 end
 
 SWEP.Attachments = {
@@ -321,6 +341,24 @@ SWEP.Attachments = {
         Pos = Vector(-0.25, 5, -1.85),
         Ang = Angle(0, -90, 0),
     },
+	{
+        PrintName = "Stock",
+        DefaultName = "None",
+
+        Category = {"ins1_stock_mp5"},
+        Bone = "Weapon",
+        Pos = Vector(-0.25, -11, -0.5),
+        Ang = Angle(0, -90, 0),
+    },
+	{
+        PrintName = "Ammunition",
+        DefaultName = "Ammo",
+
+        Category = {"ins1_ammo_mp5"},
+        Bone = "mag",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, -90, 0),
+    },
 }
 
 SWEP.Animations = {
@@ -329,14 +367,15 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "base_draw",
+		Time = 0.7,
+		MinProgress = 0.5,
         EventTable = {
             {s =  "myt_ins1/universal/uni-draw.wav" ,   t = 0 / 30},
         },
     },
     ["ready"] = {
-        Source = "base_ready", -- QC sequence source, can be {"table", "of", "strings"} or "string"
-        --Time = 0.5, -- overrides the duration of the sequence
-        Mult = 1, -- multiplies time
+        Source = "base_ready",
+		Mult = 1,
         EventTable = {
 			{s =  "myt_ins1/mp5_bolt2.wav" ,    t = 5 / 30}, 
         },
@@ -347,7 +386,8 @@ SWEP.Animations = {
     },
     ["holster"] = {
         Source = "base_holster",
-        --Time = 0
+        Time = 0.5,
+		MinProgress = 0.7,
     },
     ["fire"] = {
         Source = {"base_fire"},

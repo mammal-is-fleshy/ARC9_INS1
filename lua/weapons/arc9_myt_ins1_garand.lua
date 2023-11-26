@@ -193,7 +193,7 @@ SWEP.CrouchPos = Vector(-0.5, -1, -1)
 SWEP.CrouchAng = Angle(0, 0, -10)
 
 SWEP.CustomizeAng = Angle(90, -5, 0)
-SWEP.CustomizePos = Vector(15, 30, 4)
+SWEP.CustomizePos = Vector(17, 32, 4)
 
 SWEP.CustomizeSnapshotFOV = 110
 SWEP.CustomizeNoRotate = false
@@ -322,6 +322,8 @@ SWEP.Animations = {
     },
     ["holster"] = {
         Source = "base_holster",
+		Time = 0.75,
+		MinProgress = 0.1,
     },
     ["fire"] = {
         Source = {"base_fire_1", "base_fire_2"},

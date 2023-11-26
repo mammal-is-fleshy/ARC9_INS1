@@ -261,6 +261,8 @@ SWEP.Attachments = {
         PrintName = "Muzzle",
         DefaultName = "None",
 
+		
+		Scale = 0.8,
         ExcludeElements = {"pre_muzzed"},
         Category = {"muzzle_css"},
         Bone = "f_frame",
