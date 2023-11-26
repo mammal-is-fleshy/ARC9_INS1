@@ -283,9 +283,9 @@ SWEP.Attachments = {
         DefaultName = "Ammo",
 
         Category = {"ins1_ammo_garand"},
-        Bone = "Weapon",
-        Pos = Vector(0, 23.5, 2.9),
-        Ang = Angle(0, -90, 0),
+        Bone = "Clip",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
     },
 }
 
