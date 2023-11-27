@@ -780,3 +780,86 @@ ATT.AimDownSightsTimeMult = 1.1
 ATT.SprintToFireTimeMult = 1.1
 
 ARC9.LoadAttachment(ATT, "myt_ins1_mp5_straightstock")
+
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+
+ATT = {}
+
+-- revolver regular barrel
+
+ATT.PrintName = [[Regular-Length Barrel]]
+ATT.CompactName = [[REG]]
+ATT.Icon = Material("entities/arc9_myt_ins1_unknown.png", "mips smooth")
+ATT.Description = [[Increases the length of the barrel.]]
+ATT.SortOrder = 1
+
+ATT.Category = {"ins1_barrel_revolver"}
+ATT.ActivateElements = {"barrel_regular"}
+
+ATT.RecoilKickMult = 0.9
+
+ATT.BarrelLength = 6
+
+ATT.AimDownSightsTimeMult = 1.3
+ATT.SprintToFireTimeMult = 1.3
+
+ARC9.LoadAttachment(ATT, "myt_ins1_revolver_barrel_regular")
+
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+
+ATT = {}
+
+-- revolver long barrel
+
+ATT.PrintName = [[Long Barrel]]
+ATT.CompactName = [[LONG]]
+ATT.Icon = Material("entities/arc9_myt_ins1_unknown.png", "mips smooth")
+ATT.Description = [[Increases the length of the barrel greatly.]]
+ATT.SortOrder = 2
+
+ATT.RecoilMult = 0.75
+ATT.RecoilKickMult = 0.75
+
+ATT.BarrelLength = 12
+
+ATT.AimDownSightsTimeMult = 3
+ATT.SprintToFireTimeMult = 3
+
+ATT.DeployTimeMult = 1.2
+ATT.ReloadTimeMult = 1.2
+
+ATT.Category = {"ins1_barrel_revolver"}
+ATT.ActivateElements = {"barrel_long"}
+
+ARC9.LoadAttachment(ATT, "myt_ins1_revolver_barrel_long")
+
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+
+ATT = {}
+
+-- revolver short barrel
+
+ATT.PrintName = [[Super Short(y) Barrel]]
+ATT.CompactName = [[SHORT]]
+ATT.Icon = Material("entities/arc9_myt_ins1_unknown.png", "mips smooth")
+ATT.Description = [[Decreases the length of the barrel.]]
+ATT.SortOrder = 3
+
+ATT.RecoilMult = 2
+ATT.RecoilKickMult = 2
+
+ATT.BarrelLength = 1
+
+ATT.AimDownSightsTimeMult = 0.5
+ATT.SprintToFireTimeMult = 0.5
+
+ATT.DeployTimeMult = 0.8
+ATT.ReloadTimeMult = 0.8
+
+ATT.Category = {"ins1_barrel_revolver"}
+ATT.ActivateElements = {"barrel_short"}
+
+ARC9.LoadAttachment(ATT, "myt_ins1_revolver_barrel_short")

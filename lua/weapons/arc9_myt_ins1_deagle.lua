@@ -264,6 +264,7 @@ SWEP.Attachments = {
         ExcludeElements = {"pre_muzzed"},
         Category = {"muzzle_css"},
         Bone = "Weapon_Controller",
+		Icon_Offset = Vector(1, 0, 0),
         Pos = Vector(8.65, -2.4, 0),
         Ang = Angle(0, 0, -90),
     },
@@ -276,6 +277,15 @@ SWEP.Attachments = {
         Bone = "Weapon_Controller",
         Pos = Vector(5.8, -0.6, 0),
         Ang = Angle(0, 0, 90),
+    },
+	{
+        PrintName = "Ammunition",
+        DefaultName = "Ammo",
+
+        Category = {"ins1_ammo_deagle"},
+        Bone = "mag",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, -90, 0),
     },
 }
 

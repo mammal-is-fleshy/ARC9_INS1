@@ -8,7 +8,7 @@ SWEP.SubCategory = "Sidearm"
 
 SWEP.PrintName = "Revolver"
 
-SWEP.Class = "Pistol"
+SWEP.Class = "Revolver"
 
 SWEP.Credits = {
     ["Assets"] = [[ https://gamebanana.com/mods/207542 ]],
@@ -132,8 +132,8 @@ SWEP.SwayMultCrouch = 0.667
 SWEP.SwayMultShooting = 1.5
 SWEP.SwayMultSights = 0.5
 
-SWEP.AimDownSightsTime = 0.2
-SWEP.SprintToFireTime = 0.17
+SWEP.AimDownSightsTime = 0.15
+SWEP.SprintToFireTime = 0.15
 
 SWEP.SpeedMult = 1
 SWEP.SpeedMultSights = 0.75
@@ -192,12 +192,14 @@ SWEP.CrouchPos = Vector(-0.5, 1, -1)
 SWEP.CrouchAng = Angle(0, 0, -10)
 
 SWEP.CustomizeAng = Angle(90, -5, 0)
-SWEP.CustomizePos = Vector(13, 32, 2)
+SWEP.CustomizePos = Vector(16, 25, 2)
 
-SWEP.CustomizeSnapshotFOV = 110
+SWEP.CustomizeSnapshotFOV = 90
 SWEP.CustomizeNoRotate = false
 
 SWEP.CustomizeRotateAnchor = Vector(12, -3.25, -5.23)
+
+SWEP.BarrelLength = 2
 
 SWEP.StandardPresets = {
 }
@@ -244,6 +246,9 @@ SWEP.DefaultBodygroups = "00000000"
 SWEP.AttachmentElements = {
     ["has_tac"] = { Bodygroups = {{2, 1}}, },
     ["has_optic"] = { Bodygroups = {{1, 1}}, },
+	["barrel_regular"] = { Bodygroups = {{0, 1}}, },
+	["barrel_long"] = { Bodygroups = {{0, 2}}, },
+	["barrel_short"] = { Bodygroups = {{0, 3}}, },
 }
 
 SWEP.TriggerDelay = true -- Add a delay before the weapon fires.
@@ -272,6 +277,15 @@ SWEP.Attachments = {
         Pos = Vector(0, 2, 0.8),
         Ang = Angle(0, -90, 180),
     },
+	{
+        PrintName = "Barrel",
+        DefaultName = "None",
+
+        Category = {"ins1_barrel_revolver"},
+        Bone = "weapon",
+        Pos = Vector(0, 3, 2),
+        Ang = Angle(0, -90, 180),
+    },
 }
 
 SWEP.InstantSightIdle = true
@@ -286,12 +300,11 @@ SWEP.Animations = {
         },
     },
     ["ready"] = {
-        Source = "base_ready", -- QC sequence source, can be {"table", "of", "strings"} or "string"
-        --Time = 0.5, -- overrides the duration of the sequence
-        Mult = 1, -- multiplies time
+        Source = "base_ready",
+        Mult = 1,
         EventTable = {
             {s =  "myt_ins1/universal/uni-draw.wav" ,   t = 0 / 30},
-            {s =  "myt_ins1/38S-Close.wav" ,    t = 9 / 30},
+            {s =  "myt_ins1/38S-close.wav" ,    t = 9 / 30},
         },
     },
     ["holster"] = {
@@ -308,7 +321,10 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.85,
         EventTable = {
-            {s =  "myt_ins1/38S-Reload.ogg" ,   t = 0 / 30},
+            {s =  "myt_ins1/38S-open.wav" ,   t = 0},
+			{s =  "myt_ins1/38S-eject.wav" ,   t = 0.41},
+			{s =  "myt_ins1/38S-insert.wav" ,   t = 1.05},
+			{s =  "myt_ins1/38S-close.wav" ,   t = 1.535},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },

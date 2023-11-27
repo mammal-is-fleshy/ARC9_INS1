@@ -54,7 +54,7 @@ ATT = {}
 
 -- mp5 smg1 ammo switch
 
-ATT.PrintName = [[10mm]]
+ATT.PrintName = [[10mm Straight Mag]]
 ATT.CompactName = [[SMG1]]
 ATT.Icon = Material("entities/ammo/mp5_10mm.png")
 ATT.Description = [[Changes ammo used to "10mm", although it actually just switches to SMG1 ammo.]]
@@ -64,4 +64,27 @@ ATT.Category = {"ins1_ammo_mp5"}
 ATT.ActivateElements = {"mp5straightmag"}
 ATT.Ammo = "smg1"
 
+ATT.ShootSound = {"myt_ins1/mp5-1_10mm.wav", "myt_ins1/mp5-2_10mm.wav"}
+
 ARC9.LoadAttachment(ATT, "ins1_ammo_mp5_smg1")
+
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+
+ATT = {}
+
+-- deagle 357 ammo switch
+
+ATT.PrintName = [[.357 Magnum]]
+ATT.CompactName = [[357]]
+ATT.Icon = Material("entities/ammo/deagle_357.png")
+ATT.Description = [[Changes ammo used to "357", and this time it actually does switch to 357 ammo!]]
+ATT.SortOrder = 0
+
+ATT.Category = {"ins1_ammo_deagle"}
+ATT.ActivateElements = {"deagle357"}
+ATT.Ammo = "357"
+
+ATT.ShootSound = "myt_ins1/deagle-1_357.wav"
+
+ARC9.LoadAttachment(ATT, "ins1_ammo_deagle_357")

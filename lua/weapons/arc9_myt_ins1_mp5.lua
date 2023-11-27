@@ -19,7 +19,7 @@ SWEP.Description = [[So popular that even it's successors couldn't surpass it.]]
 SWEP.ViewModel = "models/weapons/myt_ins1/c_smg_mp5.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_smg_mp5.mdl"
 
-SWEP.Weight = 25
+SWEP.Weight = 12
 SWEP.Slot = 2
 SWEP.SlotPos = 3
 
@@ -387,7 +387,6 @@ SWEP.Animations = {
     ["holster"] = {
         Source = "base_holster",
         Time = 0.5,
-		MinProgress = 0.7,
     },
     ["fire"] = {
         Source = {"base_fire"},

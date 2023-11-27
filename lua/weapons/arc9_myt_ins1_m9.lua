@@ -192,9 +192,9 @@ SWEP.CrouchPos = Vector(-0.5, -0.5, -1)
 SWEP.CrouchAng = Angle(0, 0, -10)
 
 SWEP.CustomizeAng = Angle(90, -5, 0)
-SWEP.CustomizePos = Vector(20, 32, 6)
+SWEP.CustomizePos = Vector(20, 30, 5)
 
-SWEP.CustomizeSnapshotFOV = 110
+SWEP.CustomizeSnapshotFOV = 90
 SWEP.CustomizeNoRotate = false
 
 SWEP.CustomizeRotateAnchor = Vector(12, -3.25, -5.23)
@@ -260,9 +260,11 @@ SWEP.Attachments = {
         PrintName = "Muzzle",
         DefaultName = "None",
 
+		Scale = 0.8,
         ExcludeElements = {"pre_muzzed"},
         Category = {"muzzle_css"},
         Bone = "Weapon_Controller",
+		Icon_Offset = Vector(1, 0, 0),
         Pos = Vector(7.5, -2.1, 0),
         Ang = Angle(0, 0, -90),
     },
