@@ -11,7 +11,7 @@ SWEP.PrintName = "PKM"
 SWEP.Class = "Machine Gun"
 
 SWEP.Credits = {
-    ["Assets"] = [[Insurgency: Modern Infantry Combat]],
+    ["Assets"] = [[Modern Warfare Remastered/Project Reality 2]],
 }
 SWEP.Description = [[it go brrrt but in russian]]
 
@@ -168,8 +168,8 @@ SWEP.TracerColor = Color(255, 225, 200) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-5.2, -5, 2.75),
-    Ang = Angle(0, -0.45, 0),
+    Pos = Vector(-3.32, -5, 0.95),
+    Ang = Angle(0, -0.2, 0),
     Midpoint = { -- Where the gun should be at the middle of it's irons
         Pos = Vector(0, 15, -4),
         Ang = Angle(-10, 60, -25),
@@ -243,7 +243,7 @@ SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 
 -------------------------- SOUNDS
 
-SWEP.ShootSound = {"myt_ins1/m249-1.wav"}
+SWEP.ShootSound = {"myt_ins1/pkm-1.wav"}
 SWEP.DistantShootSound = {"myt_ins1/m249-1_echo.wav"}
 SWEP.ShootSoundSilenced = "myt_ins1_sd/rifle2.wav"
 SWEP.DryFireSound = "myt_ins1/makarov-empty.wav"
@@ -340,6 +340,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FireASAP = true,
         MinProgress = 0.7,
+        MagSwapTime = 50 / 30,
         EventTable = {
             {s =  "myt_ins1/m249-open.wav" ,   t = 5 / 30}, 
 			{s =  "myt_ins1/m249-beltout.wav" ,    t = 30 / 30},
@@ -359,7 +360,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FireASAP = true,
         MinProgress = 0.75,
-        MagSwapTime = 40 / 30,
+        MagSwapTime = 50 / 30,
         EventTable = {
             {s =  "myt_ins1/m249-open.wav" ,   t = 5 / 30}, 
 			{s =  "myt_ins1/m249-boxout.wav" ,    t = 37 / 30},	
