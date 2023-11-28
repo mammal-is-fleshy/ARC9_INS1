@@ -1,72 +1,18 @@
 // Created by Crowbar 0.74
 
-$modelname "weapons/tfa_cod/mwr/c_pkm.mdl"
+$modelname "weapons/myt_ins1/c_mach_pkm.mdl"
 
-$bodygroup "dif"
+$bodygroup "0"
 {
-	studio "wpn_h1_lmg_pkm_vm_camo_LOD0.smd"
-}
-$bodygroup "spec"
-{
-	studio "wpn_h1_lmg_pkm_vm_camo_LOD0 - Copy.smd"
-}
-$bodygroup "dif_up"
-{
-	studio "wpn_h1_lmg_pkm_vm_camo_LOD0_re.smd"
-}
-$bodygroup "spec_up"
-{
-	studio "wpn_h1_lmg_pkm_vm_camo_LOD0_re - Copy.smd"
-}
-$bodygroup "dif_up2"
-{
-	studio "wpn_h1_lmg_pkm_vm_camo_LOD0_re2.smd"
-}
-$bodygroup "spec_up2"
-{
-	studio "wpn_h1_lmg_pkm_vm_camo_LOD0_re2 - Copy.smd"
-}
-$bodygroup "dif_bar"
-{
-	studio "wpn_h1_lmg_pkm_vm_camo_LOD0_bar.smd"
-}
-$bodygroup "spec_bar"
-{
-	studio "wpn_h1_lmg_pkm_vm_camo_LOD0_bar - Copy.smd"
-}
-$bodygroup "dif_mg"
-{
-	studio "wpn_h1_lmg_pkm_vm_camo_LOD0_mg.smd"
-}
-$bodygroup "spec_mg"
-{
-	studio "wpn_h1_lmg_pkm_vm_camo_LOD0_mg - Copy.smd"
-}
-$bodygroup "dif_bl"
-{
-	studio "wpn_h1_lmg_pkm_vm_camo_LOD0_bl.smd"
-}
-$bodygroup "spec_bl"
-{
-	studio "wpn_h1_lmg_pkm_vm_camo_LOD0_bl - Copy.smd"
-}
-$bodygroup "dif_b2"
-{
-	studio "wpn_h1_lmg_pkm_vm_camo_LOD0_b2.smd"
-}
-$bodygroup "spec_b2"
-{
-	studio "wpn_h1_lmg_pkm_vm_camo_LOD0_b2 - Copy.smd"
-}
-$bodygroup "dif_bi"
-{
-	studio "wpn_h1_lmg_pkm_vm_camo_LOD0_bi.smd"
-}
-$bodygroup "spec_bi"
-{
-	studio "wpn_h1_lmg_pkm_vm_camo_LOD0_bi - Copy.smd"
+	studio "pkm.smd"
+	blank
 }
 
+$bodygroup "1"
+{
+	studio "pkm_belt.smd"
+	blank
+}
 
 $surfaceprop "default"
 
@@ -74,8 +20,9 @@ $contents "solid"
 
 $illumposition 0 0 0
 
-$cdmaterials "models\weapons\tfa_cod\mwr\pkm\c\"
-$cdmaterials "models\weapons\tfa_cod\mwr\pkm\"
+$cdmaterials "models\myt_ins1_vmt\"
+$cdmaterials "models\myt_ins1_vmt\att\"
+$cdmaterials "ins\models\hands\"
 
 $attachment "1" "tag_flash" 0 0 0 rotate 0 0 0
 $attachment "2" "tag_brass" 0 0 0 rotate 0 0 0
@@ -211,46 +158,12 @@ $bonemerge "ValveBiped.Bip01_R_Finger0"
 $bonemerge "ValveBiped.Bip01_R_Finger01"
 $bonemerge "ValveBiped.Bip01_R_Finger02"
 
-
-$sectionframes 30 41
-
-$animation "a_beltoff_corrective_animation" "c_pkm_anims\a_beltoff_corrective_animation.smd" {
-}
-
-$animation "a_grip_corrective_animation" "c_pkm_anims\a_grip_corrective_animation.smd" {
-}
-
-$animation "a_beltoff" "c_pkm_anims\a_beltoff.smd" {
-	fps 30
-	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
-	subtract "a_beltoff_corrective_animation" 0
-}
-
-$animation "a_grip" "c_pkm_anims\a_grip.smd" {
-	fps 30
-	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
-	subtract "a_grip_corrective_animation" 0
-}
-
-$sequence "idle_ref" {
-	"c_pkm_anims\idle_ref.smd"
+$sequence "idle" {
+	"c_pkm_anims\idle.smd"
+	activity "ACT_VM_IDLE" 1
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-}
-
-$sequence "beltoff" {
-	"a_beltoff"
-	delta
-	fadein 0.2
-	fadeout 0.2
-}
-
-$sequence "grip" {
-	"a_grip"
-	delta
-	fadein 0.2
-	fadeout 0.2
 }
 
 $sequence "pullout" {
@@ -258,7 +171,14 @@ $sequence "pullout" {
 	activity "ACT_VM_DRAW" 1
 	fadein 0.2
 	fadeout 0.2
-	addlayer "beltoff"
+	fps 30
+}
+
+$sequence "deploy" {
+	"anims\pkm_deploy.smd"
+	activity "ACT_VM_DRAW" 1
+	fadein 0.2
+	fadeout 0.2
 	fps 30
 }
 
@@ -267,175 +187,46 @@ $sequence "putaway" {
 	activity "ACT_VM_HOLSTER" 1
 	fadein 0.2
 	fadeout 0.2
-	addlayer "beltoff"
-	fps 30
-}
-
-$sequence "idle" {
-	"c_pkm_anims\idle.smd"
-	activity "ACT_VM_IDLE" 1
-	fadein 0.2
-	fadeout 0.2
-	addlayer "beltoff"
 	fps 30
 }
 
 $sequence "fire" {
 	"c_pkm_anims\fire.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
-	fadein 0.2
-	fadeout 0.2
-	addlayer "beltoff"
-	snap
+	fadein 0.02
+	fadeout 0.02
 	fps 30
 }
 
 $sequence "fire_ads" {
 	"c_pkm_anims\fire_ads.smd"
 	activity "ACT_VM_PRIMARYATTACK_1" 1
-	fadein 0.2
-	fadeout 0.2
-	addlayer "beltoff"
-	snap
+	fadein 0.02
+	fadeout 0.02
 	fps 30
 }
 
 $sequence "reload" {
-	"c_pkm_anims\reload.smd"
+	"anims\pkm_reload.smd"
 	activity "ACT_VM_RELOAD" 1
 	fadein 0.1
 	fadeout 0.2
-	blendlayer "beltoff" 0 0 65 70
-	blendlayer "beltoff" 202 217 291 291
 	fps 30
 }
-
-$sequence "sprint_in" {
-	"c_pkm_anims\sprint_in.smd"
-	activity "ACT_VM_IDLE_TO_LOWERED" 1
-	fadein 0.2
-	fadeout 0.2
-	addlayer "beltoff"
-	fps 30
-}
-
-$sequence "sprint_loop" {
-	"c_pkm_anims\sprint_loop.smd"
-	activity "ACT_VM_IDLE_LOWERED" 1
-	fadein 0.2
-	fadeout 0.2
-	addlayer "beltoff"
-	fps 30
-}
-
-$sequence "sprint_out" {
-	"c_pkm_anims\sprint_out.smd"
-	activity "ACT_VM_LOWERED_TO_IDLE" 1
-	fadein 0.2
-	fadeout 0.2
-	addlayer "beltoff"
-	fps 30
-}
-
-$sequence "inspect" {
-	"c_pkm_anims\inspect.smd"
-	activity "ACT_VM_FIDGET" 1
-	fadein 0.2
-	fadeout 0.2
-	fps 30
-}
-
-$sequence "pullout_grip" {
-	"c_pkm_anims\pullout_grip.smd"
-	activity "ACT_VM_PRIMARYATTACK_DEPLOYED_1" -1
-	fadein 0.2
-	fadeout 0.2
-	addlayer "beltoff"
-	fps 30
-}
-
-$sequence "putaway_grip" {
-	"c_pkm_anims\putaway_grip.smd"
-	activity "ACT_VM_PRIMARYATTACK_DEPLOYED_2" -1
-	fadein 0.2
-	fadeout 0.2
-	addlayer "beltoff"
-	fps 30
-}
-
-$sequence "idle_grip" {
-	"c_pkm_anims\idle_grip.smd"
-	activity "ACT_VM_PRIMARYATTACK_DEPLOYED_3" -1
-	fadein 0.2
-	fadeout 0.2
-	addlayer "beltoff"
-	fps 30
-}
-
-$sequence "fire_grip" {
-	"c_pkm_anims\fire_grip.smd"
-	activity "ACT_VM_PRIMARYATTACK_DEPLOYED_4" -1
-	fadein 0.2
-	fadeout 0.2
-	addlayer "beltoff"
-	snap
-	fps 30
-}
-
-$sequence "fire_ads_grip" {
-	"c_pkm_anims\fire_ads_grip.smd"
-	activity "ACT_VM_PRIMARYATTACK_DEPLOYED_5" -1
-	fadein 0.2
-	fadeout 0.2
-	addlayer "beltoff"
-	snap
-	fps 30
-}
-
-$sequence "reload_grip" {
-	"c_pkm_anims\reload_grip.smd"
-	activity "ACT_VM_PRIMARYATTACK_DEPLOYED_6" -1
+$sequence "reload_empty" {
+	"anims\pkm_reload_empty.smd"
+	activity "ACT_VM_RELOAD" 1
 	fadein 0.1
 	fadeout 0.2
-	addlayer "beltoff"
-	blendlayer "beltoff" 0 0 65 70
-	blendlayer "beltoff" 202 217 291 291
 	fps 30
 }
 
-$sequence "sprint_in_grip" {
-	"c_pkm_anims\sprint_in_grip.smd"
-	activity "ACT_VM_UNDEPLOY_2" -1
-	fadein 0.2
-	fadeout 0.2
-	addlayer "beltoff"
-	fps 30
-}
+$collisionmodel "pkm.smd"
+{
+	$mass 30
+	$inertia 10
+	$damping 0.01
+	$rotdamping 1.5
+	$rootbone " "
 
-$sequence "sprint_loop_grip" {
-	"c_pkm_anims\sprint_loop_grip.smd"
-	activity "ACT_VM_UNDEPLOY_3" -1
-	fadein 0.2
-	fadeout 0.2
-	addlayer "beltoff"
-	fps 30
-}
-
-$sequence "sprint_out_grip" {
-	"c_pkm_anims\sprint_out_grip.smd"
-	activity "ACT_VM_UNDEPLOY_4" -1
-	fadein 0.2
-	fadeout 0.2
-	addlayer "beltoff"
-	fps 30
-}
-
-$sequence "inspect_grip" {
-	"c_pkm_anims\inspect_grip.smd"
-	activity "ACT_VM_UNDEPLOY_5" -1
-	fadein 0.2
-	fadeout 0.2
-	blendlayer "grip" 0 0 0 14
-	blendlayer "grip" 105 110 130 130
-	fps 30
 }

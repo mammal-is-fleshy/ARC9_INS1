@@ -6,24 +6,24 @@ SWEP.Spawnable = true
 SWEP.Category = "ARC9 - INS1"
 SWEP.SubCategory = "Primary"
 
-SWEP.PrintName = "M249"
+SWEP.PrintName = "PKM"
 
 SWEP.Class = "Machine Gun"
 
 SWEP.Credits = {
     ["Assets"] = [[Insurgency: Modern Infantry Combat]],
 }
-SWEP.Description = [[it go brrrt]]
+SWEP.Description = [[it go brrrt but in russian]]
 
-SWEP.ViewModel = "models/weapons/myt_ins1/c_mach_m249.mdl"
-SWEP.WorldModel = "models/weapons/myt_ins1/c_mach_m249.mdl"
+SWEP.ViewModel = "models/weapons/myt_ins1/c_mach_pkm.mdl"
+SWEP.WorldModel = "models/weapons/myt_ins1/c_mach_pkm.mdl"
 
 SWEP.Weight = 25
 SWEP.Slot = 2
 SWEP.SlotPos = 5
 
 SWEP.MirrorVMWM = true
-SWEP.WorldModelMirror = "models/weapons/myt_ins1/c_mach_m249.mdl"
+SWEP.WorldModelMirror = "models/weapons/myt_ins1/c_mach_pkm.mdl"
 SWEP.WorldModelOffset = {
     Pos = Vector(-9, 5, -5),
     Ang = Angle(-5, 0, 180),
@@ -267,9 +267,9 @@ SWEP.Attachments = {
 
         ExcludeElements = {"pre_optic"},
         Category = {"optic_css"},
-        Bone = "cover",
-        Pos = Vector(-5, -0.85, 0),
-        Ang = Angle(0, 0, -90),
+        Bone = "j_ammocover",
+        Pos = Vector(-5, 0, 1),
+        Ang = Angle(0, 0, 0),
     },
     {
         PrintName = "Muzzle",
@@ -278,9 +278,9 @@ SWEP.Attachments = {
 		
         ExcludeElements = {"pre_muzzed"},
         Category = {"muzzle_css"},
-        Bone = "Weapon_Controller",
-        Pos = Vector(26, -0.95, 0),
-        Ang = Angle(0, 0, -90),
+        Bone = "tag_weapon",
+        Pos = Vector(28.5, 0, 3.4),
+        Ang = Angle(0, 0, 0),
     },
     {
         PrintName = "Foregrip",
@@ -288,42 +288,38 @@ SWEP.Attachments = {
         InstalledElements = {"rail_bot", "has_grip"},
 
         Category = {"grip_css"},
-        Bone = "Weapon_Controller",
-        Pos = Vector(14, 3.2, 0),
-        Ang = Angle(0, 0, -90),
+        Bone = "tag_weapon",
+        Pos = Vector(13, 0, 1.5),
+        Ang = Angle(0, 0, 0),
     },
 }
 
 SWEP.BulletBones = {
-    [1] = {"bullet01", "link01"},
-    [2] = {"bullet02", "link02"}, 
-	[3] = {"bullet03", "link03"},
-	[4] = {"bullet04", "link04"},
-	[5] = {"bullet05", "link05"},	
-	[6] = {"bullet06", "link06"},	
-	[7] = {"bullet07", "link07"},
-	[8] = {"bullet08", "link08"},
-	[9] = {"bullet09", "link09"},
-	[10] = {"bullet10", "link10"},
+    [1] = {"j_bullet1"},
+    [2] = {"j_bullet2"},
+    [3] = {"j_bullet3"}, 
+	[4] = {"j_bullet4"},  
+	[5] = {"j_bullet5"},  
+	[6] = {"j_bullet6"},   
+	[7] = {"j_bullet7"}, 
+	[8] = {"j_bullet8"}, 
+	[9] = {"j_bullet9"},
+	[10] = {"j_bullet10"}, 
+	[11] = {"j_bullet11"}, 
 }
 
-SWEP.InstantSightIdle = true
 SWEP.Animations = {
     ["idle"] = {
-        Source = "m249_idle",
-    },
-    ["idle_sights"] = {
-        Source = "m249_idle",
-		Time = 0
+        Source = "idle",
     },
     ["draw"] = {
-        Source = "m249_draw",
+        Source = "pullout",
         EventTable = {
             {s =  "myt_ins1/universal/uni-draw.wav" ,   t = 0 / 30},
         },
     },
     ["ready"] = {
-        Source = "m249_ready", -- QC sequence source, can be {"table", "of", "strings"} or "string"
+        Source = "deploy", -- QC sequence source, can be {"table", "of", "strings"} or "string"
         --Time = 0.5, -- overrides the duration of the sequence
         Mult = 1, -- multiplies time
         EventTable = {
@@ -331,15 +327,15 @@ SWEP.Animations = {
         },
     },
     ["holster"] = {
-        Source = "m249_down",
+        Source = "pullaway",
         --Time = 0
     },
     ["fire"] = {
-        Source = {"m249_fire1"},
+        Source = {"fire"},
     },
 
     ["reload"] = {
-        Source = "m249_reload",
+        Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FireASAP = true,
         MinProgress = 0.7,
@@ -358,7 +354,7 @@ SWEP.Animations = {
         },
     },
     ["reload_empty"] = {
-        Source = "m249_reload_empty",
+        Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FireASAP = true,
         MinProgress = 0.75,
