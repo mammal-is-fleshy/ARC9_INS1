@@ -14,6 +14,25 @@ $bodygroup "1"
 	blank
 }
 
+$bodygroup "2"
+{
+	studio "pkm_muz.smd"
+	blank
+}
+
+$bodygroup "3"
+{
+	studio "pkm_irons.smd"	
+	studio "pkm_rail_top.smd"
+	blank
+}
+
+$bodygroup "4"
+{
+	blank
+	studio "pkm_rail_bot.smd"
+}
+
 $surfaceprop "default"
 
 $contents "solid"

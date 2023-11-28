@@ -203,7 +203,7 @@ SWEP.CrouchPos = Vector(-0.5, 0.25, -1)
 SWEP.CrouchAng = Angle(0, 0, -10)
 
 SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizePos = Vector(20, 32, 8)
+SWEP.CustomizePos = Vector(16, 28, 6)
 
 SWEP.CustomizeSnapshotFOV = 110
 SWEP.CustomizeNoRotate = false
@@ -255,8 +255,9 @@ SWEP.FiremodeSound = "myt_ins1/firemode_medium.wav"
 SWEP.DefaultBodygroups = "00000000"
 
 SWEP.AttachmentElements = {
-    ["has_muz"] = { Bodygroups = {{3, 1}}, }, 
-	["has_optic"] = { Bodygroups = {{4, 1}}, },
+    ["has_muz"] = { Bodygroups = {{2, 1}}, }, 
+	["has_optic"] = { Bodygroups = {{3, 1}}, },
+	["has_grip"] = { Bodygroups = {{4, 1}}, },
 }
 
 SWEP.Attachments = {
@@ -268,7 +269,7 @@ SWEP.Attachments = {
         ExcludeElements = {"pre_optic"},
         Category = {"optic_css"},
         Bone = "j_ammocover",
-        Pos = Vector(-5, 0, 1),
+        Pos = Vector(-3, 0, 1.25),
         Ang = Angle(0, 0, 0),
     },
     {
@@ -289,7 +290,7 @@ SWEP.Attachments = {
 
         Category = {"grip_css"},
         Bone = "tag_weapon",
-        Pos = Vector(13, 0, 1.5),
+        Pos = Vector(13, 0, 1.3),
         Ang = Angle(0, 0, 0),
     },
 }
@@ -350,7 +351,7 @@ SWEP.Animations = {
         MagSwapTime = 60 / 30,
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
-        { t = 0.1, lhik = 0, rhik = 1, },{ t = 0.75, lhik = 0, rhik = 1, },{ t = 0.9, lhik = 1, rhik = 1, },
+        { t = 0.1, lhik = 0, rhik = 1, },{ t = 0.5, lhik = 0, rhik = 1, },{ t = 0.65, lhik = 1, rhik = 1, },
         },
     },
     ["reload_empty"] = {
@@ -369,7 +370,7 @@ SWEP.Animations = {
             },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
-        { t = 0.05, lhik = 0, rhik = 1, },{ t = 0.65, lhik = 0, rhik = 1, },{ t = 0.8, lhik = 1, rhik = 1, },
+        { t = 0.1, lhik = 0, rhik = 1, },{ t = 0.45, lhik = 0, rhik = 1, },{ t = 0.6, lhik = 1, rhik = 1, },
         },
     },
 }
