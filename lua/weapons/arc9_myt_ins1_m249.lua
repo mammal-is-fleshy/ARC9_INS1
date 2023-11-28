@@ -38,8 +38,8 @@ SWEP.RecoilAutoControlMultHipFire = 0.5
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 72
-SWEP.DamageMin = 34
+SWEP.DamageMax = 61
+SWEP.DamageMin = 27
 
 SWEP.RangeMin = 500
 SWEP.RangeMax = 3000
@@ -72,7 +72,7 @@ SWEP.ReloadInSights = false -- This weapon can aim down sights while reloading.
 
 -------------------------- FIREMODES
 
-SWEP.RPM = 650
+SWEP.RPM = 850
 
 -- Works different to ArcCW
 

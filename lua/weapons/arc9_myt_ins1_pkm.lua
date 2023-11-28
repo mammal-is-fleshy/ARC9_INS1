@@ -39,12 +39,12 @@ SWEP.RecoilAutoControlMultHipFire = 0.5
 -------------------------- DAMAGE PROFILE
 
 SWEP.DamageMax = 72
-SWEP.DamageMin = 34
+SWEP.DamageMin = 42
 
 SWEP.RangeMin = 500
 SWEP.RangeMax = 3000
 
-SWEP.Penetration = 15 -- Units of wood that can be penetrated by this gun.
+SWEP.Penetration = 30 -- Units of wood that can be penetrated by this gun.
 
 SWEP.BodyDamageMults = {
     [HITGROUP_HEAD] = 1.75,
@@ -61,7 +61,7 @@ SWEP.PhysBulletMuzzleVelocity = 1280 * 12
 
 -------------------------- MAGAZINE
 
-SWEP.Ammo = "smg1" -- What ammo type this gun uses.
+SWEP.Ammo = "ar2" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 0 -- The amount of rounds this gun can chamber.
 SWEP.ClipSize = 120 -- Self-explanatory.
@@ -334,6 +334,9 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = {"fire"},
+    }, 
+	["fire_sights"] = {
+        Source = {"fire_ads"},
     },
 
     ["reload"] = {
