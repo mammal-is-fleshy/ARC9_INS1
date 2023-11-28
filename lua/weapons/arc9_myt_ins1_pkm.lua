@@ -307,6 +307,7 @@ SWEP.BulletBones = {
 	[9] = {"j_bullet9"},
 	[10] = {"j_bullet10"}, 
 	[11] = {"j_bullet11"}, 
+	[12] = {"j_bullet12"}, 
 }
 
 SWEP.Animations = {
