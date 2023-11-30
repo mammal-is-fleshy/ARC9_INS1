@@ -41,8 +41,8 @@ SWEP.RecoilAutoControlMultHipFire = 0.5
 SWEP.DamageMax = 61
 SWEP.DamageMin = 27
 
-SWEP.RangeMin = 500
-SWEP.RangeMax = 3000
+SWEP.RangeMin = 750
+SWEP.RangeMax = 4500
 
 SWEP.Penetration = 15 -- Units of wood that can be penetrated by this gun.
 
@@ -240,6 +240,16 @@ SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellCorrectAng = Angle(0, 180, 0)
 SWEP.ShellScale = 1
 SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
+
+-------------------------- BIPOD
+
+SWEP.Bipod = true
+SWEP.RecoilMultBipod = 0.25
+SWEP.SwayMultBipod = 0.25
+SWEP.FreeAimRadiusMultBipod = 0
+
+SWEP.EnterBipodSound = "myt_ins1/bipod_down.wav"
+SWEP.ExitBipodSound = "myt_ins1/bipod_up.wav"
 
 -------------------------- SOUNDS
 

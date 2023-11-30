@@ -39,10 +39,10 @@ SWEP.RecoilAutoControlMultHipFire = 0.5
 -------------------------- DAMAGE PROFILE
 
 SWEP.DamageMax = 72
-SWEP.DamageMin = 42
+SWEP.DamageMin = 38
 
-SWEP.RangeMin = 500
-SWEP.RangeMax = 3000
+SWEP.RangeMin = 750
+SWEP.RangeMax = 4500
 
 SWEP.Penetration = 30 -- Units of wood that can be penetrated by this gun.
 
@@ -64,7 +64,7 @@ SWEP.PhysBulletMuzzleVelocity = 1280 * 12
 SWEP.Ammo = "ar2" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 0 -- The amount of rounds this gun can chamber.
-SWEP.ClipSize = 120 -- Self-explanatory.
+SWEP.ClipSize = 100 -- Self-explanatory.
 SWEP.SupplyLimit = 2 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
 SWEP.SecondarySupplyLimit = 2 -- Amount of reserve UBGL magazines you can take.
 
@@ -241,14 +241,24 @@ SWEP.ShellCorrectAng = Angle(0, 180, 0)
 SWEP.ShellScale = 1
 SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 
+SWEP.EjectDelay = 0
+
+-------------------------- BIPOD
+
+SWEP.Bipod = true
+SWEP.RecoilMultBipod = 0.25
+SWEP.SwayMultBipod = 0.25
+SWEP.FreeAimRadiusMultBipod = 0
+
+SWEP.EnterBipodSound = "myt_ins1/bipod_down.wav"
+SWEP.ExitBipodSound = "myt_ins1/bipod_up.wav"
+
 -------------------------- SOUNDS
 
 SWEP.ShootSound = {"myt_ins1/pkm-1.wav"}
 SWEP.DistantShootSound = {"myt_ins1/m249-1_echo.wav"}
 SWEP.ShootSoundSilenced = "myt_ins1_sd/rifle2.wav"
 SWEP.DryFireSound = "myt_ins1/makarov-empty.wav"
-
-SWEP.EjectDelay = 0
 
 SWEP.FiremodeSound = "myt_ins1/firemode_medium.wav"
 
@@ -321,16 +331,16 @@ SWEP.Animations = {
         },
     },
     ["ready"] = {
-        Source = "deploy", -- QC sequence source, can be {"table", "of", "strings"} or "string"
-        --Time = 0.5, -- overrides the duration of the sequence
-        Mult = 1, -- multiplies time
+        Source = "deploy",
+        Mult = 1,
         EventTable = {
-            {s =  "myt_ins1/m249-boltback.wav" ,    t = 6 / 30},  
+			{s =  "myt_ins1/pkm_start.wav" ,   t = 0 / 30},
+            {s =  "myt_ins1/pkm_boltcock.wav" ,    t = 12 / 30},  
         },
     },
     ["holster"] = {
         Source = "pullaway",
-        --Time = 0
+        Time = 0
     },
     ["fire"] = {
         Source = {"fire"},
@@ -344,17 +354,18 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FireASAP = true,
 		Mult = 0.9,
-        MinProgress = 0.7,
-        MagSwapTime = 50 / 30,
-        EventTable = {
-            {s =  "myt_ins1/m249-open.wav" ,   t = 5 / 30}, 
-			{s =  "myt_ins1/m249-beltout.wav" ,    t = 30 / 30},
-			{s =  "myt_ins1/m249-boxout.wav" ,    t = 45 / 30},	
-			{s =  "myt_ins1/m249-boxin.wav" ,    t = 65 / 30},
-			{s =  "myt_ins1/m249-beltin.wav" ,    t = 72 / 30},	
-			{s =  "myt_ins1/m249-close.wav" ,    t = 110 / 30},
-        },
+        MinProgress = 0.85,
         MagSwapTime = 60 / 30,
+        EventTable = {
+			{s =  "myt_ins1/pkm_start.wav" ,    t = 0 / 30},
+            {s =  "myt_ins1/pkm_open.wav" ,   t = 15 / 30},
+			{s =  "myt_ins1/pkm_boxout.wav" ,    t = 45 / 30},
+			{s =  "myt_ins1/pkm_boxin.wav" ,    t = 75 / 30},
+			{s =  "myt_ins1/m249-beltin.wav" ,    t = 105 / 30},
+			{s =  "myt_ins1/pkm_beltin.wav" ,    t = 120 / 30},
+			{s =  "myt_ins1/pkm_close.wav" ,    t = 151 / 30},
+			{s =  "myt_ins1/pkm_end.wav" ,    t = 168 / 30},
+        },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
         { t = 0.1, lhik = 0, rhik = 1, },{ t = 0.5, lhik = 0, rhik = 1, },{ t = 0.65, lhik = 1, rhik = 1, },
@@ -365,15 +376,18 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FireASAP = true,
 		Mult = 0.9,
-        MinProgress = 0.75,
-        MagSwapTime = 50 / 30,
+        MinProgress = 0.9,
+        MagSwapTime = 60 / 30,
         EventTable = {
-            {s =  "myt_ins1/m249-open.wav" ,   t = 5 / 30}, 
-			{s =  "myt_ins1/m249-boxout.wav" ,    t = 37 / 30},	
-			{s =  "myt_ins1/m249-boxin.wav" ,    t = 57 / 30},
-			{s =  "myt_ins1/m249-beltin.wav" ,    t = 74 / 30},	
-			{s =  "myt_ins1/m249-close.wav" ,    t = 95 / 30},
-            {s =  "myt_ins1/m249-boltback.wav" ,    t = 120 / 30},  
+			{s =  "myt_ins1/pkm_start.wav" ,    t = 0 / 30},
+            {s =  "myt_ins1/pkm_open.wav" ,   t = 15 / 30},
+			{s =  "myt_ins1/pkm_boxout.wav" ,    t = 45 / 30},
+			{s =  "myt_ins1/pkm_boxin.wav" ,    t = 75 / 30},
+			{s =  "myt_ins1/m249-beltin.wav" ,    t = 105 / 30},
+			{s =  "myt_ins1/pkm_beltin.wav" ,    t = 120 / 30},
+			{s =  "myt_ins1/pkm_close.wav" ,    t = 151 / 30},
+            {s =  "myt_ins1/pkm_boltcock.wav" ,    t = 175 / 30},
+			{s =  "myt_ins1/pkm_end.wav" ,    t = 192 / 30},
             },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
