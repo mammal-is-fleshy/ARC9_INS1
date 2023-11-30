@@ -181,7 +181,7 @@ SWEP.IronSights = {
 
 SWEP.Crosshair = false
 
-SWEP.BipodPos = Vector(-5.2, -5, 2)
+SWEP.BipodPos = Vector(-3.32, -4, 1)
 SWEP.BipodAng = Angle(0, 0, 0)
 
 SWEP.SprintAng = Angle(45, -15, -5)
@@ -262,13 +262,24 @@ SWEP.DryFireSound = "myt_ins1/makarov-empty.wav"
 
 SWEP.FiremodeSound = "myt_ins1/firemode_medium.wav"
 
-SWEP.DefaultBodygroups = "00000000"
+SWEP.DefaultBodygroups = "000000"
 
 SWEP.AttachmentElements = {
     ["has_muz"] = { Bodygroups = {{2, 1}}, }, 
 	["has_optic"] = { Bodygroups = {{3, 1}}, },
 	["has_grip"] = { Bodygroups = {{4, 1}}, },
 }
+
+SWEP.Hook_ModifyBodygroups = function(wep, data)
+    local model = data.model
+
+    if wep:GetBipod() then
+        model:SetBodygroup(5,1)---0 is ugly
+    elseif !wep:GetBipod() then
+        model:SetBodygroup(5,1)
+    end
+	
+end
 
 SWEP.Attachments = {
     {
@@ -355,7 +366,7 @@ SWEP.Animations = {
         FireASAP = true,
 		Mult = 0.9,
         MinProgress = 0.85,
-        MagSwapTime = 60 / 30,
+        MagSwapTime = 80 / 30,
         EventTable = {
 			{s =  "myt_ins1/pkm_start.wav" ,    t = 0 / 30},
             {s =  "myt_ins1/pkm_open.wav" ,   t = 15 / 30},
@@ -377,7 +388,7 @@ SWEP.Animations = {
         FireASAP = true,
 		Mult = 0.9,
         MinProgress = 0.9,
-        MagSwapTime = 60 / 30,
+        MagSwapTime = 80 / 30,
         EventTable = {
 			{s =  "myt_ins1/pkm_start.wav" ,    t = 0 / 30},
             {s =  "myt_ins1/pkm_open.wav" ,   t = 15 / 30},

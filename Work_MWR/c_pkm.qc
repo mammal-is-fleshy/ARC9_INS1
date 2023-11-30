@@ -33,6 +33,13 @@ $bodygroup "4"
 	studio "pkm_rail_bot.smd"
 }
 
+$bodygroup "5"
+{
+	studio "pkm_bipod_up.smd"
+	studio "pkm_bipod_down.smd"
+	blank
+}
+
 $surfaceprop "default"
 
 $contents "solid"
