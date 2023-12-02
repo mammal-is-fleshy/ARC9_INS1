@@ -203,10 +203,10 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.CrouchPos = Vector(-0.5, 1, -1)
 SWEP.CrouchAng = Angle(0, 0, -10)
 
-SWEP.CustomizeAng = Angle(90, 35, 0)
-SWEP.CustomizePos = Vector(18, 30, 5)
+SWEP.CustomizeAng = Angle(90, -15, 0)
+SWEP.CustomizePos = Vector(12, 45, 4)
 
-SWEP.CustomizeSnapshotFOV = 110
+SWEP.CustomizeSnapshotFOV = 90
 SWEP.CustomizeNoRotate = false
 
 SWEP.CustomizeRotateAnchor = Vector(12, -3.25, -5.23)
@@ -246,7 +246,7 @@ SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 
 SWEP.ShootSound = {"myt_ins1/sten-1.wav"}
 SWEP.DistantShootSound = "myt_ins1/fal-01_echo.wav"
-SWEP.ShootSoundSilenced = "myt_ins1_sd/pistol.wav"
+SWEP.ShootSoundSilenced = "myt_ins1_sd/stencil.wav"
 SWEP.DryFireSound = "myt_ins1/makarov-empty.wav"
 
 SWEP.EjectDelay = 0
@@ -259,6 +259,7 @@ SWEP.DefaultBodygroups = "00000000"
 SWEP.AttachmentElements = {
     ["rail_bot"] = { Bodygroups = {{2, 1}}, }, 
     ["has_optic"] = { Bodygroups = {{1, 1},{3, 1},}, },
+	["20rnd"] = { Bodygroups = {{0, 1}}, }, 
 }
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
@@ -299,6 +300,15 @@ SWEP.Attachments = {
         Pos = Vector(-4.63, 4, 1.75),
         Ang = Angle(0, -90, 0),
     },
+	{
+        PrintName = "Magazine",
+        DefaultName = "32-Rounder",
+		
+        Category = {"ins1_mag_sten"},
+        Bone = "Weapon",
+        Pos = Vector(0, 4.2, -1),
+        Ang = Angle(0, -90, 0),
+    },	
 }
 
 SWEP.Animations = {
@@ -315,11 +325,9 @@ SWEP.Animations = {
         },
     },
     ["ready"] = {
-        Source = "base_deploy", -- QC sequence source, can be {"table", "of", "strings"} or "string"
-        --Time = 0.5, -- overrides the duration of the sequence
-        Mult = 1, -- multiplies time
+        Source = "base_deploy",
         EventTable = {
-			{s =  "myt_ins1/sten_bolt.wav" ,    t = 9 / 30}, 	
+			{s =  "myt_ins1/sten_bolt.wav" ,    t = 10 / 30}, 	
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -347,7 +355,7 @@ SWEP.Animations = {
         Mult = 1.1,
         EventTable = {
             {s =  "myt_ins1/sten_mag1.wav" ,   t = 8 / 30},
-            {s =  "myt_ins1/sten_mag2.wav" ,    t = 35 / 30},
+            {s =  "myt_ins1/sten_mag2.wav" ,    t = 36 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -362,8 +370,8 @@ SWEP.Animations = {
         MinProgress = 0.85,
         EventTable = {
             {s =  "myt_ins1/sten_mag1.wav" ,   t = 8 / 30},
-            {s =  "myt_ins1/sten_mag2.wav" ,    t = 35 / 30},
-			{s =  "myt_ins1/sten_bolt.wav" ,    t = 55 / 30}, 	
+            {s =  "myt_ins1/sten_mag2.wav" ,    t = 36 / 30},
+			{s =  "myt_ins1/sten_bolt.wav" ,    t = 54 / 30}, 	
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -378,7 +386,7 @@ SWEP.Animations = {
         Mult = 1.1,
         EventTable = {
             {s =  "myt_ins1/sten_mag1.wav" ,   t = 8 / 30},
-            {s =  "myt_ins1/sten_mag2.wav" ,    t = 35 / 30},
+            {s =  "myt_ins1/sten_mag2.wav" ,    t = 36 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -393,12 +401,15 @@ SWEP.Animations = {
         MinProgress = 0.85,
         EventTable = {
             {s =  "myt_ins1/sten_mag1.wav" ,   t = 8 / 30},
-            {s =  "myt_ins1/sten_mag2.wav" ,    t = 35 / 30},
-			{s =  "myt_ins1/sten_bolt.wav" ,    t = 55 / 30}, 	
+            {s =  "myt_ins1/sten_mag2.wav" ,    t = 36 / 30},
+			{s =  "myt_ins1/sten_bolt.wav" ,    t = 54 / 30}, 	
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
         { t = 0.1, lhik = 0, rhik = 1, },{ t = 0.7, lhik = 0, rhik = 1, },{ t = 0.85, lhik = 1, rhik = 1, },
         },
+    },
+	["fire_iron_sd"] = {
+        Source = {"base_fire_iron2"},
     },
 }

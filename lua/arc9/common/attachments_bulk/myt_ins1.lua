@@ -137,6 +137,8 @@ ARC9.LoadAttachment(ATT, "myt_ins1_rhik_xm21")
 
 ATT = {}
 
+-- mp5 sd kit
+
 ATT.PrintName = [[SD Kit]]
 ATT.Icon = Material("entities/arc9_myt_ins1_mp5sd.png", "mips smooth")
 ATT.Description = [[Integrally suppressed barrel.
@@ -169,6 +171,8 @@ ARC9.LoadAttachment(ATT, "myt_ins1_mp5_sd")
 ------------------------------------------------------------------------------------------
 
 ATT = {}
+
+-- pistol suppressor
 
 ATT.PrintName = [[SUPP. P]]
 ATT.Icon = Material("entities/arc9_myt_ins1_sd_glock.png", "mips smooth")
@@ -204,6 +208,8 @@ ARC9.LoadAttachment(ATT, "myt_ins1_sd_pist")
 ------------------------------------------------------------------------------------------
 
 ATT = {}
+
+-- mars tavor holosight
 
 ATT.PrintName = "MARS Sight"
 ATT.CompactName = "MARS"
@@ -291,11 +297,11 @@ ARC9.LoadAttachment(ATT, "myt_ins1_db_1h")
 
 ATT = {}
 
--- sten one-hand
+-- sten alt grip
 
-ATT.PrintName = [['Correct' pose]]
-ATT.CompactName = [[1H]]
-ATT.Icon = Material("entities/arc9_myt_ins1_db_1h.png", "mips smooth")
+ATT.PrintName = [[Alternate 'Correct' Holding Position]]
+ATT.CompactName = [[ALT]]
+ATT.Icon = Material("entities/arc9_myt_ins1_unknown.png", "mips smooth")
 ATT.Description = [[Hot hot hot hot hot]]
 
 ATT.SortOrder = 99
@@ -332,7 +338,7 @@ ATT = {}
 -- mosin alternate bolt
 
 ATT.PrintName = [[Alternative Bolt]]
-ATT.CompactName = [[Alt]]
+ATT.CompactName = [[ALT]]
 ATT.Icon = Material("entities/arc9_myt_ins1_mosin_abolt.png", "mips smooth")
 ATT.Description = [[Scoping bolt without the scope]]
 
@@ -622,19 +628,19 @@ ARC9.LoadAttachment(ATT, "myt_ins1_mosin_obrez")
 
 ATT = {}
 
--- jank sten integeral suppressor
+-- jank sten sd kit/integral suppressor
 
 ATT.PrintName = [[SD Kit]]
 ATT.Icon = Material("entities/arc9_myt_ins1_mp5sd.png", "mips smooth")
 ATT.Description = [[Integrally suppressed barrel.]]
-ATT.SortOrder = 2
+ATT.SortOrder = 0
 
 ATT.Model = "models/weapons/myt_ins1/atts/sd_glock.mdl"
 ATT.Category = "ins1_sten_sd"
 ATT.ActivateElements = {"stensd"}
 
 ATT.Scale = 1
-ATT.ModelOffset = Vector(-3.8, 0, 0) -- this is why its not just the mp5sd suppressor
+ATT.ModelOffset = Vector(-6, 0, 0) -- this is why its not just the mp5sd suppressor
 
 ATT.PhysBulletMuzzleVelocityMult = 1.5
 ATT.RangeMaxMult = 1.5
@@ -651,6 +657,11 @@ ATT.MuzzleDevice = true
 
 ATT.RecoilUpMult = 1.15
 ATT.RecoilRandomMult = 0.85
+
+-- literally just for ads fire anim
+ATT.Hook_TranslateAnimation = function(wep, anim)
+    return anim .. "_sd"
+end
 
 ARC9.LoadAttachment(ATT, "myt_ins1_sten_sd")
 
@@ -863,3 +874,27 @@ ATT.Category = {"ins1_barrel_revolver"}
 ATT.ActivateElements = {"barrel_short"}
 
 ARC9.LoadAttachment(ATT, "myt_ins1_revolver_barrel_short")
+
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+
+ATT = {}
+
+-- sten small mag
+
+ATT.PrintName = [[16-Rounder]]
+ATT.CompactName = [[16-RND]]
+ATT.Icon = Material("entities/ammo/mp5_10mm.png", "mips smooth")
+ATT.Description = [[Ammo conservation?]]
+
+ATT.SortOrder = 1
+ATT.Category = "ins1_mag_sten"
+ATT.ActivateElements = {"20rnd"} -- made 16 to match size and for bigger balance change
+
+ATT.ClipSizeOverride = 16
+ATT.ReloadTimeMult = 0.85
+
+ATT.AimDownSightsTimeMult = 0.85
+ATT.SprintToFireTimeMult = 0.85
+
+ARC9.LoadAttachment(ATT, "myt_ins1_sten_smallmag")
