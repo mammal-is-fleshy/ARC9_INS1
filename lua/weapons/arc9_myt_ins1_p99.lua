@@ -11,7 +11,6 @@ SWEP.PrintName = "P99"
 SWEP.Class = "Pistol"
 
 SWEP.Credits = {
-    ["Sounds"] = [[https://gamebanana.com/sounds/69867]],
 }
 SWEP.Description = [[best pistol ever.]]
 
@@ -230,7 +229,7 @@ SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 
 SWEP.ShootSound = "myt_ins1/p99-1.wav"
 SWEP.DistantShootSound = "myt_ins1/1911-1_echo.wav"
-SWEP.ShootSoundSilenced = "myt_ins1_sd/pistol.wav"
+SWEP.ShootSoundSilenced = "myt_ins1_sd/stencil.wav"
 SWEP.DryFireSound = "myt_ins1/1911-empty.wav"
 
 SWEP.EjectDelay = 0
@@ -243,6 +242,7 @@ SWEP.DefaultBodygroups = "00000000"
 SWEP.AttachmentElements = {
     ["has_optic"] = { Bodygroups = {{1, 1}}, },
     ["has_tac"] = { Bodygroups = {{2, 1}}, },
+	["20rnd"] = { Bodygroups = {{0, 1}}, },
 }
 
 SWEP.Attachments = {
@@ -264,7 +264,8 @@ SWEP.Attachments = {
         ExcludeElements = {"pre_muzzed"},
         Category = {"muzzle_css"},
         Bone = "Weapon",
-	Scale = 0.8,
+		Scale = 0.8,
+		Icon_Offset = Vector(1, 0, 0),
         Pos = Vector(0, 2.35, 2.35),
         Ang = Angle(0, -90, 0),
     },
@@ -278,6 +279,15 @@ SWEP.Attachments = {
         Bone = "Weapon",
         Pos = Vector(0, 2, 0.8),
         Ang = Angle(0, -90, 180),
+    },
+	{
+        PrintName = "Ammunition",
+        DefaultName = "Ammo",
+
+        Category = {"ins1_mag_pistol"},
+        Bone = "Magazine",
+        Pos = Vector(0, -0.2, 0),
+        Ang = Angle(0, 0, 0),
     },
 }
 
@@ -334,7 +344,7 @@ SWEP.Animations = {
         MinProgress = 0.775,
         EventTable = {
             {s =  "myt_ins1/p99-magout.wav" ,   t = 4 / 30},
-            {s =  "myt_ins1/p99-magin.wav" ,    t = 32 / 30},
+            {s =  "myt_ins1/p99-magin.wav" ,    t = 29 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -348,7 +358,7 @@ SWEP.Animations = {
         MinProgress = 0.85,
         EventTable = {
             {s =  "myt_ins1/p99-magout.wav" ,   t = 4 / 30},
-            {s =  "myt_ins1/p99-magin.wav" ,    t = 32 / 30},
+            {s =  "myt_ins1/p99-magin.wav" ,    t = 29 / 30},
 			{s =  "myt_ins1/p99-slideforward.wav" ,    t = 58 / 40},
         },
         IKTimeLine = {
