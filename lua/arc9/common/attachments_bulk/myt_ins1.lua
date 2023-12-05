@@ -572,7 +572,7 @@ ATT = {}
 
 -- generic pistol ext mag
 
-ATT.PrintName = [[20-Rounder]]
+ATT.PrintName = [[Extended 20-Round Magazine]]
 ATT.CompactName = [[20-RND]]
 ATT.Icon = Material("entities/arc9_myt_ins1_pistol.png", "mips smooth")
 ATT.Description = [[A small but nice upgrade.]]
@@ -582,6 +582,14 @@ ATT.Category = "ins1_mag_pistol"
 ATT.ActivateElements = {"20rnd"}
 
 ATT.ClipSizeOverride = 20
+
+ATT.AimDownSightsTimeMult = 1.2
+ATT.SprintToFireTimeMult = 1.2
+
+ATT.SwayMult = 1.1
+ATT.SwayMultSights = 0.8
+
+ATT.FreeAimRadiusMult = 1.1
 
 ARC9.LoadAttachment(ATT, "myt_ins1_pistol_20rnd")
 
@@ -790,7 +798,7 @@ ATT = {}
 
 ATT.PrintName = [[Regular-Length Barrel]]
 ATT.CompactName = [[REG]]
-ATT.Icon = Material("entities/arc9_myt_ins1_unknown.png", "mips smooth")
+ATT.Icon = Material("entities/revolver_barrel_regular.png", "mips smooth")
 ATT.Description = [[Increases the length of the barrel.]]
 ATT.SortOrder = 1
 
@@ -815,7 +823,7 @@ ATT = {}
 
 ATT.PrintName = [[Long Barrel]]
 ATT.CompactName = [[LONG]]
-ATT.Icon = Material("entities/arc9_myt_ins1_unknown.png", "mips smooth")
+ATT.Icon = Material("entities/revolver_barrel_long.png", "mips smooth")
 ATT.Description = [[Increases the length of the barrel greatly.]]
 ATT.SortOrder = 2
 
@@ -844,7 +852,7 @@ ATT = {}
 
 ATT.PrintName = [[Super Short(y) Barrel]]
 ATT.CompactName = [[SHORT]]
-ATT.Icon = Material("entities/arc9_myt_ins1_unknown.png", "mips smooth")
+ATT.Icon = Material("entities/revolver_barrel_supershort.png", "mips smooth")
 ATT.Description = [[Decreases the length of the barrel.]]
 ATT.SortOrder = 3
 
@@ -863,3 +871,60 @@ ATT.Category = {"ins1_barrel_revolver"}
 ATT.ActivateElements = {"barrel_short"}
 
 ARC9.LoadAttachment(ATT, "myt_ins1_revolver_barrel_short")
+
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+
+ATT = {}
+
+-- r870 plastic furniture
+
+ATT.PrintName = [[Alternative Furniture]]
+ATT.CompactName = [[ALT]]
+ATT.Icon = Material("entities/r870_plastic.png", "mips smooth")
+ATT.Description = [[Plastic furniture instead of wooden.]]
+
+ATT.SortOrder = 1
+ATT.Category = "ins1_grip_r870"
+ATT.ActivateElements = {"plastic"}
+
+ARC9.LoadAttachment(ATT, "myt_ins1_r870_plastic")
+
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+
+ATT = {}
+
+-- walther p99 stalker
+
+ATT.PrintName = [[Walker P9m]]
+ATT.CompactName = [[Walker P9m]]
+ATT.Icon = Material("entities/arc9_myt_ins1_walkerp9m.png", "mips smooth")
+ATT.Description = [[One of the most widely used pistols in the Zone, both among professionals and rookies who can afford it.]]
+
+ATT.SortOrder = 1
+ATT.Category = "ins1_mag_p99"
+ATT.ActivateElements = {"walkerp9m"}
+
+ATT.DamageMaxMult = 1.1
+ATT.RecoilMult = 1.2
+ATT.RangeMinMult = 0.9
+
+ATT.ClipSizeOverride = 16
+
+ATT.ShootSound = {"myt_ins1/p99-walker.wav"}
+ATT.DistantShootSound = {"myt_ins1/p99-walker_distant"}
+
+ATT.HookP_NameChange = function(self, name)
+    local attached = self:GetElements()
+    local gunname = "Walker P9m"
+    return gunname
+end
+
+ATT.Hook_TranslateAnimation = function(wep, anim) -- mang love that shit
+    if anim == "reload" then  return "reload_walker" end   
+	if anim == "reload_empty" then  return "reload_empty_walker" end
+	if anim == "ready" then  return "ready_walker" end
+end
+
+ARC9.LoadAttachment(ATT, "myt_ins1_walkerp9m")

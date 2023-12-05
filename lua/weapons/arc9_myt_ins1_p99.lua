@@ -243,6 +243,7 @@ SWEP.AttachmentElements = {
     ["has_optic"] = { Bodygroups = {{1, 1}}, },
     ["has_tac"] = { Bodygroups = {{2, 1}}, },
 	["20rnd"] = { Bodygroups = {{0, 1}}, },
+	["walkerp9m"] = { Bodygroups = {{0, 2}}, },
 }
 
 SWEP.Attachments = {
@@ -284,7 +285,7 @@ SWEP.Attachments = {
         PrintName = "Ammunition",
         DefaultName = "Ammo",
 
-        Category = {"ins1_mag_pistol"},
+        Category = {"ins1_mag_pistol", "ins1_mag_p99"},
         Bone = "Magazine",
         Pos = Vector(0, -0.2, 0),
         Ang = Angle(0, 0, 0),
@@ -306,17 +307,15 @@ SWEP.Animations = {
         },
     },
     ["draw_empty"] = {
-        Source = "base_draw_empty", -- QC sequence source, can be {"table", "of", "strings"} or "string"
-        --Time = 0.5, -- overrides the duration of the sequence
-        Mult = 1, -- multiplies time
+        Source = "base_draw_empty",
+        Mult = 1,
         EventTable = {
             {s =  "myt_ins1/universal/uni-draw.wav" ,   t = 0 / 30},
         },
     },
     ["ready"] = {
-        Source = "base_deploy", -- QC sequence source, can be {"table", "of", "strings"} or "string"
-        --Time = 0.5, -- overrides the duration of the sequence
-        Mult = 1, -- multiplies time
+        Source = "base_deploy",
+        Mult = 1,
         EventTable = {
             {s =  "myt_ins1/p99-slideforward.wav" ,    t = 12 / 40},
         },
@@ -364,6 +363,43 @@ SWEP.Animations = {
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
         { t = 0.2, lhik = 0, rhik = 1, },{ t = 0.85, lhik = 0, rhik = 1, },{ t = 0.975, lhik = 1, rhik = 1, },
+        },
+    },
+	-- walker p9m --
+	["reload_walker"] = {
+        Source = "base_reload",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        FireASAP = true,
+        MinProgress = 0.775,
+        EventTable = {
+            {s =  "myt_ins1/p99-walker-magout.wav" ,   t = 6 / 30},
+            {s =  "myt_ins1/p99-walker-magin.wav" ,    t = 30 / 30},
+        },
+        IKTimeLine = {
+        { t = 0, lhik = 1, rhik = 1, },
+        { t = 0.1, lhik = 0, rhik = 1, },{ t = 0.8, lhik = 0, rhik = 1, },{ t = 0.95, lhik = 1, rhik = 1, },
+        },
+    },
+    ["reload_empty_walker"] = {
+        Source = "base_reloadempty",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        FireASAP = true,
+        MinProgress = 0.85,
+        EventTable = {
+            {s =  "myt_ins1/p99-walker-magout.wav" ,   t = 6 / 30},
+            {s =  "myt_ins1/p99-walker-magin.wav" ,    t = 30 / 30},
+			{s =  "myt_ins1/p99-walker-slideforward.wav" ,    t = 58 / 40},
+        },
+        IKTimeLine = {
+        { t = 0, lhik = 1, rhik = 1, },
+        { t = 0.2, lhik = 0, rhik = 1, },{ t = 0.85, lhik = 0, rhik = 1, },{ t = 0.975, lhik = 1, rhik = 1, },
+        },
+    },
+	["ready_walker"] = {
+        Source = "base_deploy",
+        Mult = 1,
+        EventTable = {
+            {s =  "myt_ins1/p99-walker-slideforward.wav" ,    t = 12 / 40},
         },
     },
 }

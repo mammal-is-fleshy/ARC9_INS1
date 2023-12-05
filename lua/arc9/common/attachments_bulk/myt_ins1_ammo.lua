@@ -88,3 +88,37 @@ ATT.Ammo = "357"
 ATT.ShootSound = "myt_ins1/deagle-1_357.wav"
 
 ARC9.LoadAttachment(ATT, "ins1_ammo_deagle_357")
+
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+
+ATT = {}
+
+-- unused smorgasbord dragons breath (it gets overriden by flare in the lua)
+
+ATT.PrintName = "Inflamma Dragon's Breath"
+ATT.CompactName = "FLAME"
+ATT.Icon = Material("entities/ammo/flare.png", "mips smooth")
+ATT.Description = [[Highly unethical flaming round loaded with combustible fuel.]]
+ATT.SortOrder = 4
+
+ATT.Category = {"css_ammo_sg"}
+ATT.AutoStats = true
+
+ATT.PhysBulletImpactMult = false
+ATT.RicochetChanceOverride = 0
+
+ATT.DamageTypeOverride = DMG_BURN + DMG_BUCKSHOT
+
+ATT.TracerSizeMult = 1.5
+ATT.AccuracyMOAMult = 30
+ATT.DamageMult = 0.5
+ATT.DamageMinMult = 0.5
+ATT.TracerEffect = "burning_engine_01"
+
+ATT.AlwaysPhysBulletOverride = true
+ATT.PhysBulletMuzzleVelocityMult = 0.25
+ATT.PhysBulletGravityMult = 0.75
+ATT.PhysBulletDragMult = 5
+
+ARC9.LoadAttachment(ATT, "gekolt_ammo_sg_flame")

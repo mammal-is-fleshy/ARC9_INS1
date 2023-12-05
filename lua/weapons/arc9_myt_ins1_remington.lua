@@ -256,6 +256,38 @@ SWEP.AttachmentElements = {
 	["has_optic"] = {Bodygroups = {{1, 1}},},
 }
 
+SWEP.Hook_ModifyBodygroups = function(self, data)
+
+    local vm = data.model
+    local attached = data.elements
+	local model = 0
+	
+	if attached["gekolt_ammo_sg_slug"] then
+        model = 1
+    end
+	if attached["gekolt_ammo_sg_sharp"] then
+        model = 1
+    end
+	if attached["gekolt_ammo_sg_frag"] then
+        model = 2
+    end
+	if attached["gekolt_ammo_sg_flame"] then
+        model = 2
+    end
+	
+	if attached["plastic"] then
+        model = 3
+		if attached["gekolt_ammo_sg_slug"] or attached["gekolt_ammo_sg_sharp"] then
+			model = 4
+		end
+		if attached["gekolt_ammo_sg_frag"] or attached["gekolt_ammo_sg_flame"] then
+			model = 5
+		end
+    end
+	
+	vm:SetBodygroup(0, model)
+end
+
 SWEP.Attachments = {
     {
         PrintName = "Optic",
@@ -274,6 +306,16 @@ SWEP.Attachments = {
         InstalledElements = {"rail_bot", "has_grip"},
 
         Category = {"grip_css"},
+        Bone = "Pump",
+        Pos = Vector(-0.05,5.5,-1.15),
+        Ang = Angle(0, -90, 0),
+		MergeSlots = {3},
+    },
+	{
+        PrintName = "",
+        DefaultName = "",
+		Hidden = true,
+        Category = {"ins1_grip_r870"},
         Bone = "Pump",
         Pos = Vector(-0.05,5.5,-1.15),
         Ang = Angle(0, -90, 0),
@@ -299,7 +341,7 @@ SWEP.Animations = {
     ["draw"] = {
         Source = "base_draw",
         EventTable = {
-            --{s =  "myt_ins1/uni-draw.wav" ,   t = 0 / 40},
+            {s =  "myt_ins1/uni-draw.wav" ,   t = 0 / 40},
         },
     },  
 	["ready"] = {
@@ -340,7 +382,7 @@ SWEP.Animations = {
 		Mult = 0.8,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         EventTable = {
-            {s =  "myt_ins1/r870_insert.wav" ,   t = 10 / 30},
+            {s =  "myt_ins1/r870_insert.wav" ,   t = 14 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -367,7 +409,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
 		Mult = 0.8,
         EventTable = {
-            {s =  "myt_ins1/r870_insert.wav" ,   t = 4 / 30},
+            {s =  "myt_ins1/r870_insert.wav" ,   t = 3 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 0, rhik = 1, },
