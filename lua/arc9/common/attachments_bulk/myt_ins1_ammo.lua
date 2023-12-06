@@ -95,6 +95,7 @@ ARC9.LoadAttachment(ATT, "ins1_ammo_deagle_357")
 ATT = {}
 
 -- unused smorgasbord dragons breath (it gets overriden by flare in the lua)
+-- also i fixed it fr now lol
 
 ATT.PrintName = "Inflamma Dragon's Breath"
 ATT.CompactName = "FLAME"
@@ -108,17 +109,19 @@ ATT.AutoStats = true
 ATT.PhysBulletImpactMult = false
 ATT.RicochetChanceOverride = 0
 
-ATT.DamageTypeOverride = DMG_BURN + DMG_BUCKSHOT
+ATT.DamageTypeOverride = DMG_BUCKSHOT + DMG_BURN
 
 ATT.TracerSizeMult = 1.5
 ATT.AccuracyMOAMult = 30
-ATT.DamageMult = 0.5
-ATT.DamageMinMult = 0.5
+ATT.DamageMult = 0.6
+ATT.DamageMinMult = 0.6
 ATT.TracerEffect = "burning_engine_01"
 
 ATT.AlwaysPhysBulletOverride = true
-ATT.PhysBulletMuzzleVelocityMult = 0.25
+ATT.PhysBulletMuzzleVelocityMult = 0.5
 ATT.PhysBulletGravityMult = 0.75
-ATT.PhysBulletDragMult = 5
+ATT.PhysBulletDragMult = 3
 
-ARC9.LoadAttachment(ATT, "gekolt_ammo_sg_flame")
+ATT.MuzzleParticleOverride = "muzzleflash_slug"
+
+ARC9.LoadAttachment(ATT, "ins1_ammo_sg_flame")
