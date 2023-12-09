@@ -445,7 +445,7 @@ ARC9.LoadAttachment(ATT, "myt_ins1_thomp_grip2")
 
 ATT = {}
 
--- thompson no stock
+-- generic no stock
 
 ATT.PrintName = [[No Stock]]
 ATT.CompactName = "No Stock"
@@ -728,7 +728,7 @@ ATT = {}
 
 ATT.PrintName = [[Alternate Holding Position]]
 ATT.CompactName = [[ALT]]
-ATT.Icon = Material("entities/arc9_myt_ins1_unknown.png", "mips smooth")
+ATT.Icon = Material("entities/arc9_myt_ins1_mp5alt.png", "mips smooth")
 ATT.Description = [[Changes the holding style of the weapon.
 Incompatible with SD Kit.]]
 
@@ -750,7 +750,7 @@ ATT.PrintName = [[Collapsed Stock]]
 ATT.CompactName = [[FOLD]]
 ATT.Description = [[Nice.]]
 
-ATT.Icon = Material("entities/arc9_myt_ins1_unknown.png", "mips smooth")
+ATT.Icon = Material("entities/arc9_myt_ins1_mp5foldstock.png", "mips smooth")
 
 ATT.SortOrder = -9000000
 ATT.Category = "ins1_stock_mp5"
@@ -763,7 +763,7 @@ ATT.DeployTimeMult = 0.8
 ATT.AimDownSightsTimeMult = 0.9
 ATT.SprintToFireTimeMult = 0.9
 
-ARC9.LoadAttachment(ATT, "myt_ins1_mp5_stockcollapse")
+ARC9.LoadAttachment(ATT, "myt_ins1_mp5_foldstock")
 
 ------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------
@@ -776,7 +776,7 @@ ATT.PrintName = [[Heavy Stock]]
 ATT.CompactName = [[HEAVY]]
 ATT.Description = [[Crew Expendable (3).]]
 
-ATT.Icon = Material("entities/arc9_myt_ins1_unknown.png", "mips smooth")
+ATT.Icon = Material("entities/arc9_myt_ins1_mp5a2.png", "mips smooth")
 
 ATT.SortOrder = -9000000
 ATT.Category = "ins1_stock_mp5"
@@ -928,3 +928,120 @@ ATT.Hook_TranslateAnimation = function(wep, anim) -- mang love that shit
 end
 
 ARC9.LoadAttachment(ATT, "myt_ins1_walkerp9m")
+
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+
+ATT = {}
+
+-- spas hl2 no stock
+
+ATT.PrintName = [[Overwatch Standard Issue Shotgun]]
+ATT.CompactName = [[HL2]]
+ATT.Icon = Material("entities/arc9_myt_ins1_hl2shotgun.png", "mips smooth")
+ATT.Description = [[Why do religious priests love shotguns so much?]]
+ATT.CustomCons = {
+["Ironsights"] = "Totally Gone",
+}
+
+ATT.SortOrder = 1
+ATT.Category = "ins1_frame_spas"
+ATT.ActivateElements = {"hl2shotgun"}
+
+ATT.DamageMaxMult = 1.4
+ATT.RecoilMult = 2
+ATT.RecoilUpMult = 2
+ATT.RecoilKickMult = 2
+ATT.RangeMinMult = 0.6
+
+ATT.SpeedMultShooting = 1.3
+ATT.SpeedMultBlindFire = 1.05
+
+ATT.ShootSound = "Weapon_Shotgun.Single"
+ATT.DistantShootSound = ""
+
+ATT.HasSights = false
+
+ATT.HookP_NameChange = function(self, name)
+    local attached = self:GetElements()
+    local gunname = "Shotgun"
+    return gunname
+end
+
+ATT.Hook_TranslateAnimation = function(wep, anim) -- mang love that shit
+    if anim == "ready" then  return "ready_hl2" end   
+	if anim == "fire" then  return "fire_hl2" end
+	if anim == "reload_start" then  return "reload_start_hl2" end
+	if anim == "reload_start_empty" then  return "reload_start_empty_hl2" end   
+	if anim == "reload_insert" then  return "reload_insert_hl2" end
+end
+
+ARC9.LoadAttachment(ATT, "myt_ins1_hl2shotgun")
+
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+
+ATT = {}
+
+-- spas stock unfold
+
+ATT.PrintName = [[Unfolded Stock]]
+ATT.CompactName = [[UNFOLD]]
+ATT.Icon = Material("entities/arc9_myt_ins1_spas_stockunfold.png", "mips smooth")
+ATT.Description = [[Why do religious priests love shotguns so much?]]
+
+ATT.SortOrder = 2
+ATT.Category = "ins1_frame_spas"
+ATT.ActivateElements = {"stockunfold"}
+
+ATT.RecoilMult = 0.8
+
+ATT.Attachments = {
+	{
+        PrintName = "ADS",
+        DefaultName = "F.E.A.R. Style Zoom",
+		
+        Category = {"ins1_optic_spas"},
+        Bone = "Weapon_Controller",
+        Pos = Vector(-2.75, 0, -1.75),
+        Ang = Angle(0, 90, 0),
+    },
+}
+
+ARC9.LoadAttachment(ATT, "myt_ins1_spas_stockunfold")
+
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+
+ATT = {}
+
+-- spas hl2 no stock
+
+ATT.PrintName = [[Alternate Usable Aim-Down-Sights]]
+ATT.CompactName = [[ALT]]
+ATT.Icon = Material("entities/arc9_myt_ins1_generic_scope.png", "mips smooth")
+ATT.Description = [[Just like the SPSA-14!
+May not work with the stock folded.]]
+ATT.CustomPros = {
+["Ironsights"] = "Actually Usable",
+}
+
+
+ATT.ExcludeElements = {"hl2shotgun"}
+
+ATT.SortOrder = 1
+ATT.Category = "ins1_optic_spas"
+
+ATT.IronSights = {
+    Pos = Vector(-2.65, -7, 1.3),
+    Ang = Angle(0, 2, 0),
+    Midpoint = { -- Where the gun should be at the middle of it's irons
+        Pos = Vector(0, 15, -4),
+        Ang = Angle(-10, 0, -20),
+    },
+    Magnification = 1,
+    AssociatedSlot = 0, -- Attachment slot to associate the sights with. Causes RT scopes to render.
+    CrosshairInSights = false,
+}
+
+ARC9.LoadAttachment(ATT, "myt_ins1_spas_ironsights")

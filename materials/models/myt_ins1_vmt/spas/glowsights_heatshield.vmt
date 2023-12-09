@@ -1,0 +1,6 @@
+"UnlitGeneric"
+{
+	"$basetexture" "models/myt_ins1_vmt/spas/glowsights_heatshield"
+	"$translucent" 1
+	"$selfillum" 1
+}

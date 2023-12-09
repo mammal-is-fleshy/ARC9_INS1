@@ -249,6 +249,8 @@ SWEP.DefaultBodygroups = "0000000"
 
 SWEP.AttachmentElements = { 
 	["rail_bot"] = {Bodygroups = {{2, 1}},},
+	["hl2shotgun"] = {Bodygroups = {{0, 2}},},
+	["stockunfold"] = {Bodygroups = {{0, 1}},},
 }
 
 SWEP.Attachments = {
@@ -257,9 +259,11 @@ SWEP.Attachments = {
         DefaultName = "None",
         InstalledElements = {"rail_bot", "has_grip"},
 
+		Scale = 1.02,
         Category = {"grip_css"},
         Bone = "pump",
-        Pos = Vector(1.5,1, 0),
+		Icon_Offset = Vector(0, 0, -0.5),
+        Pos = Vector(1.5, 1.15, 0.02),
         Ang = Angle(180, 0, -90),
     },
     {
@@ -268,7 +272,16 @@ SWEP.Attachments = {
 		
         Category = {"css_ammo_sg"},
         Bone = "Weapon_Controller",
-        Pos = Vector(18, 1, 0),
+        Pos = Vector(18, 0.75, 0),
+        Ang = Angle(0, 0, -90),
+    },
+	{
+        PrintName = "Frame",
+        DefaultName = "Default",
+		
+        Category = {"ins1_frame_spas"},
+        Bone = "Weapon_Controller",
+        Pos = Vector(2, 0, 0),
         Ang = Angle(0, 0, -90),
     },
 }
@@ -285,9 +298,9 @@ SWEP.Animations = {
     ["draw"] = {
         Source = "m1014_draw",
         EventTable = {
-            --{s =  "myt_ins1/uni-draw.wav" ,   t = 0 / 40},
+            {s =  "myt_ins1/uni-draw.wav" ,   t = 0 / 40},
         },
-    },  
+    },
 	["ready"] = {
         Source = "spas_ready",
         EventTable = {
@@ -301,7 +314,6 @@ SWEP.Animations = {
         Source = "m1014_down",
 		Time = 0.5,
     },
-
     ["fire"] = {
         Source = {"spas_fire1"},
         EjectAt = 20 / 40,
@@ -311,20 +323,17 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.8,
     },
-
     ["fire_empty"] = {
         Source = {"m1014_fire1"},
         FireASAP = true,
         MinProgress = 0.1,
     },
-
-
     ["reload_start"] = {
         Source = "spas_reload_start",
         RestoreAmmo = 1,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         EventTable = {
-            {s =  "myt_ins1/spas_insert.wav" ,   t = 8 / 30},
+            {s =  "myt_ins1/spas_insert.wav" ,   t = 16 / 30},
         },
     }, 
 	["reload_start_empty"] = {
@@ -349,7 +358,46 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.5,
         EventTable = {
-
+        },
+    },
+	-- hl2 shotgun --
+	["ready_hl2"] = {
+        Source = "m1014_draw",
+        EventTable = {
+            {s =  "myt_ins1/uni-draw.wav",   t = 0 / 40},
+        },
+    },
+	["fire_hl2"] = {
+        Source = {"spas_fire1"},
+        EjectAt = 20 / 40,
+        EventTable = {
+            {s =  "Weapon_Shotgun.Special1",   t = 10 / 30},
+        },
+        FireASAP = true,
+        MinProgress = 0.8,
+    },
+	["reload_start_hl2"] = {
+        Source = "spas_reload_start",
+        RestoreAmmo = 1,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        EventTable = {
+            {s =  "Weapon_Shotgun.Reload",   t = 16 / 30},
         },
     }, 
+	["reload_start_empty_hl2"] = {
+        Source = "spas_reload_start_empty",
+        RestoreAmmo = 1,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        EventTable = {
+            {s =  "Weapon_Shotgun.Reload",   t = 8 / 30},
+            {s =  "Weapon_Shotgun.Special1",   t = 31 / 30},
+        },
+	},
+    ["reload_insert_hl2"] = {
+        Source = "spas_reload_insert",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        EventTable = {
+            {s =  "Weapon_Shotgun.Reload",   t = 3 / 30},
+        },
+    },
 }
