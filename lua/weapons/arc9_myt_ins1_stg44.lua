@@ -288,7 +288,7 @@ SWEP.Attachments = {
         ExcludeElements = {"pre_muzzed"},
         Category = {"muzzle_css"},
         Bone = "STG44",
-        Pos = Vector(-0.5, 22, 4.21),
+        Pos = Vector(-0.5, 21.5, 4.1),
         Ang = Angle(0, -90, 0),
     },
     {
