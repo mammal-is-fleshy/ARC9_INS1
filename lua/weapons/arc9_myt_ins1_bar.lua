@@ -6,7 +6,7 @@ SWEP.Spawnable = true
 SWEP.Category = "ARC9 - INS1"
 SWEP.SubCategory = "Primary"
 
-SWEP.PrintName = "STG44"
+SWEP.PrintName = "BAR"
 
 SWEP.Class = "Rifle"
 
@@ -14,17 +14,20 @@ SWEP.Credits = {
     ["Assets"] = [[Medal of Honor: Airborne]],  
 	["Animation"] = [[Day of Infamy]],
 }
-SWEP.Description = [[Arguably the first real "assault rifle".]]
+SWEP.Description = [[
+> Light Machine Gun
+> 20 Round
+]]
 
-SWEP.ViewModel = "models/weapons/myt_ins1/c_rif_stg44.mdl"
-SWEP.WorldModel = "models/weapons/myt_ins1/c_rif_stg44.mdl"
+SWEP.ViewModel = "models/weapons/myt_ins1/c_rif_bar.mdl"
+SWEP.WorldModel = "models/weapons/myt_ins1/c_rif_bar.mdl"
 
 SWEP.Weight = 25
 SWEP.Slot = 2
 SWEP.SlotPos = 4
 
 SWEP.MirrorVMWM = true
-SWEP.WorldModelMirror = "models/weapons/myt_ins1/c_rif_stg44.mdl"
+SWEP.WorldModelMirror = "models/weapons/myt_ins1/c_rif_bar.mdl"
 SWEP.WorldModelOffset = {
     Pos = Vector(-9, 5, -5),
     Ang = Angle(-5, 0, 180),
@@ -62,10 +65,10 @@ SWEP.PhysBulletMuzzleVelocity = 1280 * 12
 
 -------------------------- MAGAZINE
 
-SWEP.Ammo = "smg1" -- What ammo type this gun uses.
+SWEP.Ammo = "ar2" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 1 -- The amount of rounds this gun can chamber.
-SWEP.ClipSize = 30 -- Self-explanatory.
+SWEP.ClipSize = 20 -- Self-explanatory.
 SWEP.SupplyLimit = 4 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
 SWEP.SecondarySupplyLimit = 2 -- Amount of reserve UBGL magazines you can take.
 
@@ -73,7 +76,7 @@ SWEP.ReloadInSights = false -- This weapon can aim down sights while reloading.
 
 -------------------------- FIREMODES
 
-SWEP.RPM = 600
+SWEP.RPM = 650
 
 -- Works different to ArcCW
 
@@ -86,6 +89,13 @@ SWEP.RPM = 600
 SWEP.Firemodes = {
     {
         Mode = -1,
+		PrintName = "Slow",
+		RPM = 450,
+    },
+    {
+        Mode = -1,
+		PrintName = "Fast",
+		RPM = 650
     },
     {
         Mode = 1,
@@ -97,26 +107,26 @@ SWEP.Firemodes = {
 SWEP.Recoil = 1
 
 -- These multipliers affect the predictible recoil by making the pattern taller, shorter, wider, or thinner.
-SWEP.RecoilUp = 0.5 -- Multiplier for vertical recoil
-SWEP.RecoilSide = 0.25 -- Multiplier for vertical recoil
+SWEP.RecoilUp = 0.75 -- Multiplier for vertical recoil
+SWEP.RecoilSide = 0.5 -- Multiplier for vertical recoil
 
 -- These values determine how much extra movement is applied to the recoil entirely randomly, like in a circle.
 -- This type of recoil CANNOT be predicted.
-SWEP.RecoilRandomUp = 0.5
-SWEP.RecoilRandomSide = 0.5
+SWEP.RecoilRandomUp = 0.75
+SWEP.RecoilRandomSide = 0.75
 
-SWEP.RecoilDissipationRate = 20
+SWEP.RecoilDissipationRate = 15
 SWEP.RecoilResetTime = 0
 
 SWEP.RecoilAutoControl = 0 -- Multiplier for automatic recoil control.
 
-SWEP.RecoilKick = 1.4
+SWEP.RecoilKick = 1.5
 
-SWEP.RecoilMultRecoil = 1.125 -- Looks stupid but it means expoential recoil growth.
+SWEP.RecoilMultRecoil = 1.1 -- Looks stupid but it means expoential recoil growth.
 
 -------------------------- SPREAD
 
-SWEP.Spread = 0.0175
+SWEP.Spread = 0.0075
 
 SWEP.SpreadAddRecoil = 0
 SWEP.SpreadMultRecoil = 1.2
@@ -168,8 +178,8 @@ SWEP.TracerColor = Color(255, 225, 200) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-3.025, -10, 1.2),
-    Ang = Angle(0, -0.25, 0),
+    Pos = Vector(-2.75, -4, 1.89),
+    Ang = Angle(0, 0, 0),
     Midpoint = { -- Where the gun should be at the middle of it's irons
         Pos = Vector(0, 15, -4),
         Ang = Angle(-10, 60, -25),
@@ -275,7 +285,7 @@ SWEP.Attachments = {
 
         ExcludeElements = {"pre_optic"},
         Category = {"optic_css"},
-        Bone = "STG44",
+        Bone = "BAR",
         Pos = Vector(-0.5, 1.5, 6.4),
         Ang = Angle(0, -90, 0),
 		MergeSlots = {5},
@@ -287,7 +297,7 @@ SWEP.Attachments = {
 		
         ExcludeElements = {"pre_muzzed"},
         Category = {"muzzle_css"},
-        Bone = "STG44",
+        Bone = "BAR",
         Pos = Vector(-0.5, 21.5, 4.1),
         Ang = Angle(0, -90, 0),
     },
@@ -297,7 +307,7 @@ SWEP.Attachments = {
         InstalledElements = {"rail_bot"},
 
         Category = {"grip_css"},
-        Bone = "STG44",
+        Bone = "BAR",
         Pos = Vector(-0.5, 6.75, 2.75),
         Ang = Angle(0, -90, 0),
         MergeSlots = {4},
@@ -308,22 +318,9 @@ SWEP.Attachments = {
         DefaultName = "",
         Hidden = true,
         Category = {"css_ubgl"},
-        Bone = "STG44",
+        Bone = "BAR",
         Pos = Vector(-0.5, 4.5, 3.5),
         Ang = Angle(0, -90, 0),
-    },
-
-    {	--5
-        PrintName = "Optic",
-        DefaultName = "None",
-        InstalledElements = {"rail_top"},
-        Hidden = true,
-		
-        Category = { "ins1_optic_l42"},
-        Bone = "STG44",
-        Pos = Vector(-0.5, -4.6, 6.4),
-        Ang = Angle(0, -90, 0),
-		Scale = 0.6
     },
 }
 
@@ -341,7 +338,7 @@ SWEP.Animations = {
     ["ready"] = {
         Source = "base_deploy", -- QC sequence source, can be {"table", "of", "strings"} or "string"
         --Time = 0.5, -- overrides the duration of the sequence
-        Mult = 1, -- multiplies time
+        Mult = 1.25, -- multiplies time
         EventTable = {
 			{s =  "myt_ins1/stg44_chamber.wav" ,    t = 3 / 30}, 
         },
@@ -355,23 +352,18 @@ SWEP.Animations = {
         --Time = 0
     },
     ["fire"] = {
-        Source = {"base_fire","base_fire2","base_fire3"},
+        Source = {"base_fire_1","base_fire_2","base_fire_3"},
     }, 
-	["fire_iron"] = {
-        Source = {"base_fire_iron"},
-    },
-    --["fire_iron"] = {
-        -- Source = {"iron_fire_1","iron_fire_2","iron_fire_3"},
-   -- },
 
     ["reload"] = {
         Source = "base_reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FireASAP = true,
         MinProgress = 0.775,
+        Mult = 1.25,
         EventTable = {
         	{s =  "myt_ins1/stg44_mag_out.wav" ,   t = 0 / 30},
-			{s =  "myt_ins1/stg44_mag_in.wav" ,   t = 39 / 30},
+			{s =  "myt_ins1/stg44_mag_in.wav" ,   t = 25 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -383,9 +375,10 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FireASAP = true,
         MinProgress = 0.85,
+        Mult = 1.25,
         EventTable = {
         	{s =  "myt_ins1/stg44_mag_out.wav" ,   t = 0 / 30},
-			{s =  "myt_ins1/stg44_mag_in.wav" ,   t = 39 / 30},
+			{s =  "myt_ins1/stg44_mag_in.wav" ,   t = 25 / 30},
 			{s =  "myt_ins1/stg44_chamber.wav" ,    t = 55 / 30}, 
         },
         IKTimeLine = {
