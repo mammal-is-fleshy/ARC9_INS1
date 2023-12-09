@@ -243,7 +243,7 @@ SWEP.AnimDraw = false
 
 -------------------------- EFFECTS
 
-SWEP.MuzzleParticle = "muzzleflash_3"
+SWEP.MuzzleParticle = "muzzleflash_5"
 SWEP.MuzzleEffectQCA = 1
 
 SWEP.ShellModel = "models/shells/shell_556.mdl"
@@ -353,6 +353,10 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = {"base_fire_1","base_fire_2","base_fire_3"},
+    }, 
+	
+    ["fire_iron"] = {
+        Source = {"base_fire_iron"},
     }, 
 
     ["reload"] = {
