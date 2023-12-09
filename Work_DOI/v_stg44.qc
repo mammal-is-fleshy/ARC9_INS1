@@ -6,19 +6,24 @@ $scale 1.3
 
 $bodygroup "Weapon"
 {
-	studio "stg.smd"
+	studio "stg_moha.smd"
 	blank
 }
 $bodygroup "1"
 {
-	studio "stg_iron.smd"
-	studio "stg_rail_top.smd"
+	studio "stg_moha_irons.smd"
+	studio "stg_moha_rail_top.smd"
 	blank
 }
 $bodygroup "2"
 {
 	blank
 	studio "stg_rail_bot.smd"
+}
+$bodygroup "3"
+{
+	blank
+	studio "stg_moha_scope.smd"
 }
 
 
@@ -158,30 +163,6 @@ $bonemerge "R ForeTwist4"
 $bonemerge "R ForeTwist5"
 $bonemerge "R ForeTwist6"
 
-$jigglebone "STG_RING"
-{
-	is_flexible
-	{
-		length 20
-		tip_mass 0
-		pitch_stiffness 1000
-		pitch_damping 3
-		yaw_stiffness 1000
-		yaw_damping 1000
-		allow_length_flex
-		along_stiffness 100
-		along_damping 0
-		pitch_constraint -45.000001 90.000003
-		pitch_friction 1
-		pitch_bounce 0
-		yaw_constraint -1 1
-		yaw_friction 20
-		yaw_bounce 0
-		angle_constraint 89.000001
-	}
-}
-
-$sectionframes 30 144
 
 $sequence "base_idle" {
 	"v_stg44_anims\base_idle.smd"
@@ -219,20 +200,18 @@ $sequence "base_holster" {
 }
 
 $sequence "base_fire_iron" {
-	"anims\base_fire_iron.smd"
+	"anims\stg_fire_iron.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
-	fadein 0.2
-	fadeout 0.2
-	snap
+	fadein 0.02
+	fadeout 0.02
 	fps 30
 }
 
 $sequence "base_fire" {
 	"v_stg44_anims\base_fire.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
-	fadein 0.2
-	fadeout 0.2
-	snap
+	fadein 0.02
+	fadeout 0.02
 	fps 30
 }
 
@@ -255,7 +234,7 @@ $sequence "base_fire3" {
 }
 
 $sequence "base_reload" {
-	"anims\stg_reload.smd"
+	"anims\stg_reload2.smd"
 	activity "ACT_VM_RELOAD" 1
 	{ event 46 64 "" }
 	fadein 0.2
@@ -264,7 +243,7 @@ $sequence "base_reload" {
 }
 
 $sequence "base_reloadempty" {
-	"anims\stg_reloadempty.smd"
+	"anims\stg_reloadempty2.smd"
 	activity "ACT_VM_RELOAD_EMPTY" 1
 	fadein 0.2
 	fadeout 0.2

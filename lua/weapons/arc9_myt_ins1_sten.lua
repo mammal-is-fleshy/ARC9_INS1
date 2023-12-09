@@ -346,6 +346,9 @@ SWEP.Animations = {
     ["fire_empty"] = {
         Source = {"base_firelast"},
     },
+    ["fire_iron_empty"] = {
+        Source = {"base_firelast"},
+    },
 
     ["reload"] = {
         Source = "base_reload",

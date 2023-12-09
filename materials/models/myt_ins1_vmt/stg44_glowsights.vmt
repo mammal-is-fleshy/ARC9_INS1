@@ -1,6 +1,0 @@
-"UnlitGeneric"
-{
-	"$basetexture" "models/myt_ins1_vmt/stg44_glowsights"
-	"$translucent" 1
-	"$selfillum" 1
-}

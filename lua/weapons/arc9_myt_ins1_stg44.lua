@@ -168,8 +168,8 @@ SWEP.TracerColor = Color(255, 225, 200) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-3.025, -10, 0.45),
-    Ang = Angle(0, 0.8, 0),
+    Pos = Vector(-3.025, -10, 1.2),
+    Ang = Angle(0, -0.25, 0),
     Midpoint = { -- Where the gun should be at the middle of it's irons
         Pos = Vector(0, 15, -4),
         Ang = Angle(-10, 60, -25),
@@ -256,10 +256,16 @@ SWEP.FiremodeSound = "myt_ins1/firemode_light.wav"
 SWEP.DefaultBodygroups = "00000000"
 
 SWEP.AttachmentElements = {
+    ["scope"] = {Bodygroups = {{3, 1}, {1, 0}},},
     ["rail_bot"] = { Bodygroups = {{2, 1}}, }, 
 	["has_muzzle"] = { Bodygroups = {{4, 1}}, },
     ["has_optic"] = { Bodygroups = {{1, 1},}, },
 }
+SWEP.Hook_ModifyBodygroups = function(wep, data)
+    local model = data.model  -- most insufficient method ever
+    if wep:HasElement("scope") then model:SetBodygroup(3,1) end 
+	if wep:HasElement("scope") then model:SetBodygroup(1,0) end
+end
 
 SWEP.Attachments = {
     {
@@ -272,6 +278,7 @@ SWEP.Attachments = {
         Bone = "STG44",
         Pos = Vector(-0.5, 1.5, 6.4),
         Ang = Angle(0, -90, 0),
+		MergeSlots = {5},
     },
     {
         PrintName = "Muzzle",
@@ -304,6 +311,19 @@ SWEP.Attachments = {
         Bone = "STG44",
         Pos = Vector(-0.5, 4.5, 3.5),
         Ang = Angle(0, -90, 0),
+    },
+
+    {	--5
+        PrintName = "Optic",
+        DefaultName = "None",
+        InstalledElements = {"rail_top"},
+        Hidden = true,
+		
+        Category = { "ins1_optic_l42"},
+        Bone = "STG44",
+        Pos = Vector(-0.5, -4.6, 6.4),
+        Ang = Angle(0, -90, 0),
+		Scale = 0.6
     },
 }
 
@@ -351,7 +371,7 @@ SWEP.Animations = {
         MinProgress = 0.775,
         EventTable = {
         	{s =  "myt_ins1/stg44_mag_out.wav" ,   t = 0 / 30},
-			{s =  "myt_ins1/stg44_mag_in.wav" ,   t = 35 / 30},
+			{s =  "myt_ins1/stg44_mag_in.wav" ,   t = 39 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -365,8 +385,8 @@ SWEP.Animations = {
         MinProgress = 0.85,
         EventTable = {
         	{s =  "myt_ins1/stg44_mag_out.wav" ,   t = 0 / 30},
-			{s =  "myt_ins1/stg44_mag_in.wav" ,   t = 35 / 30},
-			{s =  "myt_ins1/stg44_chamber.wav" ,    t = 52 / 30}, 
+			{s =  "myt_ins1/stg44_mag_in.wav" ,   t = 39 / 30},
+			{s =  "myt_ins1/stg44_chamber.wav" ,    t = 55 / 30}, 
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },

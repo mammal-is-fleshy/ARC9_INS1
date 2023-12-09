@@ -1,0 +1,14 @@
+"VertexlitGeneric"
+{
+	"$basetexture"			"models\myt_ins1_vmt\DE_STG44_Mat"
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[.1 .1 .1]"
+	"$envmapcontrast" "0.9"	
+	"$color2"						"[1.2 1.2 1.2]"
+
+	"$phong"                        "1"	
+	"$phongalbedotint"              "1"	
+	"$phongexponent"                "4"	
+	"$phongboost"                   "0.5"
+	"$phongfresnelranges"           "[0.75 1.5 3]"	
+}
