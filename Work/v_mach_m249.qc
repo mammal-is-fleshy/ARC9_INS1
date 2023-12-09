@@ -29,6 +29,12 @@ $bodygroup "4"
 	studio "m249_iron.smd"
 	blank
 }
+$bodygroup "5"
+{
+	studio "v_mach_m249_bipod_up.smd"	
+	studio "v_mach_m249_bipod_down.smd"
+	blank
+}
 
 
 $surfaceprop "default"

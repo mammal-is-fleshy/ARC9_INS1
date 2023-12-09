@@ -168,8 +168,8 @@ SWEP.TracerColor = Color(255, 225, 200) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-3.025, -10, 1.2),
-    Ang = Angle(0, -0.25, 0),
+    Pos = Vector(-3.025, -10, 1.225),
+    Ang = Angle(0, -0.3, 0),
     Midpoint = { -- Where the gun should be at the middle of it's irons
         Pos = Vector(0, 15, -4),
         Ang = Angle(-10, 60, -25),
@@ -318,6 +318,7 @@ SWEP.Attachments = {
         DefaultName = "None",
         InstalledElements = {"rail_top"},
         Hidden = true,
+		KeepBaseIrons = true,
 		
         Category = { "ins1_optic_l42"},
         Bone = "STG44",

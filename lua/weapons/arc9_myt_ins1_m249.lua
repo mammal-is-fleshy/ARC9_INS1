@@ -269,6 +269,18 @@ SWEP.AttachmentElements = {
 	["has_optic"] = { Bodygroups = {{4, 1}}, },
 }
 
+SWEP.Hook_ModifyBodygroups = function(wep, data)
+    local model = data.model
+
+    if wep:GetBipod() then
+        model:SetBodygroup(5,1)
+    elseif !wep:GetBipod() then
+        model:SetBodygroup(5,0)
+    end
+	
+end
+
+
 SWEP.Attachments = {
     {
         PrintName = "Optic",
