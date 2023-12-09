@@ -266,16 +266,10 @@ SWEP.FiremodeSound = "myt_ins1/firemode_light.wav"
 SWEP.DefaultBodygroups = "00000000"
 
 SWEP.AttachmentElements = {
-    ["scope"] = {Bodygroups = {{3, 1}, {1, 0}},},
     ["rail_bot"] = { Bodygroups = {{2, 1}}, }, 
 	["has_muzzle"] = { Bodygroups = {{4, 1}}, },
-    ["has_optic"] = { Bodygroups = {{1, 1},}, },
+    ["has_optic"] = { Bodygroups = {{1, 1},{3, 1},}, },
 }
-SWEP.Hook_ModifyBodygroups = function(wep, data)
-    local model = data.model  -- most insufficient method ever
-    if wep:HasElement("scope") then model:SetBodygroup(3,1) end 
-	if wep:HasElement("scope") then model:SetBodygroup(1,0) end
-end
 
 SWEP.Attachments = {
     {
@@ -286,9 +280,8 @@ SWEP.Attachments = {
         ExcludeElements = {"pre_optic"},
         Category = {"optic_css"},
         Bone = "BAR",
-        Pos = Vector(-0.5, 1.5, 6.4),
+        Pos = Vector(0, -2.75, 2.1),
         Ang = Angle(0, -90, 0),
-		MergeSlots = {5},
     },
     {
         PrintName = "Muzzle",
@@ -298,7 +291,7 @@ SWEP.Attachments = {
         ExcludeElements = {"pre_muzzed"},
         Category = {"muzzle_css"},
         Bone = "BAR",
-        Pos = Vector(-0.5, 21.5, 4.1),
+        Pos = Vector(0, 23, 0.725),
         Ang = Angle(0, -90, 0),
     },
     {
@@ -308,7 +301,7 @@ SWEP.Attachments = {
 
         Category = {"grip_css"},
         Bone = "BAR",
-        Pos = Vector(-0.5, 6.75, 2.75),
+        Pos = Vector(0, 4, -2.5),
         Ang = Angle(0, -90, 0),
         MergeSlots = {4},
     },
@@ -319,7 +312,7 @@ SWEP.Attachments = {
         Hidden = true,
         Category = {"css_ubgl"},
         Bone = "BAR",
-        Pos = Vector(-0.5, 4.5, 3.5),
+        Pos = Vector(0, 1.5, -2),
         Ang = Angle(0, -90, 0),
     },
 }
@@ -371,7 +364,7 @@ SWEP.Animations = {
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
-        { t = 0.2, lhik = 0, rhik = 1, },{ t = 0.75, lhik = 0, rhik = 1, },{ t = 0.95, lhik = 1, rhik = 1, },
+        { t = 0.2, lhik = 0, rhik = 1, },{ t = 0.7, lhik = 0, rhik = 1, },{ t = 0.875, lhik = 1, rhik = 1, },
         },
     },
     ["reload_empty"] = {

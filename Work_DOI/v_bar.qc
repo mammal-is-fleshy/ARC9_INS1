@@ -25,6 +25,11 @@ $bodygroup "3"
 	studio "bar_iron_down.smd"
 	blank
 }
+$bodygroup "4"
+{
+	studio "bar_muz.smd"
+	blank
+}
 
 
 $surfaceprop "default"
