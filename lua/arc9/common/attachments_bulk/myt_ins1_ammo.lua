@@ -94,13 +94,14 @@ ARC9.LoadAttachment(ATT, "ins1_ammo_deagle_357")
 
 ATT = {}
 
--- unused smorgasbord dragons breath (it gets overriden by flare in the lua)
--- also i fixed it fr now lol
-
 ATT.PrintName = "Inflamma Dragon's Breath"
 ATT.CompactName = "FLAME"
 ATT.Icon = Material("entities/ammo/flare.png", "mips smooth")
 ATT.Description = [[Highly unethical flaming round loaded with combustible fuel.]]
+ATT.CustomPros = {
+["Ethics"] = "Violated",
+}
+
 ATT.SortOrder = 4
 
 ATT.Category = {"css_ammo_sg"}
@@ -113,8 +114,8 @@ ATT.DamageTypeOverride = DMG_BUCKSHOT + DMG_BURN
 
 ATT.TracerSizeMult = 1.5
 ATT.AccuracyMOAMult = 30
-ATT.DamageMult = 0.6
-ATT.DamageMinMult = 0.6
+ATT.DamageMult = 0.5
+ATT.DamageMinMult = 0.5
 ATT.TracerEffect = "burning_engine_01"
 
 ATT.AlwaysPhysBulletOverride = true
@@ -125,3 +126,38 @@ ATT.PhysBulletDragMult = 3
 ATT.MuzzleParticleOverride = "muzzleflash_slug"
 
 ARC9.LoadAttachment(ATT, "ins1_ammo_sg_flame")
+-- fixed as of smorgas commit 0d6ab21, leaving in so it overrides with the changes i made (dont change smorgas)
+
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+
+ATT = {}
+
+ATT.PrintName = "Rebounder Spring Shot"
+ATT.CompactName = "SPRING" -- ghetto fix for minor spelling error
+ATT.Icon = Material("entities/gekolt_css_ammo/spring.png", "mips smooth")
+ATT.Description = [[Single boucy projectile with magical homing property.]]
+ATT.SortOrder = 1.2
+
+ATT.Category = {"css_ammo_sg"}
+
+ATT.SpreadMult = 0.2
+ATT.SpreadMultHipFire = 0.7
+ATT.RangeMaxMult = 2
+ATT.RangeMinMult = 1.25
+
+ATT.PhysBulletMuzzleVelocityMult = 2
+ATT.PhysBulletDragMult = 2
+
+ATT.RicochetChanceOverride = 1
+ATT.RicochetAngleMaxOverride = 360
+ATT.RicochetSeeking = true
+ATT.RicochetSeekingRange = 1024
+ATT.RicochetSeekingAngle = 360
+
+ATT.DamageMinMult = 4
+ATT.DamageMaxMult = 12
+
+ATT.NumOverride = 1
+
+ARC9.LoadAttachment(ATT, "gekolt_ammo_sg_spring")
