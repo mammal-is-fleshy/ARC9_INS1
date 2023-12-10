@@ -27,7 +27,7 @@ SWEP.WorldModelMirror = "models/weapons/myt_ins1/c_rif_garand.mdl"
 SWEP.WorldModelOffset = {
     Pos = Vector(-9, 5, -5),
     Ang = Angle(-5, 0, 180),
-    TPIKPos = Vector(-16, 3, -5),
+    TPIKPos = Vector(-5, 7, -5),
     TPIKAng = Angle(-5, 0, 180),
     Scale = 1
 }
@@ -205,10 +205,10 @@ SWEP.StandardPresets = {
 
 -------------------------- HoldTypes
 
-SWEP.HoldType = "revolver"
+SWEP.HoldType = "ar2"
 SWEP.HoldTypeSprint = "passive"
 SWEP.HoldTypeHolstered = "passive"
-SWEP.HoldTypeSights = "revolver"
+SWEP.HoldTypeSights = "ar2"
 SWEP.HoldTypeCustomize = "slam"
 SWEP.HoldTypeBlindfire = "pistol"
 

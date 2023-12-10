@@ -25,7 +25,7 @@ SWEP.SlotPos = 5
 SWEP.MirrorVMWM = true
 SWEP.WorldModelMirror = "models/weapons/myt_ins1/c_shot_db.mdl"
 SWEP.WorldModelOffset = {
-    Pos = Vector(-8, 4, -7),
+    Pos = Vector(-5, 7, -6),
     Ang = Angle(-5, 0, 180),
     Scale = 1
 }

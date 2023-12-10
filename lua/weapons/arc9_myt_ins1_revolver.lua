@@ -27,7 +27,7 @@ SWEP.WorldModelMirror = "models/weapons/myt_ins1/c_pist_revovler.mdl"
 SWEP.WorldModelOffset = {
     Pos = Vector(-9, 5, -5),
     Ang = Angle(-5, 0, 180),
-    TPIKPos = Vector(-16, 3, -5),
+    TPIKPos = Vector(-16, 3, -2),
     TPIKAng = Angle(-5, 0, 180),
     Scale = 1
 }

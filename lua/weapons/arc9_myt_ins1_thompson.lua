@@ -28,8 +28,8 @@ SWEP.MirrorVMWM = true
 SWEP.WorldModelMirror = "models/weapons/myt_ins1/c_smg_thompson.mdl"
 SWEP.WorldModelOffset = {
     Pos = Vector(-9, 5, -5),
-    Ang = Angle(-5, 0, 180),
-    TPIKPos = Vector(-5, 3, -7),
+    Ang = Angle(0, 0, 180),
+    TPIKPos = Vector(-6, 7, -6),
     TPIKAng = Angle(-5, 0, 180),
     Scale = 1
 }
