@@ -98,7 +98,7 @@ ATT.PrintName = "Inflamma Dragon's Breath"
 ATT.CompactName = "FLAME"
 ATT.Icon = Material("entities/ammo/flare.png", "mips smooth")
 ATT.Description = [[Highly unethical flaming round loaded with combustible fuel.]]
-ATT.CustomPros = {
+ATT.CustomCons = {
 ["Ethics"] = "Violated",
 }
 
