@@ -12,7 +12,8 @@ SWEP.Class = "Rifle"
 
 SWEP.Credits = {
     ["Assets"] = [[Medal of Honor: Airborne]],  
-	["Animation"] = [[Day of Infamy]],
+	["Animation"] = [[Day of Infamy]],	
+	["Sounds"] = [[Magmacow]],
 }
 SWEP.Description = [[
 > Light Machine Gun
@@ -253,7 +254,7 @@ SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 
 -------------------------- SOUNDS
 
-SWEP.ShootSound = {"myt_ins1/stg_fire.ogg"}
+SWEP.ShootSound = {"myt_ins1/BAR-1.wav", "myt_ins1/BAR-2.wav", "myt_ins1/BAR-3.wav"}
 SWEP.DistantShootSound = "myt_ins1/fal-01_echo.wav"
 SWEP.ShootSoundSilenced = "myt_ins1_sd/tavor.wav"
 SWEP.DryFireSound = "myt_ins1/makarov-empty.wav"
@@ -340,7 +341,7 @@ SWEP.Animations = {
         --Time = 0.5, -- overrides the duration of the sequence
         Mult = 1.25, -- multiplies time
         EventTable = {
-			{s =  "myt_ins1/stg44_chamber.wav" ,    t = 3 / 30}, 
+			{s =  "myt_ins1/BAR-Charge.wav" ,    t = 7 / 30}, 
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -366,8 +367,8 @@ SWEP.Animations = {
         MinProgress = 0.775,
         Mult = 1.25,
         EventTable = {
-        	{s =  "myt_ins1/stg44_mag_out.wav" ,   t = 0 / 30},
-			{s =  "myt_ins1/stg44_mag_in.wav" ,   t = 25 / 30},
+        	{s =  "myt_ins1/BAR-MagOut.wav" ,   t = 8 / 30},
+			{s =  "myt_ins1/BAR-MagIn.wav" ,   t = 26 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -381,9 +382,9 @@ SWEP.Animations = {
         MinProgress = 0.85,
         Mult = 1.25,
         EventTable = {
-        	{s =  "myt_ins1/stg44_mag_out.wav" ,   t = 0 / 30},
-			{s =  "myt_ins1/stg44_mag_in.wav" ,   t = 25 / 30},
-			{s =  "myt_ins1/stg44_chamber.wav" ,    t = 55 / 30}, 
+			{s =  "myt_ins1/BAR-Charge.wav" ,    t = 8 / 30}, 
+        	{s =  "myt_ins1/BAR-MagOut.wav" ,   t = 25 / 30},
+			{s =  "myt_ins1/BAR-MagIn.wav" ,   t = 43 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
