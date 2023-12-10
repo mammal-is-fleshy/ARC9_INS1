@@ -42,8 +42,8 @@ SWEP.RecoilAutoControlMultHipFire = 0.5
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 42
-SWEP.DamageMin = 29
+SWEP.DamageMax = 57
+SWEP.DamageMin = 34
 
 SWEP.RangeMin = 500
 SWEP.RangeMax = 3000
@@ -271,6 +271,13 @@ SWEP.AttachmentElements = {
     ["has_optic"] = { Bodygroups = {{1, 1},{3, 1},}, },
 }
 
+SWEP.Hook_ModifyBodygroups = function(wep, data)
+    local model = data.model  -- most insufficient method ever
+    if wep:HasElement("s_fold") then model:SetBodygroup(3,1) end  
+	if wep:HasElement("s_fold") then model:SetBodygroup(1,0) end 
+end
+
+
 SWEP.Attachments = {
     {
         PrintName = "Optic",
@@ -278,7 +285,7 @@ SWEP.Attachments = {
         InstalledElements = {"has_optic"},
 
         ExcludeElements = {"pre_optic"},
-        Category = {"optic_css"},
+        Category = {"optic_css", "ins1_optic_fold"},
         Bone = "BAR",
         Pos = Vector(0, -2.75, 2.1),
         Ang = Angle(0, -90, 0),

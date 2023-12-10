@@ -347,6 +347,24 @@ ARC9.LoadAttachment(ATT, "myt_ins1_mosin_abolt")
 
 ATT = {}
 
+-- mosin alternate bolt
+
+ATT.PrintName = [[Alternative Ironsights]]
+ATT.CompactName = [[Alt]]
+ATT.Icon = Material("entities/arc9_myt_ins1_empty.png", "mips smooth")
+ATT.Description = [[Folded ironsights]]
+
+ATT.SortOrder = 1
+ATT.Category = "ins1_optic_fold"
+ATT.ActivateElements = {"s_fold"}
+
+ARC9.LoadAttachment(ATT, "myt_ins1_bat_sights")
+
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+
+ATT = {}
+
 -- thompson drum mag
 
 ATT.PrintName = [[50-Rounder]]
