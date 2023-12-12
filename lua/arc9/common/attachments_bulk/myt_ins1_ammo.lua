@@ -126,7 +126,7 @@ ATT.PhysBulletDragMult = 3
 ATT.MuzzleParticleOverride = "muzzleflash_slug"
 
 ARC9.LoadAttachment(ATT, "ins1_ammo_sg_flame")
--- fixed as of smorgas commit 0d6ab21, leaving in so it overrides with the changes i made (dont change smorgas)
+-- fixed as of smorgas commit 0d6ab21, leaving in for whatever reason (keep this version standalone)
 
 ------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------
