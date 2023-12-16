@@ -92,13 +92,13 @@ ARC9.LoadAttachment(ATT, "ins1_ammo_deagle_357")
 ------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------
 
-ATT = {}
+--[[ATT = {}
 
 ATT.PrintName = "Inflamma Dragon's Breath"
 ATT.CompactName = "FLAME"
 ATT.Icon = Material("entities/ammo/flare.png", "mips smooth")
 ATT.Description = [[Highly unethical flaming round loaded with combustible fuel.]]
-ATT.CustomCons = {
+--[[ATT.CustomCons = {
 ["Ethics"] = "Violated",
 }
 
@@ -125,8 +125,8 @@ ATT.PhysBulletDragMult = 3
 
 ATT.MuzzleParticleOverride = "muzzleflash_slug"
 
-ARC9.LoadAttachment(ATT, "ins1_ammo_sg_flame")
--- fixed as of smorgas commit 0d6ab21, leaving in for whatever reason (keep this version standalone)
+ARC9.LoadAttachment(ATT, "ins1_ammo_sg_flame")]]
+-- fixed as of smorgas commit 0d6ab21, leaving in for whatever reason
 
 ------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------
