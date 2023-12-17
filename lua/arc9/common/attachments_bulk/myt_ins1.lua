@@ -294,9 +294,9 @@ ATT = {}
 -- sten one-hand
 
 ATT.PrintName = [['Correct' pose]]
-ATT.CompactName = [[1H]]
-ATT.Icon = Material("entities/arc9_myt_ins1_db_1h.png", "mips smooth")
-ATT.Description = [[Hot hot hot hot hot]]
+ATT.CompactName = [[WW2]]
+ATT.Icon = Material("entities/arc9_myt_ins1_empty.png", "mips smooth")
+ATT.Description = [[Stop burning your hand with this one trick]]
 
 ATT.SortOrder = 99
 ATT.Category = "ins1_grip_sten"
