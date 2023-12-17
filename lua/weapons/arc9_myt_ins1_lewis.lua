@@ -6,17 +6,18 @@ SWEP.Spawnable = true
 SWEP.Category = "ARC9 - INS1"
 SWEP.SubCategory = "Primary"
 
-SWEP.PrintName = "Lewis MK1"
+SWEP.PrintName = "Lewis Gun"
 
 SWEP.Class = "Rifle"
 
 SWEP.Credits = {
-    ["Assets"] = [[Medal of Honor: Airborne]],  
-	["Animation"] = [[Day of Infamy]],	
-	["Sounds"] = [[Magmacow]],
+    ["Assets"] = [[tbd]],
+	["Animation"] = [[tbd or n/a]],
+	["Sounds"] = [[Day of Infamy]],
 }
-SWEP.Description = [[> Light Machine Gun
-> 20 Round]]
+SWEP.Description = [[
+> Light Machine Gun
+> 47 Round]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_mach_lewis.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_mach_lewis.mdl"
@@ -41,11 +42,11 @@ SWEP.RecoilAutoControlMultHipFire = 0.5
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 57
-SWEP.DamageMin = 34
+SWEP.DamageMax = 44
+SWEP.DamageMin = 28
 
 SWEP.RangeMin = 500
-SWEP.RangeMax = 3000
+SWEP.RangeMax = 4000
 
 SWEP.Penetration = 15 -- Units of wood that can be penetrated by this gun.
 
@@ -60,13 +61,13 @@ SWEP.BodyDamageMults = {
 
 -------------------------- PHYS BULLET BALLISTICS
 
-SWEP.PhysBulletMuzzleVelocity = 1280 * 12
+SWEP.PhysBulletMuzzleVelocity = 1240 * 12 -- 303 british has less velocity but more force
 
 -------------------------- MAGAZINE
 
 SWEP.Ammo = "ar2" -- What ammo type this gun uses.
 
-SWEP.ChamberSize = 1 -- The amount of rounds this gun can chamber.
+SWEP.ChamberSize = 0 -- The amount of rounds this gun can chamber.
 SWEP.ClipSize = 47 -- Self-explanatory.
 SWEP.SupplyLimit = 4 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
 SWEP.SecondarySupplyLimit = 2 -- Amount of reserve UBGL magazines you can take.
@@ -76,6 +77,7 @@ SWEP.ReloadInSights = false -- This weapon can aim down sights while reloading.
 -------------------------- FIREMODES
 
 SWEP.RPM = 650
+-- automatic rpm in firemodes
 
 -- Works different to ArcCW
 
@@ -84,7 +86,7 @@ SWEP.RPM = 650
 -- 1: Semi.
 -- 2: Two-round burst.
 -- 3: Three-round burst.
--- n: n-round burst.
+-- n: n-round burst, ex: five-round burst.
 SWEP.Firemodes = {
     {
         Mode = -1,
@@ -119,7 +121,7 @@ SWEP.RecoilMultRecoil = 1.1 -- Looks stupid but it means expoential recoil growt
 
 -------------------------- SPREAD
 
-SWEP.Spread = 0.0075
+SWEP.Spread = 0.005
 
 SWEP.SpreadAddRecoil = 0
 SWEP.SpreadMultRecoil = 1.2
@@ -142,10 +144,10 @@ SWEP.SwayMultCrouch = 0.5
 SWEP.SwayMultShooting = 1.5
 SWEP.SwayMultSights = 0.00000125
 
-SWEP.AimDownSightsTime = 0.31
-SWEP.SprintToFireTime = 0.35
+SWEP.AimDownSightsTime = 0.36
+SWEP.SprintToFireTime = 0.4
 
-SWEP.SpeedMult = 0.95
+SWEP.SpeedMult = 0.9
 SWEP.SpeedMultSights = 0.75
 SWEP.SpeedMultShooting = 0.7
 SWEP.SpeedMultMelee = 0.75
@@ -157,16 +159,28 @@ SWEP.SpeedMultBlindFire = 1
 SWEP.Bash = true
 SWEP.PrimaryBash = false
 
-SWEP.BashDamage = 50
+SWEP.BashDamage = 80
 SWEP.BashLungeRange = 128
 SWEP.BashRange = 64
 SWEP.PreBashTime = 0.25
-SWEP.PostBashTime = 0.5
+SWEP.PostBashTime = 0.75
 
 -------------------------- TRACERS
 
 SWEP.TracerNum = 1 -- Tracer every X
 SWEP.TracerColor = Color(255, 225, 200) -- Color of tracers. Only works if tracer effect supports it. For physical bullets, this is compressed down to 9-bit color.
+
+-------------------------- MALFUNCTIONS
+
+SWEP.Overheat = true -- Weapon will jam when it overheats, playing the "overheat" animation.
+SWEP.HeatPerShot = 1
+SWEP.HeatCapacity = 47 -- rounds that can be fired non-stop before the gun jams, playing the "fix" animation
+SWEP.HeatDissipation = 5 -- rounds' worth of heat lost per second
+SWEP.HeatLockout = true -- overheating means you cannot fire until heat has been fully depleted
+SWEP.HeatDelayTime = 0.5 -- Amount of time that passes before heat begins to dissipate.
+
+-- looks cool and makes you not hold down trigger forever because it lasts after a reload, medium length bursts are indirectly suggested because of this
+-- maybe i should put this on the other lmgs
 
 -------------------------- POSITIONS
 
@@ -246,15 +260,15 @@ SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 
 -------------------------- SOUNDS
 
-SWEP.ShootSound = {"myt_ins1/BAR-1.wav", "myt_ins1/BAR-2.wav", "myt_ins1/BAR-3.wav"}
-SWEP.DistantShootSound = "myt_ins1/fal-01_echo.wav"
+SWEP.ShootSound = "myt_ins1/lewisgun-1.wav"
+SWEP.DistantShootSound = "myt_ins1/lewisgun-dist.wav"
 SWEP.ShootSoundSilenced = "myt_ins1_sd/tavor.wav"
-SWEP.DryFireSound = "myt_ins1/makarov-empty.wav"
+SWEP.DryFireSound = "myt_ins1/lewisgun-empty.wav"
 
 SWEP.EjectDelay = 0
 SWEP.CaseEffectQCA = 2
 
-SWEP.FiremodeSound = "myt_ins1/firemode_light.wav"
+SWEP.FiremodeSound = "myt_ins1/firemode_medium.wav"
 
 SWEP.DefaultBodygroups = "00000000"
 
@@ -270,6 +284,11 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 	if wep:HasElement("s_fold") then model:SetBodygroup(1,0) end 
 end
 
+SWEP.HookP_NameChange = function(self, name)
+    local attached = self:GetElements()
+    local gunname = "Lewis Gun MK1"
+    return gunname
+end
 
 SWEP.Attachments = {
     {
@@ -328,11 +347,10 @@ SWEP.Animations = {
         },
     },
     ["ready"] = {
-        Source = "base_deploy", -- QC sequence source, can be {"table", "of", "strings"} or "string"
-        --Time = 0.5, -- overrides the duration of the sequence
-        Mult = 1.25, -- multiplies time
+        Source = "base_deploy",
+        Mult = 1.25,
         EventTable = {
-			{s =  "myt_ins1/BAR-Charge.wav" ,    t = 7 / 30}, 
+			{s =  "myt_ins1/universal/uni-draw.wav" ,   t = 0 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -358,8 +376,12 @@ SWEP.Animations = {
         MinProgress = 0.775,
         Mult = 1.25,
         EventTable = {
-        	{s =  "myt_ins1/BAR-MagOut.wav" ,   t = 8 / 30},
-			{s =  "myt_ins1/BAR-MagIn.wav" ,   t = 26 / 30},
+        	{s =  "myt_ins1/lewisgun_magout.wav" ,   t = 12 / 30},
+			{s =  "myt_ins1/lewisgun_magfetch.wav" ,   t = 36 / 30},
+			{s =  "myt_ins1/lewisgun_magwell.wav" ,   t = 52 / 30},
+			{s =  "myt_ins1/lewisgun_magin.wav" ,   t = 56 / 30},
+			{s =  "myt_ins1/lewisgun_maghit.wav" ,   t = 70 / 30},
+			{s =  "myt_ins1/lewisgun_rattle.wav" ,   t = 72 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -373,9 +395,13 @@ SWEP.Animations = {
         MinProgress = 0.85,
         Mult = 1.25,
         EventTable = {
-			{s =  "myt_ins1/BAR-Charge.wav" ,    t = 8 / 30}, 
-        	{s =  "myt_ins1/BAR-MagOut.wav" ,   t = 25 / 30},
-			{s =  "myt_ins1/BAR-MagIn.wav" ,   t = 43 / 30},
+			{s =  "myt_ins1/lewisgun_magoutempty.wav" ,   t = 12 / 30},
+			{s =  "myt_ins1/lewisgun_magfetch.wav" ,   t = 36 / 30},
+			{s =  "myt_ins1/lewisgun_magwell.wav" ,   t = 52 / 30},
+			{s =  "myt_ins1/lewisgun_magin.wav" ,   t = 56 / 30},
+			{s =  "myt_ins1/lewisgun_maghit.wav" ,   t = 70 / 30},
+			{s =  "myt_ins1/lewisgun_rattle.wav" ,   t = 72 / 30},
+			{s =  "myt_ins1/lewisgun_chamber.wav" ,   t = 88 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },

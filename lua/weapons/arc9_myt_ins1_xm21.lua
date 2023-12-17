@@ -267,7 +267,7 @@ SWEP.Attachments = {
         PrintName = "Optic",
         DefaultName = "None",
 
-        Category = {"ins1_optic_svd"},
+        Category = {"ins1_optic_m14"},
         Bone = "Weapon_Controller",
         Pos = Vector(1, -2.3, 0),
         Ang = Angle(0, 0, -90),
