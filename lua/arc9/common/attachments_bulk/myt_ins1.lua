@@ -78,7 +78,7 @@ ATT.ActivateElements = {"scope"}
 -- Allows a custom sight position to be defined
 ATT.Sights = {
     {
-        Pos = Vector(-0.01, 9.5, -2.27),
+        Pos = Vector(-0.01, 8.75, -2.27),
         Ang = Angle(0, 0, 0),
         Magnification = 1.5,
         ViewModelFOV = 60

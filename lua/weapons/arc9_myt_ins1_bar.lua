@@ -15,10 +15,8 @@ SWEP.Credits = {
 	["Animation"] = [[Day of Infamy]],	
 	["Sounds"] = [[Magmacow]],
 }
-SWEP.Description = [[
-> Light Machine Gun
-> 20 Round
-]]
+SWEP.Description = [[> Light Machine Gun
+> 20 Round]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_rif_bar.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_rif_bar.mdl"
@@ -221,7 +219,7 @@ SWEP.CustomizeNoRotate = false
 
 SWEP.CustomizeRotateAnchor = Vector(12, -3.25, -5.23)
 
-SWEP.BarrelLength = 24
+SWEP.BarrelLength = 36
 
 SWEP.NearWallPos = Vector(2, 0, -10)
 SWEP.NearWallAng = Angle(45, 30, 0)
@@ -325,7 +323,6 @@ SWEP.Attachments = {
     },
 }
 
-SWEP.InstantSightIdle = true
 SWEP.Animations = {
     ["idle"] = {
         Source = "base_idle",
