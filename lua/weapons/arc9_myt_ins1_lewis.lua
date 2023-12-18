@@ -11,13 +11,11 @@ SWEP.PrintName = "Lewis Gun"
 SWEP.Class = "Rifle"
 
 SWEP.Credits = {
-    ["Assets"] = [[tbd]],
-	["Animation"] = [[tbd or n/a]],
+    ["Assets"] = [[Forgotten Hope 2]],
+	["Animation"] = [[Day of Infamy]],
 	["Sounds"] = [[Day of Infamy]],
 }
-SWEP.Description = [[
-> Light Machine Gun
-> 47 Round]]
+SWEP.Description = [[Least cumbersome british firearm]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_mach_lewis.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_mach_lewis.mdl"
@@ -102,26 +100,26 @@ SWEP.Firemodes = {
 SWEP.Recoil = 1
 
 -- These multipliers affect the predictible recoil by making the pattern taller, shorter, wider, or thinner.
-SWEP.RecoilUp = 0.75 -- Multiplier for vertical recoil
-SWEP.RecoilSide = 0.5 -- Multiplier for vertical recoil
+SWEP.RecoilUp = 0.65 -- Multiplier for vertical recoil
+SWEP.RecoilSide = 0.375 -- Multiplier for vertical recoil
 
 -- These values determine how much extra movement is applied to the recoil entirely randomly, like in a circle.
 -- This type of recoil CANNOT be predicted.
-SWEP.RecoilRandomUp = 0.75
-SWEP.RecoilRandomSide = 0.75
+SWEP.RecoilRandomUp = 0.6
+SWEP.RecoilRandomSide = 0.6
 
-SWEP.RecoilDissipationRate = 15
+SWEP.RecoilDissipationRate = 17.5
 SWEP.RecoilResetTime = 0
 
 SWEP.RecoilAutoControl = 0 -- Multiplier for automatic recoil control.
 
-SWEP.RecoilKick = 1.5
+SWEP.RecoilKick = 1.4
 
 SWEP.RecoilMultRecoil = 1.1 -- Looks stupid but it means expoential recoil growth.
 
 -------------------------- SPREAD
 
-SWEP.Spread = 0.005
+SWEP.Spread = 0.0025
 
 SWEP.SpreadAddRecoil = 0
 SWEP.SpreadMultRecoil = 1.2
@@ -132,7 +130,7 @@ SWEP.SpreadMultHipFire = 1.25
 
 -------------------------- HANDLING
 
-SWEP.FreeAimRadius = 8
+SWEP.FreeAimRadius = 10
 SWEP.FreeAimRadiusSights = 0
 
 SWEP.Sway = 0
@@ -147,11 +145,11 @@ SWEP.SwayMultSights = 0.00000125
 SWEP.AimDownSightsTime = 0.36
 SWEP.SprintToFireTime = 0.4
 
-SWEP.SpeedMult = 0.9
-SWEP.SpeedMultSights = 0.75
-SWEP.SpeedMultShooting = 0.7
-SWEP.SpeedMultMelee = 0.75
-SWEP.SpeedMultCrouch = 1
+SWEP.SpeedMult = 0.85
+SWEP.SpeedMultSights = 0.6
+SWEP.SpeedMultShooting = 0.675
+SWEP.SpeedMultMelee = 0.6
+SWEP.SpeedMultCrouch = 0.5
 SWEP.SpeedMultBlindFire = 1
 
 -------------------------- MELEE
@@ -227,7 +225,7 @@ SWEP.CustomizeNoRotate = false
 
 SWEP.CustomizeRotateAnchor = Vector(12, -3.25, -5.23)
 
-SWEP.BarrelLength = 36
+SWEP.BarrelLength = 42
 
 SWEP.NearWallPos = Vector(2, 0, -10)
 SWEP.NearWallAng = Angle(45, 30, 0)
@@ -273,16 +271,10 @@ SWEP.FiremodeSound = "myt_ins1/firemode_medium.wav"
 SWEP.DefaultBodygroups = "00000000"
 
 SWEP.AttachmentElements = {
-    ["rail_bot"] = { Bodygroups = {{2, 1}}, }, 
-	["has_muzzle"] = { Bodygroups = {{4, 1}}, },
-    ["has_optic"] = { Bodygroups = {{1, 1},{3, 1},}, },
+    ["rail_bot"] = { Bodygroups = {{3, 1}}, }, 
+---["has_muzzle"] = { Bodygroups = {{1, 1}}, },
+    ["has_optic"] = { Bodygroups = {{2, 1},}, },
 }
-
-SWEP.Hook_ModifyBodygroups = function(wep, data)
-    local model = data.model  -- most insufficient method ever
-    if wep:HasElement("s_fold") then model:SetBodygroup(3,1) end  
-	if wep:HasElement("s_fold") then model:SetBodygroup(1,0) end 
-end
 
 SWEP.HookP_NameChange = function(self, name)
     local attached = self:GetElements()
@@ -297,9 +289,9 @@ SWEP.Attachments = {
         InstalledElements = {"has_optic"},
 
         ExcludeElements = {"pre_optic"},
-        Category = {"optic_css", "ins1_optic_fold"},
-        Bone = "BAR",
-        Pos = Vector(0, -2.75, 2.1),
+        Category = {"optic_css"},
+        Bone = "Weapon",
+        Pos = Vector(0, -7, 2.6),
         Ang = Angle(0, -90, 0),
     },
     {
@@ -309,8 +301,8 @@ SWEP.Attachments = {
 		
         ExcludeElements = {"pre_muzzed"},
         Category = {"muzzle_css"},
-        Bone = "BAR",
-        Pos = Vector(0, 23, 0.725),
+        Bone = "Weapon",
+        Pos = Vector(0, 38, 0.725),
         Ang = Angle(0, -90, 0),
     },
     {
@@ -319,19 +311,8 @@ SWEP.Attachments = {
         InstalledElements = {"rail_bot"},
 
         Category = {"grip_css"},
-        Bone = "BAR",
-        Pos = Vector(0, 4, -2.5),
-        Ang = Angle(0, -90, 0),
-        MergeSlots = {4},
-    },
-
-    {   --4 permanent ubgl, affected separately from the changes of the above attachment
-        PrintName = "",
-        DefaultName = "",
-        Hidden = true,
-        Category = {"css_ubgl"},
-        Bone = "BAR",
-        Pos = Vector(0, 1.5, -2),
+        Bone = "Weapon",
+        Pos = Vector(0, 9, -2),
         Ang = Angle(0, -90, 0),
     },
 }
@@ -350,7 +331,8 @@ SWEP.Animations = {
         Source = "base_deploy",
         Mult = 1.25,
         EventTable = {
-			{s =  "myt_ins1/universal/uni-draw.wav" ,   t = 0 / 30},
+			{s =  "myt_ins1/universal/uni-draw.wav" ,   t = 0 / 30},	
+			{s =  "myt_ins1/lewisgun_chamber.wav" ,   t = 10 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -359,7 +341,7 @@ SWEP.Animations = {
     },
     ["holster"] = {
         Source = "base_holster",
-        --Time = 0
+        Mult = 0.75,
     },
     ["fire"] = {
         Source = {"base_fire_1","base_fire_2"},
@@ -385,7 +367,7 @@ SWEP.Animations = {
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
-        { t = 0.2, lhik = 0, rhik = 1, },{ t = 0.7, lhik = 0, rhik = 1, },{ t = 0.875, lhik = 1, rhik = 1, },
+        { t = 0.1, lhik = 0, rhik = 1, },{ t = 0.75, lhik = 0, rhik = 1, },{ t = 0.9, lhik = 1, rhik = 1, },
         },
     },
     ["reload_empty"] = {
@@ -401,11 +383,11 @@ SWEP.Animations = {
 			{s =  "myt_ins1/lewisgun_magin.wav" ,   t = 56 / 30},
 			{s =  "myt_ins1/lewisgun_maghit.wav" ,   t = 70 / 30},
 			{s =  "myt_ins1/lewisgun_rattle.wav" ,   t = 72 / 30},
-			{s =  "myt_ins1/lewisgun_chamber.wav" ,   t = 88 / 30},
+			{s =  "myt_ins1/lewisgun_chamber.wav" ,   t = 85 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
-        { t = 0.15, lhik = 0, rhik = 1, },{ t = 0.75, lhik = 0, rhik = 1, },{ t = 0.95, lhik = 1, rhik = 1, },
+        { t = 0.1, lhik = 0, rhik = 1, },{ t = 0.75, lhik = 0, rhik = 1, },{ t = 0.9, lhik = 1, rhik = 1, },
         },
     },
 }

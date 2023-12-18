@@ -15,8 +15,8 @@ SWEP.Credits = {
 	["Animation"] = [[Day of Infamy]],	
 	["Sounds"] = [[Magmacow]],
 }
-SWEP.Description = [[> Light Machine Gun
-> 20 Round]]
+SWEP.Description = [[Light Machine Gun
+20 Round]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_rif_bar.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_rif_bar.mdl"

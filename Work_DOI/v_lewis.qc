@@ -4,9 +4,29 @@ $modelname "weapons/myt_ins1/c_mach_lewis.mdl"
 $include c_ins2_to_gmod_hands.qci
 $scale 1.3
 
-$bodygroup "Weapon"
+$bodygroup "0"
 {
 	studio "lewis.smd"
+}
+
+$bodygroup "1"
+{
+	studio "lewis_shroud.smd"
+	studio "lewis_shroud_no.smd"
+	blank
+}
+
+$bodygroup "3"
+{
+	studio "lewis_iron.smd"
+	studio "lewis_rail_top.smd"
+	blank
+}
+
+$bodygroup "4"
+{
+	blank
+	studio "lewis_rail_bottom.smd"
 }
 
 $surfaceprop "default"
