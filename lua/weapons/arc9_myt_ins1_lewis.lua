@@ -15,7 +15,7 @@ SWEP.Credits = {
 	["Animation"] = [[Day of Infamy]],
 	["Sounds"] = [[Day of Infamy]],
 }
-SWEP.Description = [[Least cumbersome british firearm]]
+SWEP.Description = [[british firearm has 2 designs. Pipes and Overcumbersome Pipes]]
 
 SWEP.ViewModel = "models/weapons/myt_ins1/c_mach_lewis.mdl"
 SWEP.WorldModel = "models/weapons/myt_ins1/c_mach_lewis.mdl"
