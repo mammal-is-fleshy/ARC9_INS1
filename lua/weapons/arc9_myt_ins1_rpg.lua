@@ -330,46 +330,7 @@ SWEP.Animations = {
 -------------------------- ATTACHMENTS
 
 SWEP.AttachmentElements = {
-    ["rail_def"] = { Bodygroups = { {5, 1}, {2, 1} },},  
-	["rail_bot"] = { Bodygroups = { {4, 1} },},	
-	["rail_tac"] = { Bodygroups = { {3, 1} },},	
-	["a_12g"] = { Bodygroups = { {1, 3} },},
 }
 
 SWEP.Attachments = {
-    {
-        PrintName = "MOUNT Top",
-        DefaultName = "None",
-        InstalledElements = {"rail_tac"},
-
-        Category = {"tac_css_flat", "mount_css"},
-        Bone = "W_Main",
-        Pos = Vector(0, -3.65, 5.5),
-        Ang = Angle(90, 0, -90),
-    },
-	
-    {
-        PrintName = "Optic",
-        DefaultName = "None",
-        InstalledElements = {"rail_def"},
-
-        DefaultIcon = Material("arc9/def_att_icons/optic.png"),
-        Category = {"optic_css"},
-        Bone = "W_Main",
-        Pos = Vector(2.825, -3, -8.5),
-        Ang = Angle(90, 0, -90),
-    },
-	
-    {
-        PrintName = "Foregrip",
-        DefaultName = "None",
-        InstalledElements = {"rail_bot"},
-		
-        DefaultIcon = Material("arc9/def_att_icons/grip.png"),
-        ExcludeElements = {"nogrip"},
-        Category = {"grip_css"},
-        Bone = "W_Main",
-        Pos = Vector(0, 2.55, -1),
-        Ang = Angle(90, 0, -90),	
-    },
 }

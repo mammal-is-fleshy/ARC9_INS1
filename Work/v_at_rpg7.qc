@@ -24,7 +24,7 @@ $surfaceprop "default"
 
 $contents "solid"
 
-$illumposition 0.106 -14.064 -102.048
+$illumposition 0 0 0
 
 $cdmaterials "models\myt_ins1_vmt\"
 $cdmaterials "models\myt_ins1_vmt\att"
