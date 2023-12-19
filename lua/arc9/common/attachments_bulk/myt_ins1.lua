@@ -163,7 +163,7 @@ ATT.FreeAimRadiusMultSights = 0.1
 ATT.AimDownSightsTimeAdd = 0.14
 ATT.SprintToFireTimeAdd = 0.08
 
-ARC9.LoadAttachment(ATT, "myt_ins1_scope_svd")
+ARC9.LoadAttachment(ATT, "myt_ins1_scope_m14")
 
 ------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------
