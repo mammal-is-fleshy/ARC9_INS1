@@ -29,7 +29,6 @@ SWEP.WorldModelOffset = {
     Ang = Angle(-5, 0, 180),
     Scale = 1
 }
-SWEP.ShotgunReload = false
 
 SWEP.SpreadMultHipFire = 3
 SWEP.RecoilMultHipFire = 1.25
@@ -41,10 +40,10 @@ SWEP.DamageMax = 18 -- Damage done at point blank range
 SWEP.DamageMin = 6 -- Damage done at maximum range
 SWEP.Num = 14
 
-SWEP.RangeMin = 1500 -- How far bullets retain their maximum damage for.
-SWEP.RangeMax = 15000 -- In Hammer units, how far bullets can travel before dealing DamageMin.
+SWEP.RangeMin = 500
+SWEP.RangeMax = 3000
 
-SWEP.Penetration = 4 -- Units of wood that can be penetrated by this gun.
+SWEP.Penetration = 4
 
 SWEP.BodyDamageMults = {
     [HITGROUP_HEAD] = 1.25,
@@ -299,7 +298,7 @@ SWEP.Animations = {
     ["draw"] = {
         Source = "base_draw",
         EventTable = {
-            --{s =  "myt_ins1/uni-draw.wav" ,   t = 0 / 40},
+            {s =  "myt_ins1/uni-draw.wav" ,   t = 0 / 40},
         },
     },  
 	["ready"] = {

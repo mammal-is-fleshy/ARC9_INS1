@@ -42,8 +42,8 @@ SWEP.DamageMax = 14 -- Damage done at point blank range
 SWEP.DamageMin = 8 -- Damage done at maximum range
 SWEP.Num = 10
 
-SWEP.RangeMin = 1500 -- How far bullets retain their maximum damage for.
-SWEP.RangeMax = 15000 -- In Hammer units, how far bullets can travel before dealing DamageMin.
+SWEP.RangeMin = 500
+SWEP.RangeMax = 3000
 
 SWEP.Penetration = 4 -- Units of wood that can be penetrated by this gun.
 
