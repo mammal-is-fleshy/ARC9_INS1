@@ -1118,3 +1118,87 @@ ATT.IronSights = {
 }
 
 ARC9.LoadAttachment(ATT, "myt_ins1_spas_ironsights")
+
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+
+ATT = {}
+
+-- g36 kurz
+
+ATT.PrintName = [["GP37" Kurz Variant]]
+ATT.CompactName = [[KURZ]]
+ATT.Icon = Material("entities/arc9_myt_ins1_g36k.png", "mips smooth")
+ATT.Description = [[For the S.T.A.L.K.E.R in all of us.
+
+Best used with a scope or optic of sorts.]]
+
+ATT.SortOrder = 1
+ATT.Category = "ins1_g36_receiver"
+ATT.ActivateElements = {"kurz"}
+ATT.CustomPros = {
+["Reload while Aiming"] = "True",
+["Gadget Attachments"] = "True",
+}
+
+ATT.Attachments = {
+	{
+        PrintName = "Tactical",
+        DefaultName = "None",
+        InstalledElements = {"rail_bot"},
+
+        Category = {--[["grip_css",]]"tac_css"},
+        Bone = "acr_main",
+        Pos = Vector(-12.5, 1.5, 0),
+        Ang = Angle(0, 0, 90),
+    },
+}
+
+-- positive
+ATT.RangeMaxMult = 1.5
+ATT.RangeMinMult = 1.5
+ATT.SpreadMult = 0.8
+ATT.SwayMultSights = 0.75
+ATT.ReloadInSights = true
+
+-- negative
+ATT.SpeedMult = 0.95
+ATT.RecoilKickMult = 1.3
+ATT.AimDownSightsTimeMult = 1.15
+
+--negative but not really?
+ATT.RPM = 630
+
+ATT.ShootSound = "myt_ins1/g36k-1.wav"
+
+ATT.Hook_TranslateAnimation = function(wep, anim)
+
+    return anim .. "_kurz"
+
+end
+
+ARC9.LoadAttachment(ATT, "myt_ins1_g36_kurz")
+
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+
+ATT = {}
+
+-- g36 open rail
+
+ATT.PrintName = [["Low Profile" Rail]]
+ATT.CompactName = [[RAIL]]
+ATT.Icon = Material("entities/arc9_myt_ins1_g36crail.png", "mips smooth")
+ATT.Description = [[Not really low profile.]]
+
+ATT.ReloadTimeMult = 0.95
+ATT.AimDownSightsTimeMult = 0.95
+
+ATT.SwayMult = 1.05
+ATT.RecoilMult = 1.05
+
+ATT.SortOrder = 2
+ATT.Category = "ins1_g36_receiver"
+ATT.ActivateElements = {"openrail"}
+
+ARC9.LoadAttachment(ATT, "myt_ins1_g36_openrail")

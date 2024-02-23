@@ -258,6 +258,8 @@ SWEP.DefaultBodygroups = "00000000"
 SWEP.AttachmentElements = {
 	["has_muzzle"] = { Bodygroups = {{2, 1}}, },
     ["has_optic"] = { Bodygroups = {{1, 1}}, },
+	["kurz"] = { Bodygroups = {{0, 1}, {2, 0}}, AttPosMods = { [2] = { Pos = Vector(18.5, -0.15, 0), }, --[[[4] = { Pos = Vector(9, 1.5, 0), },]] } }, -- decided to not move foregrip attach location to prevent clipping with tactical attachment (see "myt_ins1_g36_kurz" in "myt_ins1.lua")
+	["openrail"] = { Bodygroups = {{0, 2}}, AttPosMods = { [1] = { Pos = Vector(-1, -3.45, 0), } } },
 }
 
 SWEP.Attachments = {
@@ -283,6 +285,15 @@ SWEP.Attachments = {
         Pos = Vector(13.5, -0.15, 0),
         Ang = Angle(0, 0, -90),
     },
+	{
+        PrintName = "Receiver",
+        DefaultName = "G36C",
+
+        Category = "ins1_g36_receiver",
+        Bone = "acr_main",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+    },
     {
         PrintName = "Foregrip",
         DefaultName = "None",
@@ -292,7 +303,7 @@ SWEP.Attachments = {
         Bone = "acr_main",
         Pos = Vector(7.5, 1.5, 0),
         Ang = Angle(0, 0, -90),
-        MergeSlots = {4},
+        MergeSlots = {5},
     },
 
     {   --4 permanent ubgl, affected separately from the changes of the above attachment
@@ -370,6 +381,43 @@ SWEP.Animations = {
 			{s =  "myt_ins1/g36-boltback1.wav" ,    t = 100 / 30},
             {s =  "myt_ins1/g36-boltback2.wav" ,    t = 101 / 30},
 			{s =  "myt_ins1/g36-boltrelease.wav" ,    t = 110 / 30}, 
+        },
+        IKTimeLine = {
+        { t = 0, lhik = 1, rhik = 1, },
+        { t = 0.15, lhik = 0, rhik = 1, },{ t = 0.85, lhik = 0, rhik = 1, },{ t = 0.975, lhik = 1, rhik = 1, },
+        },
+    },
+	
+	--kurz
+	
+	["reload_kurz"] = {
+        Source = "base_reload",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        FireASAP = true,
+        MinProgress = 0.8,
+        Mult = 0.95,
+        EventTable = {
+            {s =  "myt_ins1/g36-kurz-magout.wav" ,   t = 16 / 30},
+			{s =  "myt_ins1/g36-kurz-magin1.wav" ,    t = 70 / 30},
+            {s =  "myt_ins1/g36-kurz-magin2.wav" ,    t = 78 / 30},
+        },
+        IKTimeLine = {
+        { t = 0, lhik = 1, rhik = 1, },
+        { t = 0.15, lhik = 0, rhik = 1, },{ t = 0.8, lhik = 0, rhik = 1, },{ t = 0.95, lhik = 1, rhik = 1, },
+        },
+    },
+    ["reload_empty_kurz"] = {
+        Source = "base_reloadempty",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Mult = 0.95,
+        FireASAP = true,
+        MinProgress = 0.925,
+        EventTable = {
+            {s =  "myt_ins1/g36-kurz-magout.wav" ,   t = 16 / 30},
+			{s =  "myt_ins1/g36-kurz-magin1.wav" ,    t = 70 / 30},
+            {s =  "myt_ins1/g36-kurz-magin2.wav" ,    t = 78 / 30},
+			{s =  "myt_ins1/g36-kurz-boltback.wav" ,    t = 100 / 30},
+			{s =  "myt_ins1/g36-kurz-boltrelease.wav" ,    t = 110 / 30}, 
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
