@@ -10,7 +10,7 @@ ATT = {}
 ATT.PrintName = [[Scope]]
 ATT.CompactName = [[Scope]]
 ATT.Icon = Material("entities/arc9_myt_ins1_generic_scope.png", "mips smooth")
-ATT.Description = [[
+ATT.Description = [[! DO NOT USE WITH "Render Weapon through RT Scopes", WILL BREAK !
 ]]
 
 ATT.SortOrder = -1000
@@ -65,7 +65,7 @@ ATT = {}
 ATT.PrintName = [[Scope]]
 ATT.CompactName = [[Scope]]
 ATT.Icon = Material("entities/arc9_myt_ins1_generic_scope.png", "mips smooth")
-ATT.Description = [[
+ATT.Description = [[ ! DO NOT USE WITH "Render Weapon through RT Scopes", WILL BREAK !
 ]]
 
 ATT.SortOrder = -1000
@@ -120,7 +120,7 @@ ATT = {}
 ATT.PrintName = [[Scope]]
 ATT.CompactName = [[Scope]]
 ATT.Icon = Material("entities/arc9_myt_ins1_generic_scope.png", "mips smooth")
-ATT.Description = [[
+ATT.Description = [[ ! DO NOT USE WITH "Render Weapon through RT Scopes", WILL BREAK !
 ]]
 
 ATT.SortOrder = -1000
