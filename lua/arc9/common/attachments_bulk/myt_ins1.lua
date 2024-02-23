@@ -46,7 +46,7 @@ ATT.RTScopeShadowIntensity = 10
 ATT.ScopeScreenRatio = 0.7
 
 ATT.Scale = 1.75
-ATT.ModelOffset = Vector(0, 0, -0.175)
+ATT.ModelOffset = Vector(-1, 0, -0.175)
 
 ATT.SwayAdd = 0.075
 ATT.FreeAimRadiusMultSights = 0.1
@@ -1202,3 +1202,36 @@ ATT.Category = "ins1_g36_receiver"
 ATT.ActivateElements = {"openrail"}
 
 ARC9.LoadAttachment(ATT, "myt_ins1_g36_openrail")
+
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+
+ATT = {}
+
+-- vertical foregrip
+
+ATT.PrintName = "Vertical Foregrip"
+ATT.CompactName = "GRIP"
+ATT.Description = [[Rail-mounted vertical foregrip. Provides a stable, vertical surface to grip onto, improving recoil control and reducing recoil drift.]]
+
+ATT.Icon = Material("entities/gekolt_css_fore_troy.png", "mips smooth")
+
+ATT.Model = "models/weapons/myt_ins1/att/fg.mdl"
+
+ATT.SortOrder = 1
+ATT.Category = {"grip_css", "grip_short_css"}
+
+ATT.LHIK_Priority = 10
+ATT.LHIK = true
+
+ATT.ModelOffset = Vector(0, 0, -0.3)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.AimDownSightsTimeMult = 1.025
+ATT.SprintToFireTimeMult = 1.05
+ATT.RecoilMult = 0.9
+
+ATT.RecoilPatternDriftMult = 0.9
+ATT.RecoilAutoControlMult = 1.1
+
+ARC9.LoadAttachment(ATT, "myt_ins1_verticalforegrip")
