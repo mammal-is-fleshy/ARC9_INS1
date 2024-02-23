@@ -1211,10 +1211,10 @@ ATT = {}
 -- vertical foregrip
 
 ATT.PrintName = "Vertical Foregrip"
-ATT.CompactName = "GRIP"
-ATT.Description = [[Rail-mounted vertical foregrip. Provides a stable, vertical surface to grip onto, improving recoil control and reducing recoil drift.]]
+ATT.CompactName = "VERT. GRIP"
+ATT.Description = [[Vertical foregrip for reduced recoil and recoil drift at a slight handling cost.]]
 
-ATT.Icon = Material("entities/gekolt_css_fore_troy.png", "mips smooth")
+ATT.Icon = Material("entities/myt_ins1_verticalforegrip.png", "mips smooth")
 
 ATT.Model = "models/weapons/myt_ins1/att/fg.mdl"
 
