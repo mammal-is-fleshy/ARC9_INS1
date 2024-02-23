@@ -217,8 +217,8 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.CrouchPos = Vector(-0.5, -1, -1)
 SWEP.CrouchAng = Angle(0, 0, -10)
 
-SWEP.CustomizeAng = Angle(90, -5, 0)
-SWEP.CustomizePos = Vector(18, 28, 7)
+SWEP.CustomizeAng = Angle(90, 5, 0)
+SWEP.CustomizePos = Vector(15, 28, 7)
 
 SWEP.CustomizeSnapshotFOV = 110
 SWEP.CustomizeNoRotate = false
@@ -292,17 +292,6 @@ SWEP.Attachments = {
         Category = {"optic_css"},
         Bone = "Weapon",
         Pos = Vector(0, -7, 2.6),
-        Ang = Angle(0, -90, 0),
-    },
-    {
-        PrintName = "Muzzle",
-        DefaultName = "None",
-        InstalledElements = {"has_muzzle"},
-		
-        ExcludeElements = {"pre_muzzed"},
-        Category = {"muzzle_css"},
-        Bone = "Weapon",
-        Pos = Vector(0, 38, 0.725),
         Ang = Angle(0, -90, 0),
     },
     {

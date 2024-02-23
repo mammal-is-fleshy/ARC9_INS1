@@ -200,8 +200,8 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.CrouchPos = Vector(-0.5, 1, -1)
 SWEP.CrouchAng = Angle(0, 0, -10)
 
-SWEP.CustomizeAng = Angle(90, -5, 0)
-SWEP.CustomizePos = Vector(20, 32, 10)
+SWEP.CustomizeAng = Angle(90, 5, 0)
+SWEP.CustomizePos = Vector(20, 32, 6)
 
 SWEP.CustomizeSnapshotFOV = 110
 SWEP.CustomizeNoRotate = false
@@ -275,6 +275,7 @@ SWEP.Attachments = {
         Pos = Vector(1, -2.3, 0),
         Ang = Angle(0, 0, -90),
 		Scale = 1.05,
+		Icon_Offset = Vector(2.5, 0, 1.5),
 		MergeSlots = {4},
     },
     {
@@ -287,6 +288,7 @@ SWEP.Attachments = {
         Bone = "Weapon_Controller",
         Pos = Vector(33.5, -1.925, 0),
         Ang = Angle(0, 0, -90),
+		Icon_Offset = Vector(1, 0, 0),
     },
     {
         PrintName = "Foregrip",

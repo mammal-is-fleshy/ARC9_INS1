@@ -300,15 +300,6 @@ SWEP.Attachments = {
         Pos = Vector(-4.63, 4, 1.75),
         Ang = Angle(0, -90, 0),
     },
-	{
-        PrintName = "Magazine",
-        DefaultName = "32-Rounder",
-		
-        Category = {"ins1_mag_sten"},
-        Bone = "Weapon",
-        Pos = Vector(0, 4.2, -1),
-        Ang = Angle(0, -90, 0),
-    },	
 }
 
 SWEP.Animations = {

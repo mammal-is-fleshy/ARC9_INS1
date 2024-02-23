@@ -107,7 +107,7 @@ SWEP.RecoilResetTime = 0
 
 SWEP.RecoilAutoControl = 0 -- Multiplier for automatic recoil control.
 
-SWEP.RecoilKick = 1.5
+SWEP.RecoilKick = 1.2
 
 SWEP.RecoilMultRecoil = 1.15 -- Looks stupid but it means expoential recoil growth.
 
@@ -243,7 +243,7 @@ SWEP.DefaultBodygroups = "00000000"
 
 SWEP.AttachmentElements = {
     ["has_optic"] = { Bodygroups = {{1, 1}}, },
-    ["has_tac"] = { Bodygroups = {{2, 1}}, },
+    ["has_tac"] = { Bodygroups = {{2, 0}}, },
 }
 
 SWEP.Attachments = {
@@ -277,7 +277,7 @@ SWEP.Attachments = {
 
         Category = {"tac_css"},
         Bone = "Weapon",
-        Pos = Vector(-0.15, 3.5, -1.25),
+        Pos = Vector(-0.15, 3.8, -0.8),
         Ang = Angle(0, -90, 180),
     },
 }
@@ -308,8 +308,8 @@ SWEP.Animations = {
         --Time = 0.5, -- overrides the duration of the sequence
         Mult = 1, -- multiplies time
         EventTable = {
-            {s =  "myt_ins1/m9-slideback.wav" ,    t = 14 / 40},
-            {s =  "myt_ins1/glock_slideforward.wav" ,    t = 26 / 40},
+            {s =  "myt_ins1/glock_slideback.wav" ,    t = 14 / 40},
+            {s =  "myt_ins1/glock_sliderelease.wav" ,    t = 26 / 40},
         },
     },
     ["holster"] = {
@@ -334,7 +334,8 @@ SWEP.Animations = {
         MinProgress = 0.775,
         EventTable = {
             {s =  "myt_ins1/glock_magout.wav" ,   t = 7 / 30},
-            {s =  "myt_ins1/glock_magin.wav" ,    t = 18 / 30},
+            {s =  "myt_ins1/glock_magin.wav" ,    t = 27 / 30},
+			{s =  "myt_ins1/glock_magtap.wav" ,    t = 37 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -348,9 +349,10 @@ SWEP.Animations = {
         MinProgress = 0.85,
         EventTable = {
             {s =  "myt_ins1/glock_magout.wav" ,   t = 7 / 30},
-            {s =  "myt_ins1/glock_magin.wav" ,    t = 18 / 30},
-            {s =  "myt_ins1/m9-slideback.wav" ,    t = 43 / 30}, 
-			{s =  "myt_ins1/glock_slideforward.wav" ,    t = 45 / 30},
+            {s =  "myt_ins1/glock_magin.wav" ,    t = 27 / 30},
+			{s =  "myt_ins1/glock_magtap.wav" ,    t = 37 / 30},
+            {s =  "myt_ins1/glock_slideback.wav" ,    t = 43 / 30}, 
+			{s =  "myt_ins1/glock_sliderelease.wav" ,    t = 45 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },

@@ -195,7 +195,7 @@ SWEP.CrouchPos = Vector(-1, 1, -1)
 SWEP.CrouchAng = Angle(0, 0, -5)
 
 SWEP.CustomizeAng = Angle(90, 5, 0)
-SWEP.CustomizePos = Vector(16.25, 40, 4)
+SWEP.CustomizePos = Vector(21.5, 40, 5)
 
 SWEP.CustomizeSnapshotFOV = 90
 SWEP.CustomizeNoRotate = false
@@ -267,6 +267,7 @@ SWEP.Attachments = {
         Bone = "Weapon_Controller",
         Pos = Vector(-2.5, -0.2, 0),
         Ang = Angle(0, 0, -90),
+		Icon_Offset = Vector(2, 0, 2),
 		MergeSlots = {4},
     },
     {

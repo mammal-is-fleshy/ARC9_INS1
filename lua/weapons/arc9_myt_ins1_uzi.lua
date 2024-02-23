@@ -250,7 +250,7 @@ SWEP.AttachmentElements = {
 
 SWEP.Attachments = {
     {
-        PrintName = "Optic",
+        PrintName = "Optic Mount",
         DefaultName = "None",
         InstalledElements = {"has_optic"},
 
@@ -281,7 +281,7 @@ SWEP.Attachments = {
 
         Category = {"tac_css"},
         Bone = "Weapon",
-        Pos = Vector(0, 2.5, -0.6),
+        Pos = Vector(0, 2.3, -0.6),
         Ang = Angle(0, -90, 180),
     },
 }
@@ -302,8 +302,8 @@ SWEP.Animations = {
         --Time = 0.5, -- overrides the duration of the sequence
         Mult = 1, -- multiplies time
         EventTable = {
-            {s =  "myt_ins1/m9-slideback.wav" ,    t = 12 / 40},
-            {s =  "myt_ins1/m9-slideforward.wav" ,    t = 22 / 40},
+            {s =  "myt_ins1/uzi_boltback.wav" ,    t = 16 / 40},
+            {s =  "myt_ins1/uzi_boltforward.wav" ,    t = 22 / 40},
         },
     },
     ["holster"] = {
@@ -324,10 +324,10 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.775,
         EventTable = {
-            {s =  "myt_ins1/m9-magout.wav" ,   t = 7 / 30},
-            {s =  "myt_ins1/m9-magin1.ogg" ,    t = 18 / 30},
-            {s =  "myt_ins1/makarov-magin.wav" ,    t = 32 / 30},
-            {s =  "myt_ins1/m9-magin2.ogg" ,    t = 49 / 30},
+            {s =  "myt_ins1/uzi_magout1.wav" ,   t = 7 / 30},
+            {s =  "myt_ins1/uzi_magout2.wav" ,    t = 18 / 30},
+            {s =  "myt_ins1/uzi_foley.wav" ,    t = 32 / 30},
+            {s =  "myt_ins1/uzi_magin.wav" ,    t = 44 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -340,12 +340,12 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.85,
         EventTable = {
-            {s =  "myt_ins1/m9-magout.wav" ,   t = 7 / 30},
-            {s =  "myt_ins1/m9-magin1.ogg" ,    t = 18 / 30},
-            {s =  "myt_ins1/makarov-magin.wav" ,    t = 32 / 30},
-            {s =  "myt_ins1/m9-magin2.ogg" ,    t = 49 / 30},
-            {s =  "myt_ins1/m9-slideback.wav" ,    t = 75 / 40},
-            {s =  "myt_ins1/m9-slideforward.wav" ,    t = 85 / 40},
+            {s =  "myt_ins1/uzi_magout1.wav" ,   t = 7 / 30},
+            {s =  "myt_ins1/uzi_magout2.wav" ,    t = 18 / 30},
+            {s =  "myt_ins1/uzi_foley.wav" ,    t = 32 / 30},
+            {s =  "myt_ins1/uzi_magin.wav" ,    t = 44 / 30},
+            {s =  "myt_ins1/uzi_boltback.wav" ,    t = 79 / 40},
+            {s =  "myt_ins1/uzi_boltforward.wav" ,    t = 83 / 40},
             },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },

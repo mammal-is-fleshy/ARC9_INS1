@@ -337,8 +337,8 @@ SWEP.Animations = {
         --Time = 0.5, -- overrides the duration of the sequence
         Mult = 1, -- multiplies time
         EventTable = {
-			{s =  "myt_ins1/glock_slideforward.wav" ,    t = 12 / 40},
-            {s =  "myt_ins1/glock_slideforward.wav" ,    t = 16 / 40},
+			{s =  "myt_ins1/cherokee_sliderelease.wav" ,    t = 12 / 40},
+            {s =  "myt_ins1/cherokee_sliderelease.wav" ,    t = 16 / 40},
         },
     },
     ["holster"] = {
@@ -368,10 +368,10 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.9,
         EventTable = {
-            {s =  "myt_ins1/glock_magout.wav" ,   t = 4 / 30},
-			{s =  "myt_ins1/glock_magout.wav" ,   t = 8 / 30},
-			{s =  "myt_ins1/glock_magin.wav" ,    t = 27 / 30},
-            {s =  "myt_ins1/glock_magin.wav" ,    t = 29 / 30},
+            {s =  "myt_ins1/cherokee_magout.wav" ,   t = 4 / 30},
+			{s =  "myt_ins1/cherokee_magout.wav" ,   t = 8 / 30},
+			{s =  "myt_ins1/cherokee_magin.wav" ,    t = 27 / 30},
+            {s =  "myt_ins1/cherokee_magin.wav" ,    t = 29 / 30},
         },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -384,12 +384,12 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 0.85,
         EventTable = {
-            {s =  "myt_ins1/glock_magout.wav" ,   t = 4 / 30},
-			{s =  "myt_ins1/glock_magout.wav" ,   t = 8 / 30},
-            {s =  "myt_ins1/glock_magin.wav" ,    t = 29 / 30},
-			{s =  "myt_ins1/glock_magin.wav" ,    t = 31 / 30},
-            {s =  "myt_ins1/glock_slideforward.wav" ,    t = 94 / 40}, 
-			{s =  "myt_ins1/glock_slideforward.wav" ,    t = 97 / 40},
+            {s =  "myt_ins1/cherokee_magout.wav" ,   t = 4 / 30},
+			{s =  "myt_ins1/cherokee_magout.wav" ,   t = 8 / 30},
+            {s =  "myt_ins1/cherokee_magin.wav" ,    t = 29 / 30},
+			{s =  "myt_ins1/cherokee_magin.wav" ,    t = 31 / 30},
+            {s =  "myt_ins1/cherokee_sliderelease.wav" ,    t = 94 / 40}, 
+			{s =  "myt_ins1/cherokee_sliderelease.wav" ,    t = 97 / 40},
             },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
@@ -402,11 +402,11 @@ SWEP.Animations = {
         FireASAP = true,
         MinProgress = 1,
         EventTable = {
-            {s =  "myt_ins1/glock_magout.wav" ,   t = 4 / 30},
-			{s =  "myt_ins1/glock_magout.wav" ,   t = 8 / 30},
-            {s =  "myt_ins1/glock_magin.wav" ,    t = 29 / 30},
-			{s =  "myt_ins1/glock_magin.wav" ,    t = 31 / 30},
-            {s =  "myt_ins1/glock_slideforward.wav" ,    t = 95 / 40}, 
+            {s =  "myt_ins1/cherokee_magout.wav" ,   t = 4 / 30},
+			{s =  "myt_ins1/cherokee_magout.wav" ,   t = 8 / 30},
+            {s =  "myt_ins1/cherokee_magin.wav" ,    t = 29 / 30},
+			{s =  "myt_ins1/cherokee_magin.wav" ,    t = 31 / 30},
+            {s =  "myt_ins1/cherokee_sliderelease.wav" ,    t = 95 / 40}, 
             },
         IKTimeLine = {
         { t = 0, lhik = 1, rhik = 1, },
